@@ -3,7 +3,7 @@ from annotator_api import Annotator_API
 
 data = {
     "annotation_task_id": "947d8ee7-38ed-49c1-87e8-0e5ecba9a482",
-    "from_date": "2024-02-06",
+    "from_date": "2023-10-06",
     "to_date": "2024-02-29",
 }
 
@@ -22,6 +22,8 @@ if __name__ == "__main__":
     out = {}
 
     for result in results:
+        if result['result_type'] == 'rejected':
+            continue
         result2 = json5.loads(result['result'])
         annotation_id = result['id']
         user_id = result['user_id']
@@ -32,17 +34,18 @@ if __name__ == "__main__":
         for r in res:
             topics.append(r['text'])
 
-        if annotation_task_id not in out:
-            out[annotation_task_id] = {}
-
         with api.API_session():
-            text = api.get(api.base_url + f'/api/task/task_instance/{annotation_task_id}').json()
+            text = api.get(api.base_url + f'/api/task/task_instance/{annotation_task_id}').json()['text']
+
+        if annotation_task_id not in out:
+            out[annotation_task_id] = {
+                "text": text
+            }
 
         if annotation_id not in out[annotation_task_id]:
             out[annotation_task_id][annotation_id] = {
                 "user_id": user_id,
-                "topics": topics,
-                "text": text
+                "topics": topics
             }
 
     with open("out.json", "w") as f:
