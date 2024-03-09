@@ -1,5 +1,9 @@
 import json5
+import json
 from annotator_api import Annotator_API
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 data = {
     "annotation_task_id": "947d8ee7-38ed-49c1-87e8-0e5ecba9a482",
@@ -7,17 +11,20 @@ data = {
     "to_date": "2024-02-29",
 }
 
-username = ""
-password = ""
+username = os.getenv('API_USER')
+password = os.getenv('API_PASSWORD')
+pull_annotations = False
 
 if __name__ == "__main__":
-    with open("data.json", "r") as f:
-        results = json5.load(f)
 
     # Pull the data from the API
-    api = Annotator_API('https://anotator.semant.cz', username, password)
-    with api.API_session():
-        results = api.post(api.base_url + '/api/task/results', data=data).json()
+    if pull_annotations:
+        api = Annotator_API('https://anotator.semant.cz', username, password)
+        with api.API_session():
+            results = api.post(api.base_url + '/api/task/results', data=data).json()
+    else:
+        with open("data.json", "r") as f:
+            results = json5.load(f)
 
     out = {}
 
