@@ -55,6 +55,6 @@ if __name__ == "__main__":
                 "topics": topics
             }
 
-    with open("out.json", "w") as f:
-        json5.dump(out, f, indent=4)
+    with open("out.json", "w", encoding='utf8') as f:
+        json.dump(out, f, indent=4, ensure_ascii=False)
 
