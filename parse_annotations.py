@@ -13,7 +13,7 @@ data = {
 
 username = os.getenv('API_USER')
 password = os.getenv('API_PASSWORD')
-pull_annotations = False
+pull_annotations = True
 
 if __name__ == "__main__":
 
@@ -50,11 +50,13 @@ if __name__ == "__main__":
             }
 
         if annotation_id not in out[annotation_task_id]:
-            out[annotation_task_id][annotation_id] = {
+            out[annotation_task_id]["annotation"] = {
+                "annotation_id": annotation_id,
                 "user_id": user_id,
                 "topics": topics
             }
+        break
 
-    with open("out.json", "w", encoding='utf8') as f:
+    with open("out-better.json", "w", encoding='utf8') as f:
         json.dump(out, f, indent=4, ensure_ascii=False)
 
