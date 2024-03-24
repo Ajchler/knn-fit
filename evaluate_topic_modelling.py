@@ -1,8 +1,7 @@
 import json
 
 import numpy as np
-from transformers import pipeline
-
+from sentence_transformers import CrossEncoder
 
 class TopicEvaluator:
     def __init__(self, *args):
@@ -79,23 +78,46 @@ class CrossEncoderMetric(Metric):
     name = "cross-encoder/nli-deberta-v3-base"
 
     def __init__(self):
-        self.classifier = None
+        self.ce = CrossEncoder('cross-encoder/stsb-TinyBERT-L-4')
 
     def calculate_matching_score(self, annotator_topics, generated_topics) -> float:
-        # Load classifier to memory in the time of evaluation
-        if self.classifier is None:
-            self.classifier = pipeline("zero-shot-classification", model='cross-encoder/nli-deberta-v3-base')
-
         merged_generated_topics = " ".join(generated_topics)
-        res = self.classifier(merged_generated_topics, annotator_topics)
-        return np.mean(res["scores"])
+        result_list = self.classify_list(merged_generated_topics, annotator_topics)
+        return np.mean(result_list)
+
+    def classify_list(self, sentence, list2classify):
+        pairs = list(zip([sentence] * len(list2classify), list2classify))
+        return self.ce.predict(pairs).tolist()
+
+    def result_json(self, annotator_topics, generated_topics):
+        merged_generated_topics = " ".join(generated_topics)
+        list_scores = self.classify_list(merged_generated_topics, annotator_topics)
+
+        scoring_results = []
+        for score, annotator_topic in zip(list_scores, annotator_topics):
+            scoring_result = {
+                "from": merged_generated_topics,
+                "to": annotator_topic,
+                "score": score
+            }
+            scoring_results.append(scoring_result)
+        return scoring_results
 
 
 if __name__ == "__main__":
     with open("2024-03-22_15-13-18-generated-topics.json", mode="r") as generated_json:
-        evaluator = TopicEvaluator(BasicMetric(), CrossEncoderMetric())
+        cross_enc = CrossEncoderMetric()
+        evaluator = TopicEvaluator(BasicMetric(), cross_enc)
 
         all_generated = json.load(generated_json)
+        for generated in all_generated:
+            annotator_topics = generated["annotator_topics"]
+            generated_topics = generated["generated_topics"]
 
+            ce_score = cross_enc.result_json(annotator_topics, generated_topics)
+            generated["scoring"] = {
+                "ce-score": ce_score
+            }
+        print(json.dumps(all_generated, indent=4, ensure_ascii=False))
         res = evaluator.get_results(all_generated)
         print(res)
