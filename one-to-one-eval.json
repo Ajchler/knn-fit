@@ -1,0 +1,830 @@
+[
+    {
+        "text": " <b>Italie, jmenovitě severní, má od dob Karla IV. s Čechami styky a v době, kdy archa chuděnická vznikla, působil v Praze a v bratrstvu malířském Vlach Romanus z Florencie.</b> ",
+        "annotator_topics": [
+            "mezistátní vztahy",
+            "malířske bratstvo"
+        ],
+        "generated_topics": [
+            "mezistátní vztahy",
+            "malířské bratrstvo"
+        ],
+        "scoring": [
+            [
+                {
+                    "from": "mezistátní vztahy",
+                    "to": "mezistátní vztahy",
+                    "score": [
+                        0.9721493721008301
+                    ]
+                },
+                {
+                    "from": "mezistátní vztahy",
+                    "to": "malířské bratrstvo",
+                    "score": [
+                        0.026391657069325447
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "malířske bratstvo",
+                    "to": "mezistátní vztahy",
+                    "score": [
+                        0.029053015634417534
+                    ]
+                },
+                {
+                    "from": "malířske bratstvo",
+                    "to": "malířské bratrstvo",
+                    "score": [
+                        0.9713109135627747
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "text": " <b>Chce-li poznačiti nástroj, ukazuje na domnělý předmět jak se v ruce drží. Tak na př. ukazuje spůsob, jak se drží nůžky, nůž, lžíce, péro, píla, sekera, nebozez a t. d. a jaké pohyby s těmito nástroji se provádějí.</b> ",
+        "annotator_topics": [
+            "nakládání s nástroji",
+            "pohyby s nástroji"
+        ],
+        "generated_topics": [
+            "nakládání s nástroji",
+            "pohyby s nástroji"
+        ],
+        "scoring": [
+            [
+                {
+                    "from": "nakládání s nástroji",
+                    "to": "nakládání s nástroji",
+                    "score": [
+                        0.971899688243866
+                    ]
+                },
+                {
+                    "from": "nakládání s nástroji",
+                    "to": "pohyby s nástroji",
+                    "score": [
+                        0.4795255959033966
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "pohyby s nástroji",
+                    "to": "nakládání s nástroji",
+                    "score": [
+                        0.5325697064399719
+                    ]
+                },
+                {
+                    "from": "pohyby s nástroji",
+                    "to": "pohyby s nástroji",
+                    "score": [
+                        0.9716638326644897
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "text": " <b>Při sázení některých složitějších prací je nezbytno, aby si sazeč ujasnil celkový dojem hotového tiskopisu a vzájemnou působivost jednotlivých ploch a dekorativních podrobností, čehož nejlépe lze dosíci zběžným náčrtkem, jakýmsi plánem, podporujícím sazečovu představivost, a mnozí akcidenčníci si i provedení obyčejného insertu zběžně načrtnou před započetím sazby nebo po obsazení hlavních řádek.</b> ",
+        "annotator_topics": [
+            "typografie",
+            "grafický design",
+            "sazba textu",
+            "příprava textu"
+        ],
+        "generated_topics": [
+            "příprava tiskopisu",
+            "sazečské techniky",
+            "vizuální plánování"
+        ],
+        "scoring": [
+            [
+                {
+                    "from": "typografie",
+                    "to": "příprava tiskopisu",
+                    "score": [
+                        0.027899501845240593
+                    ]
+                },
+                {
+                    "from": "typografie",
+                    "to": "sazečské techniky",
+                    "score": [
+                        0.0260344035923481
+                    ]
+                },
+                {
+                    "from": "typografie",
+                    "to": "vizuální plánování",
+                    "score": [
+                        0.02863338030874729
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "grafický design",
+                    "to": "příprava tiskopisu",
+                    "score": [
+                        0.02541140280663967
+                    ]
+                },
+                {
+                    "from": "grafický design",
+                    "to": "sazečské techniky",
+                    "score": [
+                        0.11422953009605408
+                    ]
+                },
+                {
+                    "from": "grafický design",
+                    "to": "vizuální plánování",
+                    "score": [
+                        0.025657925754785538
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "sazba textu",
+                    "to": "příprava tiskopisu",
+                    "score": [
+                        0.08539704233407974
+                    ]
+                },
+                {
+                    "from": "sazba textu",
+                    "to": "sazečské techniky",
+                    "score": [
+                        0.12267986685037613
+                    ]
+                },
+                {
+                    "from": "sazba textu",
+                    "to": "vizuální plánování",
+                    "score": [
+                        0.04994910955429077
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "příprava textu",
+                    "to": "příprava tiskopisu",
+                    "score": [
+                        0.6263482570648193
+                    ]
+                },
+                {
+                    "from": "příprava textu",
+                    "to": "sazečské techniky",
+                    "score": [
+                        0.023398317396640778
+                    ]
+                },
+                {
+                    "from": "příprava textu",
+                    "to": "vizuální plánování",
+                    "score": [
+                        0.053745560348033905
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "text": " <b>Začali večeřeti, ale nedali tomu mnoho. Mísy byly odnášeny skoro netknuty. Paní Jadwiga pobízela k jídlu — leč každý se vymlouval.</b> ",
+        "annotator_topics": [
+            "jedení",
+            "večeření"
+        ],
+        "generated_topics": [
+            "nechuť k jídlu",
+            "společenská večeře",
+            "paní Jadwiga"
+        ],
+        "scoring": [
+            [
+                {
+                    "from": "jedení",
+                    "to": "nechuť k jídlu",
+                    "score": [
+                        0.026237143203616142
+                    ]
+                },
+                {
+                    "from": "jedení",
+                    "to": "společenská večeře",
+                    "score": [
+                        0.030792737379670143
+                    ]
+                },
+                {
+                    "from": "jedení",
+                    "to": "paní Jadwiga",
+                    "score": [
+                        0.03410639613866806
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "večeření",
+                    "to": "nechuť k jídlu",
+                    "score": [
+                        0.024809734895825386
+                    ]
+                },
+                {
+                    "from": "večeření",
+                    "to": "společenská večeře",
+                    "score": [
+                        0.7002363801002502
+                    ]
+                },
+                {
+                    "from": "večeření",
+                    "to": "paní Jadwiga",
+                    "score": [
+                        0.03980324789881706
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "text": " <b>Letha od narození Syna božího tisíczeho pětistého dvadczateho šestého tu neděli po S. Ondřeji stala se jest smluva mezi Váczlawem Hasíkem strany jedné a mezi Jakubem, synem Ondřejovým vinařem strany druhé taková, že Jakub již psaný má slúžiti z řemesla mistru Váczlavovi Hasíkovi z řemesla v leth pořád zběhlých a kdy by ta letha dobyl] tehdy mistr Váczlav má jemu sukni kupiti, košili a kabát nohavicze.</b> ",
+        "annotator_topics": [
+            "uzavírání smlouv",
+            "pracovní smlouva"
+        ],
+        "generated_topics": [
+            "smlouva mezi řemeslníky",
+            "oděvní odměna",
+            "historický dokument"
+        ],
+        "scoring": [
+            [
+                {
+                    "from": "uzavírání smlouv",
+                    "to": "smlouva mezi řemeslníky",
+                    "score": [
+                        0.5442569851875305
+                    ]
+                },
+                {
+                    "from": "uzavírání smlouv",
+                    "to": "oděvní odměna",
+                    "score": [
+                        0.06680986285209656
+                    ]
+                },
+                {
+                    "from": "uzavírání smlouv",
+                    "to": "historický dokument",
+                    "score": [
+                        0.022903259843587875
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "pracovní smlouva",
+                    "to": "smlouva mezi řemeslníky",
+                    "score": [
+                        0.588313639163971
+                    ]
+                },
+                {
+                    "from": "pracovní smlouva",
+                    "to": "oděvní odměna",
+                    "score": [
+                        0.35570964217185974
+                    ]
+                },
+                {
+                    "from": "pracovní smlouva",
+                    "to": "historický dokument",
+                    "score": [
+                        0.022966774180531502
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "text": " <b>Zovou se též raci, jsou pokryty štítem na hrudihlavě a mají oči na pohyblivých násadcích. Dělí se na 3 čeledě: 1.</b> ",
+        "annotator_topics": [
+            "biologie",
+            "anatomie raků"
+        ],
+        "generated_topics": [
+            "rakovití",
+            "třídění čeledí",
+            "pohyblivé oči"
+        ],
+        "scoring": [
+            [
+                {
+                    "from": "biologie",
+                    "to": "rakovití",
+                    "score": [
+                        0.06727328896522522
+                    ]
+                },
+                {
+                    "from": "biologie",
+                    "to": "třídění čeledí",
+                    "score": [
+                        0.047939080744981766
+                    ]
+                },
+                {
+                    "from": "biologie",
+                    "to": "pohyblivé oči",
+                    "score": [
+                        0.07518752664327621
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "anatomie raků",
+                    "to": "rakovití",
+                    "score": [
+                        0.042477041482925415
+                    ]
+                },
+                {
+                    "from": "anatomie raků",
+                    "to": "třídění čeledí",
+                    "score": [
+                        0.02986835315823555
+                    ]
+                },
+                {
+                    "from": "anatomie raků",
+                    "to": "pohyblivé oči",
+                    "score": [
+                        0.02440185286104679
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "text": " <b>Při vychovávání mládeže a ve školách je cvičení těla tak podstatné a potřebné, jako cvičení ducha. U dítěte jest vyvinutí těla přednější, nežli vyvinutí ducha.</b> ",
+        "annotator_topics": [
+            "fyzické cvičení těla",
+            "cvičení duch",
+            "výchova mládeže"
+        ],
+        "generated_topics": [
+            "výchova mládeže",
+            "školní vzdělávání",
+            "tělesný rozvoj",
+            "duchovní rozvoj"
+        ],
+        "scoring": [
+            [
+                {
+                    "from": "fyzické cvičení těla",
+                    "to": "výchova mládeže",
+                    "score": [
+                        0.1911640465259552
+                    ]
+                },
+                {
+                    "from": "fyzické cvičení těla",
+                    "to": "školní vzdělávání",
+                    "score": [
+                        0.22942014038562775
+                    ]
+                },
+                {
+                    "from": "fyzické cvičení těla",
+                    "to": "tělesný rozvoj",
+                    "score": [
+                        0.5031639337539673
+                    ]
+                },
+                {
+                    "from": "fyzické cvičení těla",
+                    "to": "duchovní rozvoj",
+                    "score": [
+                        0.03797409310936928
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "cvičení duch",
+                    "to": "výchova mládeže",
+                    "score": [
+                        0.16717854142189026
+                    ]
+                },
+                {
+                    "from": "cvičení duch",
+                    "to": "školní vzdělávání",
+                    "score": [
+                        0.2914063632488251
+                    ]
+                },
+                {
+                    "from": "cvičení duch",
+                    "to": "tělesný rozvoj",
+                    "score": [
+                        0.030133752152323723
+                    ]
+                },
+                {
+                    "from": "cvičení duch",
+                    "to": "duchovní rozvoj",
+                    "score": [
+                        0.5424386262893677
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "výchova mládeže",
+                    "to": "výchova mládeže",
+                    "score": [
+                        0.9709933996200562
+                    ]
+                },
+                {
+                    "from": "výchova mládeže",
+                    "to": "školní vzdělávání",
+                    "score": [
+                        0.19441379606723785
+                    ]
+                },
+                {
+                    "from": "výchova mládeže",
+                    "to": "tělesný rozvoj",
+                    "score": [
+                        0.0658840462565422
+                    ]
+                },
+                {
+                    "from": "výchova mládeže",
+                    "to": "duchovní rozvoj",
+                    "score": [
+                        0.08601509034633636
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "text": " <b>V záchvatu vděčnosti Eduard Poppe ho objal a políbil. Laube ho doprovodil ke dveřím, potom v kanceláři sám, nepřipustiv k tomu vrátného, pomohl mu obléci kožich a potom, když Eduard Poppe odešel a zmizel na ulici, rychle přistoupil ke Krüdlichovi. — Zítra ráno, pošle-li sem Eduard Poppe někoho, nebudu doma, slyšíte? — A přijde-li sám? — To je lhostejné.</b> ",
+        "annotator_topics": [
+            "homoerotické vztahy"
+        ],
+        "generated_topics": [
+            "vděčnost",
+            "přátelské chování",
+            "zpráva pro vrátného"
+        ],
+        "scoring": [
+            [
+                {
+                    "from": "homoerotické vztahy",
+                    "to": "vděčnost",
+                    "score": [
+                        0.18654069304466248
+                    ]
+                },
+                {
+                    "from": "homoerotické vztahy",
+                    "to": "přátelské chování",
+                    "score": [
+                        0.02370544709265232
+                    ]
+                },
+                {
+                    "from": "homoerotické vztahy",
+                    "to": "zpráva pro vrátného",
+                    "score": [
+                        0.024579055607318878
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "text": " <b>Kdy, nelze zjistiti, snad v bouřích husitských; aspoň v r. 1452. připomíná se jako zřícenina. Držitely panství byli později páni z Pernštýna — kteří asi přenesli sídlo s nepřístupného temene skalního do útulného údolí v Jimramově, vystavivše tam pěkný zámek, — později páni z Náchoda a konečně od 18. století hrabata z Belcredi.</b> ",
+        "annotator_topics": [
+            "historická událost",
+            "vývoj panství",
+            "šlechtické rody"
+        ],
+        "generated_topics": [
+            "husitské bouře",
+            "páni z Pernštýna",
+            "páni z Náchoda",
+            "hrabata z Belcredi"
+        ],
+        "scoring": [
+            [
+                {
+                    "from": "historická událost",
+                    "to": "husitské bouře",
+                    "score": [
+                        0.02857697568833828
+                    ]
+                },
+                {
+                    "from": "historická událost",
+                    "to": "páni z Pernštýna",
+                    "score": [
+                        0.02501184307038784
+                    ]
+                },
+                {
+                    "from": "historická událost",
+                    "to": "páni z Náchoda",
+                    "score": [
+                        0.02840336225926876
+                    ]
+                },
+                {
+                    "from": "historická událost",
+                    "to": "hrabata z Belcredi",
+                    "score": [
+                        0.023918502032756805
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "vývoj panství",
+                    "to": "husitské bouře",
+                    "score": [
+                        0.023326141759753227
+                    ]
+                },
+                {
+                    "from": "vývoj panství",
+                    "to": "páni z Pernštýna",
+                    "score": [
+                        0.4022331237792969
+                    ]
+                },
+                {
+                    "from": "vývoj panství",
+                    "to": "páni z Náchoda",
+                    "score": [
+                        0.3911949396133423
+                    ]
+                },
+                {
+                    "from": "vývoj panství",
+                    "to": "hrabata z Belcredi",
+                    "score": [
+                        0.027945777401328087
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "šlechtické rody",
+                    "to": "husitské bouře",
+                    "score": [
+                        0.07819753885269165
+                    ]
+                },
+                {
+                    "from": "šlechtické rody",
+                    "to": "páni z Pernštýna",
+                    "score": [
+                        0.02566532790660858
+                    ]
+                },
+                {
+                    "from": "šlechtické rody",
+                    "to": "páni z Náchoda",
+                    "score": [
+                        0.026910006999969482
+                    ]
+                },
+                {
+                    "from": "šlechtické rody",
+                    "to": "hrabata z Belcredi",
+                    "score": [
+                        0.026972094550728798
+                    ]
+                }
+            ]
+        ]
+    },
+    {
+        "text": " <b>Ale až poslední nádeník, kterýkoli člověk bez zaměstnání, každá kuchařka, zničený sedlák uvidí — nikoli z novin, ale na vlastní oči — že se proletářská vláda nekoří před bohatstvím, ale pomáhá chudině, že se tato vláda nezastavuje před revolučními kroky, že odbírá nadbytečné plodiny u darmojedů a dává je hladovým, že usídluje mocí nebydlící do bytů boháčů, že nutí platit bohaté za mléko, ale nedává jim ni jediné kapky mléka, pokud jím nejsou zásobeny v dostatečné míře děti všech chu-</b> ",
+        "annotator_topics": [
+            "proletářska revoluce",
+            "marxizmus",
+            "komunizmus",
+            "vykořisťování",
+            "revoluce"
+        ],
+        "generated_topics": [
+            "proletářská vláda",
+            "pomoc chudině",
+            "revoluční kroky",
+            "redistribuce bohatství"
+        ],
+        "scoring": [
+            [
+                {
+                    "from": "proletářska revoluce",
+                    "to": "proletářská vláda",
+                    "score": [
+                        0.7271741032600403
+                    ]
+                },
+                {
+                    "from": "proletářska revoluce",
+                    "to": "pomoc chudině",
+                    "score": [
+                        0.033687252551317215
+                    ]
+                },
+                {
+                    "from": "proletářska revoluce",
+                    "to": "revoluční kroky",
+                    "score": [
+                        0.2516648471355438
+                    ]
+                },
+                {
+                    "from": "proletářska revoluce",
+                    "to": "redistribuce bohatství",
+                    "score": [
+                        0.06434760987758636
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "marxizmus",
+                    "to": "proletářská vláda",
+                    "score": [
+                        0.02352074161171913
+                    ]
+                },
+                {
+                    "from": "marxizmus",
+                    "to": "pomoc chudině",
+                    "score": [
+                        0.023548301309347153
+                    ]
+                },
+                {
+                    "from": "marxizmus",
+                    "to": "revoluční kroky",
+                    "score": [
+                        0.02422627992928028
+                    ]
+                },
+                {
+                    "from": "marxizmus",
+                    "to": "redistribuce bohatství",
+                    "score": [
+                        0.059891726821660995
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "komunizmus",
+                    "to": "proletářská vláda",
+                    "score": [
+                        0.034593142569065094
+                    ]
+                },
+                {
+                    "from": "komunizmus",
+                    "to": "pomoc chudině",
+                    "score": [
+                        0.05785319581627846
+                    ]
+                },
+                {
+                    "from": "komunizmus",
+                    "to": "revoluční kroky",
+                    "score": [
+                        0.04612674564123154
+                    ]
+                },
+                {
+                    "from": "komunizmus",
+                    "to": "redistribuce bohatství",
+                    "score": [
+                        0.08254482597112656
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "vykořisťování",
+                    "to": "proletářská vláda",
+                    "score": [
+                        0.07746969163417816
+                    ]
+                },
+                {
+                    "from": "vykořisťování",
+                    "to": "pomoc chudině",
+                    "score": [
+                        0.022828130051493645
+                    ]
+                },
+                {
+                    "from": "vykořisťování",
+                    "to": "revoluční kroky",
+                    "score": [
+                        0.023551316931843758
+                    ]
+                },
+                {
+                    "from": "vykořisťování",
+                    "to": "redistribuce bohatství",
+                    "score": [
+                        0.03815770521759987
+                    ]
+                }
+            ],
+            [
+                {
+                    "from": "revoluce",
+                    "to": "proletářská vláda",
+                    "score": [
+                        0.023686103522777557
+                    ]
+                },
+                {
+                    "from": "revoluce",
+                    "to": "pomoc chudině",
+                    "score": [
+                        0.0793871134519577
+                    ]
+                },
+                {
+                    "from": "revoluce",
+                    "to": "revoluční kroky",
+                    "score": [
+                        0.1638159155845642
+                    ]
+                },
+                {
+                    "from": "revoluce",
+                    "to": "redistribuce bohatství",
+                    "score": [
+                        0.13615277409553528
+                    ]
+                }
+            ]
+        ]
+    }
+]
+[
+    {
+        "metric_name": "Simple evaluation based on word matching.",
+        "score_list": [
+            0.5,
+            1.0,
+            0.125,
+            0.0,
+            0.16666666666666666,
+            0.0,
+            0.3333333333333333,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "score_total": 0.2125
+    },
+    {
+        "metric_name": "cross-encoder/nli-deberta-v3-base",
+        "score_list": [
+            0.8224527835845947,
+            0.8665915131568909,
+            0.22993306908756495,
+            0.1102612130343914,
+            0.4970201551914215,
+            0.10800169035792351,
+            0.6231531500816345,
+            0.0436650887131691,
+            0.1379842460155487,
+            0.2586940363049507
+        ],
+        "score_total": 0.369775694552809
+    }
+]

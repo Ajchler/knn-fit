@@ -89,35 +89,47 @@ class CrossEncoderMetric(Metric):
         pairs = list(zip([sentence] * len(list2classify), list2classify))
         return self.ce.predict(pairs).tolist()
 
-    def result_json(self, annotator_topics, generated_topics):
-        merged_generated_topics = " ".join(generated_topics)
-        list_scores = self.classify_list(merged_generated_topics, annotator_topics)
+    def result_json(self, annotator_topic, generated_topic):
+        score = self.ce.predict([(annotator_topic, generated_topic)]).tolist()[0]
 
-        scoring_results = []
-        for score, annotator_topic in zip(list_scores, annotator_topics):
-            scoring_result = {
-                "from": merged_generated_topics,
-                "to": annotator_topic,
-                "score": score
-            }
-            scoring_results.append(scoring_result)
-        return scoring_results
+        scoring_result = {
+            "from": annotator_topic,
+            "to": generated_topic,
+            "score": score
+        }
+        return scoring_result
+    
+    def calc_scores(self, annotator_topics, generated_topics):
+        """
+        Compare each annotator topic with all of the generated topics,
+        the aim is to find if the annotator topic is similar to at least one generated topic.                 
+        It might be useful to immidiately find the score with the best match and only keep such score,
+        but for now we will keep all scores.
+        """
+        ce_scores = []
+        for annotator_topic in annotator_topics:
+            topic_scores = []
+            for generated_topic in generated_topics:
+                score = self.result_json(annotator_topic, generated_topic)
+                topic_scores.append(score)
+            ce_scores.append(topic_scores)
+        return ce_scores
 
 
 if __name__ == "__main__":
-    with open("2024-03-22_15-13-18-generated-topics.json", mode="r") as generated_json:
+    with open("2024-03-22_18-16-18-generated-topics.json", mode="r") as topics_json:
         cross_enc = CrossEncoderMetric()
         evaluator = TopicEvaluator(BasicMetric(), cross_enc)
 
-        all_generated = json.load(generated_json)
-        for generated in all_generated:
-            annotator_topics = generated["annotator_topics"]
-            generated_topics = generated["generated_topics"]
+        all_topics = json.load(topics_json)
 
-            ce_score = cross_enc.result_json(annotator_topics, generated_topics)
-            generated["scoring"] = {
-                "ce-score": ce_score
-            }
-        print(json.dumps(all_generated, indent=4, ensure_ascii=False))
-        res = evaluator.get_results(all_generated)
+        for text_topics in all_topics: # text_topics contains generated and annotator topics for one text
+            annotator_topics = text_topics["annotator_topics"]
+            generated_topics = text_topics["generated_topics"]
+
+            ce_scores = cross_enc.calc_scores(annotator_topics, generated_topics)
+
+            text_topics["ce_scores"] = ce_scores
+        print(json.dumps(all_topics, indent=4, ensure_ascii=False))
+        res = evaluator.get_results(all_topics)
         print(res)
