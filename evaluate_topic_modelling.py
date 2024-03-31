@@ -88,18 +88,9 @@ class CrossEncoderMetric1to1(Metric):
             scores.append(max(anotation_scores))
         return np.mean(scores)
 
-    def classify_list(self, sentence, list2classify):
-        pass
-
-    def result_json(self, annotator_topic, generated_topic):
-        score = self.ce.predict([(annotator_topic, generated_topic)]).tolist()[0]
-
-        scoring_result = {
-            "from": annotator_topic,
-            "to": generated_topic,
-            "score": score
-        }
-        return scoring_result
+    def compare_pairs(self, pairs):
+        score = self.ce.predict(pairs).tolist()
+        return score
     
     def calc_scores_for_text(self, annotator_topics, generated_topics):
         """
@@ -109,12 +100,19 @@ class CrossEncoderMetric1to1(Metric):
         but for now we will keep all scores.
         """
         ce_scores = []
-        for annotator_topic in annotator_topics:
-            topic_scores = []
-            for generated_topic in generated_topics:
-                score = self.result_json(annotator_topic, generated_topic)
-                topic_scores.append(score)
-            ce_scores.append(topic_scores)
+        pairs = [(annotator_topic, generated_topic) for annotator_topic in annotator_topics for generated_topic in generated_topics]
+        scores = self.compare_pairs(pairs)
+        for i in range(0, len(annotator_topics)):
+            annotation_scores = []
+            for j in range(0, len(generated_topics)):
+                score = scores[i * len(generated_topics) + j]
+                scoring_result = {
+                    "from": annotator_topics[i],
+                    "to": generated_topics[j],
+                    "score": score
+                }
+                annotation_scores.append(scoring_result)
+            ce_scores.append(annotation_scores)
         return ce_scores
     
 
