@@ -87,4 +87,4 @@ if __name__ == '__main__':
 
     crs.clear()
     curses.endwin()
-    json.dump(annotated_data, open('annotated_dataset.json', 'w'), indent=4)
+    json.dump(annotated_data, open('annotated_dataset.json', 'w'), indent=4, ensure_ascii=False)
