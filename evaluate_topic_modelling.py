@@ -1,7 +1,8 @@
-import json5
-
+import json
 import numpy as np
-from sentence_transformers import CrossEncoder
+from sentence_transformers import CrossEncoder, SentenceTransformer
+import torch
+from torch import nn
 
 class TopicEvaluator:
     def __init__(self, *args):
@@ -11,13 +12,15 @@ class TopicEvaluator:
         results = []
         for metric in self.metrics:
             score_list = self.create_score_list(metric, generated)
+            # convert list to floats
+            score_list = [float(score) for score in score_list]
             result = {
                 "metric_name": metric.name,
                 "score_list": score_list,
                 "score_total": metric.calculate_total_score(score_list)
             }
             results.append(result)
-        return json5.dumps(results, indent=4, ensure_ascii=False)
+        return json.dumps(results, indent=4, ensure_ascii=False)
 
     @staticmethod
     def create_score_list(metric, generated):
@@ -115,6 +118,55 @@ class CrossEncoderMetric1to1(Metric):
             ce_scores.append(annotation_scores)
         return ce_scores
 
+class MLMSimilarity1to1(Metric):
+    name = "mlm-cosine-similarities - 1 to 1 matching."
+
+    def __init__(self):
+        self.model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
+        self.cosine_similarity = nn.CosineSimilarity(dim=2)
+
+    def calculate_matching_score(self, annotator_topics, generated_topics) -> float:
+        scores = []
+        for annotator_topic in annotator_topics:
+            anotation_scores = []
+            for generated_topic in generated_topics:
+                anotation_score = self.compare_pairs([annotator_topic], [generated_topic])
+                anotation_scores.append(anotation_score)
+            scores.append(max(anotation_scores))
+        return np.mean(scores)
+
+    def compare_pairs(self, annotator_topics, generated_topics):
+        annotator_topics_embedding = self.model.encode(annotator_topics)
+        annotator_topics_embedding = torch.tensor(np.array(annotator_topics_embedding))
+        annotator_topics_embedding = annotator_topics_embedding.reshape(annotator_topics_embedding.size(0), 1, -1)
+        generated_topics_embedding = self.model.encode(generated_topics)
+        generated_topics_embedding = torch.tensor(np.array(generated_topics_embedding))
+        generated_topics_embedding = generated_topics_embedding.reshape(1, generated_topics_embedding.size(0), -1)
+        similarity = self.cosine_similarity(annotator_topics_embedding, generated_topics_embedding)
+        return similarity
+
+    def calc_scores_for_text(self, annotator_topics, generated_topics):
+        """
+        Compare each annotator topic with all of the generated topics,
+        the aim is to find if the annotator topic is similar to at least one generated topic.
+        It might be useful to immidiately find the score with the best match and only keep such score,
+        but for now we will keep all scores.
+        """
+        ce_scores = []
+        scores = self.compare_pairs(annotator_topics, generated_topics)
+        for i in range(0, len(annotator_topics)):
+            annotation_scores = []
+            for j in range(0, len(generated_topics)):
+                score = scores[i][j]
+                scoring_result = {
+                    "from": annotator_topics[i],
+                    "to": generated_topics[j],
+                    "score": score.item()
+                }
+                annotation_scores.append(scoring_result)
+            ce_scores.append(annotation_scores)
+        return ce_scores
+
 
 class CrossEncoderMetric(Metric):
     # This model was chosen because it has best score on MNLI task
@@ -152,7 +204,8 @@ if __name__ == "__main__":
     with open("2024-03-31_23-48-17-generated-topics.json", mode="r") as topics_json:
         cross_enc_1to1 = CrossEncoderMetric1to1()
         cross_enc = CrossEncoderMetric()
-        evaluator = TopicEvaluator(BasicMetric(), cross_enc, cross_enc_1to1)
+        mlm_cos_sim = MLMSimilarity1to1()
+        evaluator = TopicEvaluator(BasicMetric(), cross_enc, cross_enc_1to1, mlm_cos_sim)
 
         all_topics = json.load(topics_json)
         all_topics = [text_topics for text_topics in all_topics if len(text_topics["annotator_topics"]) != 0]
@@ -165,10 +218,12 @@ if __name__ == "__main__":
 
             ce_scores_1to1 = cross_enc_1to1.calc_scores_for_text(annotator_topics, generated_topics)
             ce_scores = cross_enc.calc_scores_for_text(annotator_topics, generated_topics)
+            mlm_scores_1to1 = mlm_cos_sim.calc_scores_for_text(annotator_topics, generated_topics)
 
             text_topics["scoring"] = {
                 "ce_scores_1to1": ce_scores_1to1,
-                "ce_scores": ce_scores
+                "ce_scores": ce_scores,
+                "mlm_scores_1to1": mlm_scores_1to1
             }
 
         # print(json.dumps(all_topics_clean, indent=4, ensure_ascii=False))
