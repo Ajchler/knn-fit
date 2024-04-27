@@ -26,13 +26,27 @@ class MLMTopicEvaluator:
 if __name__ == "__main__":
     evaluator = MLMTopicEvaluator()
     data = json.load(open('gold_annotated_dataset.json', 'r'))
+    scores_dict = {}
     i = 0
     for d in data:
         i += 1
         text = data[d]['text']
         topics = []
+        labels = []
         for t in data[d]['topics']:
             topics.append(t)
-
+            labels.append(data[d]['topics'][t])
+        scores_dict[d] = {}
+        scores_dict[d]['text'] = text
+        scores = []
         similarities = evaluator.get_similarity(text, topics)
-        print(similarities)
+        for t, s in zip(topics, similarities):
+            topic_dict = {}
+            topic_dict['topic'] = t
+            topic_dict['similarity'] = s.item()
+            topic_dict['label'] = labels[topics.index(t)]
+            scores.append(topic_dict)
+        scores_dict[d]['scores'] = scores
+
+    json.dump(scores_dict, open('out_mlm_cos_similarity_scores.json', 'w'), indent=4, ensure_ascii=False)
+
