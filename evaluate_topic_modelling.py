@@ -149,16 +149,19 @@ class CrossEncoderMetric(Metric):
 
 
 if __name__ == "__main__":
-    with open("2024-03-22_18-16-18-generated-topics.json", mode="r") as topics_json:
+    with open("2024-03-31_23-48-17-generated-topics.json", mode="r") as topics_json:
         cross_enc_1to1 = CrossEncoderMetric1to1()
         cross_enc = CrossEncoderMetric()
         evaluator = TopicEvaluator(BasicMetric(), cross_enc, cross_enc_1to1)
 
-        all_topics = json5.load(topics_json)
+        all_topics = json.load(topics_json)
+        all_topics = [text_topics for text_topics in all_topics if len(text_topics["annotator_topics"]) != 0]
+        # text_topics contains generated and annotator topics for one text
+        for i, text_topics in enumerate(all_topics):
 
-        for text_topics in all_topics: # text_topics contains generated and annotator topics for one text
             annotator_topics = text_topics["annotator_topics"]
             generated_topics = text_topics["generated_topics"]
+            print(f"Processing {i}/{len(all_topics)} annotator_topics {annotator_topics}")
 
             ce_scores_1to1 = cross_enc_1to1.calc_scores_for_text(annotator_topics, generated_topics)
             ce_scores = cross_enc.calc_scores_for_text(annotator_topics, generated_topics)
@@ -168,6 +171,9 @@ if __name__ == "__main__":
                 "ce_scores": ce_scores
             }
 
-        print(json5.dumps(all_topics, indent=4, ensure_ascii=False))
+        # print(json.dumps(all_topics_clean, indent=4, ensure_ascii=False))
+        with open("out-eval.json", mode="w") as eval_file:
+            json.dump(all_topics, eval_file, indent=4, ensure_ascii=False)
+
         res = evaluator.get_results(all_topics)
         print(res)

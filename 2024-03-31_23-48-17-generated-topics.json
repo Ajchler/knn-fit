@@ -1,0 +1,2408 @@
+[
+    {
+        "text": " <b>Italie, jmenovitě severní, má od dob Karla IV. s Čechami styky a v době, kdy archa chuděnická vznikla, působil v Praze a v bratrstvu malířském Vlach Romanus z Florencie.</b> ",
+        "annotator_topics": [
+            "mezistátní vztahy",
+            "malířske bratstvo"
+        ],
+        "generated_topics": [
+            "mezistátní vztahy",
+            "malířské bratrstvo"
+        ]
+    },
+    {
+        "text": " <b>Chce-li poznačiti nástroj, ukazuje na domnělý předmět jak se v ruce drží. Tak na př. ukazuje spůsob, jak se drží nůžky, nůž, lžíce, péro, píla, sekera, nebozez a t. d. a jaké pohyby s těmito nástroji se provádějí.</b> ",
+        "annotator_topics": [
+            "nakládání s nástroji",
+            "pohyby s nástroji"
+        ],
+        "generated_topics": [
+            "nakládání s nástroji",
+            "pohyby s nástroji"
+        ]
+    },
+    {
+        "text": " <b>Při sázení některých složitějších prací je nezbytno, aby si sazeč ujasnil celkový dojem hotového tiskopisu a vzájemnou působivost jednotlivých ploch a dekorativních podrobností, čehož nejlépe lze dosíci zběžným náčrtkem, jakýmsi plánem, podporujícím sazečovu představivost, a mnozí akcidenčníci si i provedení obyčejného insertu zběžně načrtnou před započetím sazby nebo po obsazení hlavních řádek.</b> ",
+        "annotator_topics": [
+            "typografie",
+            "grafický design",
+            "sazba textu",
+            "příprava textu"
+        ],
+        "generated_topics": [
+            "sazební proces",
+            "vizuální plánování",
+            "akcidenční sazba"
+        ]
+    },
+    {
+        "text": " <b>Začali večeřeti, ale nedali tomu mnoho. Mísy byly odnášeny skoro netknuty. Paní Jadwiga pobízela k jídlu — leč každý se vymlouval.</b> ",
+        "annotator_topics": [
+            "jedení",
+            "večeření"
+        ],
+        "generated_topics": [
+            "nedostatečná chuť k jídlu",
+            "večeře",
+            "vymlouvání se"
+        ]
+    },
+    {
+        "text": " <b>Letha od narození Syna božího tisíczeho pětistého dvadczateho šestého tu neděli po S. Ondřeji stala se jest smluva mezi Váczlawem Hasíkem strany jedné a mezi Jakubem, synem Ondřejovým vinařem strany druhé taková, že Jakub již psaný má slúžiti z řemesla mistru Váczlavovi Hasíkovi z řemesla v leth pořád zběhlých a kdy by ta letha dobyl] tehdy mistr Váczlav má jemu sukni kupiti, košili a kabát nohavicze.</b> ",
+        "annotator_topics": [
+            "uzavírání smlouv",
+            "pracovní smlouva"
+        ],
+        "generated_topics": [
+            "smlouva mezi řemeslníky",
+            "oděvní odměna",
+            "historický dokument"
+        ]
+    },
+    {
+        "text": " <b>Zovou se též raci, jsou pokryty štítem na hrudihlavě a mají oči na pohyblivých násadcích. Dělí se na 3 čeledě: 1.</b> ",
+        "annotator_topics": [
+            "biologie",
+            "anatomie raků"
+        ],
+        "generated_topics": [
+            "rakovití",
+            "čeledě raců",
+            "pohyblivé násadce očí"
+        ]
+    },
+    {
+        "text": " <b>Při vychovávání mládeže a ve školách je cvičení těla tak podstatné a potřebné, jako cvičení ducha. U dítěte jest vyvinutí těla přednější, nežli vyvinutí ducha.</b> ",
+        "annotator_topics": [
+            "fyzické cvičení těla",
+            "cvičení duch",
+            "výchova mládeže"
+        ],
+        "generated_topics": [
+            "výchova mládeže",
+            "tělesné cvičení",
+            "duchovní vzdělávání"
+        ]
+    },
+    {
+        "text": " <b>V záchvatu vděčnosti Eduard Poppe ho objal a políbil. Laube ho doprovodil ke dveřím, potom v kanceláři sám, nepřipustiv k tomu vrátného, pomohl mu obléci kožich a potom, když Eduard Poppe odešel a zmizel na ulici, rychle přistoupil ke Krüdlichovi. — Zítra ráno, pošle-li sem Eduard Poppe někoho, nebudu doma, slyšíte? — A přijde-li sám? — To je lhostejné.</b> ",
+        "annotator_topics": [
+            "homoerotické vztahy"
+        ],
+        "generated_topics": [
+            "vděčnost",
+            "přátelské chování",
+            "zpráva pro vrátného"
+        ]
+    },
+    {
+        "text": " <b>Kdy, nelze zjistiti, snad v bouřích husitských; aspoň v r. 1452. připomíná se jako zřícenina. Držitely panství byli později páni z Pernštýna — kteří asi přenesli sídlo s nepřístupného temene skalního do útulného údolí v Jimramově, vystavivše tam pěkný zámek, — později páni z Náchoda a konečně od 18. století hrabata z Belcredi.</b> ",
+        "annotator_topics": [
+            "historická událost",
+            "vývoj panství",
+            "šlechtické rody"
+        ],
+        "generated_topics": [
+            "husitské bouře",
+            "panství Pernštejnů",
+            "zámek v Jimramově",
+            "hrabata z Belcredi"
+        ]
+    },
+    {
+        "text": " <b>Ale až poslední nádeník, kterýkoli člověk bez zaměstnání, každá kuchařka, zničený sedlák uvidí — nikoli z novin, ale na vlastní oči — že se proletářská vláda nekoří před bohatstvím, ale pomáhá chudině, že se tato vláda nezastavuje před revolučními kroky, že odbírá nadbytečné plodiny u darmojedů a dává je hladovým, že usídluje mocí nebydlící do bytů boháčů, že nutí platit bohaté za mléko, ale nedává jim ni jediné kapky mléka, pokud jím nejsou zásobeny v dostatečné míře děti všech chu-</b> ",
+        "annotator_topics": [
+            "proletářska revoluce",
+            "marxizmus",
+            "komunizmus",
+            "vykořisťování",
+            "revoluce"
+        ],
+        "generated_topics": [
+            "proletářská vláda",
+            "pomoc chudině",
+            "revoluční kroky",
+            "redistribuce bohatství"
+        ]
+    },
+    {
+        "text": " <b>K tomu konci, aby se odklizovaly výkaly, užíti lze také soustavy odvážení jich.1) V městech, městečkách a uzavřených osadách budiž způsob, jakýmž se žumpy mají vyprazdňovati, upraven předpisy v oboru policie místní vydanými.</b> ",
+        "annotator_topics": [
+            "vyprazdňování žump",
+            "předpisy o vyprazdňování žump",
+            "odklizovaní výkalů"
+        ],
+        "generated_topics": [
+            "odklízení výkalů",
+            "městské předpisy",
+            "policie místní"
+        ]
+    },
+    {
+        "text": " <b>Neleželi tam ovšem všichni předkové. Byl to někdy četný rod vladycký. V době vojen svolávali se heslem „Grady“ a v erbu, pokládajíce se za lepší jiných vladyků, kteří ne vždy měli právo k erbu, měli „tupou podkovu.“ V roku 1331 pod Plovci postříleli němečtí lučištníci čtyřiasedmdesát bojovníků z Bohdance na blatech, a zachránil se toliko jediný Vojtěch, příjmím Tur, kterému král Vladislav Lokietek po porážce Němců zvláštním privilejem potvrdil erb a zboží Bohdanecké.</b> ",
+        "annotator_topics": [
+            "vraždení pod Plovci",
+            "rodinný erby",
+            "rody"
+        ],
+        "generated_topics": [
+            "rodová historie",
+            "erb a privilegia",
+            "vojenské střety"
+        ]
+    },
+    {
+        "text": " <b>A tak gíme ċaſto zhreſſili proti Bohu, neměwſſe prawé wjry, prawé nadege a prawé láſky k Bohu; proti 3*</b> ",
+        "annotator_topics": [
+            "boží přikázání"
+        ],
+        "generated_topics": [
+            "hříchy proti Bohu",
+            "nedostatek víry",
+            "nedostatek lásky"
+        ]
+    },
+    {
+        "text": " <b>Radoval jsem se z toho, že jsem tento druhý anglický list již téměř bez pomoci slovníka dobře mohl pochopiti, pročež tím více byl jsem povzbuzen, abych jak skladbu tak i různé obraty této zvláštní mluvy sobě osvojil.</b> ",
+        "annotator_topics": [
+            "Radost z učení se jazyka",
+            "Radost z porozumění anglickému jazyku"
+        ],
+        "generated_topics": [
+            "učení anglického jazyka",
+            "použití slovníku",
+            "osvojení slovní zásoby"
+        ]
+    },
+    {
+        "text": " <b>Koprník dosáhl dvacátého prvního roku a konal svá pozorování v Krakově s hvězdářem Vojtěchem Brudzewskim, když Krištof Kolumbus objevil Ameriku.</b> ",
+        "annotator_topics": [
+            "Život Mikuláše Koperníka"
+        ],
+        "generated_topics": [
+            "Koprníkova pozorování",
+            "objev Ameriky",
+            "Krakov"
+        ]
+    },
+    {
+        "text": " <b>Vzděl. hospodářské kursy Hospodyňský třínedělní kurs Použití elektř. v prům. a dom. 6 odborných kursů!) 10 přednáškových kursů3) 11 odborných kursů4)</b> ",
+        "annotator_topics": [
+            "hospodářstsví",
+            "elektřina",
+            "kurs"
+        ],
+        "generated_topics": [
+            "vzdělávací kurzy",
+            "hospodyňský kurs",
+            "elektrické použití"
+        ]
+    },
+    {
+        "text": " <b>Ale to je pouze pohyb zdánlivý; právě naopak: jste to vy, kteří se pohybujete a opisujete kruh kol něho.</b> ",
+        "annotator_topics": [
+            "filozofie",
+            "metafora"
+        ],
+        "generated_topics": [
+            "zdánlivý pohyb",
+            "subjektivní vnímání"
+        ]
+    },
+    {
+        "text": " <b>Jan Jáchym Winckelmann, narozený 1717 v Stendalu v Branibořích, přišel roku 1755 do Říma a žil pak trvale v Italii do roku 1768, kdy byl v Terstu zavražděn.</b> ",
+        "annotator_topics": [
+            "život v 18. století"
+        ],
+        "generated_topics": [
+            "život Jana Winckelmanna",
+            "pobyt v Itálii",
+            "vražda v Terstu"
+        ]
+    },
+    {
+        "text": " <b>Německá věda nepomohla Lvu Nikolajeviči, protože požadavky, jež on na tuto vědu kladl, byly příliš vysoké.</b> ",
+        "annotator_topics": [
+            "Vědecké bádání Tolstého",
+            "Výzkum Lva Nikolajeviče Tolstého"
+        ],
+        "generated_topics": [
+            "německé bádání",
+            "požadavky Tolstého"
+        ]
+    },
+    {
+        "text": "Počet stran napíšeme podle posledního čísla v knize vytištěného. Při dílech vícesvazkových počet stranse neuvádí. <b>V místě, kde mají býti na hlavním lístku zapsány přílohy, napíšeme souhrnný počet všech příloh, tabulek, map, nákresů a podobizen, a to jenom tehdy, když nejsou započteny ve stránkách knihy samé.</b> ",
+        "annotator_topics": [
+            "Návod ke knižním typografickým pravidlům",
+            "Přehled typografických pravidel pro tištěné knihy"
+        ],
+        "generated_topics": [
+            "záznam o knize",
+            "počet stran",
+            "přílohy a tabulky"
+        ]
+    },
+    {
+        "text": " <b>Tato modlitba koná se při následujících zastaveních s upomínkou na duše v očistci, a modli se Otče náš a Zdrávas Maria.</b> ",
+        "annotator_topics": [
+            "výzva k modlitbě za duše v očistci"
+        ],
+        "generated_topics": [
+            "modlitba za duše",
+            "očistec",
+            "Otče náš a Zdrávas Maria"
+        ]
+    },
+    {
+        "text": " <b>Byl u nás učedník, hlupák, že mu nebylo rovno. K ničemu dobrej, leda k házení betonu, nosení vody nebo točení klikou.</b> ",
+        "annotator_topics": [
+            "Pracovní neschopnost učedníka"
+        ],
+        "generated_topics": [
+            "kvalifikace učedníka",
+            "manuální práce",
+            "kritika schopností"
+        ]
+    },
+    {
+        "text": " <b>Zároveň hlásí se tu však i jiné, spíše domorodé složky cítění romantického. Především vřelé hodnocení rozmanitých společenských a stavovských řádů, které vyrůstaly z dějinné tradice místní a byly vážně ohroženy nivellisující vlnou osvícenského absolutismu a jeho suše ustrojeným duchem.</b> ",
+        "annotator_topics": [
+            "sociální cítění",
+            "tradice"
+        ],
+        "generated_topics": [
+            "romantické cítění",
+            "společenské řády",
+            "osvícenský absolutismus"
+        ]
+    },
+    {
+        "text": " <b>Giovanni Pierluigi Sante, zván dle svého rodiště da Palestrina (* r. 1514), byl kapelníkem v různých chrámech římských (St. Giovanni v Lateraně, St. Maria Maggiore a zemř. jako kapelník chrámu sv. Petra r. 1594.</b> ",
+        "annotator_topics": [
+            "kapelník v 16. století",
+            "italský kapelník"
+        ],
+        "generated_topics": [
+            "italský hudební skladatel",
+            "kapelník v chrámech",
+            "Giovanni Pierluigi da Palestrina"
+        ]
+    },
+    {
+        "text": " <b>Oddělení V/7: Přednosta: Alfons Nováček, MVDr, odb. rada. Zástupce: Jindřich Hyhlík, MVDr, min. rada.</b> ",
+        "annotator_topics": [
+            "ministerská rada"
+        ],
+        "generated_topics": [
+            "oddělení V/7",
+            "vedoucí pracovníci",
+            "zdravotnická správa"
+        ]
+    },
+    {
+        "text": " <b>Prodaná nevěsta. 285.80. Princezna Pampeliška. 296.10. Láska a smrt. Odp. 556.20. Psohlavci. 1619.16. Bajaja.</b> ",
+        "annotator_topics": [
+            "Divadelní hry",
+            "Literární díla"
+        ],
+        "generated_topics": [
+            "literární díla",
+            "ceny knih",
+            "česká kultura"
+        ]
+    },
+    {
+        "text": " <b>hocha umeješ, v hájovně by ani to pořádně nedovedli — a dej mu něco čistého, od Tondy...“ A když doktor Staněk odejel, ulehčil si pan lesní poznámkou: „Ty, Roberte, že je to jeho táta.“ „Není,“ odsekl Robert, ale ve vší dobrotě, „ten by tak pěkně a otevřeně nejednal ... a k dítěti by se choval jináč,“ mínil ten hluboce citlivý soudce .. .</b> ",
+        "annotator_topics": [
+            "péče o dítě"
+        ],
+        "generated_topics": [
+            "péče o dítě",
+            "lesní hájovna",
+            "rodinné vztahy"
+        ]
+    },
+    {
+        "text": " <b>ALLMERS Hraje si tam někde dole. BORGHEIM Opravdu, hraje si nyní? Dříve obyčejně se jenom učil nebo četl v pokojíku.</b> ",
+        "annotator_topics": [],
+        "generated_topics": [
+            "dětské hry",
+            "změna chování",
+            "vzdělávací aktivity"
+        ]
+    },
+    {
+        "text": " <b>Palacký, výslovně napsal o době ss. Cyrilla a Methoda: »V pokřesťanění záležela oné doby (IX. věku) životní otázka všech národů slo-</b> ",
+        "annotator_topics": [
+            "citát Palackého o době Cyrila a Metoděje"
+        ],
+        "generated_topics": [
+            "pokřesťanění národů",
+            "doba Cyrilla a Methoda",
+            "Palackého historické zápisky"
+        ]
+    },
+    {
+        "text": " <b>Mimo to byla široce rozvětvena práce směřující ke přípravě bolševicky školených a vědecky kvalifikovaných filosofických kádrů, stojících na výši »současné vědy« a »stranou formulovaných úloh«, o čemž svědčí především dnešní stav aktivních spolupracovníků hlavního filosofického orgánu strany, který čítá 85 zcela zapracovaných chovanců zmíněného Institutu.</b> ",
+        "annotator_topics": [
+            "příprava bolševických filosofů"
+        ],
+        "generated_topics": [
+            "příprava filosofických kádrů",
+            "bolševické školení",
+            "vědecká kvalifikace"
+        ]
+    },
+    {
+        "text": " <b>Je-li kouření zdraví škodlivé — u mladých lidí jest škodlivé vždycky — jest pití líhových nápojů dvojnásobně škodlivé a nebezpečné. — Proto dnes hnutí proti pití alkoholu — hnutí abstinentní, nabývá takového rozsahu, proto stojí v čele jeho nejlepší a nejjasnější hlavy národa.</b> ",
+        "annotator_topics": [
+            "vyjádření hnutí proti pití alkoholu"
+        ],
+        "generated_topics": [
+            "škodlivost kouření",
+            "škodlivost alkoholu",
+            "abstinenční hnutí"
+        ]
+    },
+    {
+        "text": " <b>Přehlížel jsem úsek ten dne 10. dubna, a jsa velice spokojen dosaženými výsledky, žádal jsem generála Pétaina, aby umožnil Nivelleovi pokračovati v jeho úspěšných akcích po obou stranách Douaumontu.</b> ",
+        "annotator_topics": [
+            "zhodnocení Nivellových akcí v Douaumontu"
+        ],
+        "generated_topics": [
+            "vojenské operace",
+            "generál Pétain",
+            "úspěšné akce"
+        ]
+    },
+    {
+        "text": " <b>To znamená, že i když jest rakouský občan v cizině, pokud rakouským příslušníkem jest, musí se podle tohoto zákona říditi.</b> ",
+        "annotator_topics": [
+            "platnost rakouského zákona"
+        ],
+        "generated_topics": [
+            "rakouské občanství",
+            "právní předpisy",
+            "působnost zákona"
+        ]
+    },
+    {
+        "text": " <b>A když se již blížily vánoce a kníže dlel na lovech ve vsi Zbečně, jednoho dne prý při obědě řekl k lovci, jenž seděl nedaleko od něho za čtvrtým stolem: „Poslyš, Kukato, myslíš, že nevím, že je mezi vámi někdo, který mne hledá zabíti?“ A on, jak byl člověk vznětlivý v řeči, zvolal: „Bůh to daleko odvrať a oko tvé ho nelituj, ať jen hodně brzy zahyne, kdo takové věci strojí.“ Na to kníže: „Ach, milý</b> ",
+        "annotator_topics": [
+            "plánování vraždy kněžího"
+        ],
+        "generated_topics": [
+            "vánoční období",
+            "lov a šlechta",
+            "pokus o vraždu"
+        ]
+    },
+    {
+        "text": " <b>Když chtějí ženich a nevěsta manželství své skrze úřad světský dáti ohlásiti a slavné prohlášení, že k manželství přivolují, před tímto úřadem učiniti, podejtež žádost svou písemně nebo ji dejte sepsati protokolem. § 5.</b> ",
+        "annotator_topics": [
+            "prohlášení manželství před světským úřadem",
+            "ohlášení manželství skrze světský úřad"
+        ],
+        "generated_topics": [
+            "manželské ohlášení",
+            "světský úřad",
+            "písemná žádost"
+        ]
+    },
+    {
+        "text": " <b>Tvoří most mezi J. Š. Bachem a vídeňskými klassiky. Charakteristickým pro Stamitzovu tvorbu jest mistrné vedení bassu a intermitující vedení hlasů ostatních, kterého později zejména využil Beethoven.</b> ",
+        "annotator_topics": [
+            "hudba Stamitze"
+        ],
+        "generated_topics": [
+            "hudební vývoj",
+            "Stamitzova tvorba",
+            "vídeňští klasici"
+        ]
+    },
+    {
+        "text": " <b>Vše na něm bylo drobounké, filigránové: útlounké kosti, oholené vráskovité tváře, ba i bílé zuby, které byly</b> ",
+        "annotator_topics": [
+            "popis drobné osoby"
+        ],
+        "generated_topics": [
+            "drobná tělesná stavba",
+            "filigránové rysy",
+            "bílé zuby"
+        ]
+    },
+    {
+        "text": " <b>Kapitán lodi Haddock, jakož i setník pěchoty asi uznávali důvod mé stížnosti a dali mi kabinu pro pasažéry, již jsem sdílel s kapitánem de Witt-Hamerem.</b> ",
+        "annotator_topics": [
+            "změna kabiny na lodi"
+        ],
+        "generated_topics": [
+            "stížnost pasažéra",
+            "sdílení kabiny",
+            "kapitán lodi Haddock"
+        ]
+    },
+    {
+        "text": " <b>Koncem dne bylo hlášeno, že se německá pěchota usadila v některých našich posunutých zákopech v Bois des Caures a v Herbebois.</b> ",
+        "annotator_topics": [
+            "válečné hlášení z Francie"
+        ],
+        "generated_topics": [
+            "německá pěchota",
+            "posunuté zákopy",
+            "Bois des Caures"
+        ]
+    },
+    {
+        "text": " <b>Učinila se domluva s Jusifem Sokopem při celé obci a úplné hromadě v dědině Rychtářově stranivá jeho na obci naší poctivé , kdežto jemu dala obec světničku postavit na obecním místě, ale to místo jeho býti má na ten způsob, že dnes a neb zejtra kdyby se jemu nelíbilo tak sobě bude moci prodat zač bude moct, ale to místo předce obecní věčně zůstane/ Jusif bude povinen do ubce každoročně na penězích, na hotových penězích 3 fl. složiti/ a to jest tomu tak a ne jináč jak se stalo my celá ubec toho všeho naší obecní pečetí stvrzujem, že jest tomu tak ane jináč , jak se stalo v roku 1762. — Při tom sobě vyžádal kósek zahrádky před oknama.</b> ",
+        "annotator_topics": [
+            "domluva s Jusifem Sokopem v dědině Rychtářově"
+        ],
+        "generated_topics": [
+            "obecní dohoda",
+            "pozemkové právo",
+            "finanční povinnosti"
+        ]
+    },
+    {
+        "text": " <b>Voda vedena do 440 kašen, z nichž byly 72 veřejné, ostatní soukromé. Libeň měla vodárnu s vodním pohonem zřízenou ve století 17.; tato stávala v místech nynějšího přístavu na nyní zasypaném rameni vltavském zvaném »mlýnském« a zásobovala Libeň říční vodou.</b> ",
+        "annotator_topics": [
+            "vodárna v obci Libeň",
+            "kašny v obci Libeň"
+        ],
+        "generated_topics": [
+            "vodní zdroje",
+            "veřejné kašny",
+            "historie vodáren"
+        ]
+    },
+    {
+        "text": " <b>V. Sesemann, když ukázal vedle předmětného vědění též existenci nepředmětného vědění a když stanovil omezený a zvláštní význam racionálna, zprostředkujícího a předmětna uvnitř sféry poznání, pokouší se vůbec překonati noetickou antinomii subjektuobjektu pojmem čirého vědění, noeticky předcházejícího i subjekt i objekt a je oba zdůvodňujícího; zvláště pak pomocí kategorie možnosti, která se jeví skrupulosní analysi jakožto logicko-ontologická zprostředkovatelka mezi všeobecností a skutečností.</b> ",
+        "annotator_topics": [
+            "objevy V. Sesemanna"
+        ],
+        "generated_topics": [
+            "noetická antinomie",
+            "čiré vědění",
+            "logicko-ontologická zprostředkovatelka"
+        ]
+    },
+    {
+        "text": " <b>Poněvadž nauka o mnohosti Světů je dílem filosofickým, vystavěným na půdě vědecké a nezávislým nikterak na náboženství, myslili jsme, že je slušné a zároveň nutné, považovati ji jako otázku čistě vědeckou a nevyvolávati víry theologických sporů, jež se vždy ihned pozvednou, jakmile vstoupíme v zápasiště dogmatistů.</b> ",
+        "annotator_topics": [
+            "vědecký charaktér nauky o mnohosti Světů"
+        ],
+        "generated_topics": [
+            "filosofická nauka",
+            "vědecká nezávislost",
+            "teologické spory"
+        ]
+    },
+    {
+        "text": " <b>Konečně nezastaví se organisace lidovýchovná ani u lidových škol, a zajisté i u nás v Čechách bude přikročeno k zbudování vrcholné instituce vzdělávací — lidové universitě, jež by nejintelligentnějším jednotlivcům poskytovala vědeckou výchovu bez požadavků předběžných studií středoškolských.</b> ",
+        "annotator_topics": [
+            "lidové školy a univerzity v Čechách"
+        ],
+        "generated_topics": [
+            "lidové vzdělávání",
+            "lidové školy",
+            "lidová univerzita"
+        ]
+    },
+    {
+        "text": " <b>Normální ženská postava vyznačuje se útlejšími kostmi, okrouhlými formami, plnými, ale ne svislými prsy, širokou kyčlí, bohatým, dlouhým vlasem, živým okem; k tomu patří zdravá, růžová barva kůže, červená</b> ",
+        "annotator_topics": [
+            "popis normální ženské postavy"
+        ],
+        "generated_topics": [
+            "ženská anatomie",
+            "zdravá kůže",
+            "dlouhé vlasy"
+        ]
+    },
+    {
+        "text": " <b>Proč v našich krajinách sluk znenáhla ubývá? (Vysušování lesních bažin.) — 3. Proč vajíčka slučí potřebují ochranného zbarvení?</b> ",
+        "annotator_topics": [
+            "proč ubývá sluk v našich krajinách"
+        ],
+        "generated_topics": [
+            "ochrana vajíček",
+            "ubývání sluků",
+            "vysušování bažin"
+        ]
+    },
+    {
+        "text": " <b>Miluj! Žij v své lásky nebi a neptej se, jak blaho unésti: tím víc má lásky žena zapotřebí čím větší její touha po štěstí!</b> ",
+        "annotator_topics": [
+            "Láska žen",
+            "Touha po štěstí"
+        ],
+        "generated_topics": [
+            "láska",
+            "štěstí",
+            "touha"
+        ]
+    },
+    {
+        "text": " <b>Hlavní význam jeho spočívá v tom, že zdokonalil linkový system a methodu vyučovací. První učil intonaci tónů, kdežto až dosud učili se zpěváci zpěvům pouze dle sluchu pomocí neum.</b> ",
+        "annotator_topics": [
+            "inovace ve výuce zpěvu"
+        ],
+        "generated_topics": [
+            "vzdělávací metody",
+            "linkový systém",
+            "výuka intonace"
+        ]
+    },
+    {
+        "text": " <b>Tehdy Rajskij dal se do historického románu, napsal několik hlav a také ty přečetl v kroužku. Přátelé začali si ho vážit »jako naděje«, chodili s ním v zástupech.</b> ",
+        "annotator_topics": [
+            "Rajsijho psaní románu"
+        ],
+        "generated_topics": [
+            "historický román",
+            "literární kroužek",
+            "společenské ocenění"
+        ]
+    },
+    {
+        "text": " <b>Myslím, že také mnohého sem láká touha spatřiti místo slavného boje proti Tatarům, projevil své mínění Sladomel. — Ovšem, ale nikdo nesmí zapomenouti, že toho vítězství křesťané dobyli na přímluvu Marie Panny, pokračoval Soukal. — O tato hora je velepamátná a není se čemu diviti, že viděla už několikráte pospolu poutníky ze všech zemí slovanských.</b> ",
+        "annotator_topics": [
+            "výklad o památné hoře",
+            "bitva křesťanů s Tatary"
+        ],
+        "generated_topics": [
+            "poutní místo",
+            "boj proti Tatarům",
+            "vítězství křesťanů",
+            "památka Marie Panny"
+        ]
+    },
+    {
+        "text": " <b>Věděl, že proto, a sice právě proto, že jeho srdce je rozdrásáno, nebude nikdo míti s ním slitování.</b> ",
+        "annotator_topics": [
+            "Slitování"
+        ],
+        "generated_topics": [
+            "osamělost",
+            "vnitřní bolest",
+            "absence slitování"
+        ]
+    },
+    {
+        "text": " <b>R. 1640 vzbouřili se Katalonci a byli pokořeni teprv po 12 letech. Mnohem důraznější bylo povstání, k němuž se téhož roku znovu vzchopili po několika marných pokusech předchozích Portugalci.</b> ",
+        "annotator_topics": [
+            "Povstání v 17. století",
+            "Politická situace v 17. století"
+        ],
+        "generated_topics": [
+            "katalánské povstání",
+            "portugalské povstání",
+            "historické události"
+        ]
+    },
+    {
+        "text": "Pokud půjde o pohledávky, které podle očekávané soupisové a depurační normy bude nutno přihlásiti k soupisu a pokud jde o pohledávky, které podle osnovy této normy vůbec z konfiskovaného majetku budou uspokojovány, není třeba podávati žalobu, neboť zmíněná norma bude obsahovati ustanovení o stavení promlčení. <b>Pokud by se ovšem věřitel přímo od Němce (nepřátelské osoby) chtěl domoci uspokojení těch pohledávek, které podle zmíněné normy nebude Fond národní obnovy vypořádati, resp. pokud by se chtěl domoci uspokojení většího než jakého se mu dostane podle této normy, musel by proti odsunutému Němci postupovati normálním způsobem, aby se jeho pohledávání nepromlčelo.</b> Zda výsledek takového sporu bude míti nějaký praktický význam, je ovšem otázkou.",
+        "annotator_topics": [
+            "právo",
+            "následky",
+            "právní postup"
+        ],
+        "generated_topics": [
+            "soupisová a depurační norma",
+            "uspokojení pohledávek",
+            "Fond národní obnovy",
+            "promlčení pohledávek"
+        ]
+    },
+    {
+        "text": " <b>darach L. užívá se v Asii proti svrabu i hlístům. Oleje Aradirachta indica Juss. s výsledkem se užívá proti hlístům.</b> ",
+        "annotator_topics": [
+            "Zahubení škůdců"
+        ],
+        "generated_topics": [
+            "léčba hlístů",
+            "tradiční medicína Asie",
+            "oleje Aradirachta indica"
+        ]
+    },
+    {
+        "text": " <b>Vysvětlení. Předpis tento má platnost jen tehdá, když to zvykem jest nebo užitečno obmezovati pozemky takové.</b> ",
+        "annotator_topics": [
+            "pozemkové právo",
+            "zemské právo",
+            "předpisy o pozemcích"
+        ],
+        "generated_topics": [
+            "platnost předpisu",
+            "omezování pozemků",
+            "zvyk a užitečnost"
+        ]
+    },
+    {
+        "text": " <b>Tu jednou stalo se, že cizí muž do hradu zavítal a pravil tak: „Jdu z daleka. Mám mnohou zkušenosť, za mořem nabytou, za horami.</b> ",
+        "annotator_topics": [
+            "cestování",
+            "vypráveč"
+        ],
+        "generated_topics": [
+            "příběh cizince",
+            "cestování za zkušenostmi",
+            "tajemný příchozí"
+        ]
+    },
+    {
+        "text": " <b>H,ASO, + 6 H = ASH, + 3 H,O H,ASO,+ 8H = AsH, + 4H,O Zn,As, + 3 H,80, = 2 ASH, + 3 Zn80,. Arsenovodík jest plyn bezbarvý, hutnoty 2,69, zápachu upomínajícího na zápach česneku, velice jedovatý.</b> ",
+        "annotator_topics": [
+            "arsenovodík",
+            "plyn",
+            "chemický hodnoty arsenovodíku",
+            "zápach arsenovodíku",
+            "chémie"
+        ],
+        "generated_topics": [
+            "chemické reakce",
+            "vlastnosti arsenovodíku",
+            "toxicita plynu"
+        ]
+    },
+    {
+        "text": " <b>Kdo věří v bezpodmínečnou povinnost a tím také ve svobodu, bude viděti její projev právě v tom, že uzná bezpodmínečnou závaznost mravní povinnosti,</b> ",
+        "annotator_topics": [
+            "poučení",
+            "lidová moudrost",
+            "právo"
+        ],
+        "generated_topics": [
+            "mravní povinnost",
+            "bezpodmínečná závaznost",
+            "projev svobody"
+        ]
+    },
+    {
+        "text": " <b>Žemla šel jako pod vlivem kouzelného pohledu a stanul ve světničce. Paní Šustrová hleděla na něj okamžik, políbila ho znova, tentokráte na ústa, a řekla přitlumeně: »Martinku milý, děkuji vám.</b> ",
+        "annotator_topics": [
+            "poděkování",
+            "líbaní"
+        ],
+        "generated_topics": [
+            "kouzelný pohled",
+            "polibek",
+            "vděčnost"
+        ]
+    },
+    {
+        "text": " <b>Sun mrtvých lun mu udělal a ticho v rose ztekutělé V té očkovat se báseň jal tím roubem žalu za zemřelé</b> ",
+        "annotator_topics": [
+            "poézie",
+            "zármutek",
+            "píseň o smútku"
+        ],
+        "generated_topics": [
+            "poezie",
+            "smutek za zemřelé",
+            "metaforický výraz"
+        ]
+    },
+    {
+        "text": " <b>A hleděl vzhůru k hvězdám zamyšlen, a Nicoletta: „s Bohem!“ zvolala do skuliny, pak vzhledla do výše a sladce šveholila tak svůj dík: „Buď žehnán ten, jenž smilování měl!</b> ",
+        "annotator_topics": [
+            "poézie",
+            "vdečnost"
+        ],
+        "generated_topics": [
+            "pozorování hvězd",
+            "rozloučení Nicoletty",
+            "vděčnost za smilování"
+        ]
+    },
+    {
+        "text": " <b>Zemědělská ústředna filmů a diapositivů, Praha II, Těšnov 65. Státní výzkumný statek, Heřmanův Městec.</b> ",
+        "annotator_topics": [],
+        "generated_topics": [
+            "zemědělská ústředna",
+            "výzkumný statek",
+            "Praha II"
+        ]
+    },
+    {
+        "text": " <b>Ale to znamená také psáti kritiku gymnasia, tedy něco, co už stokrát a víc než stokrát bylo napsáno; a taková práce není ani radostná ani vděčná.</b> ",
+        "annotator_topics": [
+            "školství",
+            "kritika školství"
+        ],
+        "generated_topics": [
+            "kritika gymnasia",
+            "opakované téma",
+            "nedostatek novoty"
+        ]
+    },
+    {
+        "text": " <b>Tu také žně až o 14 dní později začínají než v okresu ostatním. Také se na Koryčansku nedaří réva, kteráž jinak po celém okresu se pěstuje se zdarem.</b> ",
+        "annotator_topics": [
+            "pěstováni",
+            "réva",
+            "sklizeň"
+        ],
+        "generated_topics": [
+            "začátek žní",
+            "pěstování révy",
+            "Koryčansko"
+        ]
+    },
+    {
+        "text": " <b>Právo vlastnické ke jmění fideikomisárnímu rozděleno jest mezi všemi čekanci a mezi tím, kdo každého času fideikomis má.</b> ",
+        "annotator_topics": [
+            "vlastnické právo",
+            "fideikomisářství"
+        ],
+        "generated_topics": [
+            "vlastnické právo",
+            "fideikomis",
+            "dědické právo"
+        ]
+    },
+    {
+        "text": " <b>Není tu téměř duševního života, nálada bývá jako v herně, kde všichni sázejí a žádný nemá větší výhry.</b> ",
+        "annotator_topics": [
+            "pochmúrny prostředí",
+            "slabý duševní život"
+        ],
+        "generated_topics": [
+            "duševní život",
+            "herní nálada",
+            "sázení"
+        ]
+    },
+    {
+        "text": " <b>Byla ovšem ještě dosti slabá, ale hnalo ji to již do lesa. Tam seděla zpola ve stínu, zpola osvětlena, natažena na lehátku s kočárkem, ve kterém byla maličká, vedle sebe.</b> ",
+        "annotator_topics": [
+            "touha",
+            "zotavování"
+        ],
+        "generated_topics": [
+            "pobyt v lese",
+            "odpočinek ve stínu",
+            "péče o dítě"
+        ]
+    },
+    {
+        "text": " <b>Nad šerým hřbitovem se sklání měsíc bdělý a volá z hrobů ven zjev hysterických děv, jež nocí za živa po strmých střechách spěly, co cestou provázel je blouznivý váš zpěv.</b> ",
+        "annotator_topics": [
+            "báseň",
+            "verše",
+            "šerý hřbitov",
+            "voláni z hrobu",
+            "spěv ze záhrobí"
+        ],
+        "generated_topics": [
+            "noční atmosféra",
+            "hřbitovní zjevy",
+            "hysterické děje",
+            "blouznivý zpěv"
+        ]
+    },
+    {
+        "text": " <b>Je-li toho třeba, zejména proto, že od odročení veřejného zasedání uplynula delší doba nebo že se změnilo sestavení senátu, koná se veřejné zasedání znovu.</b> ",
+        "annotator_topics": [
+            "veřejná zasedání",
+            "senát",
+            "právo",
+            "věc veřejná"
+        ],
+        "generated_topics": [
+            "veřejné zasedání",
+            "změna senátu",
+            "odročení zasedání"
+        ]
+    },
+    {
+        "text": " <b>„Jdu ujímat se svého království. Že není z toho světa, uvidíš. Chceš se mnou jíti, matko milená?“ „Chci věčně s tebou být“, mu řekla s duše nadšením a zadumala se pak mimoděk.</b> ",
+        "annotator_topics": [
+            "chtění",
+            "onen svět",
+            "zadumění"
+        ],
+        "generated_topics": [
+            "královské dědictví",
+            "nadpřirozené království",
+            "matčina láska"
+        ]
+    },
+    {
+        "text": " <b>v každé ruce nutno držeti jeden nástroj. Cpátkem, které drží levá ruka, silným tlakem vmáčkne se zlato ke dnu, a aniž by tlak levé ruky povolil, drží se cpátko stále přitisknuté k podkladu.</b> ",
+        "annotator_topics": [
+            "použití cpátka",
+            "cpátko a zlato",
+            "vmáčknutí zlata"
+        ],
+        "generated_topics": [
+            "práce se zlatem",
+            "držení nástrojů",
+            "tlak na podklad"
+        ]
+    },
+    {
+        "text": " <b>Po bojích o Staré Město se Česká národní rada přemístila do místností vojenského velitelství, kde zůstala do skončení bojů.</b> ",
+        "annotator_topics": [
+            "Česká národní rada",
+            "boje",
+            "velitelství"
+        ],
+        "generated_topics": [
+            "boje o Staré Město",
+            "Česká národní rada",
+            "vojenské velitelství"
+        ]
+    },
+    {
+        "text": " <b>a dle potřeby přilíváme k nim vodu neb polévku. Uvařené pak dáme do odcezené polévky, do níž rozkverláme žloutek (bílek se uschová), okořeníme ji květem a sekanou zelenou petržilkou.</b> ",
+        "annotator_topics": [
+            "vaření",
+            "ochucení polévky",
+            "přísady",
+            "složky",
+            "ingredience",
+            "polévka"
+        ],
+        "generated_topics": [
+            "příprava polévky",
+            "použití žloutku",
+            "okořenění jídla"
+        ]
+    },
+    {
+        "text": " <b>První podmínka, abychom měli užitek z intelligence, jest jednota. V mnohonásobnosti „obecného vzdělávání“ našlo se poslední umění, jak zpitoměti a zhovaditi děti.</b> ",
+        "annotator_topics": [
+            "Význam vzdělání",
+            "Význam školství"
+        ],
+        "generated_topics": [
+            "kritika vzdělávacího systému",
+            "důležitost jednoty",
+            "vzdělávání a inteligence"
+        ]
+    },
+    {
+        "text": "vždy činí pověrčiví cizinci, a doufají tedy, že kouzelná moc je přivede zase do Říma zpět. <b>Ze staroslavného „forum romanum“ stalo se během věků — „campo vaccino“, pastvina pro skot, z nynějších náměstí římských stane se během času také něco.</b> ",
+        "annotator_topics": [
+            "záník říše římské",
+            "Proud času"
+        ],
+        "generated_topics": [
+            "pověrčivost cizinců",
+            "forum romanum",
+            "proměny Říma"
+        ]
+    },
+    {
+        "text": " <b>Hledal jsem vysvětlení onoho v knihách, na rytinách, na obrazech. Byl bych strhal na ženách šaty, jen abych něco objevil.</b> ",
+        "annotator_topics": [
+            "Zvědavost",
+            "ženský",
+            "informace"
+        ],
+        "generated_topics": [
+            "hledání vysvětlení",
+            "studium knih",
+            "zkoumání obrazů"
+        ]
+    },
+    {
+        "text": " <b>Philaster Nemyslím pánové; je šlechetná; snad její zrak mne zastřelí, či běl a červeň v její líci uloupí mi srdce: toť vše nebezpečí.</b> ",
+        "annotator_topics": [
+            "uloupení srdce",
+            "šlechetná dáma",
+            "pohled"
+        ],
+        "generated_topics": [
+            "láska",
+            "nebezpečí",
+            "obdiv"
+        ]
+    },
+    {
+        "text": " <b>Vypros víru, naději a lásku, v cnostném životě setrvání; odvrať od nás hlad, mor, též i valku, dej šťastné života skonání!</b> ",
+        "annotator_topics": [
+            "modlitba",
+            "prosba"
+        ],
+        "generated_topics": [
+            "modlitba za ochranu",
+            "životní cnosty",
+            "přání šťastného konce"
+        ]
+    },
+    {
+        "text": " <b>A maršál Marmont dumá a píše Paměti, cejch Jidáše má v čele a vojska prokletí: - Já zradil Ho, On řek to...</b> ",
+        "annotator_topics": [
+            "zrada",
+            "dopis"
+        ],
+        "generated_topics": [
+            "paměti maršála Marmonta",
+            "označení zrady",
+            "vojenské prokletí"
+        ]
+    },
+    {
+        "text": " <b>Řemeslníci, obchodníci, čeládka ani nádeníci nechtěli je přijímat, platy, obchod vázly, zmáhaly se nepořádky a tak r. 1811 (16 3.) vydán finanční patent, jímž tyto bankocetle padly na 1/5 své jmenovité ceny (devalvace).</b> ",
+        "annotator_topics": [
+            "devalvace",
+            "pád ceny",
+            "obchodování",
+            "finančníctví",
+            "1811"
+        ],
+        "generated_topics": [
+            "finanční krize",
+            "devalvace měny",
+            "řemeslníci a obchodníci",
+            "finanční patent 1811"
+        ]
+    },
+    {
+        "text": " <b>Řivnáče v Praze a Bedřicha Grosse v Olomouci knihy sobě vybírati má. Kdo by však chtěl poštou knihy švé dostati, račiž se obrátiti frankovaným listem na jmenovaná kněhkupectví, a přiložiž 3 kr., kterýžto peníz přísluší kněhkupci za práci a obálku, mimo to ještě 6 kr. na kolkovaný list nákladní.</b> ",
+        "annotator_topics": [
+            "proděj knih",
+            "vyřizováni v knihkupectví",
+            "ceny za knihu",
+            "knihy poštou"
+        ],
+        "generated_topics": [
+            "kněhkupectví",
+            "poštovní objednávky",
+            "náklady na zaslání"
+        ]
+    },
+    {
+        "text": " <b>Moderní myšlení od francouzské revoluce je založeno sociálně a historicky a světovou válkou sesílil se tento jeho ráz.</b> ",
+        "annotator_topics": [
+            "moderní myšlení po francouzske revoluci",
+            "založení moderního myšlení",
+            "zesílení myšlení světovou válkou"
+        ],
+        "generated_topics": [
+            "moderní myšlení",
+            "francouzská revoluce",
+            "světová válka"
+        ]
+    },
+    {
+        "text": " <b>Ochranné zařízení vymršťovací schopností. 2. Škodlivost »drátových červů«. V. Úkol. Jak hrobařík pohřbil mrtvou myšku.</b> ",
+        "annotator_topics": [
+            "ochranné zařízení",
+            "úkol"
+        ],
+        "generated_topics": [
+            "ochranné zařízení",
+            "drátoví červi",
+            "pohřbívání myšky"
+        ]
+    },
+    {
+        "text": " <b>Do Nového roku 1920 1. Ministrovi národní obrany . 2. Rozhovor pro Venkov 3. Rozhovor pro Neue Freie Presse</b> ",
+        "annotator_topics": [
+            "zpravodajství",
+            "rozhovory"
+        ],
+        "generated_topics": [
+            "ministr národní obrany",
+            "rozhovory pro média",
+            "Nový rok 1920"
+        ]
+    },
+    {
+        "text": " <b>Úprava vzájemných práv a závazků, vyplývajících z poskytnuté podpory, mezi státem a vlastníky domů. Oddělení 6: Přednosta: Vojtěch Lešetický, Dr. Agenda: Poskytování státní podpory podle zákona o státní podpoře na obytné stavby.</b> ",
+        "annotator_topics": [
+            "zákon o státní podpoře na obytné stavby"
+        ],
+        "generated_topics": [
+            "státní podpora",
+            "vzájemné práva",
+            "obytné stavby"
+        ]
+    },
+    {
+        "text": " <b>Že dědic musí býti způsobilým k dědictví již a toliko v této době (§ 545), vysvětluje se i bez zpětného účinku dostatečně z toho, že jeho zděditelné a zcizitelné právo na dědictví vzniká již v oné době 26).</b> ",
+        "annotator_topics": [
+            "dědictví",
+            "právo na dědictví",
+            "zákony"
+        ],
+        "generated_topics": [
+            "způsobilost k dědictví",
+            "vznik dědického práva",
+            "bez zpětného účinku"
+        ]
+    },
+    {
+        "text": " <b>I. posch.: Přednosta: Karel Radnický, Ing. Referent: R. Pantůček. Agenda: stavební a správa obecního majetku.</b> ",
+        "annotator_topics": [
+            "správa obecního majetku",
+            "stavební agenda"
+        ],
+        "generated_topics": [
+            "stavební agenda",
+            "správa majetku",
+            "obecní úřad"
+        ]
+    },
+    {
+        "text": " <b>Amen. Pozdravena budiž, předrahá krvi Ježíše Krista, která za mne na kříži vylita byla! V nejhlubší pokoře klaním se Tobě. — Ježíši, smiluj se nade mnou!</b> ",
+        "annotator_topics": [
+            "motlidba",
+            "Bible"
+        ],
+        "generated_topics": [
+            "náboženská modlitba",
+            "uctívání Ježíše Krista",
+            "pokora a prosba"
+        ]
+    },
+    {
+        "text": " <b>Stalo se to z návodu předních mistrů Jana Příbrama, Prokopa z Plzně a Petra z Mladenovic, kteří tudy dali na jevo, že byli pustili z mysli všelikou někdejší svou nepřízeň k němu.</b> ",
+        "annotator_topics": [
+            "řemeslnictví",
+            "mistr řemeslnictví"
+        ],
+        "generated_topics": [
+            "mistr Jan Příbram",
+            "Prokop z Plzně",
+            "Petra z Mladenovic",
+            "zapomenutá nepřízeň"
+        ]
+    },
+    {
+        "text": " <b>§ 202. (1) Kdo úmyslně způsobí nebo zvýší nebezpečí zavlečení nebo rozšíření nakažlivé choroby nebo škůdce užitkových rostlin, bude potrestán odnětím svobody až na jeden rok. (2) Odnětím svobody na tři měsíce až dvě léta bude pachatel potrestán, má-li čin uvedený v odstavci 1 za následek rozšíření takové choroby nebo takového škůdce.</b> ",
+        "annotator_topics": [
+            " hospodářství",
+            "zákony"
+        ],
+        "generated_topics": [
+            "trestné činy",
+            "rozšíření nakažlivých chorob",
+            "ochrana užitkových rostlin"
+        ]
+    },
+    {
+        "text": " <b>Vedoucí redaktor: Petr Proser, akt. ředitel. Agenda: Záležitosti administrace Úředního listu Čs. republiky.</b> ",
+        "annotator_topics": [],
+        "generated_topics": [
+            "vedoucí redaktor",
+            "administrace Úředního listu",
+            "Petr Proser"
+        ]
+    },
+    {
+        "text": " <b>Nejobyčejnější úchylka arteriae lingualis jest způsob odstupu. Často bývá v jeden kmen spojena s arteria thyreoidea, jak uvedeno, neb odstupuje i od arteria maxillaris externa.</b> ",
+        "annotator_topics": [
+            "biologie",
+            "lidské telo"
+        ],
+        "generated_topics": [
+            "anatomie jazyka",
+            "odstup arterií",
+            "spoje arterií"
+        ]
+    },
+    {
+        "text": " <b>Cor. 10, 1. Jak druhdy Israelité vítěznou píseň pěli Exod. 15. po vyjití svém z moře rudého. Prohlédá ku krvi beránka, kterou Israelité podvoje a veřeje domů svojich pokropili a tak anděla zhoubce se uchránili.</b> ",
+        "annotator_topics": [
+            "Bible",
+            "Starý Zákon"
+        ],
+        "generated_topics": [
+            "biblické příběhy",
+            "vítězná píseň",
+            "ochrana před andělem"
+        ]
+    },
+    {
+        "text": " <b>I umyla si čistě ruce a obličej, přišla, skromně před princem se uklonila, a když podaný jí střevíček zkusila, hodil se na nožku její jako ulitý- Princ podíval se teprve nyní Popelce do očí a hned poznal krásnou dívku, s níž tančil, a radostí zvolal: »To je pravá moje nevěsta!« Macecha i obě sestry velice se ulekly a zbledly zlostí a závistí; ale princ posadil Popelku před sebe na koně a vesele odjížděl.</b> ",
+        "annotator_topics": [
+            "pohádka"
+        ],
+        "generated_topics": [
+            "pohádkový příběh",
+            "princ a Popelka",
+            "závist a zlost"
+        ]
+    },
+    {
+        "text": " <b>1) Odpustky získáváme za každý zevnější projev úcty, když jdeme kolem kostela nebo kaple kde se chová nejsv. svátost.</b> ",
+        "annotator_topics": [
+            "odpustky",
+            "náboženství",
+            "víra",
+            "nejsvatější svátost"
+        ],
+        "generated_topics": [
+            "odpustky",
+            "projevy úcty",
+            "nejsvětější svátost"
+        ]
+    },
+    {
+        "text": " <b>Ročník XIV. Číslo 1.—3. Tři zrádná hesla. Podává Jos. Fabian. Číslo 4.—6. Po stopách prozřetelnosti Boží. Napsal Josef Hronek. — Žena a církev.</b> ",
+        "annotator_topics": [
+            "literatura"
+        ],
+        "generated_topics": [
+            "literární ročenka",
+            "náboženské tématy",
+            "žena a církev"
+        ]
+    },
+    {
+        "text": " <b>Některé dvory ve vsech řečených Sosslewen, Radusch, forberk jeden a vsi Tanberk, Kozel, Sitin léno. Psáno německy libro 2° Caroli et Wenczeslai fol. 174. 91.</b> ",
+        "annotator_topics": [],
+        "generated_topics": [
+            "léno ve středověku",
+            "historické dokumenty",
+            "německý jazyk"
+        ]
+    },
+    {
+        "text": " <b>Hle my věříme, že Duch svatý je Duchem poslušnosti, tak že i Hntikrist musí na konec poslušně skloniti před ním svou šíji, ale ty, kdo ostříhají přikázání Božích povede cestou spasení dál, že ani svět ani ďábel nevyrve jim pokoj, který je v Kristu Ježíši, nebo Duch svatý je konečně i Duchem pokoje. 3.</b> ",
+        "annotator_topics": [
+            "Bible",
+            "motlidba"
+        ],
+        "generated_topics": [
+            "Duch svatý",
+            "poslušnost Antikrista",
+            "cesta spasení",
+            "pokoj v Kristu"
+        ]
+    },
+    {
+        "text": "„A já s paní hospodskou umyjem a upravíme mrtvolu. Prokážem jí poslední službu!“ „To jste hodny!“ chválil pan doktor. <b>„Ale já už musím jít!“ „Půjdu s vámi.“ Páni odešli. „Copak děláte, paní sousedko? „Rozjímám svět.“ „A cože se vám zdálo, paní sousedko?“ tázala se dále hospodská.</b> „Chtěla jste vypravovat —“ „Tak ano! To byl krásný sen! — Zdálo se mně, že přišel ke mně nebožtík můj otec, dej mu pánbůh nebe, už hnije přes dvacet let, a když matka umřela před ním, neměl pokoje a chodil denně na hřbitov, až sám také umřel.",
+        "annotator_topics": [
+            "Mezilidské vztahy",
+            "Sousedské vztahy"
+        ],
+        "generated_topics": [
+            "poslední služby",
+            "rozjímání o světě",
+            "vyprávění snu"
+        ]
+    },
+    {
+        "text": " <b>Vskutku myslím, že švestkový knedlík je co do rodu svého ženská. Že náleží k slabému, ale krásnému pohlaví.</b> ",
+        "annotator_topics": [
+            "Rody podstatných jmen",
+            "Vliv jazyka na vnímání světa"
+        ],
+        "generated_topics": [
+            "knedlíky",
+            "pohlavní přirovnání",
+            "gastronomické hodnocení"
+        ]
+    },
+    {
+        "text": "Palacký má pro ni jen sympatie. Když umírala, ze sedmi jejích dítek jediné bylo přítomné; dvě z nich ji předešly do hrobu a čtvero starších bylo živo v cizině. <b>„Tím způsobem velikomyslné paní té, poslednímu to potomku staroslavného rodu králů českých, nedostalo se v posledním okamžení ani té nejsladší outěchy: opuštěná, již jako polou cizá, loučila se s vlastí svou, dědictvím to po předcích veleslavných.“ A konečně Wenzig vřadil sem, do třetího proroctví, Karla IV.</b> Měl mnoho příčin, pro něž tak mohl učiniti: on však zdůrazňuje pouze jedinou Karlovu zásluhu: založení pražské university. To byl v jeho očích čin, který předstihoval a zastiňoval všechno ostatní.",
+        "annotator_topics": [
+            "poslední potomek",
+            "dědictví",
+            "loučení",
+            "Karel IV."
+        ],
+        "generated_topics": [
+            "smrt šlechtičny",
+            "česká historie",
+            "založení pražské university"
+        ]
+    },
+    {
+        "text": " <b>Moravské kožní družstvo řezníků a uzenářů. z. s. s r. o., žid, Habrmanova 28, T 14 .092 Tieber Vilém, KrP, Dalimilova 10</b> ",
+        "annotator_topics": [
+            "řeznící"
+        ],
+        "generated_topics": [
+            "kožní družstvo",
+            "řezníci a uzenáři",
+            "obchodní adresy"
+        ]
+    },
+    {
+        "text": " <b>V levo bělaly se v lese na výšině dvě mohutné stěny, jediné zbytky ze slavného druhdy Žerotina, slavného rodem bohatým a šlechetným.</b> ",
+        "annotator_topics": [
+            "historie rodů",
+            "příroda",
+            "symbolika"
+        ],
+        "generated_topics": [
+            "zbytky hradu Žerotina",
+            "šlechtický rod",
+            "historické pozadí"
+        ]
+    },
+    {
+        "text": " <b>Pamatujme si zatím: naše č, ř, š píše se cz, rz, sz, naše ě = ie; podobně změkčují se široké samohlásky na</b> ",
+        "annotator_topics": [
+            "gramatika",
+            "gramatika češtiny",
+            "pravidla českého jazyka",
+            "pravidla přepisu češtiny"
+        ],
+        "generated_topics": [
+            "pravopis",
+            "změkčení samohlásek",
+            "historie jazyka"
+        ]
+    },
+    {
+        "text": " <b>Peroutka] Vaněček, místní hosté. Rybka, Vavřínek, Milota, Horáček, Drůžička. Zpěvácký spolek »Hlasoň« (za scénou).</b> ",
+        "annotator_topics": [
+            "divadlo",
+            "herci"
+        ],
+        "generated_topics": [
+            "místní společnost",
+            "zpěvácký spolek",
+            "kulturní akce"
+        ]
+    },
+    {
+        "text": " <b>A přec když zima tady zavévodí, Bůh s útěchou zde k milým lidem chodi, jim na hruď ruku klade, učí zpěvu, by měli náhradu běd pro úlevu.</b> Tu všude z chyší písně zahlaholí Což teprv lid kdy zavýská si v poli! Své opouští pak slamou kryté stánky, by zpěvně pohovořil se skřivánky a dívky, v zimě doma popelkou, jdou v pole zavýskat si s křepelkou, a junák, nežli stoupne ku pluhu, si pérko svíjí z květů na luhu.",
+        "annotator_topics": [
+            "boží útěcha",
+            "úleva pomocí zpěvu"
+        ],
+        "generated_topics": [
+            "zima a útěcha",
+            "lidové zvyky",
+            "zpěv a příroda"
+        ]
+    },
+    {
+        "text": "Vůbec byl velmi dětinský, ač mu bylo již šestnáct let. V roce 1744., když dvůr ruský pobýval v Moskvě, přibyla tam 9. února Kateřina II. se svou matkou. <b>Ruský dvůr byl tehdy rozdělen ve dvě strany. V čele jedné, jež počínala růsti, stál místokancléř, hrabě Bestužev-Rjumin.</b> Byl spíše obáván, než milován; muž neobyčejně intrikující a nedůvěřivý; pevný a neochvějný v úmyslech; dosti násilný, nesmířitelný nepřítel, ale přítel svých přátel, jež opouštěl jen tehdy, když sami se odvraceli; ale těžko s ním bylo zacházet, neboť byl dosti malicherný.",
+        "annotator_topics": [
+            "politika",
+            "dvůr",
+            "společnost",
+            "rozdělení"
+        ],
+        "generated_topics": [
+            "dětské chování",
+            "příchod Kateřiny II.",
+            "rozdělení ruského dvora",
+            "intriky hraběte Bestuževa-Rjumina"
+        ]
+    },
+    {
+        "text": " <b>Před rokem mu zemřel otec. Dal jej pohřbít s pompou skvělou (kněží pět a velká hudba, všecky spolky) — objednal hned na hrob mramorový pomník s vyzlacenou chvalořečí, pak vsed rychle do kočáru</b> ",
+        "annotator_topics": [
+            "Smrt otce",
+            "Pohřeb otce",
+            "Mramorový pomník na pohřeb"
+        ],
+        "generated_topics": [
+            "pohřební obřady",
+            "mramorový pomník",
+            "vzdání pocty"
+        ]
+    },
+    {
+        "text": " <b>Já osobně nemohl jsem nikdy na tu jeho podlost zapomenout, a kdykoliv jsem ho v pozdějších letech v Praze zahlédl, pokaždé se ve mně ozvala ona vzpomínka, spojená s odporem proti muži, jenž se mně zdál představitelem zkornatělého šosáctví v našem starším písemnictví.</b> ",
+        "annotator_topics": [
+            "emoce",
+            "morálnost",
+            "vzpomínky",
+            "geografie"
+        ],
+        "generated_topics": [
+            "osobní nenávist",
+            "vzpomínky na podlost",
+            "odpor k šosáctví",
+            "staré písemnictví"
+        ]
+    },
+    {
+        "text": " <b>To je překvapení!“ „Promiňte, že vyrušuji, milostivá paní. Přicházím jen, abych vám popřál — „Ale posaďte se, pane sekretáři, abyste nám nevynesl spaní.</b> ",
+        "annotator_topics": [
+            "pozvání",
+            "přání",
+            "vynést spaní"
+        ],
+        "generated_topics": [
+            "návštěva sekretáře",
+            "zdvořilostní fráze",
+            "překvapení hostitelky"
+        ]
+    },
+    {
+        "text": " <b>Chválil si to na Náchodě, touže jediné na to, že neměl společnost starých přátel. „Jinak je tu veselo a živo,“ dodal, „a co vy tu nyní pobudete, nastanou mi ještě mnohem veselejší časy.“ I Antonín byl tomu velmi povděčen.</b> ",
+        "annotator_topics": [
+            "vyprávění"
+        ],
+        "generated_topics": [
+            "společenský život",
+            "návštěva Náchoda",
+            "pocit osamění"
+        ]
+    },
+    {
+        "text": " <b>Ale nedostali všichni podle pracovní své doby, jak očekávali, nýbrž hospodář dal všem po jednom penízi.</b> ",
+        "annotator_topics": [
+            "statek",
+            "práce",
+            "očekávání"
+        ],
+        "generated_topics": [
+            "rozdělování odměn",
+            "očekávání a realita",
+            "pracovní doba"
+        ]
+    },
+    {
+        "text": " <b>Než brzy za ním přišel do Říma malíř, který měl všechny vlastnosti, aby vyrostl v osobnost, zasluhující titul mistra v jeho nejširším významu.</b> ",
+        "annotator_topics": [
+            "vyprávění",
+            "zdokonalování"
+        ],
+        "generated_topics": [
+            "malířský talent",
+            "příchod do Říma",
+            "titul mistra"
+        ]
+    },
+    {
+        "text": " <b>Platí řád pro mezinárodní závody ve střelbě. Přihlášky k závodu do 31. května 1934 náčelnictvu ČOS. Závody se konají dne 10. června 1934 na voj. střelnici v Praze-Kobylisích.</b> ",
+        "annotator_topics": [
+            "vojenská střelnice",
+            "oznámení",
+            "pozvánka"
+        ],
+        "generated_topics": [
+            "mezinárodní závody",
+            "střelecký řád",
+            "závodní přihlášky"
+        ]
+    },
+    {
+        "text": " <b>Nejsem tak pošetilý, abych nadešel tomuto paradoxu. Jděte mi z cesty. Nezajímám se o sebe.« »Nezajímám se o sebe,« opakoval si opuštěný; ale tu se cizinec zvedl a odešel, nepohlédnuv ni nepozdraviv.</b> ",
+        "annotator_topics": [
+            "monolog",
+            "beletrie"
+        ],
+        "generated_topics": [
+            "odmítnutí paradoxu",
+            "osobní nezájem",
+            "opuštění cizincem"
+        ]
+    },
+    {
+        "text": " <b>Ale v disposici výslovně bylo uvedeno, že po zahájení boje tím způsobem vydány budou rozkazy podle toho, jakou akci zahájí nepřátelé — proto mohlo by se zdáti, že teprv průběhem bitvy Napoleonem v život uvedena budou všechna nutná opatření; ale to se nestalo a nemohlo se stát, poněvadž Napoleon po celou dobu bitvy stál tak daleko od bojiště, že (jak se později dokázalo) průběh bitvy nemohl býti mu znám, a ze všech jeho opatření a nařízení po čas celé bitvy nemohlo býti provedeno ani jediné.</b> ",
+        "annotator_topics": [
+            "Napoleonovy bitvy"
+        ],
+        "generated_topics": [
+            "Napoleonova strategie",
+            "průběh bitvy",
+            "vojenská opatření"
+        ]
+    },
+    {
+        "text": " <b>Poroučíš nám kříži sloužit, Nedávej nás křížem soužit, A když zlé v strast budeš hroužiť, Dej nám přijít, kam's dal toužiť Ke Tvých slastí požitku.</b> ",
+        "annotator_topics": [
+            "křesťanství",
+            "kostel"
+        ],
+        "generated_topics": [
+            "náboženská prosba",
+            "duchovní touha",
+            "vyprošování ochrany"
+        ]
+    },
+    {
+        "text": " <b>Jenom si stále opakoval, mávaje chvílemi krvavýma rukama a krvavým nožem: »Já jim ukáži! Já jim povím!</b> ",
+        "annotator_topics": [
+            "beletrie",
+            "vyprávění"
+        ],
+        "generated_topics": [
+            "hrozba násilím",
+            "krvavý incident",
+            "psychický stav"
+        ]
+    },
+    {
+        "text": " <b>(1) Je-li k objasnění skutečností závažných pro trestní řízení třeba odborné znalosti, přibere prokurátor znalce. (2) Mají-li být přímým pozorováním objasněny skutečnosti závažné pro trestní řízení, koná prokurátor ohledání.</b> ",
+        "annotator_topics": [
+            "soudnictví",
+            "zákon",
+            "trestný čin"
+        ],
+        "generated_topics": [
+            "trestní řízení",
+            "přibírání znalců",
+            "konání ohledání"
+        ]
+    },
+    {
+        "text": " <b>Kyselinu močovou, jež vytvořuje se v těle z nukleoproteidů, resp. z purinů potravy, jmenovali Burian a Schur (1. c.) exogenní.</b> ",
+        "annotator_topics": [
+            "fyziologie",
+            "člověk",
+            "biologie člověka"
+        ],
+        "generated_topics": [
+            "vznik kyseliny močové",
+            "výzkum Buriana a Schura",
+            "exogenní puriny"
+        ]
+    },
+    {
+        "text": " <b>Rozum náš nikdy neustává se tázati, odkud vše pošlo a pátrati po prvé příčině jsoucího. Bůh musí býti!</b> ",
+        "annotator_topics": [
+            "náboženství",
+            "kostel"
+        ],
+        "generated_topics": [
+            "hledání první příčiny",
+            "existenciální otázky",
+            "důkaz existence Boha"
+        ]
+    },
+    {
+        "text": " <b>Poznala to podle dvoukolového vozíku, přiraženého k chodníku. Na káře bylo celé Toníkovo jmění: skládací železná postel, slamník, peřiny s červeně pruhovanými povlaky a dvě židle.</b> ",
+        "annotator_topics": [
+            "obsah káry",
+            "Toníkovo jmění na káře"
+        ],
+        "generated_topics": [
+            "Toníkovo jmění",
+            "dvoukolový vozík",
+            "skládací železná postel"
+        ]
+    },
+    {
+        "text": " <b>Motor tvaru V. Tento nejčastější typ dvouválce (obr. 385) má válce v jedné rovině a jejich osy jsou k sobě skloněny v jistém úhlu.</b> ",
+        "annotator_topics": [
+            "popis",
+            "technika"
+        ],
+        "generated_topics": [
+            "motor tvaru V",
+            "dvouválcový motor",
+            "úhel válců"
+        ]
+    },
+    {
+        "text": " <b>Tobě nyní zasvětím své síly ať co chce se na mou hlavu schýlí, osud tvůj buď nyní také mým srdcem, krví tobě náležím!“</b> ",
+        "annotator_topics": [
+            "staročeština",
+            "předání síly"
+        ],
+        "generated_topics": [
+            "oddanost",
+            "osudové spojení",
+            "věrnost"
+        ]
+    },
+    {
+        "text": " <b>Nejsme tu pouze vojáci, k nám dámy se tisknou, měšťáci, švadlenky, studenti a všichni jsou tak tuze svěží, i konduktérka, která stěží se prodírá a brebentí.</b> ",
+        "annotator_topics": [
+            "historie",
+            "vypravování"
+        ],
+        "generated_topics": [
+            "společenská rozmanitost",
+            "vojenský život",
+            "městský život"
+        ]
+    },
+    {
+        "text": " <b>Kúpil sem korale Za štyry torale, Oj, aby si ich dala, Dyž půjde přes pole. Kúpil sem střevíce Za štyry tisíce, Oj, aby si obula, Dyž půjde k muzice.</b> ",
+        "annotator_topics": [
+            "nářečí",
+            "Morava",
+            "lidové písně"
+        ],
+        "generated_topics": [
+            "dárek pro milou",
+            "lidová poezie",
+            "láska a touha"
+        ]
+    },
+    {
+        "text": " <b>Utužme družbu slovanských národů poznáním jejich řeči! Jazykovým vzděláním k sblížení pracujících celého světa!</b> ",
+        "annotator_topics": [
+            "slované",
+            "spojení",
+            "ovlivňování",
+            "zvolání",
+            "komunismus"
+        ],
+        "generated_topics": [
+            "slovanská družba",
+            "jazykové vzdělání",
+            "sblížení pracujících"
+        ]
+    },
+    {
+        "text": " <b>nepomýšlím se provdati, jak bych se mohla provdati, když toliko tys mým manželem! Vrať se, abychom zůstail spolu v mé zemi Bora-Bora, abychom se usídlili v mé zemi Bora-Bora.</b> ",
+        "annotator_topics": [
+            "staročeština",
+            "monolog",
+            "svatba",
+            "cestování"
+        ],
+        "generated_topics": [
+            "odmítnutí sňatku",
+            "návrat do vlasti",
+            "usazení v Bora-Bora"
+        ]
+    },
+    {
+        "text": " <b>Kolkol pak ohradím živým tě plůtečkem; neb tebe budu vždy vroucně tě budu vždy v náručí chovat svém!</b> ",
+        "annotator_topics": [
+            "mateřská láska",
+            "milenecká láska",
+            "ochrana bližních"
+        ],
+        "generated_topics": [
+            "ochrana milované osoby",
+            "projevy náklonnosti",
+            "metaforický výraz"
+        ]
+    },
+    {
+        "text": " <b>Nemohli se spolu vyrovnati po dobrém; byli tudíž nuceni se souditi. Jsem vám velice povděčen za (vaši) dobrou radu.</b> ",
+        "annotator_topics": [
+            "staročeština",
+            "vyprávění",
+            "popis situace"
+        ],
+        "generated_topics": [
+            "soudní spor",
+            "vděčnost za radu"
+        ]
+    },
+    {
+        "text": " <b>Kapitál polního inventáře se oceňuje podle hodnoty výrobní a podle hodnoty směnné (tržní, obecné), kupní nebo prodejní.</b> ",
+        "annotator_topics": [
+            "nákup",
+            "prodej",
+            "obchodník"
+        ],
+        "generated_topics": [
+            "oceňování inventáře",
+            "výrobní hodnota",
+            "směnná hodnota"
+        ]
+    },
+    {
+        "text": " <b>Karl Dragoch nahnul se k zajatci a řekl: „Nikoli. Dýše.“ Sergij Ladko oddechl si s uspokojením a chápaje se hned vesla, jal se veslovati proti proudu</b> ",
+        "annotator_topics": [
+            "voda",
+            "loď",
+            "cesta",
+            "cestování"
+        ],
+        "generated_topics": [
+            "zajetí a útěk",
+            "veslování proti proudu",
+            "úleva Sergije Ladka"
+        ]
+    },
+    {
+        "text": " <b>Zelenohorský měl dosvědčovati, že staří Čechové měli vyspělé soudnictví (doklad to vysoké své vzdělanosti), ba už v 9. století »pravdodatné« desky, t. j. zákony.</b> ",
+        "annotator_topics": [
+            "staročeština",
+            "tvrzení"
+        ],
+        "generated_topics": [
+            "staročeské soudnictví",
+            "vysoká vzdělanost",
+            "pravdodatné desky"
+        ]
+    },
+    {
+        "text": " <b>Nežli se sestátnila česká severní dráha, seděli úředníci — vím to, poněvadž často české severní dráhy k jízdě používám — pohodlně ve svých úřadovnách, pracovali úplně klidně a nebyli prací přetíženi; po sestátnění však musili zůstávati v písárnách hluboko do noci a nemohli býti s pracemi hotovi.</b> ",
+        "annotator_topics": [
+            "Práce úředníků před sestátněním dráhy",
+            "Změna pracovního nasazení úředníku po sestátnění české severní dráhy",
+            "Osobní zkušenost autora se sestátněním dráhy"
+        ],
+        "generated_topics": [
+            "sestátnění dráhy",
+            "pracovní podmínky",
+            "úředníci dráhy"
+        ]
+    },
+    {
+        "text": " <b>Obchod průvozný do Uher, Francie a Vlach je obzvláště důležitý. Hlavní obchodní města jsou: Augšpurk, Norimberk, Vyrcpurk, Bamberk.</b> ",
+        "annotator_topics": [
+            "Obchodování",
+            "cesta"
+        ],
+        "generated_topics": [
+            "obchod s Uhrami",
+            "obchod s Francií",
+            "obchod s Vlachy",
+            "hlavní obchodní města"
+        ]
+    },
+    {
+        "text": " <b>Zarděla se hluboce. „Ale vždyť je to dítě“, pomyslil si Artur, vida ji z blízka a slyše její ostýchavě dětské: „Vítám vás!“ Výraz její tváře byl důvěřivý, milý.</b> ",
+        "annotator_topics": [
+            "přivítání",
+            "staročeština",
+            "žena"
+        ],
+        "generated_topics": [
+            "dětská nevinnost",
+            "první setkání",
+            "výraz tváře"
+        ]
+    },
+    {
+        "text": " <b>Marx a Hegel. Marxův historism heglovský stává se Feuerbachovým vlivem materialistickým: materialism historický</b> ",
+        "annotator_topics": [],
+        "generated_topics": [
+            "Marx a Hegel",
+            "historický materialism",
+            "Feuerbachův vliv"
+        ]
+    },
+    {
+        "text": " <b>Gabriel neztratil však nikdy klidu a veselosti. „Jsme v rukou božích,“ říkával, „Bůh na nás myslí; všecko se děje podle nejsvětějších úradků jeho prozřetelnosti.“ Viděl ve vůdcích povstání pouze nástroje, jichž Bůh používal, aby dobré zkoušel a tříbil, nechoval k nim ne-</b> ",
+        "annotator_topics": [
+            "náboženství",
+            "víra"
+        ],
+        "generated_topics": [
+            "duchovní postoj",
+            "prozřetelnost",
+            "povstání"
+        ]
+    },
+    {
+        "text": " <b>Na př. kropící = kdo kropí, kropicí = co je ke kropení; honící = jenž honí, honicí = který je k tomu, aby honil.</b> ",
+        "annotator_topics": [
+            "slovník",
+            "výklad"
+        ],
+        "generated_topics": [
+            "slovní rozdíly",
+            "význam slov",
+            "gramatické rozlišení"
+        ]
+    },
+    {
+        "text": " <b>Též může býti tutor sesazen magistrátním dekretem bez předchozí accusatio suspecti pro nedbalost nebo pro jiné příčiny, pro povážlivý způsob života nebo neschopnost.</b> ",
+        "annotator_topics": [
+            "medicína"
+        ],
+        "generated_topics": [
+            "sesazení tutora",
+            "magistrátní dekret",
+            "nedbalost a neschopnost"
+        ]
+    },
+    {
+        "text": " <b>Válečnou službu nastoupil v roce 1915, byl zajat na ruské frontě v roce 1916 a do čs. legií vstoupil v roce 1917.</b> ",
+        "annotator_topics": [
+            "vojenský osud člověka",
+            "vojenské události člověka"
+        ],
+        "generated_topics": [
+            "válečná služba",
+            "zajetí na frontě",
+            "čs. legie"
+        ]
+    },
+    {
+        "text": " <b>A muž z Keriothu vyňal těch třicet stříbrných penízů a prohlížel si je při blednoucím světle měsíčním; byly vesměs lesklé; na líci byla kvetoucí hůl Aronova a nápis Jerusalem svatý, a na rubu palma a číše manny a písmena, která značila: šekel izraelský.</b> ",
+        "annotator_topics": [
+            "popis mincí",
+            "biblické příběhy ",
+            "příběh Jidáše"
+        ],
+        "generated_topics": [
+            "biblický příběh",
+            "stříbrné peníze",
+            "symboly na mincích"
+        ]
+    },
+    {
+        "text": " <b>Po té obrátil se k pacholíkovi: „Želeňski!“ pravil, „svolej mi plukovníky!“ Vévoda kyjovský sedl si zatím na lavičku a oddychoval, ohlížeje se při tom po večeři, neboť byl hladov a rád dobře jedl.</b> ",
+        "annotator_topics": [
+            "armáda",
+            "jídlo",
+            "touha"
+        ],
+        "generated_topics": [
+            "vojenské rozkazy",
+            "vévodův odpočinek",
+            "chutná večeře"
+        ]
+    },
+    {
+        "text": " <b>Svou ochotou upletl jsem na sebe bič. »Když jste se tak dobře osvědčil,« řekl chefredaktor . . »musíte po druhé na popravu vy, aby se nikdy něco podobného nemohlo opakovati.«</b> ",
+        "annotator_topics": [
+            "přirovnání",
+            "trest",
+            "využívání"
+        ],
+        "generated_topics": [
+            "novinářská práce",
+            "morální dilema",
+            "poprava jako téma"
+        ]
+    },
+    {
+        "text": " <b>IV č. 14 p. p. kolku za 8 Kč za první arch a kolku 5 Kč za každý další arch. Nabyl-li státní zaměstnanec (učitel veřejné školy národní) z rozhodnutí, upravujícího jeho služební neb odpočivné požitky, právoplatného nároku, není přípustno, aby výše požitků těch byla později úřadem jednostranně snížena jen proto, že při původním rozhodnutí nebylo zákona správně použito (srovnej nález Nejvyššího správního soudu, Bohuslavova sb. č 2199 adm.); naproti tomu pouhý jednostranný, ex officio vydaný poukaz k výplatě služebních požitků, jímž nebylo rozhodnuto o určitém na úřad vzneseném nároku, není rozhodnutím právní moci schopným o nároku zaměstnance na požitky ty a může proto úřadem býti změněn a odvolán.</b> ",
+        "annotator_topics": [
+            "znění zákonu"
+        ],
+        "generated_topics": [
+            "práva státních zaměstnanců",
+            "správní rozhodnutí",
+            "požitky zaměstnanců",
+            "soudní nález"
+        ]
+    },
+    {
+        "text": " <b>a kabelu, pravě při tom: »Schovejte dobře tyto věci; neboť mají mým potomkům připamatovati, že ze selského stavu vznikli; neboť dokud budou si ten stav vážiti, blaze jim bude.« Po několika dnech oznámen na Vyšehradě návrat poselstva; radovali se všickni, když shlédli statečného mladého knížete, a nejvíce Libuše, která vyšla vstříc uvítati svého chotě.</b> ",
+        "annotator_topics": [
+            "staročeština",
+            "pověst"
+        ],
+        "generated_topics": [
+            "připomínka původu",
+            "návrat poselstva",
+            "Libušino uvítání"
+        ]
+    },
+    {
+        "text": " <b>Prodával jistě Tomáš Kuchtíček pro dluhy a z bídy. A tak bychom mohli sledovati v těch starých, zežloutlých papírech prodeje svobodných kousků rolí na Lhotkách, v Hrozkách (v Rouských) a jinde, později v exekučních dražbách jen zřídka pro nedbalost neb lenosť prodávaných, vždy téměř pro dluhy a nedostatek.</b> ",
+        "annotator_topics": [
+            "bída",
+            "popis",
+            "vyprávění"
+        ],
+        "generated_topics": [
+            "prodej nemovitostí",
+            "dluhy a bída",
+            "exekuční dražby"
+        ]
+    },
+    {
+        "text": " <b>Nesmí se to ani tolik vytýkati: my, Chorvaté přišli jsme z Chorvatska jako oposice, jíž jsme vždy byli k Maďarsku a k Rakousku, pak jsme měli v Záhřebu bána, kterého jsme podporovali.</b> ",
+        "annotator_topics": [
+            "historie",
+            "podpora"
+        ],
+        "generated_topics": [
+            "chorvatsko-maďarské vztahy",
+            "politická opozice",
+            "podpora bána"
+        ]
+    },
+    {
+        "text": " <b>Matějovi z Mýta Vysokého řečenému Mýtský. (25) Na Potšteině, 14. června 1450. Já Hynek Krušina z Lichtnburga seděním na Kladště, jistec a spravedlivý dlužník dluhu dolepsaného, a my Vilém z Orlé a na Držele, Jan Kuchynka z Ledské, Jeníš z Přestavlk, Franěk z Bošína, rukojmě jeho za pana Hynka Krušinu svrchupsaného, s ním a zaň vyznávámy oc, že smy dlužni pravého a spravedlivého dluhu bez tří kop patdesáte kop gr. dobr. střieb. rázu praž. slovut.</b> ",
+        "annotator_topics": [
+            "smlouva",
+            "dluh",
+            "historie",
+            "půjčka "
+        ],
+        "generated_topics": [
+            "historické dokumenty",
+            "dluhové závazky",
+            "česká šlechta"
+        ]
+    },
+    {
+        "text": " <b>Konduktér však hned zase na něho hnal útokem: „a kde máte to dědictví? Kde je vydávají?“ „Tu v Praze přece.“ „Praha je veliká — musíte mi říci v které čtvrti a ulici, abych vám podle toho mohl vydati lístek.“ „Ha cák já vím?</b> ",
+        "annotator_topics": [
+            "dědictví"
+        ],
+        "generated_topics": [
+            "konduktérův dotaz",
+            "dědictví v Praze",
+            "vydávání lístků"
+        ]
+    },
+    {
+        "text": " <b>Jen půlčtvrta roku pracoval Delaroche na svém plátně, než je nalepil do okruhu zkušební síně pařížské Ecole impériale des Beaux-Arts, ale od té doby spěchá každý cizinec do rue Bonaparte, aby se podivil, v jak krátké době může člověk vytvořit díla nejen věčná, nýbrž i obrovitá.</b> ",
+        "annotator_topics": [
+            "umění",
+            "Francie",
+            "Paříž",
+            "výtvarník",
+            "malíř"
+        ],
+        "generated_topics": [
+            "Delarocheovo plátno",
+            "Ecole impériale des Beaux-Arts",
+            "tvorba věčných děl"
+        ]
+    },
+    {
+        "text": " <b>Kromě toho, bohužel, že dosud jen německá fakulta — na základě větších dotací než česká — byla opatřena na klinice prof. Kreibicha, přednosty kliniky pro nemoce venerické a kožní, aparátem Finsenovým a na klinice prof. dra Jaksche, přednosty kliniky pro nemoce vnitřní, vedle Röntgena mají také proudy vysoké frequence, k jejichžto zařízení značným nákladem přispěl i sám jmenovaný přednosta.</b> ",
+        "annotator_topics": [
+            "obdarování německé fakulty novými přístroji",
+            "Rozdíl v dotacích mezi českými a německými fakulty"
+        ],
+        "generated_topics": [
+            "německá fakulta",
+            "vědecké vybavení",
+            "zdravotnické kliniky"
+        ]
+    },
+    {
+        "text": " <b>Olga (spatří Lab.). On! jak mu vše vysvětlím? Labutka. Dovolte, slečno, bych vám pomohl! (Pomáhá jí prostříti na stůl prostěradlo, kteréž však oba zaujati rozhovorem, pouze komicky hladí.)</b> ",
+        "annotator_topics": [
+            "konverzace při prostírání stolu"
+        ],
+        "generated_topics": [
+            "komická situace",
+            "pomoc s prostíráním",
+            "rozhovor postav"
+        ]
+    },
+    {
+        "text": " <b>Igaala jsem potkala v chodbě, když ho Šelómó poslal ke stráži, aby se tam dal zajmouti, i poradila jsem mu, jak by unikl z paláce, a poslala jsem ho k mému starému příteli idumejskému, který má dům svůj v nejztracenější uličce města; tam bude bezpečně ukryt.</b> ",
+        "annotator_topics": [
+            "únik Igaala z paláce"
+        ],
+        "generated_topics": [
+            "útěk z paláce",
+            "idumejský přítel",
+            "bezpečné úkryty"
+        ]
+    },
+    {
+        "text": " <b>Jakési bolestné, zapomenuté verše, vzlyk neznámého básníka, plynou duší, jako v temnosti polí vzdychají větvemi holé stromy: »K šíleným vírům v tajemné sluji s jasem na čele, vesel popluji; a než mne vír ten pohltí klatý, zazpívám v smrti na slunce hymn svatý...«</b> ",
+        "annotator_topics": [
+            "zapomenuté verše neznámého básníka"
+        ],
+        "generated_topics": [
+            "poezie",
+            "vzpomínky",
+            "smrt",
+            "tajemství"
+        ]
+    },
+    {
+        "text": " <b>Žoldnéři kolem vozu počítali, kolik dní ještě do Čech za takové nepohody a na kolik dní potravy pro ně i pro koně.</b> ",
+        "annotator_topics": [
+            "vojenství",
+            "cestování na vozech ",
+            "počítání dní do finální destinace",
+            "žoldnéřské táhnutí "
+        ],
+        "generated_topics": [
+            "žoldnéři",
+            "cesta do Čech",
+            "zásoby potravy"
+        ]
+    },
+    {
+        "text": " <b>Já jsem obyčejný člověk, který se tím jen liší od ostatních, že tě nade vše miluje.“ „Ne, Vláďo“ — odpověděla Hanka — „já nikterak nechci, abys byl nějakou veličinou, neboť pamatuji, co říkají Angličané, že největším arcidílem Božím jest poctivý člověk.“ „Já jsem trochu hřešil, ale myslím, že jsem poctivý.“ „Ano, ale pamatuj, že ne ten jest poctivým člověkem, kdo nečiní zlého, nýbrž ten, kdo dobře činí.</b> ",
+        "annotator_topics": [
+            "Poctivost člověka"
+        ],
+        "generated_topics": [
+            "láska a poctivost",
+            "vztah Hanky a Vláďi",
+            "morální hodnoty"
+        ]
+    },
+    {
+        "text": " <b>Dřínovité (Corneae, Hartriegel). Jsou stromy i keře a liší se od předešlých tím, že plod jejich jest peckovice.</b> ",
+        "annotator_topics": [
+            "klasifikace typu dřeviny"
+        ],
+        "generated_topics": [
+            "stromy a keře",
+            "peckovice",
+            "Dřínovité"
+        ]
+    },
+    {
+        "text": " <b>R. 1803 dle Dr. Daniele zahynulo tak 275 vdov. Po rázném zakročení vlády nešťastnic stále ubývalo, až krutý obyčej vymizel načisto.</b> ",
+        "annotator_topics": [
+            "zákrok vlády ke snížení úmrtnosti vdov"
+        ],
+        "generated_topics": [
+            "vdovy v roce 1803",
+            "zásah vlády",
+            "vymizení obyčeje"
+        ]
+    },
+    {
+        "text": " <b>Po ústupu Vgl octl by se černý v passivním postavení po Dxh7 s volným věžovým pěšcem! 29. Jxg Po Dxh7 jde: Dg8!s protihrou! ..... hg6</b> ",
+        "annotator_topics": [
+            "popis části hry šachu"
+        ],
+        "generated_topics": [
+            "šachová partie",
+            "strategické postavení",
+            "protihra"
+        ]
+    },
+    {
+        "text": " <b>Liturgická bohoslužba katolická století 17. a 18. poskytovala více příležitosti k uplatnění hudební složky, než si dnes lze představit.</b> ",
+        "annotator_topics": [
+            "uplatnění hudby v katolické bohoslužbě"
+        ],
+        "generated_topics": [
+            "liturgická bohoslužba",
+            "hudební složka",
+            "17. a 18. století"
+        ]
+    },
+    {
+        "text": " <b>Frumentius byl od sv. Athanasia v Alexandrii posvěcen na prvého biskupa habešského. I Aedesius stal se knězem.</b> ",
+        "annotator_topics": [
+            "jmenování biskupů a kněží v Alexandrii"
+        ],
+        "generated_topics": [
+            "křesťanství v Habeši",
+            "posvěcení biskupa",
+            "kněžské povolání"
+        ]
+    },
+    {
+        "text": " <b>V rohu jehlu s nití vypíchneme, nit protáhneme až na možnou délku, a uvážeme uzlíček, kterým ji připevníme.</b> ",
+        "annotator_topics": [
+            "návod na šití"
+        ],
+        "generated_topics": [
+            "práce s jehlou",
+            "vázání uzlíků"
+        ]
+    },
+    {
+        "text": " <b>Daň z obratu při dovozu. a) Zboží saz. pol. 489 c) nepodléhá dani z obratu při dovozu; b) zboží saz. pol. 489 a) a b): 3  z ceny, cla a dovozného na hranici.</b> ",
+        "annotator_topics": [
+            "úryvek ze zákona o dani z obratu při dovozu"
+        ],
+        "generated_topics": [
+            "daň z obratu",
+            "dovoz zboží",
+            "sazební politika"
+        ]
+    },
+    {
+        "text": " <b>Vystoupivše po pěti kamenných stupních do temné sínce vešli jsme napravo do osvětlené, velké jizby. Byla zařízena prostě, ale solidně, po lovecku.</b> ",
+        "annotator_topics": [
+            "popis lovecké chaty",
+            "vyprávění příběhu o vstupu do jizby",
+            "chatařství"
+        ],
+        "generated_topics": [
+            "vstup do domu",
+            "lovecké zařízení",
+            "prosté zařízení"
+        ]
+    },
+    {
+        "text": " <b>Však ale na dvoře přivítal jej „Blaf“ prudkým štěkotem a doprovázel až na náves. Musí to býti nějaký dareba, — pravila pasačka, — „Blaf“ si ve dne všimne málo koho, ale tohohle by sežral.</b> ",
+        "annotator_topics": [
+            "Bafovo přivítání cizince na nádvoří",
+            "pes Baf"
+        ],
+        "generated_topics": [
+            "pes na dvoře",
+            "pasaččino varování",
+            "štěkot psa"
+        ]
+    },
+    {
+        "text": " <b>I největší mudrc závisí od mravního okolí svých útlých let, a počíná své vychování prvním dechem. Domovy, ve kterých vyrůstají dítky, jsou dobré nebo špatné dle té síly, která v nich vládne.</b> ",
+        "annotator_topics": [
+            "vliv okolí při dospívání na jedince"
+        ],
+        "generated_topics": [
+            "výchova dětí",
+            "mravní vliv",
+            "domácí prostředí"
+        ]
+    },
+    {
+        "text": " <b>Ale já mu rád odpouštím, jak nám přikazuje dobrotivý Bůh. Tedy z Bologně jsi přijel a chtěl bys pro mne pracovat, Michelangelo, rád, velmi rád tě vítám, už pro památku mého příbuzného, který tě velmi miloval, byl to hříšný, zmatený člověk, dobrotivý Bůh mu hříchy račiž odpustit!</b> ",
+        "annotator_topics": [
+            "návrat Michelangela do Bologně",
+            "milovník Michelangela"
+        ],
+        "generated_topics": [
+            "odpuštění hříchů",
+            "příjezd z Bologně",
+            "práce pro Michelangela"
+        ]
+    },
+    {
+        "text": " <b>Pátrejte po kapradinách, které mají dva druhy vějířů, listové a výtrusonosné! — Srovnejte šířku a postavení listových vějířů s vějíři výtrusonosnými! — Pokuste se vysvětliti, kterou výhodu má kapradina z toho, že listové vějíře jsou široké a leží na zemi v podobě růžice, kdežto výtrusonosné vějíře jsou naopak úzké a vzpřímené!</b> ",
+        "annotator_topics": [
+            "rozdíl mezi listovými a výtrusonosnými kapradinami"
+        ],
+        "generated_topics": [
+            "kapradiny",
+            "listové vějíře",
+            "výtrusonosné vějíře",
+            "výhody kapradin"
+        ]
+    },
+    {
+        "text": " <b>Pro moderní dobu se ženským volebním právem toto ovšem již neplatí, ale je zřejmo, jak byl autor pro- Pozn. překlad.</b> ",
+        "annotator_topics": [
+            "volební práva žen"
+        ],
+        "generated_topics": [
+            "ženské volební právo",
+            "moderní doba",
+            "autorova pozice"
+        ]
+    },
+    {
+        "text": " <b>Důkaz? (Uhlík — chlad při vypařování po dešti.) — Teplo vzduchu se tedy zmenší; oč? (O množství na vypařování spotřebované.) — Snížení teploty přispívá zase k tomu, že se páry vodní ve vzduchu zhušťují a v dešť srážejí.</b> ",
+        "annotator_topics": [
+            "koloběh vody na Zemi",
+            "tvorba srážek"
+        ],
+        "generated_topics": [
+            "vypařování vody",
+            "snížení teploty",
+            "srážení deště"
+        ]
+    },
+    {
+        "text": " <b>Článek 37. Předseda, zpravodaj i ostatní soudcové mohou klásti zástupcům súčastněných činitelů dotázky.</b> ",
+        "annotator_topics": [
+            "zákon o kladení dotazů zástupcům činitelů soudu"
+        ],
+        "generated_topics": [
+            "soudní řízení",
+            "právo na dotazy"
+        ]
+    },
+    {
+        "text": " <b>Nejstarší ze slov takto přejatých, tak na př. většina slov, týkajících se věcí náboženských, pocházejí z ruštiny; daleko největší počet však z polštiny v souhlase s osvětovými styky L-nů.</b> ",
+        "annotator_topics": [
+            "převzatá slova z ruštiny a polštiny"
+        ],
+        "generated_topics": [
+            "původ slov",
+            "náboženská terminologie",
+            "vliv ruštiny",
+            "vliv polštiny"
+        ]
+    },
+    {
+        "text": " <b>dlouho čekati. Doba temna nad rozkvetlou kdysi vlastí naší započala a zapustila hluboké kořeny do povahy našeho člověka.</b> ",
+        "annotator_topics": [
+            "začátek doby temna"
+        ],
+        "generated_topics": [
+            "doba temna",
+            "vlastní povaha"
+        ]
+    },
+    {
+        "text": " <b>Mohu jen prostě a bez jakýchkoli závěrků zaznamenati některé rysy, jak se mi tu onde namanuly. Prvním městem italským, které jsem navštívil, byla Verona a snad právě pro tu povšechnou novost dojmů zdá se mi rázovitější nežli některé pozdější mé stanice: Milán, Turin i Janov.</b> ",
+        "annotator_topics": [
+            "pocity z italských měst"
+        ],
+        "generated_topics": [
+            "italská města",
+            "cestovatelské dojmy",
+            "kulturní rozdíly"
+        ]
+    },
+    {
+        "text": " <b>Spáti se mu nechtělo, a proto pozoroval čilý život svého okolí. Kam se poděla lenivost a ospalost Abchazců?</b> ",
+        "annotator_topics": [
+            "vyprávění o Abchazech",
+            "spánková nemoc"
+        ],
+        "generated_topics": [
+            "nespavost pozorovatele",
+            "život v okolí",
+            "změna chování Abchazců"
+        ]
+    },
+    {
+        "text": " <b>Ve příčině ostatních jest žaloba bez účinku. Rozkazem platebním čili mandátem ukládá se sice žalovanému splnění závazku ve 14 dnech pod následky exekuce, avšak zároveň se mu zůstavuje právo, aby do téže lhůty vznesl obrany proti mandátu.</b> ",
+        "annotator_topics": [
+            "výsledek soudního řízení"
+        ],
+        "generated_topics": [
+            "platební rozkaz",
+            "právo na obranu",
+            "exekuční důsledky"
+        ]
+    },
+    {
+        "text": " <b>Pohlaváři připínali kdysi k svým účesům chochol z těchto per; k utvoření této aristokratické ozdoby bylo však třeba mnoho času a vytrvalosti...</b> ",
+        "annotator_topics": [
+            "ozdoba pohlavářů"
+        ],
+        "generated_topics": [
+            "historické účesy",
+            "aristokratické ozdoby",
+            "použití per"
+        ]
+    },
+    {
+        "text": " <b>»Nebát se a nekrást!« vzkřik do národa Masaryk. Leckdo si to heslo rozdvojí, s první půlkou jen se spokojí, krade dál — a krást se nebojí.</b> ",
+        "annotator_topics": [
+            "převzetí Masarykova hesla"
+        ],
+        "generated_topics": [
+            "Masarykovo heslo",
+            "morální imperativ",
+            "společenské chování"
+        ]
+    },
+    {
+        "text": " <b>Opatření toto vzbudilo nedůvěru měšťanů kadaňských, tím spíše, když v sousedství, v Lokti, viděli příklad zpronevěry panské; r. 1506 rozepře tato sice utišena, ale po pěti letech vzplanula znova a prudčeji, asi ne bez viny Janovy, jak ukázalo rozhodnutí vlády zemské, Kadaňským příznivé.</b> ",
+        "annotator_topics": [
+            "pohled veřejnosti na nové opatření v Kadani"
+        ],
+        "generated_topics": [
+            "měšťanská nedůvěra",
+            "zpronevěra v Lokti",
+            "zemské rozhodnutí"
+        ]
+    },
+    {
+        "text": " <b>Za otevřenou stavební soustavu budiž považována ona, kde budova na staveništi zřízená nebo skupina budov na několika staveništích současně</b> ",
+        "annotator_topics": [
+            "definice otevřené stavební soustavy"
+        ],
+        "generated_topics": [
+            "otevřená stavební soustava",
+            "staveniště",
+            "skupina budov"
+        ]
+    },
+    {
+        "text": " <b>Obyvatelé, Magnétové, zabíhali až na sever k dol. Péneiu a zabírali i úbočí hory Ossy. Obývali v malých osadách na svazích horských a středem jejich byla svatyně Dia Akraia.</b> ",
+        "annotator_topics": [],
+        "generated_topics": [
+            "obyvatelé Magnétů",
+            "osady na svazích",
+            "svatyně Dia Akraia"
+        ]
+    },
+    {
+        "text": " <b>Jedná o účinku modlitby v předchozí kapitole zmíněné, z něhož lze usouditi, že jde o pravdu a ne o klam.</b> ",
+        "annotator_topics": [
+            "účinky modlitby"
+        ],
+        "generated_topics": [
+            "účinek modlitby",
+            "pravda a klam"
+        ]
+    },
+    {
+        "text": " <b>Přátelů mnoho! skrovný podílek spojme se přímí u vlasti, tať budiž našich srdcí střed; všickni ač chudi jsme sami, v ní sbohatneme všickni. (1822.)</b> ",
+        "annotator_topics": [
+            "báseň o zbohatnutí",
+            "společný majetek",
+            "sjednocení majetku u vlasti",
+            "Báseň z roku 1822"
+        ],
+        "generated_topics": [
+            "vlastenectví",
+            "společná sounáležitost",
+            "podpora vlasti"
+        ]
+    },
+    {
+        "text": " <b>Jedna z největších jeho zásluh pak je v tom, že uměl zainteresovati Rusko pro osud Srbska. Pašič byl si vědom toho, že bez něho budou národní činy Srbska bez zítřejška.</b> ",
+        "annotator_topics": [
+            "zásluha Pašiče pro Srbsko",
+            "závislost Srbska na Rusku"
+        ],
+        "generated_topics": [
+            "zásluhy Pašiče",
+            "vztah Ruska a Srbska",
+            "národní činy Srbska"
+        ]
+    },
+    {
+        "text": " <b>70. Pavel Josef Šafařík Františkovi Palackému. 1821, 8. března (z Nového Sadu). — Odpovídaje na dopis jeho ze dne 23. února, těší se z uzdravení jeho, dává zprávu o svých pracích literárních a o literatuře srbské.</b> ",
+        "annotator_topics": [
+            "dopis Šafaříka Palackému"
+        ],
+        "generated_topics": [
+            "korespondence vzdělanců",
+            "literární práce",
+            "srbská literatura"
+        ]
+    },
+    {
+        "text": " <b>Mouka Sibirjakova prodává se tam nyní pud (40 liber) po 70—80 kopejkách, v Berezově na téže řece Sosvě, ve vzdálenosti několika set verst, stojí pouze 40—50 kopejek za pud.</b> ",
+        "annotator_topics": [
+            "ceny mouky Sibirjakovky"
+        ],
+        "generated_topics": [
+            "ceny mouky",
+            "obchod v Sibiři",
+            "rozptyl cen"
+        ]
+    },
+    {
+        "text": " <b>Snad na prstech by spočítal ty, kteří pracují. Několik žen dojíždělo do Rodeňské cihelny. — 60 korun týdně, 8 korun 30 haléřů vlak.</b> ",
+        "annotator_topics": [
+            "plat žen",
+            "cena vlaku",
+            "nezaměstnanost"
+        ],
+        "generated_topics": [
+            "pracovní situace",
+            "dojíždění za prací",
+            "Rodeňská cihelna"
+        ]
+    },
+    {
+        "text": " <b>A potom přemýšlela a přemýšlela, co by měla učiniti — ale nic ji nenapadalo. Až jednou, když se zase tak pohroužila v myšlenky, blesklo jí něco hlavou, zasmála se hlasitě, vyskočila jako gazela a zmizela za hustými růžovými keři.</b> ",
+        "annotator_topics": [
+            "přemýšlení",
+            "nápad"
+        ],
+        "generated_topics": [
+            "přemýšlení o řešení",
+            "náhlé osvícení",
+            "zmizení za keři"
+        ]
+    },
+    {
+        "text": " <b>Zdvih tygr hlavu, na mne díval se zelených očí svitem příšerným a bije o podlahu ocasem zdál chystati se k skoku.</b> ",
+        "annotator_topics": [
+            "konfrontace s tygrem"
+        ],
+        "generated_topics": [
+            "chování tygra",
+            "příprava k skoku",
+            "zelené oči tygra"
+        ]
+    },
+    {
+        "text": " <b>Lidová poesie i dnes praví, že mladé žito, vyrážejíc ze země, je proto červené, poněvadž země ještě dnes je všudy plna Abelovy krve.</b> ",
+        "annotator_topics": [
+            "poetické vysvětlení barvy mladého žita"
+        ],
+        "generated_topics": [
+            "lidová poesie",
+            "Abelova krev",
+            "symbolika žita"
+        ]
+    },
+    {
+        "text": " <b>TRUHLÁŘSKÉ ŘEZIVO smrkové, borové, modřinové, bukové, dubové a ostatní listnatě STAVEBNÍ MATERIÁL trámy, hranoly, fošny, prkna, latě, lišty a přesně opracovaná loďovka (palubky) Řezání a hoblování dřeva ve mzdě.</b> ",
+        "annotator_topics": [
+            "reklama na obchod opracovávající dřevo"
+        ],
+        "generated_topics": [
+            "truhlářské řezivo",
+            "stavební materiál",
+            "obrábění dřeva"
+        ]
+    },
+    {
+        "text": " <b>Nejprve vynesli na ramenou náklad, potom vyvedli voly, pak vynesli oje, pak kola. Zatím co to vojáci baterie konali, velitel seskočil s koně, aby poněkud protáhl nohy.</b> ",
+        "annotator_topics": [
+            "činnosti vojáků"
+        ],
+        "generated_topics": [
+            "příprava k odjezdu",
+            "vojenské činnosti",
+            "velitelova aktivita"
+        ]
+    },
+    {
+        "text": " <b>Zatím nadvláda maďarštiny pokračovala rychlým krokem. Sněm z roku 1840 vyhlásil ji za státní jazyk pro všechnu oblast koruny svatého Štěpána a zavedl ji do úřadův a soudů.</b> ",
+        "annotator_topics": [
+            "rozšířenost maďarštiny v 19. století"
+        ],
+        "generated_topics": [
+            "maďarská nadvláda",
+            "jazyková politika",
+            "sněm roku 1840"
+        ]
+    },
+    {
+        "text": " <b>V druhé polovině říše tato politika zájmová jest neméně v rozkvětu a také až po tuto chvíli příčinou všech našich nerozřešitelných zmatků.</b> ",
+        "annotator_topics": [
+            "politika v období druhé poloviny říše",
+            "Zmatky v politice",
+            "rozkvět druhé poloviny říše",
+            "nerozřešitelné zmatky kvůli rozdělení říše"
+        ],
+        "generated_topics": [
+            "politika říše",
+            "příčiny zmatků",
+            "nerozřešitelné zmatky"
+        ]
+    },
+    {
+        "text": " <b>šťuji, že ze všech lidí, kteří Vám přejí dobrého, nikdo Vám, ctěný pane, nepřeje věcí lepších nežli Váš velmi věrný a oddaný sluha P. B. Shelley.</b> ",
+        "annotator_topics": [
+            "lidé přející druhým lidem dobré věci",
+            "nesobecké přání dobrého",
+            "věrnost sluhů k pánovi"
+        ],
+        "generated_topics": [
+            "oddanost sluhy",
+            "přání dobra",
+            "věrnost P. B. Shelleyho"
+        ]
+    },
+    {
+        "text": " <b>Čl. 12. = R. r. k číslu 38. (Cvičení mluvnické) 74 13. = R. r č. 39. Komu je tíže? 74 „ „ 14. = R. r. č. 40.</b> ",
+        "annotator_topics": [],
+        "generated_topics": [
+            "mluvnická cvičení",
+            "číslování cvičení"
+        ]
+    },
+    {
+        "text": " <b>Pestrými okny s nádhernými malbami padalo dovnitř barevné světlo, vyzařované z obloukovek, visících venku před budovou.</b> ",
+        "annotator_topics": [
+            "článek o světle pronikajícím do budovy barevným oknem",
+            "světlo dopadající do kostela",
+            "popis prostředí ",
+            "zvukomalba "
+        ],
+        "generated_topics": [
+            "barevné světlo",
+            "nádherné malby",
+            "obloukovky"
+        ]
+    },
+    {
+        "text": " <b>Proto po zprávě, kterou o věci podala komise tří kardinálů, vydal 30. dubna 1344 slavnostní bullu, která z mohučské pravomoci vylučovala pražskou i olomouckou diecési a pražskému stolci, povýšenému na metropolitní, podřizovala nejen Olomouc, nýbrž i druhý sufragánní stolec zřízený v Litomyšli na území dosud zčásti z Prahy, zčásti z Olomouce spravovaném, s užitím premonstrátské kanonie litomyšlské k jeho vybavení.</b> ",
+        "annotator_topics": [
+            "Vláda na našem území ve 14. století",
+            "předání vlády pražskému stolci"
+        ],
+        "generated_topics": [
+            "církevní reformy",
+            "vznik metropolitního stolce",
+            "premonstrátská kanonie"
+        ]
+    },
+    {
+        "text": " <b>Má píseň bude jako vrba nicí, jež kloní v bolu větve žalující. Přede mnou vznáší se zjev Juanin, Don Gil</b> ",
+        "annotator_topics": [
+            "lyrická báseň od Dona Gila",
+            "vrba nicí a větve žalující se vznášející"
+        ],
+        "generated_topics": [
+            "poezie",
+            "smutek",
+            "zjevení Juanin",
+            "Don Gil"
+        ]
+    }
+]
