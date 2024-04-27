@@ -1,4 +1,4 @@
-import json
+import json5
 
 import numpy as np
 from sentence_transformers import CrossEncoder
@@ -17,7 +17,7 @@ class TopicEvaluator:
                 "score_total": metric.calculate_total_score(score_list)
             }
             results.append(result)
-        return json.dumps(results, indent=4, ensure_ascii=False)
+        return json5.dumps(results, indent=4, ensure_ascii=False)
 
     @staticmethod
     def create_score_list(metric, generated):
@@ -91,11 +91,11 @@ class CrossEncoderMetric1to1(Metric):
     def compare_pairs(self, pairs):
         score = self.ce.predict(pairs).tolist()
         return score
-    
+
     def calc_scores_for_text(self, annotator_topics, generated_topics):
         """
         Compare each annotator topic with all of the generated topics,
-        the aim is to find if the annotator topic is similar to at least one generated topic.                 
+        the aim is to find if the annotator topic is similar to at least one generated topic.
         It might be useful to immidiately find the score with the best match and only keep such score,
         but for now we will keep all scores.
         """
@@ -114,7 +114,7 @@ class CrossEncoderMetric1to1(Metric):
                 annotation_scores.append(scoring_result)
             ce_scores.append(annotation_scores)
         return ce_scores
-    
+
 
 class CrossEncoderMetric(Metric):
     # This model was chosen because it has best score on MNLI task
@@ -146,7 +146,7 @@ class CrossEncoderMetric(Metric):
             }
             scoring_results.append(scoring_result)
         return scoring_results
-    
+
 
 if __name__ == "__main__":
     with open("2024-03-31_23-48-17-generated-topics.json", mode="r") as topics_json:
@@ -158,6 +158,7 @@ if __name__ == "__main__":
         all_topics = [text_topics for text_topics in all_topics if len(text_topics["annotator_topics"]) != 0]
         # text_topics contains generated and annotator topics for one text
         for i, text_topics in enumerate(all_topics):
+
             annotator_topics = text_topics["annotator_topics"]
             generated_topics = text_topics["generated_topics"]
             print(f"Processing {i}/{len(all_topics)} annotator_topics {annotator_topics}")
@@ -173,5 +174,6 @@ if __name__ == "__main__":
         # print(json.dumps(all_topics_clean, indent=4, ensure_ascii=False))
         with open("out-eval.json", mode="w") as eval_file:
             json.dump(all_topics, eval_file, indent=4, ensure_ascii=False)
+
         res = evaluator.get_results(all_topics)
         print(res)
