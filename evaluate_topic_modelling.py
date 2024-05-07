@@ -227,7 +227,7 @@ if __name__ == "__main__":
             }
 
         # print(json.dumps(all_topics_clean, indent=4, ensure_ascii=False))
-        with open("out-eval.json", mode="w") as eval_file:
+        with open("old-jsons/out-eval.json", mode="w") as eval_file:
             json.dump(all_topics, eval_file, indent=4, ensure_ascii=False)
 
         res = evaluator.get_results(all_topics)

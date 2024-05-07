@@ -53,7 +53,7 @@ class MLMCosineSimilarityDetector(Detector):
 
 
 if __name__ == "__main__":
-    data_modeled_topics = json.load(open('out-eval.json', 'r'))
+    data_modeled_topics = json.load(open('old-jsons/out-eval.json', 'r'))
     modeled_detector = ModeledTopicsDetector()
     modeled_detector.evaluate_annotations(data_modeled_topics)
 
