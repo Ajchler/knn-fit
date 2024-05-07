@@ -1,3 +1,4 @@
 .idea/
 old-jsons/
 .ipynb_checkpoints/
+.env
