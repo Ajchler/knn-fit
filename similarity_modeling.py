@@ -25,7 +25,7 @@ class MLMTopicEvaluator:
 
 if __name__ == "__main__":
     evaluator = MLMTopicEvaluator()
-    data = json.load(open('gold_annotated_dataset.json', 'r'))
+    data = json.load(open('dataset/gold_annotated_dataset.json', 'r'))
     scores_dict = {}
     i = 0
     for d in data:
@@ -48,5 +48,5 @@ if __name__ == "__main__":
             scores.append(topic_dict)
         scores_dict[d]['scores'] = scores
 
-    json.dump(scores_dict, open('out_mlm_cos_similarity_scores.json', 'w'), indent=4, ensure_ascii=False)
+    json.dump(scores_dict, open('evaluation-data/out_mlm_cos_similarity_scores.json', 'w'), indent=4, ensure_ascii=False)
 

@@ -201,7 +201,7 @@ class CrossEncoderMetric(Metric):
 
 
 if __name__ == "__main__":
-    with open("2024-03-31_23-48-17-generated-topics.json", mode="r") as topics_json:
+    with open("topic-generation-logs/2024-03-31_23-48-17-generated-topics.json", mode="r") as topics_json:
         cross_enc_1to1 = CrossEncoderMetric1to1()
         cross_enc = CrossEncoderMetric()
         mlm_cos_sim = MLMSimilarity1to1()
@@ -227,7 +227,7 @@ if __name__ == "__main__":
             }
 
         # print(json.dumps(all_topics_clean, indent=4, ensure_ascii=False))
-        with open("out-eval.json", mode="w") as eval_file:
+        with open("evaluation-data/out-eval.json", mode="w") as eval_file:
             json.dump(all_topics, eval_file, indent=4, ensure_ascii=False)
 
         res = evaluator.get_results(all_topics)

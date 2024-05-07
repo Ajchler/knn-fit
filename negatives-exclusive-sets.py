@@ -8,7 +8,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 def clean_dataset():
-    f = open('out.json')
+    f = open('dataset/out.json')
 
     data = json.load(f)
     data_list = []
@@ -27,7 +27,7 @@ def clean_dataset():
             if len(new_text['user_topics']) != 0:
                 data_list.append(new_text)
 
-    with open("out-clean.json", "w") as f:
+    with open("dataset/out-clean.json", "w") as f:
         json.dump(data_list, f, ensure_ascii=False, indent=4)
 
     # Create DataFrame
