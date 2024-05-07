@@ -3,7 +3,7 @@ import curses
 import os
 
 if __name__ == '__main__':
-    with open('out.json', 'r') as f:
+    with open('dataset/out.json', 'r') as f:
         data = json.load(f)
 
     crs = curses.initscr()

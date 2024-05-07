@@ -53,11 +53,11 @@ class MLMCosineSimilarityDetector(Detector):
 
 
 if __name__ == "__main__":
-    data_modeled_topics = json.load(open('old-jsons/out-eval.json', 'r'))
+    data_modeled_topics = json.load(open('evaluation-data/out-eval.json', 'r'))
     modeled_detector = ModeledTopicsDetector()
     modeled_detector.evaluate_annotations(data_modeled_topics)
 
-    data_mlm_cosine_similarity = json.load(open('out_mlm_cos_similarity_scores.json', 'r'))
+    data_mlm_cosine_similarity = json.load(open('evaluation-data/out_mlm_cos_similarity_scores.json', 'r'))
     mlm_detector = MLMCosineSimilarityDetector()
     mlm_detector.evaluate_annotations(data_mlm_cosine_similarity)
 
