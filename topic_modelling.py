@@ -58,7 +58,8 @@ class GptGenerator:
 
 
 if __name__ == "__main__":
-    max_topic_generations = 10
+    max_topic_generations = 35
+
     save_to_file = True
 
     # topic_generator should be callable which takes text as argument
@@ -70,8 +71,10 @@ if __name__ == "__main__":
     logger.print_settings()
     # Generating topics using topic_generator
     generated_all = []
-    for text, topics in get_annotations("dataset/out.json", num_iterations=max_topic_generations):
+    for text, topics, key in get_annotations("data/gold_annotated_dataset.json",
+                                             num_iterations=max_topic_generations):
         generated = {
+            "text-id": key,
             "text": text,
             "annotator_topics": topics,
             "generated_topics": topic_generator(text)

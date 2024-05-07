@@ -54,13 +54,14 @@ def find_topics(item):
     return None
 
 
+
 def get_annotations(file_path, num_iterations=None):
     with open(file_path, 'r') as file:
         data = json.load(file)
         for key, value in islice(data.items(), num_iterations):
-            topics = find_topics(value)
+            topics = value['topics']
             if topics is not None:
-                yield value['text'], topics
+                yield value['text'], topics, key
 
 
 class Annotator_API():
@@ -194,7 +195,23 @@ class GoldDatasetCreator:
         curses.endwin()
         json.dump(annotated_data, open('old-jsons/annotated_dataset.json', 'w'), indent=4, ensure_ascii=False)
 
+
+class GoldDatasetConvertor:
+    def __call__(self, *args, **kwargs):
+        new_dataset = []
+        with open("topic-generation-logs/2024-05-08_00-41-35-generated-topics.json", mode="r") as golden_dataset:
+            data = json.load(golden_dataset)
+            # text_topics contains generated and annotator topics for one text
+            for item in data:
+                item['annotator_topics'] = [t for t in item['annotator_topics'].keys()]
+                new_dataset.append(item)
+        json.dump(new_dataset, open('topic-generation-logs/2024-05-08_00-41-35-generated-topics.json', mode="w"),
+                  indent=4, ensure_ascii=False)
+
+
 if __name__ == '__main__':
-    creator = GoldDatasetCreator()
-    creator()
+    pass
+    # GoldDatasetConvertor()()
+    # creator = GoldDatasetCreator()
+    # creator()
 
