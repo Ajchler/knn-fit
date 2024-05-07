@@ -89,7 +89,7 @@ if __name__ == "__main__":
     text_embeddings = text_embeddings / text_embeddings.norm(dim=1)[:, None]
     similarity = text_embeddings @ text_embeddings.transpose(0, 1)
     similarity = similarity.cpu().numpy()
-    k = 4
+    k = 20
 
     similar_texts = []
     for i in range(len(similarity)):
@@ -102,6 +102,7 @@ if __name__ == "__main__":
             most_similar.append(
                 {
                     "text": df_texts.iloc[most_similar_idx]["text"],
+                    "text_id": df_texts.iloc[most_similar_idx]["text_id"],
                     "user_topics": df_texts.iloc[most_similar_idx]["user_topics"],
                     "cosine_sim": f"{similarity[i][most_similar_idx]:0.6f}"
                 }
@@ -112,6 +113,7 @@ if __name__ == "__main__":
         best_text_topics_set_all = set(flatten(list(map(lambda x: x["user_topics"], most_similar)))[:10])
         similar_texts.append(
             {
+                "text_id": df_texts.iloc[i]["text_id"],
                 "text": df_texts.iloc[i]["text"],
                 "user_topics": df_texts.iloc[i]["user_topics"],
                 "potential_negatives_one": list(best_text_topics_set - this_topics_set),
