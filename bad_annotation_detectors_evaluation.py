@@ -26,6 +26,15 @@ class ModeledTopicsDetector(Detector):
         mlm_false_negative = 0
         mlm_true_positive = 0
         mlm_true_negative = 0
+        ce1to1_false_positive = 0
+        ce1to1_false_negative = 0
+        ce1to1_true_positive = 0
+        ce1to1_true_negative = 0
+        ce_false_positive = 0
+        ce_false_negative = 0
+        ce_true_positive = 0
+        ce_true_negative = 0
+
         for text in golden_data:
             ce_scores = data[text]["scoring"]["ce_scores"]
             ce_scores_1to1 = data[text]["scoring"]["ce_scores_1to1"]
@@ -41,13 +50,13 @@ class ModeledTopicsDetector(Detector):
                         max_score = s["score"]
 
                 if max_score >= self.MLM_THRESHOLD and label == 0:
-                    mlm_true_negative += 1
+                    ce1to1_true_negative += 1
                 elif max_score >= self.MLM_THRESHOLD and label == 1:
-                    mlm_false_negative += 1
+                    ce1to1_false_negative += 1
                 elif max_score < self.MLM_THRESHOLD and label == 0:
-                    mlm_false_positive += 1
+                    ce1to1_false_positive += 1
                 elif max_score < self.MLM_THRESHOLD and label == 1:
-                    mlm_true_positive += 1
+                    ce1to1_true_positive += 1
 
             # ce_scores_1to1
             for t in ce_scores_1to1:
@@ -59,13 +68,13 @@ class ModeledTopicsDetector(Detector):
                         max_score = s["score"]
 
                 if max_score >= self.CE1TO1_THRESHOLD and label == 0:
-                    mlm_true_negative += 1
+                    ce_true_negative += 1
                 elif max_score >= self.CE1TO1_THRESHOLD and label == 1:
-                    mlm_false_negative += 1
+                    ce_false_negative += 1
                 elif max_score < self.CE1TO1_THRESHOLD and label == 0:
-                    mlm_false_positive += 1
+                    ce_false_positive += 1
                 elif max_score < self.CE1TO1_THRESHOLD and label == 1:
-                    mlm_true_positive += 1
+                    ce_true_positive += 1
 
             for t in ce_scores:
                 topic = t["to"]
@@ -90,17 +99,17 @@ class ModeledTopicsDetector(Detector):
         )
         print_results(
             "CE 1to1 + Modeled Topics",
-            mlm_true_positive,
-            mlm_true_negative,
-            mlm_false_negative,
-            mlm_false_positive,
+            ce1to1_true_positive,
+            ce1to1_true_negative,
+            ce1to1_false_negative,
+            ce1to1_false_positive,
         )
         print_results(
             "CE + Modeled Topics",
-            mlm_true_positive,
-            mlm_true_negative,
-            mlm_false_negative,
-            mlm_false_positive,
+            ce_true_positive,
+            ce_true_negative,
+            ce_false_negative,
+            ce_false_positive,
         )
 
 
