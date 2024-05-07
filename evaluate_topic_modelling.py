@@ -201,7 +201,7 @@ class CrossEncoderMetric(Metric):
 
 
 if __name__ == "__main__":
-    with open("2024-03-31_23-48-17-generated-topics.json", mode="r") as topics_json:
+    with open("topic-generation-logs/2024-03-31_23-48-17-generated-topics.json", mode="r") as topics_json:
         cross_enc_1to1 = CrossEncoderMetric1to1()
         cross_enc = CrossEncoderMetric()
         mlm_cos_sim = MLMSimilarity1to1()
