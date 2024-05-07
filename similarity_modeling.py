@@ -21,6 +21,7 @@ class MLMTopicEvaluator:
         text_embedding = text_embedding.reshape(1, -1)
         topics_embeddings = torch.tensor(np.array(topics_embeddings))
         similarities = self.cos_sim(text_embedding, topics_embeddings)
+        similarities = map(lambda x: x.item, similarities)
         return similarities
 
 
@@ -32,13 +33,8 @@ class BenesEvaluator:
         self.top_p = 1
         self.frequency_penalty = 0
         self.presence_penalty = 0
-        self.system_message = (""
-                               "that occur in a given text. Each topic has to make sense on its own and cover "
-                               "substantial part of the text. The length of each topic never exceeds 4 words limit. "
-                               "Answer in Czech language. Answer should contain only new line separated "
-                               "topics.\n\nHere are some examples.")
 
-        self.new_system_message = (
+        self.system_message = (
             """
             You are Czech lingual expert with years of experience. I will give you text and a few topics and
             you will provide relevance score to a given text for each topic. 
@@ -68,9 +64,11 @@ class BenesEvaluator:
         )
 
     def get_similarity(self, text, topics):
-        topics = topics.join('\n')
+        topics = '\n'.join(topics)
+        gpt4_input = f"{text}\n\n{topics}"
+        print(f"Input: '{gpt4_input}'")
         generation_result = self.client.chat.completions.create(
-            model="gpt-4-0125-preview",
+            model="gpt-4-turbo",
             messages=[
                 {
                     "role": "system",
@@ -78,7 +76,7 @@ class BenesEvaluator:
                 },
                 {
                     "role": "user",
-                    "content": f"{text}\n\n{topics}"
+                    "content": gpt4_input
                 }
             ],
             temperature=self.temperature,
@@ -87,13 +85,14 @@ class BenesEvaluator:
             frequency_penalty=self.frequency_penalty,
             presence_penalty=self.presence_penalty
         )
-        generated_answer = generation_result.choices[0].message.content
-        return generated_answer.split("\n")
+        generated_answer = generation_result.choices[0].message.content.split('\n')
+        print(f"Output: '{generated_answer}'")
+        return map(lambda x: float(x.split(': ')[1]), generated_answer)
 
 
 if __name__ == "__main__":
     evaluator = BenesEvaluator()
-    data = json.load(open('dataset/gold_annotated_dataset.json', 'r'))
+    data = json.load(open('data/gold_annotated_dataset.json', 'r'))
     scores_dict = {}
     i = 0
     for d in data:
@@ -111,10 +110,11 @@ if __name__ == "__main__":
         for t, s in zip(topics, similarities):
             topic_dict = {}
             topic_dict['topic'] = t
-            topic_dict['similarity'] = s.item()
+            topic_dict['similarity'] = s
             topic_dict['label'] = labels[topics.index(t)]
             scores.append(topic_dict)
         scores_dict[d]['scores'] = scores
 
-    json.dump(scores_dict, open('evaluation-data/out_mlm_cos_similarity_scores.json', 'w'), indent=4, ensure_ascii=False)
+    json.dump(scores_dict, open('evaluation-data/out-direct-score.json', 'w'),
+              indent=4, ensure_ascii=False)
 
