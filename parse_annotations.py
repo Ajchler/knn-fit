@@ -1,6 +1,6 @@
 import json5
 import json
-from annotator_api import Annotator_API
+from utils import Annotator_API
 import os
 from dotenv import load_dotenv
 load_dotenv()
