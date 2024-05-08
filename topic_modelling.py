@@ -70,7 +70,7 @@ if __name__ == "__main__":
     logger.print_settings()
     # Generating topics using topic_generator
     generated_all = []
-    for text, topics in get_annotations("dataset/out.json", num_iterations=max_topic_generations):
+    for text, topics in get_annotations("data/out.json", num_iterations=max_topic_generations):
         generated = {
             "text": text,
             "annotator_topics": topics,
