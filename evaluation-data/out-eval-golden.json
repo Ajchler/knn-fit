@@ -1,0 +1,3048 @@
+[
+    {
+        "text-id": "51fa695f-2cba-4d40-b3d0-2ffc4ac3fcbb",
+        "text": " <b>Při vychovávání mládeže a ve školách je cvičení těla tak podstatné a potřebné, jako cvičení ducha. U dítěte jest vyvinutí těla přednější, nežli vyvinutí ducha.</b> ",
+        "annotator_topics": [
+            "fyzické cvičení těla",
+            "cvičení duch",
+            "výchova mládeže"
+        ],
+        "generated_topics": [
+            "výchova mládeže",
+            "tělesné cvičení",
+            "duchovní vzdělání"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "fyzické cvičení těla",
+                        "to": "výchova mládeže",
+                        "score": 0.19116418063640594
+                    },
+                    {
+                        "from": "fyzické cvičení těla",
+                        "to": "tělesné cvičení",
+                        "score": 0.8275976181030273
+                    },
+                    {
+                        "from": "fyzické cvičení těla",
+                        "to": "duchovní vzdělání",
+                        "score": 0.17747247219085693
+                    }
+                ],
+                [
+                    {
+                        "from": "cvičení duch",
+                        "to": "výchova mládeže",
+                        "score": 0.1671784669160843
+                    },
+                    {
+                        "from": "cvičení duch",
+                        "to": "tělesné cvičení",
+                        "score": 0.5852552652359009
+                    },
+                    {
+                        "from": "cvičení duch",
+                        "to": "duchovní vzdělání",
+                        "score": 0.9413564205169678
+                    }
+                ],
+                [
+                    {
+                        "from": "výchova mládeže",
+                        "to": "výchova mládeže",
+                        "score": 0.9709933996200562
+                    },
+                    {
+                        "from": "výchova mládeže",
+                        "to": "tělesné cvičení",
+                        "score": 0.05496552959084511
+                    },
+                    {
+                        "from": "výchova mládeže",
+                        "to": "duchovní vzdělání",
+                        "score": 0.2979614734649658
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "výchova mládeže tělesné cvičení duchovní vzdělání",
+                    "to": "fyzické cvičení těla",
+                    "score": 0.9063019752502441
+                },
+                {
+                    "from": "výchova mládeže tělesné cvičení duchovní vzdělání",
+                    "to": "cvičení duch",
+                    "score": 0.8204711079597473
+                },
+                {
+                    "from": "výchova mládeže tělesné cvičení duchovní vzdělání",
+                    "to": "výchova mládeže",
+                    "score": 0.8273345232009888
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "fyzické cvičení těla",
+                        "to": "výchova mládeže",
+                        "score": 0.13422027230262756
+                    },
+                    {
+                        "from": "fyzické cvičení těla",
+                        "to": "tělesné cvičení",
+                        "score": 0.9703406095504761
+                    },
+                    {
+                        "from": "fyzické cvičení těla",
+                        "to": "duchovní vzdělání",
+                        "score": 0.17251181602478027
+                    }
+                ],
+                [
+                    {
+                        "from": "cvičení duch",
+                        "to": "výchova mládeže",
+                        "score": 0.2871371805667877
+                    },
+                    {
+                        "from": "cvičení duch",
+                        "to": "tělesné cvičení",
+                        "score": 0.4914839267730713
+                    },
+                    {
+                        "from": "cvičení duch",
+                        "to": "duchovní vzdělání",
+                        "score": 0.7309492826461792
+                    }
+                ],
+                [
+                    {
+                        "from": "výchova mládeže",
+                        "to": "výchova mládeže",
+                        "score": 1.0000001192092896
+                    },
+                    {
+                        "from": "výchova mládeže",
+                        "to": "tělesné cvičení",
+                        "score": 0.20973247289657593
+                    },
+                    {
+                        "from": "výchova mládeže",
+                        "to": "duchovní vzdělání",
+                        "score": 0.36395907402038574
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "5445da40-ce98-4f4c-b1a8-e46115ef4166",
+        "text": " <b>Radoval jsem se z toho, že jsem tento druhý anglický list již téměř bez pomoci slovníka dobře mohl pochopiti, pročež tím více byl jsem povzbuzen, abych jak skladbu tak i různé obraty této zvláštní mluvy sobě osvojil.</b> ",
+        "annotator_topics": [
+            "Radost z učení se jazyka",
+            "Radost z porozumění anglickému jazyku"
+        ],
+        "generated_topics": [
+            "učení angličtiny",
+            "použití slovníku",
+            "osvojení jazyka"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "Radost z učení se jazyka",
+                        "to": "učení angličtiny",
+                        "score": 0.5274627208709717
+                    },
+                    {
+                        "from": "Radost z učení se jazyka",
+                        "to": "použití slovníku",
+                        "score": 0.1300605684518814
+                    },
+                    {
+                        "from": "Radost z učení se jazyka",
+                        "to": "osvojení jazyka",
+                        "score": 0.730999767780304
+                    }
+                ],
+                [
+                    {
+                        "from": "Radost z porozumění anglickému jazyku",
+                        "to": "učení angličtiny",
+                        "score": 0.3978123366832733
+                    },
+                    {
+                        "from": "Radost z porozumění anglickému jazyku",
+                        "to": "použití slovníku",
+                        "score": 0.19643551111221313
+                    },
+                    {
+                        "from": "Radost z porozumění anglickému jazyku",
+                        "to": "osvojení jazyka",
+                        "score": 0.4120301604270935
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "učení angličtiny použití slovníku osvojení jazyka",
+                    "to": "Radost z učení se jazyka",
+                    "score": 0.6817634701728821
+                },
+                {
+                    "from": "učení angličtiny použití slovníku osvojení jazyka",
+                    "to": "Radost z porozumění anglickému jazyku",
+                    "score": 0.5873318910598755
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "Radost z učení se jazyka",
+                        "to": "učení angličtiny",
+                        "score": 0.5408297777175903
+                    },
+                    {
+                        "from": "Radost z učení se jazyka",
+                        "to": "použití slovníku",
+                        "score": 0.2600690424442291
+                    },
+                    {
+                        "from": "Radost z učení se jazyka",
+                        "to": "osvojení jazyka",
+                        "score": 0.6582609415054321
+                    }
+                ],
+                [
+                    {
+                        "from": "Radost z porozumění anglickému jazyku",
+                        "to": "učení angličtiny",
+                        "score": 0.7702641487121582
+                    },
+                    {
+                        "from": "Radost z porozumění anglickému jazyku",
+                        "to": "použití slovníku",
+                        "score": 0.297019898891449
+                    },
+                    {
+                        "from": "Radost z porozumění anglickému jazyku",
+                        "to": "osvojení jazyka",
+                        "score": 0.5465051531791687
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "4a80bf7d-9e2f-4d60-8751-0c02e643cf61",
+        "text": " <b>Ale to je pouze pohyb zdánlivý; právě naopak: jste to vy, kteří se pohybujete a opisujete kruh kol něho.</b> ",
+        "annotator_topics": [
+            "filozofie",
+            "metafora"
+        ],
+        "generated_topics": [
+            "zdánlivý pohyb",
+            "opisování kruhu"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "filozofie",
+                        "to": "zdánlivý pohyb",
+                        "score": 0.028781576082110405
+                    },
+                    {
+                        "from": "filozofie",
+                        "to": "opisování kruhu",
+                        "score": 0.03333822265267372
+                    }
+                ],
+                [
+                    {
+                        "from": "metafora",
+                        "to": "zdánlivý pohyb",
+                        "score": 0.027096141129732132
+                    },
+                    {
+                        "from": "metafora",
+                        "to": "opisování kruhu",
+                        "score": 0.06623777747154236
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "zdánlivý pohyb opisování kruhu",
+                    "to": "filozofie",
+                    "score": 0.04275756701827049
+                },
+                {
+                    "from": "zdánlivý pohyb opisování kruhu",
+                    "to": "metafora",
+                    "score": 0.04907853156328201
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "filozofie",
+                        "to": "zdánlivý pohyb",
+                        "score": 0.3440767228603363
+                    },
+                    {
+                        "from": "filozofie",
+                        "to": "opisování kruhu",
+                        "score": 0.3209141194820404
+                    }
+                ],
+                [
+                    {
+                        "from": "metafora",
+                        "to": "zdánlivý pohyb",
+                        "score": 0.45050475001335144
+                    },
+                    {
+                        "from": "metafora",
+                        "to": "opisování kruhu",
+                        "score": 0.3106147050857544
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "718431bf-885e-439a-bada-3d231c872f78",
+        "text": " <b>Jan Jáchym Winckelmann, narozený 1717 v Stendalu v Branibořích, přišel roku 1755 do Říma a žil pak trvale v Italii do roku 1768, kdy byl v Terstu zavražděn.</b> ",
+        "annotator_topics": [
+            "život v 18. století"
+        ],
+        "generated_topics": [
+            "Winckelmannova biografie",
+            "pobyt v Itálii",
+            "vražda v Terstu"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "život v 18. století",
+                        "to": "Winckelmannova biografie",
+                        "score": 0.03690953180193901
+                    },
+                    {
+                        "from": "život v 18. století",
+                        "to": "pobyt v Itálii",
+                        "score": 0.15616470575332642
+                    },
+                    {
+                        "from": "život v 18. století",
+                        "to": "vražda v Terstu",
+                        "score": 0.10621871799230576
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "Winckelmannova biografie pobyt v Itálii vražda v Terstu",
+                    "to": "život v 18. století",
+                    "score": 0.08444931358098984
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "život v 18. století",
+                        "to": "Winckelmannova biografie",
+                        "score": 0.37253686785697937
+                    },
+                    {
+                        "from": "život v 18. století",
+                        "to": "pobyt v Itálii",
+                        "score": 0.2852579951286316
+                    },
+                    {
+                        "from": "život v 18. století",
+                        "to": "vražda v Terstu",
+                        "score": 0.3590210974216461
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "6a766e56-e3c5-469c-b231-c288de83f73f",
+        "text": " <b>Mimo to byla široce rozvětvena práce směřující ke přípravě bolševicky školených a vědecky kvalifikovaných filosofických kádrů, stojících na výši »současné vědy« a »stranou formulovaných úloh«, o čemž svědčí především dnešní stav aktivních spolupracovníků hlavního filosofického orgánu strany, který čítá 85 zcela zapracovaných chovanců zmíněného Institutu.</b> ",
+        "annotator_topics": [
+            "příprava bolševických filosofů"
+        ],
+        "generated_topics": [
+            "filosofické vzdělávání",
+            "bolševická příprava",
+            "vědecká kvalifikace"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "příprava bolševických filosofů",
+                        "to": "filosofické vzdělávání",
+                        "score": 0.6546025276184082
+                    },
+                    {
+                        "from": "příprava bolševických filosofů",
+                        "to": "bolševická příprava",
+                        "score": 0.8385846614837646
+                    },
+                    {
+                        "from": "příprava bolševických filosofů",
+                        "to": "vědecká kvalifikace",
+                        "score": 0.07560546696186066
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "filosofické vzdělávání bolševická příprava vědecká kvalifikace",
+                    "to": "příprava bolševických filosofů",
+                    "score": 0.894470751285553
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "příprava bolševických filosofů",
+                        "to": "filosofické vzdělávání",
+                        "score": 0.5555561184883118
+                    },
+                    {
+                        "from": "příprava bolševických filosofů",
+                        "to": "bolševická příprava",
+                        "score": 0.8162683248519897
+                    },
+                    {
+                        "from": "příprava bolševických filosofů",
+                        "to": "vědecká kvalifikace",
+                        "score": 0.3045359253883362
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "330ea01f-e6a6-4842-a065-3ff10f9a5cc3",
+        "text": " <b>To znamená, že i když jest rakouský občan v cizině, pokud rakouským příslušníkem jest, musí se podle tohoto zákona říditi.</b> ",
+        "annotator_topics": [
+            "platnost rakouského zákona"
+        ],
+        "generated_topics": [
+            "rakouské občanství",
+            "zákony v cizině",
+            "příslušnost k státu"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "platnost rakouského zákona",
+                        "to": "rakouské občanství",
+                        "score": 0.8522219061851501
+                    },
+                    {
+                        "from": "platnost rakouského zákona",
+                        "to": "zákony v cizině",
+                        "score": 0.3112243711948395
+                    },
+                    {
+                        "from": "platnost rakouského zákona",
+                        "to": "příslušnost k státu",
+                        "score": 0.16711187362670898
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "rakouské občanství zákony v cizině příslušnost k státu",
+                    "to": "platnost rakouského zákona",
+                    "score": 0.8564093112945557
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "platnost rakouského zákona",
+                        "to": "rakouské občanství",
+                        "score": 0.663493275642395
+                    },
+                    {
+                        "from": "platnost rakouského zákona",
+                        "to": "zákony v cizině",
+                        "score": 0.594176173210144
+                    },
+                    {
+                        "from": "platnost rakouského zákona",
+                        "to": "příslušnost k státu",
+                        "score": 0.40725645422935486
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "f4f69bca-c2ac-4c48-98ce-c390a87fb687",
+        "text": " <b>Vše na něm bylo drobounké, filigránové: útlounké kosti, oholené vráskovité tváře, ba i bílé zuby, které byly</b> ",
+        "annotator_topics": [
+            "popis drobné osoby"
+        ],
+        "generated_topics": [
+            "drobná tělesná stavba",
+            "filigránový vzhled",
+            "bílé zuby"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "popis drobné osoby",
+                        "to": "drobná tělesná stavba",
+                        "score": 0.6485276222229004
+                    },
+                    {
+                        "from": "popis drobné osoby",
+                        "to": "filigránový vzhled",
+                        "score": 0.03210684657096863
+                    },
+                    {
+                        "from": "popis drobné osoby",
+                        "to": "bílé zuby",
+                        "score": 0.03790024295449257
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "drobná tělesná stavba filigránový vzhled bílé zuby",
+                    "to": "popis drobné osoby",
+                    "score": 0.30445656180381775
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "popis drobné osoby",
+                        "to": "drobná tělesná stavba",
+                        "score": 0.6408757567405701
+                    },
+                    {
+                        "from": "popis drobné osoby",
+                        "to": "filigránový vzhled",
+                        "score": 0.44479459524154663
+                    },
+                    {
+                        "from": "popis drobné osoby",
+                        "to": "bílé zuby",
+                        "score": 0.30760905146598816
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "405d4e1a-0107-412f-ada6-d1121790b349",
+        "text": " <b>Normální ženská postava vyznačuje se útlejšími kostmi, okrouhlými formami, plnými, ale ne svislými prsy, širokou kyčlí, bohatým, dlouhým vlasem, živým okem; k tomu patří zdravá, růžová barva kůže, červená</b> ",
+        "annotator_topics": [
+            "popis normální ženské postavy"
+        ],
+        "generated_topics": [
+            "ženská anatomie",
+            "charakteristiky postavy",
+            "zdraví a vzhled"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "popis normální ženské postavy",
+                        "to": "ženská anatomie",
+                        "score": 0.48324882984161377
+                    },
+                    {
+                        "from": "popis normální ženské postavy",
+                        "to": "charakteristiky postavy",
+                        "score": 0.6793486475944519
+                    },
+                    {
+                        "from": "popis normální ženské postavy",
+                        "to": "zdraví a vzhled",
+                        "score": 0.03212921693921089
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "ženská anatomie charakteristiky postavy zdraví a vzhled",
+                    "to": "popis normální ženské postavy",
+                    "score": 0.7761757373809814
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "popis normální ženské postavy",
+                        "to": "ženská anatomie",
+                        "score": 0.6057534217834473
+                    },
+                    {
+                        "from": "popis normální ženské postavy",
+                        "to": "charakteristiky postavy",
+                        "score": 0.5775848031044006
+                    },
+                    {
+                        "from": "popis normální ženské postavy",
+                        "to": "zdraví a vzhled",
+                        "score": 0.39864712953567505
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "2266eb09-6905-40e7-a8bf-aa2dd6d44b95",
+        "text": " <b>Myslím, že také mnohého sem láká touha spatřiti místo slavného boje proti Tatarům, projevil své mínění Sladomel. — Ovšem, ale nikdo nesmí zapomenouti, že toho vítězství křesťané dobyli na přímluvu Marie Panny, pokračoval Soukal. — O tato hora je velepamátná a není se čemu diviti, že viděla už několikráte pospolu poutníky ze všech zemí slovanských.</b> ",
+        "annotator_topics": [
+            "výklad o památné hoře",
+            "bitva křesťanů s Tatary"
+        ],
+        "generated_topics": [
+            "poutní místo",
+            "boj proti Tatarům",
+            "vítězství křesťanů",
+            "úcta k Marii Panně",
+            "slovanská jednota"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "výklad o památné hoře",
+                        "to": "poutní místo",
+                        "score": 0.0731768012046814
+                    },
+                    {
+                        "from": "výklad o památné hoře",
+                        "to": "boj proti Tatarům",
+                        "score": 0.031183507293462753
+                    },
+                    {
+                        "from": "výklad o památné hoře",
+                        "to": "vítězství křesťanů",
+                        "score": 0.047402624040842056
+                    },
+                    {
+                        "from": "výklad o památné hoře",
+                        "to": "úcta k Marii Panně",
+                        "score": 0.09320197254419327
+                    },
+                    {
+                        "from": "výklad o památné hoře",
+                        "to": "slovanská jednota",
+                        "score": 0.06620876491069794
+                    }
+                ],
+                [
+                    {
+                        "from": "bitva křesťanů s Tatary",
+                        "to": "poutní místo",
+                        "score": 0.049329157918691635
+                    },
+                    {
+                        "from": "bitva křesťanů s Tatary",
+                        "to": "boj proti Tatarům",
+                        "score": 0.5780595541000366
+                    },
+                    {
+                        "from": "bitva křesťanů s Tatary",
+                        "to": "vítězství křesťanů",
+                        "score": 0.6725649237632751
+                    },
+                    {
+                        "from": "bitva křesťanů s Tatary",
+                        "to": "úcta k Marii Panně",
+                        "score": 0.13815118372440338
+                    },
+                    {
+                        "from": "bitva křesťanů s Tatary",
+                        "to": "slovanská jednota",
+                        "score": 0.05933739244937897
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "poutní místo boj proti Tatarům vítězství křesťanů úcta k Marii Panně slovanská jednota",
+                    "to": "výklad o památné hoře",
+                    "score": 0.08088534325361252
+                },
+                {
+                    "from": "poutní místo boj proti Tatarům vítězství křesťanů úcta k Marii Panně slovanská jednota",
+                    "to": "bitva křesťanů s Tatary",
+                    "score": 0.6375631093978882
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "výklad o památné hoře",
+                        "to": "poutní místo",
+                        "score": 0.5551940202713013
+                    },
+                    {
+                        "from": "výklad o památné hoře",
+                        "to": "boj proti Tatarům",
+                        "score": 0.32649368047714233
+                    },
+                    {
+                        "from": "výklad o památné hoře",
+                        "to": "vítězství křesťanů",
+                        "score": 0.32618582248687744
+                    },
+                    {
+                        "from": "výklad o památné hoře",
+                        "to": "úcta k Marii Panně",
+                        "score": 0.32122018933296204
+                    },
+                    {
+                        "from": "výklad o památné hoře",
+                        "to": "slovanská jednota",
+                        "score": 0.4259175658226013
+                    }
+                ],
+                [
+                    {
+                        "from": "bitva křesťanů s Tatary",
+                        "to": "poutní místo",
+                        "score": 0.2143375724554062
+                    },
+                    {
+                        "from": "bitva křesťanů s Tatary",
+                        "to": "boj proti Tatarům",
+                        "score": 0.8301945328712463
+                    },
+                    {
+                        "from": "bitva křesťanů s Tatary",
+                        "to": "vítězství křesťanů",
+                        "score": 0.6529968976974487
+                    },
+                    {
+                        "from": "bitva křesťanů s Tatary",
+                        "to": "úcta k Marii Panně",
+                        "score": 0.292256236076355
+                    },
+                    {
+                        "from": "bitva křesťanů s Tatary",
+                        "to": "slovanská jednota",
+                        "score": 0.45009955763816833
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "f87e1a6f-5194-44ad-9130-51e69ced1128",
+        "text": " <b>Tu jednou stalo se, že cizí muž do hradu zavítal a pravil tak: „Jdu z daleka. Mám mnohou zkušenosť, za mořem nabytou, za horami.</b> ",
+        "annotator_topics": [
+            "cestování",
+            "vypráveč"
+        ],
+        "generated_topics": [
+            "cizí návštěvník",
+            "daleká cesta",
+            "zkušenosti z cest"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "cestování",
+                        "to": "cizí návštěvník",
+                        "score": 0.14555440843105316
+                    },
+                    {
+                        "from": "cestování",
+                        "to": "daleká cesta",
+                        "score": 0.09100954979658127
+                    },
+                    {
+                        "from": "cestování",
+                        "to": "zkušenosti z cest",
+                        "score": 0.1176510825753212
+                    }
+                ],
+                [
+                    {
+                        "from": "vypráveč",
+                        "to": "cizí návštěvník",
+                        "score": 0.025170791894197464
+                    },
+                    {
+                        "from": "vypráveč",
+                        "to": "daleká cesta",
+                        "score": 0.02377903275191784
+                    },
+                    {
+                        "from": "vypráveč",
+                        "to": "zkušenosti z cest",
+                        "score": 0.02475171908736229
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "cizí návštěvník daleká cesta zkušenosti z cest",
+                    "to": "cestování",
+                    "score": 0.09449585527181625
+                },
+                {
+                    "from": "cizí návštěvník daleká cesta zkušenosti z cest",
+                    "to": "vypráveč",
+                    "score": 0.02627433091402054
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "cestování",
+                        "to": "cizí návštěvník",
+                        "score": 0.5981525778770447
+                    },
+                    {
+                        "from": "cestování",
+                        "to": "daleká cesta",
+                        "score": 0.7032948732376099
+                    },
+                    {
+                        "from": "cestování",
+                        "to": "zkušenosti z cest",
+                        "score": 0.8958512544631958
+                    }
+                ],
+                [
+                    {
+                        "from": "vypráveč",
+                        "to": "cizí návštěvník",
+                        "score": 0.4709896445274353
+                    },
+                    {
+                        "from": "vypráveč",
+                        "to": "daleká cesta",
+                        "score": 0.675849974155426
+                    },
+                    {
+                        "from": "vypráveč",
+                        "to": "zkušenosti z cest",
+                        "score": 0.2952142357826233
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "6bc9f176-bf3d-4f63-9665-ac43c058d892",
+        "text": " <b>První podmínka, abychom měli užitek z intelligence, jest jednota. V mnohonásobnosti „obecného vzdělávání“ našlo se poslední umění, jak zpitoměti a zhovaditi děti.</b> ",
+        "annotator_topics": [
+            "Význam vzdělání",
+            "Význam školství"
+        ],
+        "generated_topics": [
+            "význam jednoty",
+            "kritika vzdělávání",
+            "vzdělávací systémy"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "Význam vzdělání",
+                        "to": "význam jednoty",
+                        "score": 0.7314547300338745
+                    },
+                    {
+                        "from": "Význam vzdělání",
+                        "to": "kritika vzdělávání",
+                        "score": 0.7176234722137451
+                    },
+                    {
+                        "from": "Význam vzdělání",
+                        "to": "vzdělávací systémy",
+                        "score": 0.8668389916419983
+                    }
+                ],
+                [
+                    {
+                        "from": "Význam školství",
+                        "to": "význam jednoty",
+                        "score": 0.5927080512046814
+                    },
+                    {
+                        "from": "Význam školství",
+                        "to": "kritika vzdělávání",
+                        "score": 0.17233389616012573
+                    },
+                    {
+                        "from": "Význam školství",
+                        "to": "vzdělávací systémy",
+                        "score": 0.4671306610107422
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "význam jednoty kritika vzdělávání vzdělávací systémy",
+                    "to": "Význam vzdělání",
+                    "score": 0.8394569754600525
+                },
+                {
+                    "from": "význam jednoty kritika vzdělávání vzdělávací systémy",
+                    "to": "Význam školství",
+                    "score": 0.7106440663337708
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "Význam vzdělání",
+                        "to": "význam jednoty",
+                        "score": 0.346280038356781
+                    },
+                    {
+                        "from": "Význam vzdělání",
+                        "to": "kritika vzdělávání",
+                        "score": 0.8149639368057251
+                    },
+                    {
+                        "from": "Význam vzdělání",
+                        "to": "vzdělávací systémy",
+                        "score": 0.7942060828208923
+                    }
+                ],
+                [
+                    {
+                        "from": "Význam školství",
+                        "to": "význam jednoty",
+                        "score": 0.34626349806785583
+                    },
+                    {
+                        "from": "Význam školství",
+                        "to": "kritika vzdělávání",
+                        "score": 0.8136467933654785
+                    },
+                    {
+                        "from": "Význam školství",
+                        "to": "vzdělávací systémy",
+                        "score": 0.8020095825195312
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "95d72b68-214a-4075-8259-93634a9167af",
+        "text": "vždy činí pověrčiví cizinci, a doufají tedy, že kouzelná moc je přivede zase do Říma zpět. <b>Ze staroslavného „forum romanum“ stalo se během věků — „campo vaccino“, pastvina pro skot, z nynějších náměstí římských stane se během času také něco.</b> ",
+        "annotator_topics": [
+            "záník říše římské",
+            "Proud času"
+        ],
+        "generated_topics": [
+            "změny Říma",
+            "historické proměny",
+            "campo vaccino"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "záník říše římské",
+                        "to": "změny Říma",
+                        "score": 0.6503564715385437
+                    },
+                    {
+                        "from": "záník říše římské",
+                        "to": "historické proměny",
+                        "score": 0.04166756197810173
+                    },
+                    {
+                        "from": "záník říše římské",
+                        "to": "campo vaccino",
+                        "score": 0.02561623603105545
+                    }
+                ],
+                [
+                    {
+                        "from": "Proud času",
+                        "to": "změny Říma",
+                        "score": 0.0449313148856163
+                    },
+                    {
+                        "from": "Proud času",
+                        "to": "historické proměny",
+                        "score": 0.0784185454249382
+                    },
+                    {
+                        "from": "Proud času",
+                        "to": "campo vaccino",
+                        "score": 0.08584464341402054
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "změny Říma historické proměny campo vaccino",
+                    "to": "záník říše římské",
+                    "score": 0.5106315016746521
+                },
+                {
+                    "from": "změny Říma historické proměny campo vaccino",
+                    "to": "Proud času",
+                    "score": 0.050820522010326385
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "záník říše římské",
+                        "to": "změny Říma",
+                        "score": 0.8863952159881592
+                    },
+                    {
+                        "from": "záník říše římské",
+                        "to": "historické proměny",
+                        "score": 0.4418318271636963
+                    },
+                    {
+                        "from": "záník říše římské",
+                        "to": "campo vaccino",
+                        "score": 0.19608108699321747
+                    }
+                ],
+                [
+                    {
+                        "from": "Proud času",
+                        "to": "změny Říma",
+                        "score": 0.3408241868019104
+                    },
+                    {
+                        "from": "Proud času",
+                        "to": "historické proměny",
+                        "score": 0.5298293232917786
+                    },
+                    {
+                        "from": "Proud času",
+                        "to": "campo vaccino",
+                        "score": 0.2076079249382019
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "e7f147ad-4a5b-4df8-a32c-7f008e2a0674",
+        "text": " <b>I umyla si čistě ruce a obličej, přišla, skromně před princem se uklonila, a když podaný jí střevíček zkusila, hodil se na nožku její jako ulitý- Princ podíval se teprve nyní Popelce do očí a hned poznal krásnou dívku, s níž tančil, a radostí zvolal: »To je pravá moje nevěsta!« Macecha i obě sestry velice se ulekly a zbledly zlostí a závistí; ale princ posadil Popelku před sebe na koně a vesele odjížděl.</b> ",
+        "annotator_topics": [
+            "pohádka"
+        ],
+        "generated_topics": [
+            "pohádkový příběh",
+            "princ a Popelka",
+            "závist a zlost"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "pohádka",
+                        "to": "pohádkový příběh",
+                        "score": 0.6781285405158997
+                    },
+                    {
+                        "from": "pohádka",
+                        "to": "princ a Popelka",
+                        "score": 0.035540271550416946
+                    },
+                    {
+                        "from": "pohádka",
+                        "to": "závist a zlost",
+                        "score": 0.024187328293919563
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "pohádkový příběh princ a Popelka závist a zlost",
+                    "to": "pohádka",
+                    "score": 0.37582072615623474
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "pohádka",
+                        "to": "pohádkový příběh",
+                        "score": 0.8242077827453613
+                    },
+                    {
+                        "from": "pohádka",
+                        "to": "princ a Popelka",
+                        "score": 0.3971162736415863
+                    },
+                    {
+                        "from": "pohádka",
+                        "to": "závist a zlost",
+                        "score": 0.427404522895813
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "69b66d80-b591-4205-8269-94296737a622",
+        "text": " <b>Vskutku myslím, že švestkový knedlík je co do rodu svého ženská. Že náleží k slabému, ale krásnému pohlaví.</b> ",
+        "annotator_topics": [
+            "Rody podstatných jmen",
+            "Vliv jazyka na vnímání světa"
+        ],
+        "generated_topics": [
+            "gastrofilozofie",
+            "ženské pohlaví",
+            "švestkové knedlíky"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "Rody podstatných jmen",
+                        "to": "gastrofilozofie",
+                        "score": 0.03742973506450653
+                    },
+                    {
+                        "from": "Rody podstatných jmen",
+                        "to": "ženské pohlaví",
+                        "score": 0.08954692631959915
+                    },
+                    {
+                        "from": "Rody podstatných jmen",
+                        "to": "švestkové knedlíky",
+                        "score": 0.07240775227546692
+                    }
+                ],
+                [
+                    {
+                        "from": "Vliv jazyka na vnímání světa",
+                        "to": "gastrofilozofie",
+                        "score": 0.027326077222824097
+                    },
+                    {
+                        "from": "Vliv jazyka na vnímání světa",
+                        "to": "ženské pohlaví",
+                        "score": 0.031819235533475876
+                    },
+                    {
+                        "from": "Vliv jazyka na vnímání světa",
+                        "to": "švestkové knedlíky",
+                        "score": 0.2258594036102295
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "gastrofilozofie ženské pohlaví švestkové knedlíky",
+                    "to": "Rody podstatných jmen",
+                    "score": 0.2014688402414322
+                },
+                {
+                    "from": "gastrofilozofie ženské pohlaví švestkové knedlíky",
+                    "to": "Vliv jazyka na vnímání světa",
+                    "score": 0.19120903313159943
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "Rody podstatných jmen",
+                        "to": "gastrofilozofie",
+                        "score": 0.21275387704372406
+                    },
+                    {
+                        "from": "Rody podstatných jmen",
+                        "to": "ženské pohlaví",
+                        "score": 0.3747994601726532
+                    },
+                    {
+                        "from": "Rody podstatných jmen",
+                        "to": "švestkové knedlíky",
+                        "score": 0.19447605311870575
+                    }
+                ],
+                [
+                    {
+                        "from": "Vliv jazyka na vnímání světa",
+                        "to": "gastrofilozofie",
+                        "score": 0.10420584678649902
+                    },
+                    {
+                        "from": "Vliv jazyka na vnímání světa",
+                        "to": "ženské pohlaví",
+                        "score": 0.22240868210792542
+                    },
+                    {
+                        "from": "Vliv jazyka na vnímání světa",
+                        "to": "švestkové knedlíky",
+                        "score": 0.1741681694984436
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "8a861c49-1f94-46e7-b92c-8bb10d06dd90",
+        "text": " <b>Před rokem mu zemřel otec. Dal jej pohřbít s pompou skvělou (kněží pět a velká hudba, všecky spolky) — objednal hned na hrob mramorový pomník s vyzlacenou chvalořečí, pak vsed rychle do kočáru</b> ",
+        "annotator_topics": [
+            "Smrt otce",
+            "Pohřeb otce",
+            "Mramorový pomník na pohřeb"
+        ],
+        "generated_topics": [
+            "smrt otce",
+            "pohřební obřady",
+            "mramorový pomník"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "Smrt otce",
+                        "to": "smrt otce",
+                        "score": 0.9712435007095337
+                    },
+                    {
+                        "from": "Smrt otce",
+                        "to": "pohřební obřady",
+                        "score": 0.0388249009847641
+                    },
+                    {
+                        "from": "Smrt otce",
+                        "to": "mramorový pomník",
+                        "score": 0.05136192962527275
+                    }
+                ],
+                [
+                    {
+                        "from": "Pohřeb otce",
+                        "to": "smrt otce",
+                        "score": 0.6742609143257141
+                    },
+                    {
+                        "from": "Pohřeb otce",
+                        "to": "pohřební obřady",
+                        "score": 0.5005224347114563
+                    },
+                    {
+                        "from": "Pohřeb otce",
+                        "to": "mramorový pomník",
+                        "score": 0.25825902819633484
+                    }
+                ],
+                [
+                    {
+                        "from": "Mramorový pomník na pohřeb",
+                        "to": "smrt otce",
+                        "score": 0.05551743879914284
+                    },
+                    {
+                        "from": "Mramorový pomník na pohřeb",
+                        "to": "pohřební obřady",
+                        "score": 0.7877969741821289
+                    },
+                    {
+                        "from": "Mramorový pomník na pohřeb",
+                        "to": "mramorový pomník",
+                        "score": 0.9350862503051758
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "smrt otce pohřební obřady mramorový pomník",
+                    "to": "Smrt otce",
+                    "score": 0.7189391851425171
+                },
+                {
+                    "from": "smrt otce pohřební obřady mramorový pomník",
+                    "to": "Pohřeb otce",
+                    "score": 0.6910500526428223
+                },
+                {
+                    "from": "smrt otce pohřební obřady mramorový pomník",
+                    "to": "Mramorový pomník na pohřeb",
+                    "score": 0.9304182529449463
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "Smrt otce",
+                        "to": "smrt otce",
+                        "score": 0.9951874613761902
+                    },
+                    {
+                        "from": "Smrt otce",
+                        "to": "pohřební obřady",
+                        "score": 0.5674156546592712
+                    },
+                    {
+                        "from": "Smrt otce",
+                        "to": "mramorový pomník",
+                        "score": 0.230438694357872
+                    }
+                ],
+                [
+                    {
+                        "from": "Pohřeb otce",
+                        "to": "smrt otce",
+                        "score": 0.7836523056030273
+                    },
+                    {
+                        "from": "Pohřeb otce",
+                        "to": "pohřební obřady",
+                        "score": 0.2857730984687805
+                    },
+                    {
+                        "from": "Pohřeb otce",
+                        "to": "mramorový pomník",
+                        "score": 0.1883997619152069
+                    }
+                ],
+                [
+                    {
+                        "from": "Mramorový pomník na pohřeb",
+                        "to": "smrt otce",
+                        "score": 0.45737776160240173
+                    },
+                    {
+                        "from": "Mramorový pomník na pohřeb",
+                        "to": "pohřební obřady",
+                        "score": 0.7418630719184875
+                    },
+                    {
+                        "from": "Mramorový pomník na pohřeb",
+                        "to": "mramorový pomník",
+                        "score": 0.8705848455429077
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "c9eb6eec-64c9-4029-807f-0cdc190c5165",
+        "text": " <b>Uznání, kterého se našim legionářům dostalo za jejich sibiřský výkon krásnými slovy osvíceného náčelníka britské vlády — opakovali jsme si je často před svým vy-</b> ",
+        "annotator_topics": [
+            "Uznání československým legionářům"
+        ],
+        "generated_topics": [
+            "legionáři v Sibiři",
+            "britské uznání",
+            "historické události"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "Uznání československým legionářům",
+                        "to": "legionáři v Sibiři",
+                        "score": 0.22081053256988525
+                    },
+                    {
+                        "from": "Uznání československým legionářům",
+                        "to": "britské uznání",
+                        "score": 0.6244783401489258
+                    },
+                    {
+                        "from": "Uznání československým legionářům",
+                        "to": "historické události",
+                        "score": 0.060056187212467194
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "legionáři v Sibiři britské uznání historické události",
+                    "to": "Uznání československým legionářům",
+                    "score": 0.792197048664093
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "Uznání československým legionářům",
+                        "to": "legionáři v Sibiři",
+                        "score": 0.6619623303413391
+                    },
+                    {
+                        "from": "Uznání československým legionářům",
+                        "to": "britské uznání",
+                        "score": 0.3351931571960449
+                    },
+                    {
+                        "from": "Uznání československým legionářům",
+                        "to": "historické události",
+                        "score": 0.4312950670719147
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "71014c61-dddb-4476-88bf-dfbfbbf16131",
+        "text": " <b>Ryba pro hostinu se musí na přiměřené díly rozkrájeti, je-li však určena darem, vyjímá se lépe, je-li uvařena v celku.</b> ",
+        "annotator_topics": [
+            "způsoby přípravy ryby"
+        ],
+        "generated_topics": [
+            "příprava ryby",
+            "dárek hostině",
+            "vaření ryby"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "způsoby přípravy ryby",
+                        "to": "příprava ryby",
+                        "score": 0.9297042489051819
+                    },
+                    {
+                        "from": "způsoby přípravy ryby",
+                        "to": "dárek hostině",
+                        "score": 0.02628841996192932
+                    },
+                    {
+                        "from": "způsoby přípravy ryby",
+                        "to": "vaření ryby",
+                        "score": 0.6743440628051758
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "příprava ryby dárek hostině vaření ryby",
+                    "to": "způsoby přípravy ryby",
+                    "score": 0.8482024073600769
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "způsoby přípravy ryby",
+                        "to": "příprava ryby",
+                        "score": 0.9799203872680664
+                    },
+                    {
+                        "from": "způsoby přípravy ryby",
+                        "to": "dárek hostině",
+                        "score": 0.0366569459438324
+                    },
+                    {
+                        "from": "způsoby přípravy ryby",
+                        "to": "vaření ryby",
+                        "score": 0.9040848016738892
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "2c39f356-cfc6-4806-bff7-d8cb278e315a",
+        "text": " <b>Ač se vykazuje v nové době tento druh psychologie — zvaný psychologie zvířecí — četnými úspěchy, jsou přece výsledky pozorování zvířat nejisté, neboť jich nelze potvrditi vlastním pozorováním zvířete samého.</b> ",
+        "annotator_topics": [
+            "zvířecí psychologie",
+            "skoumaní zvířat",
+            "pozorování zvířat"
+        ],
+        "generated_topics": [
+            "psychologie zvířecí",
+            "úspěchy a nejistoty",
+            "pozorování zvířat"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "zvířecí psychologie",
+                        "to": "psychologie zvířecí",
+                        "score": 0.9691770076751709
+                    },
+                    {
+                        "from": "zvířecí psychologie",
+                        "to": "úspěchy a nejistoty",
+                        "score": 0.032454825937747955
+                    },
+                    {
+                        "from": "zvířecí psychologie",
+                        "to": "pozorování zvířat",
+                        "score": 0.29380056262016296
+                    }
+                ],
+                [
+                    {
+                        "from": "skoumaní zvířat",
+                        "to": "psychologie zvířecí",
+                        "score": 0.2810055613517761
+                    },
+                    {
+                        "from": "skoumaní zvířat",
+                        "to": "úspěchy a nejistoty",
+                        "score": 0.04094121977686882
+                    },
+                    {
+                        "from": "skoumaní zvířat",
+                        "to": "pozorování zvířat",
+                        "score": 0.8124855160713196
+                    }
+                ],
+                [
+                    {
+                        "from": "pozorování zvířat",
+                        "to": "psychologie zvířecí",
+                        "score": 0.22708365321159363
+                    },
+                    {
+                        "from": "pozorování zvířat",
+                        "to": "úspěchy a nejistoty",
+                        "score": 0.02938741259276867
+                    },
+                    {
+                        "from": "pozorování zvířat",
+                        "to": "pozorování zvířat",
+                        "score": 0.9714593887329102
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "psychologie zvířecí úspěchy a nejistoty pozorování zvířat",
+                    "to": "zvířecí psychologie",
+                    "score": 0.6699302792549133
+                },
+                {
+                    "from": "psychologie zvířecí úspěchy a nejistoty pozorování zvířat",
+                    "to": "skoumaní zvířat",
+                    "score": 0.6397548317909241
+                },
+                {
+                    "from": "psychologie zvířecí úspěchy a nejistoty pozorování zvířat",
+                    "to": "pozorování zvířat",
+                    "score": 0.7197993993759155
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "zvířecí psychologie",
+                        "to": "psychologie zvířecí",
+                        "score": 0.9867022633552551
+                    },
+                    {
+                        "from": "zvířecí psychologie",
+                        "to": "úspěchy a nejistoty",
+                        "score": 0.3093724548816681
+                    },
+                    {
+                        "from": "zvířecí psychologie",
+                        "to": "pozorování zvířat",
+                        "score": 0.7209862470626831
+                    }
+                ],
+                [
+                    {
+                        "from": "skoumaní zvířat",
+                        "to": "psychologie zvířecí",
+                        "score": 0.7682870626449585
+                    },
+                    {
+                        "from": "skoumaní zvířat",
+                        "to": "úspěchy a nejistoty",
+                        "score": 0.18525393307209015
+                    },
+                    {
+                        "from": "skoumaní zvířat",
+                        "to": "pozorování zvířat",
+                        "score": 0.7947282195091248
+                    }
+                ],
+                [
+                    {
+                        "from": "pozorování zvířat",
+                        "to": "psychologie zvířecí",
+                        "score": 0.7559983134269714
+                    },
+                    {
+                        "from": "pozorování zvířat",
+                        "to": "úspěchy a nejistoty",
+                        "score": 0.15357477962970734
+                    },
+                    {
+                        "from": "pozorování zvířat",
+                        "to": "pozorování zvířat",
+                        "score": 1.0000001192092896
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "0d0deeed-9064-44f3-b011-7ba092238afe",
+        "text": " <b>Jest to nejsilnější sval na těle; pohybuje kostí stehenní, a i sehnutý trup zvedá. Pod ním leží střední a pod tímto malý sval hýžďový, kteréž mají stejný účel. 37.</b> ",
+        "annotator_topics": [
+            "anatomie lidského těla",
+            "svaly na lidském těle"
+        ],
+        "generated_topics": [
+            "anatomie těla",
+            "svaly",
+            "pohyb těla"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "anatomie lidského těla",
+                        "to": "anatomie těla",
+                        "score": 0.9016991257667542
+                    },
+                    {
+                        "from": "anatomie lidského těla",
+                        "to": "svaly",
+                        "score": 0.026638049632310867
+                    },
+                    {
+                        "from": "anatomie lidského těla",
+                        "to": "pohyb těla",
+                        "score": 0.438435435295105
+                    }
+                ],
+                [
+                    {
+                        "from": "svaly na lidském těle",
+                        "to": "anatomie těla",
+                        "score": 0.39159467816352844
+                    },
+                    {
+                        "from": "svaly na lidském těle",
+                        "to": "svaly",
+                        "score": 0.5910888910293579
+                    },
+                    {
+                        "from": "svaly na lidském těle",
+                        "to": "pohyb těla",
+                        "score": 0.40932127833366394
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "anatomie těla svaly pohyb těla",
+                    "to": "anatomie lidského těla",
+                    "score": 0.7439172863960266
+                },
+                {
+                    "from": "anatomie těla svaly pohyb těla",
+                    "to": "svaly na lidském těle",
+                    "score": 0.7798676490783691
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "anatomie lidského těla",
+                        "to": "anatomie těla",
+                        "score": 0.9495450258255005
+                    },
+                    {
+                        "from": "anatomie lidského těla",
+                        "to": "svaly",
+                        "score": 0.561057448387146
+                    },
+                    {
+                        "from": "anatomie lidského těla",
+                        "to": "pohyb těla",
+                        "score": 0.5629985332489014
+                    }
+                ],
+                [
+                    {
+                        "from": "svaly na lidském těle",
+                        "to": "anatomie těla",
+                        "score": 0.7203880548477173
+                    },
+                    {
+                        "from": "svaly na lidském těle",
+                        "to": "svaly",
+                        "score": 0.7502270340919495
+                    },
+                    {
+                        "from": "svaly na lidském těle",
+                        "to": "pohyb těla",
+                        "score": 0.6900533437728882
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "91dd5970-19d4-4b33-ba55-47192373516b",
+        "text": " <b>Mají-li se z jisté sumy kolikeré setiny za sebou počítati, a k hlavní sumě přičítati nebo od ní odčítati, uvážiti při tom sluší, zdaliž se počítají z jednoho a toho samého čísla, nebo z čísel postupně za sebou jdoucích.</b> ",
+        "annotator_topics": [
+            "počitání sumy"
+        ],
+        "generated_topics": [
+            "matematické počítání",
+            "přičítání a odčítání",
+            "postupné číslice"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "počitání sumy",
+                        "to": "matematické počítání",
+                        "score": 0.8057745099067688
+                    },
+                    {
+                        "from": "počitání sumy",
+                        "to": "přičítání a odčítání",
+                        "score": 0.9115893840789795
+                    },
+                    {
+                        "from": "počitání sumy",
+                        "to": "postupné číslice",
+                        "score": 0.038109615445137024
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "matematické počítání přičítání a odčítání postupné číslice",
+                    "to": "počitání sumy",
+                    "score": 0.6624711751937866
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "počitání sumy",
+                        "to": "matematické počítání",
+                        "score": 0.3912220299243927
+                    },
+                    {
+                        "from": "počitání sumy",
+                        "to": "přičítání a odčítání",
+                        "score": 0.6563235521316528
+                    },
+                    {
+                        "from": "počitání sumy",
+                        "to": "postupné číslice",
+                        "score": 0.49106365442276
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "3e732ca4-261d-43e3-b2fb-2c8a1a10e7c4",
+        "text": " <b>Někteří stěhují se, zvlášť na podzim v houfech, jež často v obrovská hejna vzrůstají (špačci, kavky), jiní zmizí po jednom a teprv na pozdější dráze shlukují se v menší společnosti.</b> ",
+        "annotator_topics": [
+            "Hejna ptáků",
+            "Migrace ptáků",
+            "Stěhování ptáků",
+            "Odlet do teplých krajin"
+        ],
+        "generated_topics": [
+            "stěhování ptáků",
+            "podzimní hejna",
+            "společenské chování ptáků"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "Hejna ptáků",
+                        "to": "stěhování ptáků",
+                        "score": 0.6500935554504395
+                    },
+                    {
+                        "from": "Hejna ptáků",
+                        "to": "podzimní hejna",
+                        "score": 0.7749078869819641
+                    },
+                    {
+                        "from": "Hejna ptáků",
+                        "to": "společenské chování ptáků",
+                        "score": 0.6026787161827087
+                    }
+                ],
+                [
+                    {
+                        "from": "Migrace ptáků",
+                        "to": "stěhování ptáků",
+                        "score": 0.4339591860771179
+                    },
+                    {
+                        "from": "Migrace ptáků",
+                        "to": "podzimní hejna",
+                        "score": 0.07169543206691742
+                    },
+                    {
+                        "from": "Migrace ptáků",
+                        "to": "společenské chování ptáků",
+                        "score": 0.4510956108570099
+                    }
+                ],
+                [
+                    {
+                        "from": "Stěhování ptáků",
+                        "to": "stěhování ptáků",
+                        "score": 0.9710264205932617
+                    },
+                    {
+                        "from": "Stěhování ptáků",
+                        "to": "podzimní hejna",
+                        "score": 0.12393278628587723
+                    },
+                    {
+                        "from": "Stěhování ptáků",
+                        "to": "společenské chování ptáků",
+                        "score": 0.7707160115242004
+                    }
+                ],
+                [
+                    {
+                        "from": "Odlet do teplých krajin",
+                        "to": "stěhování ptáků",
+                        "score": 0.12242788821458817
+                    },
+                    {
+                        "from": "Odlet do teplých krajin",
+                        "to": "podzimní hejna",
+                        "score": 0.06923060864210129
+                    },
+                    {
+                        "from": "Odlet do teplých krajin",
+                        "to": "společenské chování ptáků",
+                        "score": 0.1817915439605713
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "stěhování ptáků podzimní hejna společenské chování ptáků",
+                    "to": "Hejna ptáků",
+                    "score": 0.8494436740875244
+                },
+                {
+                    "from": "stěhování ptáků podzimní hejna společenské chování ptáků",
+                    "to": "Migrace ptáků",
+                    "score": 0.6650092601776123
+                },
+                {
+                    "from": "stěhování ptáků podzimní hejna společenské chování ptáků",
+                    "to": "Stěhování ptáků",
+                    "score": 0.8389718532562256
+                },
+                {
+                    "from": "stěhování ptáků podzimní hejna společenské chování ptáků",
+                    "to": "Odlet do teplých krajin",
+                    "score": 0.06842787563800812
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "Hejna ptáků",
+                        "to": "stěhování ptáků",
+                        "score": 0.8558192253112793
+                    },
+                    {
+                        "from": "Hejna ptáků",
+                        "to": "podzimní hejna",
+                        "score": 0.5101999044418335
+                    },
+                    {
+                        "from": "Hejna ptáků",
+                        "to": "společenské chování ptáků",
+                        "score": 0.7708512544631958
+                    }
+                ],
+                [
+                    {
+                        "from": "Migrace ptáků",
+                        "to": "stěhování ptáků",
+                        "score": 0.9495628476142883
+                    },
+                    {
+                        "from": "Migrace ptáků",
+                        "to": "podzimní hejna",
+                        "score": 0.39252129197120667
+                    },
+                    {
+                        "from": "Migrace ptáků",
+                        "to": "společenské chování ptáků",
+                        "score": 0.6955971121788025
+                    }
+                ],
+                [
+                    {
+                        "from": "Stěhování ptáků",
+                        "to": "stěhování ptáků",
+                        "score": 0.9995455741882324
+                    },
+                    {
+                        "from": "Stěhování ptáků",
+                        "to": "podzimní hejna",
+                        "score": 0.418756902217865
+                    },
+                    {
+                        "from": "Stěhování ptáků",
+                        "to": "společenské chování ptáků",
+                        "score": 0.728703498840332
+                    }
+                ],
+                [
+                    {
+                        "from": "Odlet do teplých krajin",
+                        "to": "stěhování ptáků",
+                        "score": 0.3832486569881439
+                    },
+                    {
+                        "from": "Odlet do teplých krajin",
+                        "to": "podzimní hejna",
+                        "score": 0.48904407024383545
+                    },
+                    {
+                        "from": "Odlet do teplých krajin",
+                        "to": "společenské chování ptáků",
+                        "score": 0.18949802219867706
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "9e041014-a35f-4926-9c37-04f0dce78a87",
+        "text": " <b>Dali mu na srozuměnou, že záchvat onen byl dokonce až neobyčejný, trval a opakoval se několik dní, takže život pacientův byl v povážlivém nebezpečí, a že teprv nyní po všemožných opatřeních možno už říci s určitostí, že nemocný zůstane na živu, ačkoliv jest dosti možno (dodal doktor Herzenstube), že rozum jeho zůstane z části porušen, ne-li na celý život, tedy na dosti dlouhou dobu.</b> ",
+        "annotator_topics": [
+            "Opakované záchvaty",
+            "Zachránění života pacienta"
+        ],
+        "generated_topics": [
+            "kritický zdravotní stav",
+            "lékařská prognóza",
+            "duševní následky"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "Opakované záchvaty",
+                        "to": "kritický zdravotní stav",
+                        "score": 0.11248879134654999
+                    },
+                    {
+                        "from": "Opakované záchvaty",
+                        "to": "lékařská prognóza",
+                        "score": 0.024111595004796982
+                    },
+                    {
+                        "from": "Opakované záchvaty",
+                        "to": "duševní následky",
+                        "score": 0.03604619577527046
+                    }
+                ],
+                [
+                    {
+                        "from": "Zachránění života pacienta",
+                        "to": "kritický zdravotní stav",
+                        "score": 0.3198385238647461
+                    },
+                    {
+                        "from": "Zachránění života pacienta",
+                        "to": "lékařská prognóza",
+                        "score": 0.028906581923365593
+                    },
+                    {
+                        "from": "Zachránění života pacienta",
+                        "to": "duševní následky",
+                        "score": 0.02697858400642872
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "kritický zdravotní stav lékařská prognóza duševní následky",
+                    "to": "Opakované záchvaty",
+                    "score": 0.09238466620445251
+                },
+                {
+                    "from": "kritický zdravotní stav lékařská prognóza duševní následky",
+                    "to": "Zachránění života pacienta",
+                    "score": 0.164895698428154
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "Opakované záchvaty",
+                        "to": "kritický zdravotní stav",
+                        "score": 0.44727209210395813
+                    },
+                    {
+                        "from": "Opakované záchvaty",
+                        "to": "lékařská prognóza",
+                        "score": 0.39254361391067505
+                    },
+                    {
+                        "from": "Opakované záchvaty",
+                        "to": "duševní následky",
+                        "score": 0.6122329831123352
+                    }
+                ],
+                [
+                    {
+                        "from": "Zachránění života pacienta",
+                        "to": "kritický zdravotní stav",
+                        "score": 0.5474586486816406
+                    },
+                    {
+                        "from": "Zachránění života pacienta",
+                        "to": "lékařská prognóza",
+                        "score": 0.5155758857727051
+                    },
+                    {
+                        "from": "Zachránění života pacienta",
+                        "to": "duševní následky",
+                        "score": 0.3752625584602356
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "8f6b51a9-4a67-419f-9f6f-2cfbbebbe8ee",
+        "text": " <b>Když nouze byla největší, přišla z nenadání žádoucí pomoc. Biskup Jindřich Zdik objevil se v nedalekém Jeníkově, kde hodlal slaviti narození Páně.</b> ",
+        "annotator_topics": [
+            "přichod biskupa Jindřicha Zdíka do Jeníkova"
+        ],
+        "generated_topics": [
+            "nouze a pomoc",
+            "příchod biskupa Zdika",
+            "oslava narození Páně"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "přichod biskupa Jindřicha Zdíka do Jeníkova",
+                        "to": "nouze a pomoc",
+                        "score": 0.023064302280545235
+                    },
+                    {
+                        "from": "přichod biskupa Jindřicha Zdíka do Jeníkova",
+                        "to": "příchod biskupa Zdika",
+                        "score": 0.8263416290283203
+                    },
+                    {
+                        "from": "přichod biskupa Jindřicha Zdíka do Jeníkova",
+                        "to": "oslava narození Páně",
+                        "score": 0.1989797055721283
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "nouze a pomoc příchod biskupa Zdika oslava narození Páně",
+                    "to": "přichod biskupa Jindřicha Zdíka do Jeníkova",
+                    "score": 0.7487843632698059
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "přichod biskupa Jindřicha Zdíka do Jeníkova",
+                        "to": "nouze a pomoc",
+                        "score": 0.2374766319990158
+                    },
+                    {
+                        "from": "přichod biskupa Jindřicha Zdíka do Jeníkova",
+                        "to": "příchod biskupa Zdika",
+                        "score": 0.763049840927124
+                    },
+                    {
+                        "from": "přichod biskupa Jindřicha Zdíka do Jeníkova",
+                        "to": "oslava narození Páně",
+                        "score": 0.39515432715415955
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "4770c943-ac58-46f1-ac43-eb0a1706c1c4",
+        "text": " <b>Zvláštní přednášky o paedagogice budou se konati pro žačky, jež k učitelství se připravují (élèves maîtresses). 15.</b> ",
+        "annotator_topics": [
+            "přednáška o pedagogice"
+        ],
+        "generated_topics": [
+            "přednášky o pedagogice",
+            "příprava učitelek",
+            "vzdělávací program"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "přednáška o pedagogice",
+                        "to": "přednášky o pedagogice",
+                        "score": 0.9707039594650269
+                    },
+                    {
+                        "from": "přednáška o pedagogice",
+                        "to": "příprava učitelek",
+                        "score": 0.07824335247278214
+                    },
+                    {
+                        "from": "přednáška o pedagogice",
+                        "to": "vzdělávací program",
+                        "score": 0.1240154579281807
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "přednášky o pedagogice příprava učitelek vzdělávací program",
+                    "to": "přednáška o pedagogice",
+                    "score": 0.7942463755607605
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "přednáška o pedagogice",
+                        "to": "přednášky o pedagogice",
+                        "score": 0.9845311641693115
+                    },
+                    {
+                        "from": "přednáška o pedagogice",
+                        "to": "příprava učitelek",
+                        "score": 0.6887713074684143
+                    },
+                    {
+                        "from": "přednáška o pedagogice",
+                        "to": "vzdělávací program",
+                        "score": 0.7540488243103027
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "80ac1784-33dc-4100-af53-e802eb080ee9",
+        "text": " <b>Morava byla bez panovníka. A nezemřel jí, v boji nepadl aniž jinak zahynul. Ale zmizel beze stopy, že nebylo po něm ani slechu ani dechu.</b> ",
+        "annotator_topics": [
+            "zmizení panovníka Moravy"
+        ],
+        "generated_topics": [
+            "Moravský panovník",
+            "Záhadné zmizení"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "zmizení panovníka Moravy",
+                        "to": "Moravský panovník",
+                        "score": 0.9471502900123596
+                    },
+                    {
+                        "from": "zmizení panovníka Moravy",
+                        "to": "Záhadné zmizení",
+                        "score": 0.502035915851593
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "Moravský panovník Záhadné zmizení",
+                    "to": "zmizení panovníka Moravy",
+                    "score": 0.9700143933296204
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "zmizení panovníka Moravy",
+                        "to": "Moravský panovník",
+                        "score": 0.8796657919883728
+                    },
+                    {
+                        "from": "zmizení panovníka Moravy",
+                        "to": "Záhadné zmizení",
+                        "score": 0.44552361965179443
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "f13f8666-760f-4434-8311-b9f8b5e227ba",
+        "text": " <b>Roztoky některých, hlavně organických koloidů, jež nazýváme »ochranné koloidy« (Zsigmondy 1902), jako jsou klih, gelatina, gummi, vodní sklo, dextrin, škrob, albumin, kasein a jejich rozkladné produkty, zadržují, přidáme-li je k anorganickým hydrosólům kovů, hydroxydů, sulfidů, halogenidů stříbra a pod., vylučování těchto anorganických koloidů z roztoků a činí jejich roztoky stálejšími.</b> ",
+        "annotator_topics": [
+            "použití roztoků organických koloidů"
+        ],
+        "generated_topics": [
+            "ochranné koloidy",
+            "anorganické hydrosóly",
+            "stabilita roztoků"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "použití roztoků organických koloidů",
+                        "to": "ochranné koloidy",
+                        "score": 0.6857587099075317
+                    },
+                    {
+                        "from": "použití roztoků organických koloidů",
+                        "to": "anorganické hydrosóly",
+                        "score": 0.04992985725402832
+                    },
+                    {
+                        "from": "použití roztoků organických koloidů",
+                        "to": "stabilita roztoků",
+                        "score": 0.6282248497009277
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "ochranné koloidy anorganické hydrosóly stabilita roztoků",
+                    "to": "použití roztoků organických koloidů",
+                    "score": 0.7781907320022583
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "použití roztoků organických koloidů",
+                        "to": "ochranné koloidy",
+                        "score": 0.5622138977050781
+                    },
+                    {
+                        "from": "použití roztoků organických koloidů",
+                        "to": "anorganické hydrosóly",
+                        "score": 0.681444525718689
+                    },
+                    {
+                        "from": "použití roztoků organických koloidů",
+                        "to": "stabilita roztoků",
+                        "score": 0.13048096001148224
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "7d5b22b7-4b11-464e-942f-0c5087652adc",
+        "text": "Pomník stál půldruhého milionu, místo u vchodu dalších 200.000 Kč. Hrobka rodičů nynějšího papeže je pozlacena a svítí mezi ostatními hroby. <b>Ctižádost Italů dosáhla na milánském hřbitově nejbizarnějších tvarů. Loučení s Milánem je těžké, ještě bychom rádi do Scaly, známého stánku operního umění, jehož arie a balety jsou svátkem pro miliony lidí, mohou-li je alespoň zachytit u rozhlasového přístroje, ale vždyť i nádraží</b> ",
+        "annotator_topics": [
+            "cesra po Itálii"
+        ],
+        "generated_topics": [
+            "náklady na pohřební místa",
+            "italská ctižádost",
+            "milánský hřbitov",
+            "operní umění Scala"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "cesra po Itálii",
+                        "to": "náklady na pohřební místa",
+                        "score": 0.45571452379226685
+                    },
+                    {
+                        "from": "cesra po Itálii",
+                        "to": "italská ctižádost",
+                        "score": 0.058811597526073456
+                    },
+                    {
+                        "from": "cesra po Itálii",
+                        "to": "milánský hřbitov",
+                        "score": 0.023701075464487076
+                    },
+                    {
+                        "from": "cesra po Itálii",
+                        "to": "operní umění Scala",
+                        "score": 0.08791554719209671
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "náklady na pohřební místa italská ctižádost milánský hřbitov operní umění Scala",
+                    "to": "cesra po Itálii",
+                    "score": 0.2120189517736435
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "cesra po Itálii",
+                        "to": "náklady na pohřební místa",
+                        "score": 0.08113937079906464
+                    },
+                    {
+                        "from": "cesra po Itálii",
+                        "to": "italská ctižádost",
+                        "score": 0.8862916231155396
+                    },
+                    {
+                        "from": "cesra po Itálii",
+                        "to": "milánský hřbitov",
+                        "score": 0.30453619360923767
+                    },
+                    {
+                        "from": "cesra po Itálii",
+                        "to": "operní umění Scala",
+                        "score": 0.4565764367580414
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "83560180-60d7-4f54-9985-10dadbccf796",
+        "text": " <b>Byl-li řečník třikrát ku věci volán, může mu předseda odníti slovo. Udělí-li se řečníku po ukončené debatě slovo k stručné opravě okolností v debatě tvrzených (§ 45.), a řečník ve své řeči meze věcné opravy překročí, aneb do obšírných výkladů se pustí, může jemu předseda, aniž ho předem volá k věci, ihned odníti slovo.</b> ",
+        "annotator_topics": [
+            "pravidla debaty"
+        ],
+        "generated_topics": [
+            "pravidla debaty",
+            "odebrání slova",
+            "řečnické překročení"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "pravidla debaty",
+                        "to": "pravidla debaty",
+                        "score": 0.9716160893440247
+                    },
+                    {
+                        "from": "pravidla debaty",
+                        "to": "odebrání slova",
+                        "score": 0.036190006881952286
+                    },
+                    {
+                        "from": "pravidla debaty",
+                        "to": "řečnické překročení",
+                        "score": 0.025867275893688202
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "pravidla debaty odebrání slova řečnické překročení",
+                    "to": "pravidla debaty",
+                    "score": 0.7208494544029236
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "pravidla debaty",
+                        "to": "pravidla debaty",
+                        "score": 1.0
+                    },
+                    {
+                        "from": "pravidla debaty",
+                        "to": "odebrání slova",
+                        "score": 0.4975077509880066
+                    },
+                    {
+                        "from": "pravidla debaty",
+                        "to": "řečnické překročení",
+                        "score": 0.575657069683075
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "977cea80-026c-4464-85fd-f8109b234067",
+        "text": " <b>Doklady k životopisu Jiříka VII. a jeho potomků budou uveřejněny ve svazku následujícím (Díl II. sv. 2.)</b> ",
+        "annotator_topics": [
+            "uveřejnení dokladů k životopisu Jiříka VII"
+        ],
+        "generated_topics": [
+            "životopis Jiříka VII.",
+            "publikace dokladů",
+            "následující svazek"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "uveřejnení dokladů k životopisu Jiříka VII",
+                        "to": "životopis Jiříka VII.",
+                        "score": 0.8432976603507996
+                    },
+                    {
+                        "from": "uveřejnení dokladů k životopisu Jiříka VII",
+                        "to": "publikace dokladů",
+                        "score": 0.6363598704338074
+                    },
+                    {
+                        "from": "uveřejnení dokladů k životopisu Jiříka VII",
+                        "to": "následující svazek",
+                        "score": 0.0512249730527401
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "životopis Jiříka VII. publikace dokladů následující svazek",
+                    "to": "uveřejnení dokladů k životopisu Jiříka VII",
+                    "score": 0.8716768026351929
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "uveřejnení dokladů k životopisu Jiříka VII",
+                        "to": "životopis Jiříka VII.",
+                        "score": 0.8655513525009155
+                    },
+                    {
+                        "from": "uveřejnení dokladů k životopisu Jiříka VII",
+                        "to": "publikace dokladů",
+                        "score": 0.6722676753997803
+                    },
+                    {
+                        "from": "uveřejnení dokladů k životopisu Jiříka VII",
+                        "to": "následující svazek",
+                        "score": 0.4238823652267456
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "9a6c8cf6-7a89-40e6-a77a-f8a73538e657",
+        "text": " <b>„Ano“ pravil dále, „já sám jsem byl v maďarských školách, a co jsme my mladí Rumuni tam vytrpěli, to se za všecek život zapomenouti nemůže.</b> ",
+        "annotator_topics": [
+            "šikana Rumunů na maďarských školách"
+        ],
+        "generated_topics": [
+            "vzdělávání v Maďarsku",
+            "rumunské menšiny",
+            "školní zkušenosti"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "šikana Rumunů na maďarských školách",
+                        "to": "vzdělávání v Maďarsku",
+                        "score": 0.5227317810058594
+                    },
+                    {
+                        "from": "šikana Rumunů na maďarských školách",
+                        "to": "rumunské menšiny",
+                        "score": 0.42613378167152405
+                    },
+                    {
+                        "from": "šikana Rumunů na maďarských školách",
+                        "to": "školní zkušenosti",
+                        "score": 0.18840667605400085
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "vzdělávání v Maďarsku rumunské menšiny školní zkušenosti",
+                    "to": "šikana Rumunů na maďarských školách",
+                    "score": 0.7586586475372314
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "šikana Rumunů na maďarských školách",
+                        "to": "vzdělávání v Maďarsku",
+                        "score": 0.7493859529495239
+                    },
+                    {
+                        "from": "šikana Rumunů na maďarských školách",
+                        "to": "rumunské menšiny",
+                        "score": 0.707338273525238
+                    },
+                    {
+                        "from": "šikana Rumunů na maďarských školách",
+                        "to": "školní zkušenosti",
+                        "score": 0.5014223456382751
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "423319dc-f46d-4a78-ad49-e9a03a2b4651",
+        "text": " <b>U dvora,“ pokračoval pan d'Artagnan otec, „budete-li kdy míti čest tam přijíti, čest, k níž ostatně vaše staré šlechtictví právo vám dává, neste důstojně své jméno šlechtické, které bylo důstojně noseno vašimi předky déle než od pěti set let, pro sebe i pro lidi vaše.</b> ",
+        "annotator_topics": [
+            "tři mušketýři"
+        ],
+        "generated_topics": [
+            "šlechtické dědictví",
+            "dvorské etikety",
+            "historie rodiny"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "tři mušketýři",
+                        "to": "šlechtické dědictví",
+                        "score": 0.03150205686688423
+                    },
+                    {
+                        "from": "tři mušketýři",
+                        "to": "dvorské etikety",
+                        "score": 0.7150187492370605
+                    },
+                    {
+                        "from": "tři mušketýři",
+                        "to": "historie rodiny",
+                        "score": 0.03856324777007103
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "šlechtické dědictví dvorské etikety historie rodiny",
+                    "to": "tři mušketýři",
+                    "score": 0.3404185175895691
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "tři mušketýři",
+                        "to": "šlechtické dědictví",
+                        "score": 0.24642786383628845
+                    },
+                    {
+                        "from": "tři mušketýři",
+                        "to": "dvorské etikety",
+                        "score": 0.20911827683448792
+                    },
+                    {
+                        "from": "tři mušketýři",
+                        "to": "historie rodiny",
+                        "score": 0.24955448508262634
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "5e9d4894-2b98-4f46-a0f7-d2e09d3539f8",
+        "text": " <b>Avšak říkají, ne z každého dřeva může býti fládr. Odpovídám: ale z každého člověka stává se člověk, vzdálí-li se nákaza./</b> ",
+        "annotator_topics": [
+            "metafora",
+            "motivační citát"
+        ],
+        "generated_topics": [
+            "lidský potenciál",
+            "výchova a rozvoj",
+            "metafora dřeva"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "metafora",
+                        "to": "lidský potenciál",
+                        "score": 0.06698666512966156
+                    },
+                    {
+                        "from": "metafora",
+                        "to": "výchova a rozvoj",
+                        "score": 0.07318192720413208
+                    },
+                    {
+                        "from": "metafora",
+                        "to": "metafora dřeva",
+                        "score": 0.8618882894515991
+                    }
+                ],
+                [
+                    {
+                        "from": "motivační citát",
+                        "to": "lidský potenciál",
+                        "score": 0.029370715841650963
+                    },
+                    {
+                        "from": "motivační citát",
+                        "to": "výchova a rozvoj",
+                        "score": 0.03160795196890831
+                    },
+                    {
+                        "from": "motivační citát",
+                        "to": "metafora dřeva",
+                        "score": 0.15820369124412537
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "lidský potenciál výchova a rozvoj metafora dřeva",
+                    "to": "metafora",
+                    "score": 0.6603937745094299
+                },
+                {
+                    "from": "lidský potenciál výchova a rozvoj metafora dřeva",
+                    "to": "motivační citát",
+                    "score": 0.06966570764780045
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "metafora",
+                        "to": "lidský potenciál",
+                        "score": 0.3790642023086548
+                    },
+                    {
+                        "from": "metafora",
+                        "to": "výchova a rozvoj",
+                        "score": 0.25557637214660645
+                    },
+                    {
+                        "from": "metafora",
+                        "to": "metafora dřeva",
+                        "score": 0.6903476119041443
+                    }
+                ],
+                [
+                    {
+                        "from": "motivační citát",
+                        "to": "lidský potenciál",
+                        "score": 0.45055484771728516
+                    },
+                    {
+                        "from": "motivační citát",
+                        "to": "výchova a rozvoj",
+                        "score": 0.30752724409103394
+                    },
+                    {
+                        "from": "motivační citát",
+                        "to": "metafora dřeva",
+                        "score": 0.3931213319301605
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "7ae71932-b9f6-44ad-a4d3-2b213e18cbfa",
+        "text": "Pojednou vzkřikl jeden, jehož oči snad mimoděk zabloudily k vodě: „Ježíši! Maria! <b>Wolf se topí! ...“ Bylo tomu skutečně tak. Asi v polovici řeky objevily se ruce a hlava tonoucího nad rozčeřenou hladinou, ale hned zase zmizely pod vodou.</b> Nerozpakuje se ani vteřinu skočil jsem do vody a byl jsem dvěma rozmachy u tonoucího, jehož jsem chopil za ruku, snaže se jej vytáhnouti z hlubiny směrem k prvému břehu, kde, jak jsem věděl, voda byla mělká; než tento, rychleji nežli stačím vše vypravovati, zaťal mi prsty obou svých rukou do ramena a do plece, potopil mě a, snaže se dostat hlavu nad vodní hladinu, podepřel se při tom o mne, takže jsem ucítil dno řeky pod nohama... Byla to kritická chvíle — ani pomyšlení vyrvati se z jeho křečovitého objetí, bylť mnohem silnější mne a zápase o svůj život, zapomněl úplně, že, nepustí-li mne, i sobě jistou záhubu připraví...",
+        "annotator_topics": [
+            "havárie",
+            "nebezpečí",
+            "smrt",
+            "život",
+            "voda"
+        ],
+        "generated_topics": [
+            "záchrana z vody",
+            "kritická situace",
+            "boj o život"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "havárie",
+                        "to": "záchrana z vody",
+                        "score": 0.028001276776194572
+                    },
+                    {
+                        "from": "havárie",
+                        "to": "kritická situace",
+                        "score": 0.032699186354875565
+                    },
+                    {
+                        "from": "havárie",
+                        "to": "boj o život",
+                        "score": 0.026099029928445816
+                    }
+                ],
+                [
+                    {
+                        "from": "nebezpečí",
+                        "to": "záchrana z vody",
+                        "score": 0.033196646720170975
+                    },
+                    {
+                        "from": "nebezpečí",
+                        "to": "kritická situace",
+                        "score": 0.044961508363485336
+                    },
+                    {
+                        "from": "nebezpečí",
+                        "to": "boj o život",
+                        "score": 0.02821114845573902
+                    }
+                ],
+                [
+                    {
+                        "from": "smrt",
+                        "to": "záchrana z vody",
+                        "score": 0.03449426218867302
+                    },
+                    {
+                        "from": "smrt",
+                        "to": "kritická situace",
+                        "score": 0.07312562316656113
+                    },
+                    {
+                        "from": "smrt",
+                        "to": "boj o život",
+                        "score": 0.040161848068237305
+                    }
+                ],
+                [
+                    {
+                        "from": "život",
+                        "to": "záchrana z vody",
+                        "score": 0.16282345354557037
+                    },
+                    {
+                        "from": "život",
+                        "to": "kritická situace",
+                        "score": 0.04879581555724144
+                    },
+                    {
+                        "from": "život",
+                        "to": "boj o život",
+                        "score": 0.86189204454422
+                    }
+                ],
+                [
+                    {
+                        "from": "voda",
+                        "to": "záchrana z vody",
+                        "score": 0.48136845231056213
+                    },
+                    {
+                        "from": "voda",
+                        "to": "kritická situace",
+                        "score": 0.043995968997478485
+                    },
+                    {
+                        "from": "voda",
+                        "to": "boj o život",
+                        "score": 0.03799917921423912
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "záchrana z vody kritická situace boj o život",
+                    "to": "havárie",
+                    "score": 0.02590670809149742
+                },
+                {
+                    "from": "záchrana z vody kritická situace boj o život",
+                    "to": "nebezpečí",
+                    "score": 0.062074918299913406
+                },
+                {
+                    "from": "záchrana z vody kritická situace boj o život",
+                    "to": "smrt",
+                    "score": 0.06527690589427948
+                },
+                {
+                    "from": "záchrana z vody kritická situace boj o život",
+                    "to": "život",
+                    "score": 0.6256623268127441
+                },
+                {
+                    "from": "záchrana z vody kritická situace boj o život",
+                    "to": "voda",
+                    "score": 0.2568616271018982
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "havárie",
+                        "to": "záchrana z vody",
+                        "score": 0.36354994773864746
+                    },
+                    {
+                        "from": "havárie",
+                        "to": "kritická situace",
+                        "score": 0.454026997089386
+                    },
+                    {
+                        "from": "havárie",
+                        "to": "boj o život",
+                        "score": 0.3044213652610779
+                    }
+                ],
+                [
+                    {
+                        "from": "nebezpečí",
+                        "to": "záchrana z vody",
+                        "score": 0.445046067237854
+                    },
+                    {
+                        "from": "nebezpečí",
+                        "to": "kritická situace",
+                        "score": 0.6606134176254272
+                    },
+                    {
+                        "from": "nebezpečí",
+                        "to": "boj o život",
+                        "score": 0.5033044219017029
+                    }
+                ],
+                [
+                    {
+                        "from": "smrt",
+                        "to": "záchrana z vody",
+                        "score": 0.35435307025909424
+                    },
+                    {
+                        "from": "smrt",
+                        "to": "kritická situace",
+                        "score": 0.4037416875362396
+                    },
+                    {
+                        "from": "smrt",
+                        "to": "boj o život",
+                        "score": 0.5893462896347046
+                    }
+                ],
+                [
+                    {
+                        "from": "život",
+                        "to": "záchrana z vody",
+                        "score": 0.3928734064102173
+                    },
+                    {
+                        "from": "život",
+                        "to": "kritická situace",
+                        "score": 0.5092401504516602
+                    },
+                    {
+                        "from": "život",
+                        "to": "boj o život",
+                        "score": 0.820141077041626
+                    }
+                ],
+                [
+                    {
+                        "from": "voda",
+                        "to": "záchrana z vody",
+                        "score": 0.7574478387832642
+                    },
+                    {
+                        "from": "voda",
+                        "to": "kritická situace",
+                        "score": 0.2598302960395813
+                    },
+                    {
+                        "from": "voda",
+                        "to": "boj o život",
+                        "score": 0.21136972308158875
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "e258ac0c-b955-4788-8c32-fab806b7431a",
+        "text": "Tehdáž byl jsem opravdovému šílenství snad nejblíže. Dosud jsem pokládal své vidiny za pouhý výplod blouznění, odtud počínal jsem v jejich skutečnou, reálnou bytnost věřiti. <b>Je-li možno, aby nejprostší děvče uprostřed hlubokého šumavského lesa, vnučka železničního hlídače, kteráž sotva dvakráte do roka přicházela na kraj hvozdu, zpívala francouzsky (ještě se nesměj!), jest mnohem spíše pravděpodobno, že člověk potká na Malé Straně starobylý povoz, ve kterém sedí šlechtična ve starožitném úboru některé své prabáby, dáma vracející se z nějaké kostymní zábavy šlechtické.</b> Tak jsem rozumoval. Vemlouval jsem se stále více do přesvědčení, nejen že ona dáma, již jsem o dostizích spatřil, jest totožna s dámou z oné noci, kteráž skončila ulomením kliky na vratech povědomého portálu, nýbrž že i mezi ní a Madlou, Mazancovou vnučkou, jest jakási tajemná souvislost.",
+        "annotator_topics": [
+            "Vzdělání prostého obyvatelstva"
+        ],
+        "generated_topics": [
+            "šílenství a vidiny",
+            "starobylé pověsti",
+            "tajemná souvislost"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "Vzdělání prostého obyvatelstva",
+                        "to": "šílenství a vidiny",
+                        "score": 0.1785116046667099
+                    },
+                    {
+                        "from": "Vzdělání prostého obyvatelstva",
+                        "to": "starobylé pověsti",
+                        "score": 0.025804299861192703
+                    },
+                    {
+                        "from": "Vzdělání prostého obyvatelstva",
+                        "to": "tajemná souvislost",
+                        "score": 0.05815718322992325
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "šílenství a vidiny starobylé pověsti tajemná souvislost",
+                    "to": "Vzdělání prostého obyvatelstva",
+                    "score": 0.15656830370426178
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "Vzdělání prostého obyvatelstva",
+                        "to": "šílenství a vidiny",
+                        "score": 0.26012924313545227
+                    },
+                    {
+                        "from": "Vzdělání prostého obyvatelstva",
+                        "to": "starobylé pověsti",
+                        "score": 0.20778349041938782
+                    },
+                    {
+                        "from": "Vzdělání prostého obyvatelstva",
+                        "to": "tajemná souvislost",
+                        "score": 0.26411187648773193
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "text-id": "4343fb94-fe66-4a09-aa8e-bf80eb5d3e1c",
+        "text": "Teď však nic více jej nezdržuje. K čemu otálet? — Rozhodnutí a provedení bylo u pana Aloisa Petříka jedno. <b>Sáhl po hliněné pokladničce a rozbiv ji, obsah její zastrčil za pás; sundal s postele plášť, který zastával službu přikrývky, a svinuv jej dovedně otočil se jím; zavěsil kožený vak pocestný na bedra; do ruky vzal hůl.</b> A vesele, krokem svižným a lehkým, hvízdaje si bezstarostný popěvek, bral se přes hory a doly",
+        "annotator_topics": [
+            "skrývání cenností",
+            "Příprava na cestu"
+        ],
+        "generated_topics": [
+            "příprava na cestu",
+            "rozhodný postup",
+            "cestování přírodou"
+        ],
+        "scoring": {
+            "ce_scores_1to1": [
+                [
+                    {
+                        "from": "skrývání cenností",
+                        "to": "příprava na cestu",
+                        "score": 0.11538627743721008
+                    },
+                    {
+                        "from": "skrývání cenností",
+                        "to": "rozhodný postup",
+                        "score": 0.03033781237900257
+                    },
+                    {
+                        "from": "skrývání cenností",
+                        "to": "cestování přírodou",
+                        "score": 0.1921255886554718
+                    }
+                ],
+                [
+                    {
+                        "from": "Příprava na cestu",
+                        "to": "příprava na cestu",
+                        "score": 0.9720523953437805
+                    },
+                    {
+                        "from": "Příprava na cestu",
+                        "to": "rozhodný postup",
+                        "score": 0.024680232629179955
+                    },
+                    {
+                        "from": "Příprava na cestu",
+                        "to": "cestování přírodou",
+                        "score": 0.7070103883743286
+                    }
+                ]
+            ],
+            "ce_scores": [
+                {
+                    "from": "příprava na cestu rozhodný postup cestování přírodou",
+                    "to": "skrývání cenností",
+                    "score": 0.25477176904678345
+                },
+                {
+                    "from": "příprava na cestu rozhodný postup cestování přírodou",
+                    "to": "Příprava na cestu",
+                    "score": 0.8058099150657654
+                }
+            ],
+            "mlm_scores_1to1": [
+                [
+                    {
+                        "from": "skrývání cenností",
+                        "to": "příprava na cestu",
+                        "score": 0.1534329503774643
+                    },
+                    {
+                        "from": "skrývání cenností",
+                        "to": "rozhodný postup",
+                        "score": 0.41121160984039307
+                    },
+                    {
+                        "from": "skrývání cenností",
+                        "to": "cestování přírodou",
+                        "score": 0.2939329445362091
+                    }
+                ],
+                [
+                    {
+                        "from": "Příprava na cestu",
+                        "to": "příprava na cestu",
+                        "score": 0.7393459677696228
+                    },
+                    {
+                        "from": "Příprava na cestu",
+                        "to": "rozhodný postup",
+                        "score": 0.5263639092445374
+                    },
+                    {
+                        "from": "Příprava na cestu",
+                        "to": "cestování přírodou",
+                        "score": 0.623305082321167
+                    }
+                ]
+            ]
+        }
+    }
+]
