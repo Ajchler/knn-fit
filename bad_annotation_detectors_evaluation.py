@@ -142,11 +142,40 @@ class MLMCosineSimilarityDetector(Detector):
         )
 
 
+class DirectScoreDetector(Detector):
+    THRESHOLD = 0.4
+
+    def evaluate_annotations(self, data):
+        true_positive = 0
+        true_negative = 0
+        false_negative = 0
+        false_positive = 0
+        for text in data:
+            for topic in data[text]:
+                _, score, target = topic.values()
+                if score >= self.THRESHOLD and target == 0:
+                    true_negative += 1
+                elif score >= self.THRESHOLD and target == 1:
+                    false_negative += 1
+                elif score < self.THRESHOLD and target == 0:
+                    false_positive += 1
+                elif score < self.THRESHOLD and target == 1:
+                    true_positive += 1
+
+        print_results(
+            "Direct Score",
+            true_positive,
+            true_negative,
+            false_negative,
+            false_positive,
+        )
+
+
 if __name__ == "__main__":
     golden_data = json.load(open("data/gold_annotated_dataset.json", "r"))
     golden_data = {entry["text"]: entry["topics"] for entry in golden_data.values()}
 
-    data_modeled_topics = json.load(open("evaluation-data/out-eval.json", "r"))
+    data_modeled_topics = json.load(open("evaluation-data/out-eval-golden.json", "r"))
     data_modeled_topics = {
         item["text"]: {k: v for k, v in item.items() if k != "text"}
         for item in data_modeled_topics
@@ -162,3 +191,8 @@ if __name__ == "__main__":
     }
     mlm_detector = MLMCosineSimilarityDetector()
     mlm_detector.evaluate_annotations(data_mlm_cosine_similarity)
+
+    data_direct = json.load(open("evaluation-data/out-direct-score.json", "r"))
+    data_direct = {entry["text"]: entry["scores"] for entry in data_direct.values()}
+    direct_detector = DirectScoreDetector()
+    direct_detector.evaluate_annotations(data_direct)
