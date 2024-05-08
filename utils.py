@@ -109,7 +109,7 @@ class Annotator_API():
 class GoldDatasetCreator:
     def __call__(self, *args, **kwargs):
 
-        with open('dataset/out.json', 'r') as f:
+        with open('data/out.json', 'r') as f:
             data = json.load(f)
 
         crs = curses.initscr()

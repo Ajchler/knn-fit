@@ -70,7 +70,6 @@ if __name__ == "__main__":
 
     logger.print_settings()
     # Generating topics using topic_generator
-    generated_all = []
     for text, topics, key in get_annotations("data/gold_annotated_dataset.json",
                                              num_iterations=max_topic_generations):
         generated = {
