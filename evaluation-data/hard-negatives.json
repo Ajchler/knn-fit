@@ -1,0 +1,597 @@
+{
+"51fa695f-2cba-4d40-b3d0-2ffc4ac3fcbb": {
+  "descriptions": [
+    "Duchovní výchova",
+    "Fyzická nepřiměřenost",
+    "Vzdělávací priorita",
+    "Tělesná nedostatečnost",
+    "Mentální podřízenost"
+  ],
+  "explanations": [
+    "Zaměřeno na ducha, opomíjí tělo",
+    "Nadpřirozeně chybný důraz",
+    "Implicitní, ne přímý výrok",
+    "Opomíjení fyzické přiměřenosti",
+    "Míněno naopak o zaměření"
+  ]
+}
+,
+"5445da40-ce98-4f4c-b1a8-e46115ef4166": {
+  "descriptions": [
+    "Literární kritika",
+    "Studie překladu",
+    "Jazyková revoluce",
+    "Lingvistická analýza",
+    "Vzdělávací proces"
+  ],
+  "explanations": [
+    "Není kritika, jen osobní pokrok",
+    "Nejde o studii, ale self-learning",
+    "Není revoluční, pouze individuální zlepšení",
+    "Neanalyzuje jazyk, pouze učení jazyka",
+    "Nejde o formální vzdělávání, ale osobní snažení"
+  ]
+}
+,
+"4a80bf7d-9e2f-4d60-8751-0c02e643cf61": {
+  "descriptions": [
+    "Relativní pohybová teorie",
+    "Zdánlivá rotační kinetika",
+    "Kruhová dynamika subjektu",
+    "Geocentrický pohybový model",
+    "Optická iluze pohybu"
+  ],
+  "explanations": [
+    "Téma je o pohybu, ne teorii.",
+    "Zdánlivost není rotační ani kinetická.",
+    "Kruh okolo něčeho, ne subjektu samotného.",
+    "Text není o geocentrickém modelu.",
+    "O klamu, ne o optické iluzi."
+  ]
+}
+,
+"718431bf-885e-439a-bada-3d231c872f78": {
+    "descriptions": [
+        "Německý historik umění",
+        "Italský barokní skladatel",
+        "Vědec zavražděný 1768",
+        "Spoluzakladatel archeologie",
+        "Renesanční umělecký kritik"
+    ],
+    "explanations": [
+        "Byl historik, ne umělec.",
+        "Nebyl Ital, ani skladatel.",
+        "Byl historik, ne vědec.",
+        "Nebyl spoluzakladatelem, ale reformátorem archeologie.",
+        "Nezabýval se renesancí, ale starověkým uměním."
+    ]
+}
+,
+"6a766e56-e3c5-469c-b231-c288de83f73f": {
+  "descriptions": [
+    "Vědecké publikace",
+    "Pedagogický institut",
+    "Akademické síly",
+    "Strategická příprava",
+    "Teoretické studium"
+  ],
+  "explanations": [
+    "Není zmínka o publikacích",
+    "Nejde o pedagogický institut",
+    "Nezmiňuje akademické prostředí",
+    "Není strategie, ale školení",
+    "Není studium, ale školení"
+  ]
+}
+,
+"330ea01f-e6a6-4842-a065-3ff10f9a5cc3": {
+  "descriptions": [
+    "Zákon cizině",
+    "Občanské právo",
+    "Právní povinnost",
+    "Státní regulace",
+    "Právní podmínky"
+  ],
+  "explanations": [
+    "Mylně zjednodušuje text jako zákon pro cizince.",
+    "Text se netýká občanského práva přímo.",
+    "Text není přímo o právní povinnosti.",
+    "Státní regulace není přímým tématem.",
+    "Přesahuje kontext právního závazku v textu."
+  ]
+}
+,
+"f4f69bca-c2ac-4c48-98ce-c390a87fb687": {
+  "descriptions": [
+    "Miniaturizovaný portrét",
+    "Detailní anatomie",
+    "Typická stařecká vizáž",
+    "Jemná sochařská práce",
+    "Starožitná fotografie"
+  ],
+  "explanations": [
+    "Zdůrazňuje malost, chybně naznačuje umělecké dílo",
+    "Obojí přesné, ale zaměřuje se na anatomii",
+    "Obsah nespecifikuje stáří, zaměřeno na vzhled",
+    "Nesprávné médium, důraz na drobnost",
+    "Nesouhlasí s médium, vede k záměně"
+  ]
+}
+,
+"405d4e1a-0107-412f-ada6-d1121790b349": {
+  "descriptions": [
+    "Svislé ženské rysy",
+    "Štíhlý ženský vzhled",
+    "Vlasová bohatost",
+    "Živé obličejové prvky",
+    "Barva ženské kůže"
+  ],
+  "explanations": [
+    "Popis naznačuje svislé prvky, opak skutečnosti",
+    "Odkazuje na štíhlost, ale popisuje útlost",
+    "Fokus pouze na vlasy, opomíjí ostatní rysy",
+    "Pouze oči, ignoruje kompletní vzhled",
+    "Zdůrazňuje pouze barvu kůže, ignoruje jiné aspekty"
+  ]
+}
+,
+"2266eb09-6905-40e7-a8bf-aa2dd6d44b95":
+{
+  "descriptions": [
+    "Slavná oblast",
+    "Vítězný boj",
+    "Poutní místo",
+    "Křesťanské vítězství",
+    "Boj proti Tatarům"
+  ],
+  "explanations": [
+    "Zaměřuje se na slávu, ne na poutníky.",
+    "Znění naznačuje jednoznačné vítězství.",
+    "Zaměřeno jen na poutnictví obecně.",
+    "Orientováno pouze na vítězný aspekt.",
+    "Zneužívá antagonismus, chybí širší kontext."
+  ]
+}
+,
+"f87e1a6f-5194-44ad-9130-51e69ced1128": {
+  "descriptions": [
+    "cestovatelská novela",
+    "historická biografie",
+    "námořní vyprávění",
+    "dobrodružný román",
+    "pohádkový příběh"
+  ],
+  "explanations": [
+    "Není novela, ale krátké vyprávění.",
+    "Není biografie, jen krátká zmínka.",
+    "Nezdůrazňuje námořní aspekty.",
+    "Obsahuje prvky dobrodružství, ale není román.",
+    "Přítomna fantazie, ale není typicky pohádkové."
+  ]
+}
+,
+"6bc9f176-bf3d-4f63-9665-ac43c058d892": {
+    "descriptions": [
+        "Výhody obecného vzdělání",
+        "Jednota ve vzdělávání",
+        "Metody vzdělávací reformy",
+        "Integrace inteligence",
+        "Pedagogické inovace"
+    ],
+    "explanations": [
+        "Ignoruje negativní kontext",
+        "Obchází kritiku jednoty",
+        "Nepřipomíná zhovadění dětí",
+        "Nesouvisí přímo s jednotou",
+        "Opomíjí původní kritický tón"
+    ]
+}
+,
+"95d72b68-214a-4075-8259-93634a9167af": {
+  "descriptions": [
+    "Historická evoluce",
+    "Stavební proměny",
+    "Archeologická lokalita",
+    "Urbanistická přeměna",
+    "Starověká památka"
+  ],
+  "explanations": [
+    "Označuje stáří, ne proměny",
+    "Nevypovídá o pastvině",
+    "Přesnější pro vykopávky",
+    "Není jen o urbanismu",
+    "Obecnější než 'foro'"
+  ]
+}
+,
+"e7f147ad-4a5b-4df8-a32c-7f008e2a0674": {
+  "descriptions": [
+    "královský ples",
+    "zábavný večírek",
+    "šlechtický obřad",
+    "romantické přiznání",
+    "družinový tanec"
+  ],
+  "explanations": [
+    "Ples není zmíněn, jen tanec.",
+    "Nebyl to večírek, ale setkání.",
+    "Není o obřadu, ale o setkání.",
+    "Nešlo o přiznání, ale poznání.",
+    "Není o skupinovém tanci, ale o páru."
+  ]
+}
+,
+"69b66d80-b591-4205-8269-94296737a622": {
+  "descriptions": [
+    "Literární genderová analýza",
+    "Postmoderní feministický výklad",
+    "Teorie genderové performativity",
+    "Sociálně-konstruktivistická perspektiva",
+    "Diskurz o rovnosti pohlaví"
+  ],
+  "explanations": [
+    "Výraz se zabývá genderem, nikoliv literaturou.",
+    "Fráze přesahuje rámec textu, není postmoderní.",
+    "Odkazuje na gender, ne na performativitu.",
+    "Nevztahuje se přímo k sociální konstrukci.",
+    "Text je specifický, nemluví o rovnosti."
+  ]
+}
+,
+"8a861c49-1f94-46e7-b92c-8bb10d06dd90": {
+  "descriptions": [
+    "Náboženská obřadnost",
+    "Osobní vzdělání",
+    "Empatická reakce",
+    "Spřízněné duše",
+    "Rychlá cesta"
+  ],
+  "explanations": [
+    "Popsáno jako náboženská ceremonie, přesto to není zřejmé.",
+    "Bylo to zaměněno za osobní rozvoj, místo pohřbu.",
+    "Zdánlivě o emocích, ale jde o popis akce.",
+    "Nevhodně interpretováno jako hluboký vztah, ne zmínka o otci.",
+    "Chybně popsáno jako cestování, nikoli útěk od pohřbu."
+  ]
+}
+,
+"c9eb6eec-64c9-4029-807f-0cdc190c5165": {
+  "descriptions": [
+    "Státní cenová politika",
+    "Hrdinský legionářský čin",
+    "Britské vzdělávací reformy",
+    "Historie osvícenství",
+    "Náčelnická diplomacie"
+  ],
+  "explanations": [
+    "Zmínka o vládě, avšak ne o politice",
+    "Legionáři zmíněni, čin nebyl specifický",
+    "Británie zmiňována, ne jde o vzdělávání",
+    "Osvícený náčelník, ne celé historické období",
+    "Náčelník a vláda zmiňováni, ne diplomacie"
+  ]
+}
+,
+"71014c61-dddb-4476-88bf-dfbfbbf16131": {
+  "descriptions": [
+    "Culinary presentation",
+    "Hospitality traditions",
+    "Fish preservation",
+    "Gift etiquette",
+    "Cooking methods"
+  ],
+  "explanations": [
+    "Popis může znamenat způsob úpravy jídla.",
+    "Nepřesně zobecňuje důvod krájení ryby.",
+    "Není o konzervaci, ale o úpravě.",
+    "Nepřesné, agregační balení dárků.",
+    "Je to spíše o přípravě než o metodách."
+  ]
+}
+,
+"2c39f356-cfc6-4806-bff7-d8cb278e315a": {
+  "descriptions": [
+    "Moderní zoologie",
+    "Přírodní behaviorismus",
+    "Neověřená etologie",
+    "Experimentální psychologie",
+    "Animalistické pozorování"
+  ],
+  "explanations": [
+    "Místo psychologie používá termín zoologie.",
+    "Behaviorismus je více zaměřený na obecnou psychologii.",
+    "Etologie studuje chování, ale není nepotvrzená.",
+    "Termín nepřesně popisuje metodu pozorování.",
+    "Výraz zdůrazňuje pozorování, ale zamlčuje nejistotu výsledků."
+  ]
+}
+,
+"0d0deeed-9064-44f3-b011-7ba092238afe": {
+  "descriptions": [
+    "Trupní svaly",
+    "Kostra nohy",
+    "Stehenní flexe",
+    "Hýžďový mechanismus",
+    "Svalová koordinace"
+  ],
+  "explanations": [
+    "Zaměřeno méně specificky, trup nezmíněn přímo.",
+    "Kostra, ne svalovina; zaměřeno na kost.",
+    "Popisuje funkci, ale nekonkrétní sval.",
+    "Omyl, nezahrnuje všechny zmíněné svaly.",
+    "Nezmiňuje specifické svaly, jen všeobecný koncept."
+  ]
+}
+,
+"91dd5970-19d4-4b33-ba55-47192373516b": {
+  "descriptions": [
+    "početní postupy",
+    "série výpočtů",
+    "matematické přičítání",
+    "finanční strategie",
+    "složité výpočty"
+  ],
+  "explanations": [
+    "zjednodušuje skutečný proces",
+    "neuvádí specifiku pořadí",
+    "neupřesňuje typ operace",
+    "zaměňuje kontext za finance",
+    "neosvětluje postupné číslování"
+  ]
+}
+,
+"3e732ca4-261d-43e3-b2fb-2c8a1a10e7c4": {
+  "descriptions": [
+    "Hostující ptáci",
+    "Stěhování společností",
+    "Špačková invaze",
+    "Podzimní migrace",
+    "Hromadné uzdravování"
+  ],
+  "explanations": [
+    "V textu jsou stěhovaví ptáci, nikoliv hostující.",
+    "Není o stěhování lidí, ale ptáků.",
+    "Text není o invazi, jen migraci.",
+    "Text je o konkrétním chování ptáků, nikoli migraci obecně.",
+    "Fráze nesouvisí s textem, chybné zaměření."
+  ]
+}
+,
+"9e041014-a35f-4926-9c37-04f0dce78a87": {
+  "descriptions": [
+    "Psychická stabilizace",
+    "Úspěšná léčba",
+    "Rychlé uzdravení",
+    "Dlouhodobé zotavení",
+    "Záchvat bez následků"
+  ],
+  "explanations": [
+    "Text naznačuje poškození mozku, nikoliv stabilizaci.",
+    "Léčba není úplně úspěšná, možné duševní následky.",
+    "Uzdravení není rychlé, trvalo několik dní.",
+    "Není jisté 'dlouhodobé zotavení', existují poškození.",
+    "Existují následky, možné trvalé poškození rozumu."
+  ]
+}
+,
+"8f6b51a9-4a67-419f-9f6f-2cfbbebbe8ee": {
+  "descriptions": [
+    "Biskupova náhlá návštěva",
+    "Nepředvídaná episkopální setkání",
+    "Církevní působení",
+    "Boží zjevení",
+    "Náboženské oslavy"
+  ],
+  "explanations": [
+    "Biskup přišel, nebyla návštěva",
+    "Setkání není přesně určeno",
+    "Působení není čistě církevní",
+    "Nebylo zjevení, pouze příchod biskupa",
+    "Oslavy se netýkaly náboženství přímo"
+  ]
+}
+,
+"4770c943-ac58-46f1-ac43-eb0a1706c1c4": {
+  "descriptions": [
+    "Psychologické workshopy",
+    "Otevřené vzdělávání",
+    "Akademické konference",
+    "Výuka podpůrných technik",
+    "Studentky vysokých škol"
+  ],
+  "explanations": [
+    "Nesprávný obor, nejde o psychologii.",
+    "Není otevřené, je určeno pro konkrétní skupinu.",
+    "Příliš obecné a matoucí, nejsou to konference.",
+    "Zahrnuje techniky, ne ale podpůrné.",
+    "Nesprávný typ vzdělávacího ústavu."
+  ]
+}
+,
+"80ac1784-33dc-4100-af53-e802eb080ee9": {
+    "descriptions": [
+        "nezvěstný bojovník",
+        "vládce v exilu",
+        "šlechtický útěk",
+        "královská abdikace",
+        "ztracená bitva"
+    ],
+    "explanations": [
+        "naznačuje smrt v boji, neplatí",
+        "sugeruje dobrovolný odchod, neplatí",
+        "implikuje únik, což není správné",
+        "značí odstoupení, které se nestalo",
+        "naznačuje prohranou válku, což neplatí"
+    ]
+}
+,
+"f13f8666-760f-4434-8311-b9f8b5e227ba": {
+  "descriptions": [
+    "Protizánětlivé látky",
+    "Nevyužitelné polymery",
+    "Dekorativní aplikace",
+    "Farmaceutické suspenze",
+    "Biodegradabilní materiály"
+  ],
+  "explanations": [
+    "Nejedná se o protizánětlivé látky",
+    "Jsou využitelné, ne nevyužitelné",
+    "Není zmínka o dekorativním využití",
+    "Nejsou to farmaceutické suspenze",
+    "Není zmínka o biodegradabilitě"
+  ]
+}
+,
+"7d5b22b7-4b11-464e-942f-0c5087652adc": {
+    "descriptions": [
+        "Italské renesanční sochařství",
+        "Památník operního umění",
+        "Kostelní architektonické umění",
+        "Starověké italské rituály",
+        "Klasická hudební scéna"
+    ],
+    "explanations": [
+        "Text je o moderním hrobě, ne renesanci.",
+        "Památník je obecný, ne specificky opeře.",
+        "Text pojednává o hřbitově, ne o kostele.",
+        "Je modernější, ne starověký popis.",
+        "Opravdu nepopisuje hudební scénu, ale návštěvu."
+    ]
+}
+,
+"83560180-60d7-4f54-9985-10dadbccf796": {
+  "descriptions": [
+    "Slovní improvizace",
+    "Debatní procedury",
+    "Komplexní argumentace",
+    "Právní polemika",
+    "Řídící jednání"
+  ],
+  "explanations": [
+    "Není o improvizaci, jde o pravidla",
+    "Popisuje pravidla, ne obecné debaty",
+    "Obsahuje pravidla, ne argumentaci",
+    "Nejde o polemiku, ale o pravidlo",
+    "Je o řečnických pravidlech, ne řízení"
+  ]
+}
+,
+"977cea80-026c-4464-85fd-f8109b234067": {
+  "descriptions": [
+    "Životopis Karla IV.",
+    "Dějiny Jiřího VII.",
+    "Genealogie vladařů",
+    "Biografie evropských králů",
+    "Kronika českých králů"
+  ],
+  "explanations": [
+    "Karel IV. není Jiřík VII.",
+    "Není to dějiny, ale dokumenty.",
+    "Nezahrnuje všechny vladaře, jen jednu rodinu.",
+    "Více dokumentační, míň biografické dílo.",
+    "Není to kronika, ale publikace dokumentů."
+  ]
+}
+,
+"9a6c8cf6-7a89-40e6-a77a-f8a73538e657": {
+  "descriptions": [
+    "Maďarské studijní zkušenosti",
+    "Vzdělávací potíže Rumunů",
+    "Mezinárodní školní režimy",
+    "Etické záležitosti školství",
+    "Maďarsko-rumunské konflikty"
+  ],
+  "explanations": [
+    "Přesunuto z osobní zkušenosti na obecnější zážitek.",
+    "Není jasné, zda šlo o fyzické nebo psychické potíže.",
+    "Zdá se nezávislé na konkrétním místě a čase.",
+    "Neuvádí konkrétní etickou problematiku.",
+    "Není jisté, zda to byl politický konflikt."
+  ]
+}
+,
+"423319dc-f46d-4a78-ad49-e9a03a2b4651": {
+  "descriptions": [
+    "Středověká etiketa",
+    "Diplomatické jednání",
+    "Soudní proces",
+    "Rodová hrdost",
+    "Dějiny aristokracie"
+  ],
+  "explanations": [
+    "Zdánlivě o zdvořilosti, nicméně nedosahuje specifičnosti",
+    "Může se zdát vhodný, ale nesouvisí s diplomacií přímo",
+    "Zdánlivě právní, ale ve skutečnosti historicko-socialní",
+    "Je o šlechtě, ale nezmiňuje specificky hrdost",
+    "Text o historii šlechty, ale ne o historii aristokracie obecně"
+  ]
+}
+,
+"5e9d4894-2b98-4f46-a0f7-d2e09d3539f8": {
+  "descriptions": [
+    "Dřevo versus lidé",
+    "Nemožnost změny",
+    "Proces osobní transformace",
+    "Lidská nezbytnost",
+    "Vnitřní očista"
+  ],
+  "explanations": [
+    "Nesprávná ekvivalence mezi materiálem a lidmi.",
+    "Text nepopisuje nemožnost, ale potenciál.",
+    "Text hovoří o člověku, nikoliv o transformaci.",
+    "Zveličuje obecnou lidství místo individuálního rozvoje.",
+    "Fráze vytváří mylnou představu o obsahu."
+  ]
+}
+,
+"7ae71932-b9f6-44ad-a4d3-2b213e18cbfa": {
+  "descriptions": [
+    "Námořní záchrana",
+    "Přítel ve vodě",
+    "Vrhnul se jednotlivec",
+    "Podvodní zvíře",
+    "Opuštění břehu"
+  ],
+  "explanations": [
+    "Wolf není v námořní situaci",
+    "Wolf není přítel",
+    "Skok byl obranný, ne útočný",
+    "Wolf není zvíře",
+    "Nikdo neopouštěl břeh"
+  ]
+}
+,
+"e258ac0c-b955-4788-8c32-fab806b7431a": {
+  "descriptions": [
+    "Literární realismus",
+    "Psychologická studie",
+    "Historický román",
+    "Osobní vzpomínky",
+    "Pohádkový příběh"
+  ],
+  "explanations": [
+    "Text má nadpřirozené prvky",
+    "Text obsahuje šílenství a halucinace",
+    "Je z moderní doby, ne historický",
+    "Fiktivní, ne osobní zážitky",
+    "Text není typickou pohádkou"
+  ]
+}
+,
+"4343fb94-fe66-4a09-aa8e-bf80eb5d3e1c": {
+  "descriptions": [
+    "Každodenní příprava",
+    "Domyšlený odjezd",
+    "Cestovní náklady",
+    "Rutinní balení",
+    "Obvyklý začátek"
+  ],
+  "explanations": [
+    "Příprava není každodenní",
+    "Odjezd není jen domyšlený",
+    "Nezmiňuje se o nákladech",
+    "Není to rutinní balení",
+    "Začátek není obvyklý"
+  ]
+}
+}
