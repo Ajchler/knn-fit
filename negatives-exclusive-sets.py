@@ -8,7 +8,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 def clean_dataset():
-    f = open('dataset/out.json')
+    f = open('data/out.json')
 
     data = json.load(f)
     data_list = []
@@ -27,7 +27,7 @@ def clean_dataset():
             if len(new_text['user_topics']) != 0:
                 data_list.append(new_text)
 
-    with open("dataset/out-clean.json", "w") as f:
+    with open("data/out-clean.json", "w") as f:
         json.dump(data_list, f, ensure_ascii=False, indent=4)
 
     # Create DataFrame
@@ -76,7 +76,7 @@ def flatten(xss):
 
 
 if __name__ == "__main__":
-    df_texts = pd.read_json("out-clean.json")
+    df_texts = pd.read_json("data/out-clean.json")
     model_name = 'sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2'
     model_name_file = model_name.replace("/", "_")
 
@@ -89,7 +89,7 @@ if __name__ == "__main__":
     text_embeddings = text_embeddings / text_embeddings.norm(dim=1)[:, None]
     similarity = text_embeddings @ text_embeddings.transpose(0, 1)
     similarity = similarity.cpu().numpy()
-    k = 4
+    k = 10
 
     similar_texts = []
     for i in range(len(similarity)):
@@ -102,6 +102,7 @@ if __name__ == "__main__":
             most_similar.append(
                 {
                     "text": df_texts.iloc[most_similar_idx]["text"],
+                    "text_id": df_texts.iloc[most_similar_idx]["text_id"],
                     "user_topics": df_texts.iloc[most_similar_idx]["user_topics"],
                     "cosine_sim": f"{similarity[i][most_similar_idx]:0.6f}"
                 }
@@ -109,9 +110,10 @@ if __name__ == "__main__":
 
         this_topics_set = set(df_texts.iloc[i]["user_topics"])
         best_text_topics_set = set(most_similar[0]["user_topics"])
-        best_text_topics_set_all = set(flatten(list(map(lambda x: x["user_topics"], most_similar)))[:10])
+        best_text_topics_set_all = set(flatten(list(map(lambda x: x["user_topics"], most_similar))))
         similar_texts.append(
             {
+                "text_id": df_texts.iloc[i]["text_id"],
                 "text": df_texts.iloc[i]["text"],
                 "user_topics": df_texts.iloc[i]["user_topics"],
                 "potential_negatives_one": list(best_text_topics_set - this_topics_set),
