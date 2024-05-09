@@ -1,0 +1,590 @@
+{
+"51fa695f-2cba-4d40-b3d0-2ffc4ac3fcbb": {
+  "topics": [
+    "Výživa dětí",
+    "Sportovní trénink",
+    "Rozvoj osobnosti",
+    "Školní vzdělávání",
+    "Psychická pohoda"
+  ],
+  "explanations": [
+    "Popisuje školství, nesedí pro vyvinutí těla.",
+    "Sedí ke cvičení, nesedí k vyvinutí ducha.",
+    "Sedí k rozvoji ducha, ale ne k vyvinutí těla.",
+    "Popisuje školství, nesedí k psychické pohodě.",
+    "Sedí k duchovní stránce, nesedí ke cvičení těla."
+  ]
+}
+,
+"5445da40-ce98-4f4c-b1a8-e46115ef4166": {
+  "topics": [
+    "čtení anglického textu",
+    "výuka cizích jazyků",
+    "použití slovníku",
+    "osvojení jazykové gramatiky",
+    "rozvoj jazykových dovedností"
+  ],
+  "explanations": [
+    "Popisuje hlavní činnost, ale nezmíní emocionální stav.",
+    "Souvisí s učením, avšak neukazuje konkrétní metodu.",
+    "Spojuje se s částí textu, jinak není zmiňován.",
+    "Zdůrazňuje gramatiku, ale neosobní přístup k jazyku.",
+    "Vztahuje se na učení, detailní specifika nejsou uvedena."
+  ]
+}
+,
+"4a80bf7d-9e2f-4d60-8751-0c02e643cf61": {
+  "topics": [
+    "Planeta Země",
+    "Taneční vystoupení",
+    "Mechanika tuhého těla",
+    "Astronomická iluze",
+    "Fyzikální cvičení"
+  ],
+  "explanations": [
+    "Text může naznačit pohyb okolo, ale ne specifikuje Zemi.",
+    "Text popisuje pohyb a kruh, ale ne taneční.",
+    "Text zmiňuje pohyb, avšak ne technický opis momentu.",
+    "Zdánlivý pohyb souvisí, avšak ne specificky astronomický.",
+    "Mluví o pohybu a kruhu, ale nikoli o cvičení."
+  ]
+}
+,
+"718431bf-885e-439a-bada-3d231c872f78": {
+  "topics": [
+    "Česká historie",
+    "Založení Říma",
+    "Italská renesance",
+    "Německá literatura",
+    "Vraždy známých osobností"
+  ],
+  "explanations": [
+    "Winckelmann nebyl součástí české historie.",
+    "Řím nebyl založen v roce 1755.",
+    "Winckelmann nesouvisí s italskou renesancí.",
+    "Winckelmann nepsal německou literaturu.",
+    "Zabit byl Winckelmann, ale nespecializuje se na známé osoby."
+  ]
+}
+,
+"6a766e56-e3c5-469c-b231-c288de83f73f": {
+  "topics": ["Vědecká kvalifikace", "Bolševická příprava", "Filosofické vzdělání", "Stranické úlohy", "Institucionální spolupráce"],
+  "explanations": [
+    "Odpovídá sekci o kvalifikaci kádrů, ale nesedí na zaměření.", 
+    "Popisuje školení kádrů, ale nevztahuje se na vědecký aspekt.",
+    "Vysvětluje zaměření kádrů, neodpovídá na stranické úlohy.",
+    "Souvisí s úkoly, ale nevystihuje vědeckou přípravu a spolupráci.",
+    "Odkazuje na spolupracovníky, ale nezmiňuje filosofické obsahy."
+  ]
+}
+,
+"330ea01f-e6a6-4842-a065-3ff10f9a5cc3": {
+  "topics": [
+    "Cizinecké právo",
+    "Státní příslušnost",
+    "Zákon Rakouska",
+    "Mezinárodní vztahy",
+    "Občanské povinnosti"
+  ],
+  "explanations": [
+    "Popisuje zahraniční aspekt, ale ne cizince.",
+    "Zmíněna příslušnost, ne přímo státní.",
+    "Zmíněn zákon, ale nespecifikuje jen Rakousko.",
+    "Obecnější než specifický zákon.",
+    "Zaměřeno na povinnosti občana, ale konkrétně podle zákona."
+  ]
+}
+,
+"f4f69bca-c2ac-4c48-98ce-c390a87fb687": {
+  "topics": [
+    "zubní hygiena",
+    "starožitný nábytek",
+    "miniaturizace technologií",
+    "kosmetické úpravy",
+    "dietní stravování"
+  ],
+  "explanations": [
+    "Zuby zmíněny, ale ne jejich péče.",
+    "Nesouvisí s nábytkem, ale s osobními vlastnostmi.",
+    "Nevztahuje se na technologie, ale na fyzické rysy.",
+    "Oholené tváře souvisejí, kosti ne.",
+    "Zmínka o tělesných rysů, nikoli stravě."
+  ]
+}
+,
+"405d4e1a-0107-412f-ada6-d1121790b349": {
+  "topics": [
+    "Architektonické prvky",
+    "Gastronomické speciality",
+    "Sportovní disciplína",
+    "Programovací jazyk",
+    "Finanční analýza"
+  ],
+  "explanations": [
+    "Zmíněné v textu, ale nejde o architekturu.",
+    "Popisuje tělo, ne jídlo.",
+    "Popisuje postavu, ne sport.",
+    "Popisuje vzhled, ne software.",
+    "Popisuje fyzický vzhled, ne ekonomii."
+  ]
+}
+,
+"2266eb09-6905-40e7-a8bf-aa2dd6d44b95": {
+  "topics": [
+    "historické bitvy",
+    "náboženské poutě",
+    "slovanská kultura",
+    "tatarské vpády",
+    "vítězství křesťanů"
+  ],
+  "explanations": [
+    "popisuje bitvu, nikoli celý text",
+    "odkaz na poutníky, ne na celé dějiny",
+    "zmínka o Slovanech, ne o celé události",
+    "Tataři zmíněni, nikoli jiné události",
+    "část o vítězství, ne o celém textu"
+  ]
+}
+,
+"f87e1a6f-5194-44ad-9130-51e69ced1128": {
+  "topics": [
+    "mezinárodní cestování",
+    "zámek",
+    "osobní zpověď",
+    "cesta za poznáním",
+    "sdělení příběhu"
+  ],
+  "explanations": [
+    "Muž přijel zdaleka, nezmiňuje však cestování v praxi.",
+    "Děj se odehrává na hrade, zámek je však specifický typ.",
+    "Muž mluví o sobě, ale nejde o zpověď.",
+    "Hledání poznání není explicitně zmíněno, pouze naznačeno.",
+    "Muž vypráví, ale nejde o komplexní příběh."
+  ]
+}
+,
+"6bc9f176-bf3d-4f63-9665-ac43c058d892": {
+    "topics": [
+        "obecné vzdělávání",
+        "jednota",
+        "umění",
+        "dětská psychologie",
+        "vzdělávací systémy"
+    ],
+    "explanations": [
+        "Popisuje segment o vzdělání, nelze aplikovat na jednotu.",
+        "Popisuje první část, nevztahuje se na vzdělávání.",
+        "Správně umění ve vzdělání, špatně pro jednotu.",
+        "Souvisí s dětmi ve vzdělání, ale ne s jednotou.",
+        "Odkazuje na systémy vzdělávání, ne na jednotu nebo umění."
+    ]
+}
+,
+"95d72b68-214a-4075-8259-93634a9167af": {
+  "topics": [
+    "magické rituály",
+    "historické náměstí",
+    "zemědělská půda",
+    "starověké Římské budovy",
+    "migrace obyvatelstva"
+  ],
+  "explanations": [
+    "popisuje první část, nevhodný pro druhou",
+    "popisuje druhou část, neplatí pro první",
+    "popisuje druhou část, neplatí pro první",
+    "náleží k druhé části, nevztahuje se na první",
+    "nevhodný pro obě části, ale známý koncept"
+  ]
+}
+,
+"e7f147ad-4a5b-4df8-a32c-7f008e2a0674": {
+    "topics": [
+        "Pohádková svatba",
+        "Osobní hygiena",
+        "Překvapivé odhalení",
+        "Závist a zloba",
+        "Společenský tanec"
+    ],
+    "explanations": [
+        "Princ si vybírá nevěstu, nikoli se nevdává.",
+        "Popelka se umyla, ale není hlavní téma.",
+        "Princ poznává Popelku, nesouvisí s jinými částmi.",
+        "Sestry a macecha závidí, neprovází radost.",
+        "Odkaz na tanec, ale tanec není ústřední téma."
+    ]
+}
+,
+"69b66d80-b591-4205-8269-94296737a622": {
+  "topics": [
+    "kulinární lahůdka",
+    "ženské pohlaví",
+    "botanická klasifikace",
+    "psychologická charakteristika",
+    "fyzická zdatnost"
+  ],
+  "explanations": [
+    "Odkazuje na knedlík, ne na pohlaví.",
+    "Odkazuje na pohlaví, ne na knedlík.",
+    "Nesprávný vztah k knedlíku nebo pohlaví.",
+    "Nevztahuje se na knedlík ani na pohlaví.",
+    "Správně k slabému pohlaví, nesprávně k švestkovému knedlíku."
+  ]
+}
+,
+"8a861c49-1f94-46e7-b92c-8bb10d06dd90": {
+  "topics": [
+    "Hudba a spolky",
+    "Rychlá doprava",
+    "Umělecké dílo",
+    "Náboženské obřady",
+    "Rodinné vztahy"
+  ],
+  "explanations": [
+    "Popisuje přítomnost hudby a spolků, ale ne celý text.",
+    "Kočář popisuje, rychlost neadekvátní jinde.",
+    "Pomník může být vnímán jako umělecké dílo, ne celý text.",
+    "Kněží a pohřeb, ale ne zbylé části textu.",
+    "Otec, syn; nic o dalších rodinných vztazích."
+  ]
+}
+,
+"c9eb6eec-64c9-4029-807f-0cdc190c5165": {
+  "topics": [
+    "sibiřská expedice",
+    "britská vláda",
+    "vojenské uznání",
+    "politické projevy",
+    "historické události"
+  ],
+  "explanations": [
+    "Zmíněno ve vztahu k legionářům, ne v jiných sekcích.",
+    "Zmíněno ve vztahu k náčelníkovi, ne v jiných sekcích.",
+    "Zmíněno ve vztahu k uznání legionářů, ne v jiných sekcích.",
+    "Implicitně obsaženo v projevu, není zmíněno jinde.",
+    "Souvisí s legionáři, nevztahuje se na ostatní text."
+  ]
+}
+,
+"71014c61-dddb-4476-88bf-dfbfbbf16131": {
+  "topics": [
+    "Kulinářské zpracování",
+    "Rozdělení jídla",
+    "Práce s nožem",
+    "Sváteční stolování",
+    "Tradiční pokrmy"
+  ],
+  "explanations": [
+    "Popisuje krájení ryby, ale ne vaření.",
+    "Popisuje dělení ryby, ale ne obdarování.",
+    "Pasuje k krájení, nikoli k vyjímání celku.",
+    "Souvisí s hostinou, ale ne s darem.",
+    "Zahrnuje přípravu jídla, ale ne specifiku darování."
+  ]
+}
+,
+"2c39f356-cfc6-4806-bff7-d8cb278e315a": {
+  "topics": [
+    "Psychologie zvířat",
+    "Historie psychologie",
+    "Vědecké metody",
+    "Etika výzkumu",
+    "Pozorovatelné úspěchy"
+  ],
+  "explanations": [
+    "Popisuje zkoumanou oblast, ale ne nejistotu výsledků.",
+    "Svědčí o vědním oboru, nezpochybňuje metody.",
+    "Vysvětluje proces, nezahrnuje nejistotu vědeckého zjištění.",
+    "Naráží na problematiku, neobsahuje žádné etické aspekty.",
+    "Nalézá v textu úspěchy, přehlíží jejich nejistotu."
+  ]
+}
+,
+"0d0deeed-9064-44f3-b011-7ba092238afe": {
+  "topics": [
+    "Anatomie svalu",
+    "Zdravotní cvičení",
+    "Zvedání těžkých břemen",
+    "Poranění stehna",
+    "Svalová aktivita"
+  ],
+  "explanations": [
+    "Popisuje strukturu a funkci, ne arterii.",
+    "Relates to muscle function, nesouvisí s dietou.",
+    "Použitelné k zvedání, nesouvisející s klidem.",
+    "Může být zraněno, nevztahuje se k mozkovým funkcím.",
+    "Důležitá pro pohyb, nekonkrétní pro mateřskou péči."
+  ]
+}
+,
+"91dd5970-19d4-4b33-ba55-47192373516b": {
+  "topics": [
+    "Matematické sekvence",
+    "Finanční účetnictví",
+    "Pravidla sčítání",
+    "Sečtení setin",
+    "Odčítání částek"
+  ],
+  "explanations": [
+    "Popisuje postupné čísla, ale ne konkrétní matematické principy.",
+    "Text se týká počítání setin, ale ne specificky financí.",
+    "Zmiňuje sčítání, ale ne stanovuje pravidla.",
+    "O setinách se mluví, ale není pouze o sečtení.",
+    "Text obsahuje odčítání, ale ne jen finančních částek."
+  ]
+}
+,
+"3e732ca4-261d-43e3-b2fb-2c8a1a10e7c4": {
+    "topics": [
+        "Migrace ptáků",
+        "Sociální skupiny",
+        "Jednotlivá cestování",
+        "Podzimní jevy",
+        "Populace ptactva"
+    ],
+    "explanations": [
+        "Popisuje přesuny ptáků, ale nesedí k samotnému cestování jedince.",
+        "Vztahuje se k shlukování, nesprávně k samotnému mizení.",
+        "Odkazuje na zmizení po jednom, ne na skupinovou migraci.",
+        "Vztahuje se k času zmíněném ve vstupu, ne k jiným obdobím.",
+        "Popisuje skupiny ptáků, neaplikovatelné na jednotlivé zmizející ptáky."
+    ]
+}
+,
+"9e041014-a35f-4926-9c37-04f0dce78a87": {
+  "topics": [
+    "lékařské ošetřování",
+    "psychické poruchy",
+    "dlouhodobá nemoc",
+    "nebezpečí pro život",
+    "diagnóza onemocnění"
+  ],
+  "explanations": [
+    "Mluví o opatřeních, nikoli přímo o ošetřování.",
+    "Zmínka o poškození rozumu, nikoli konkrétně o psychických.",
+    "Nemoc trvala několik dní, není dlouhodobá.",
+    "Život byl v nebezpečí po několik dní, ale poté už ne.",
+    "Diagnóza potvrzena, jedná o specifikaci, ne obecné diagnóze."
+  ]
+}
+,
+"8f6b51a9-4a67-419f-9f6f-2cfbbebbe8ee": {
+  "topics": [
+    "Náboženské slavnosti",
+    "Překvapivá záchrana",
+    "Historické objevy",
+    "Zpovědní tajemství",
+    "Krize management"
+  ],
+  "explanations": [
+    "Odkazuje na narození Páně, nic o slavnosti v Jeníkově.",
+    "Popisuje pomoc, nic o záchraně Biskupa Zdika.",
+    "Biskup 'objevil', nejedná se však o historický objev.",
+    "Biskup se objevil, nezmiňuje se zpovědní tajemství.",
+    "Pomoc v krizi, ale nejde o řízení krize."
+  ]
+}
+,
+"4770c943-ac58-46f1-ac43-eb0a1706c1c4": {
+  "topics": [
+    "Výchova a školství",
+    "Organizace akcí",
+    "Odborné vzdělávání",
+    "Studentky vysokých škol",
+    "Příprava učitelů"
+  ],
+  "explanations": [
+    "Správně pro odkaz na pedagogiku, chybně pro konkrétní event",
+    "Správně pro konání přednášek, chybně pro obsah o pedagogice",
+    "Správně pro obsah přednášek, chybně pro formát nebo místo",
+    "Správně pro žačky připravující se, chybně pro úroveň studia",
+    "Správně pro téma učitelství, chybně pro širší vzdělávací systém"
+  ]
+}
+,
+"80ac1784-33dc-4100-af53-e802eb080ee9": {
+  "topics": [
+    "Ztracené osoby",
+    "Nevyřešené záhady",
+    "Panovnická abdikace",
+    "Státní převrat",
+    "Bezvědomí"
+  ],
+  "explanations": [
+    "Popisuje zmizení, ale nevztahuje se na smrt.",
+    "Popisuje nejasnost situace, neplatí pro příčiny.",
+    "Zdá se, že panovník odešel, ale zmizel.",
+    "Mohl by naznačovat politickou akci, ale nestalo se.",
+    "Odpovídá na ztrátu vědomí, nikoliv zmizení."
+  ]
+}
+,
+"f13f8666-760f-4434-8311-b9f8b5e227ba": {
+  "topics": [
+    "Potravinářské aditiva",
+    "Chemická stabilizace",
+    "Biochemický rozklad",
+    "Farmaceutické přípravky",
+    "Kovové slitiny"
+  ],
+  "explanations": [
+    "Gelatina, kasein běžně v potravinách, ale ne v textu.",
+    "Stabilizace roztoků je zmíněna, ne všechny chemie.",
+    "Rozkladné produkty zmíněny, ne všechny biochemické.",
+    "Gummi, gelatina ve farmacii, ne celek textu.",
+    "Kovy zmíněny, slitiny ne."
+  ]
+}
+,
+"7d5b22b7-4b11-464e-942f-0c5087652adc": {
+  "topics": [
+    "Stavební náklady",
+    "Pohřební rituály",
+    "Italská architektura",
+    "Hudební vystoupení",
+    "Dopravní uzly"
+  ],
+  "explanations": [
+    "Popisuje pomník, ne ale hrobku",
+    "Odkazuje na hrobku, ne na operu",
+    "Vztahuje se na milánský hřbitov, ne na nádraží",
+    "Týká se Scaly, ne pomníku",
+    "Odkazuje na nádraží, ne na pohřební místo"
+  ]
+}
+,
+"83560180-60d7-4f54-9985-10dadbccf796": {
+  "topics": [
+    "Parlamentní debata",
+    "Pravidla jednání",
+    "Porušení procedury",
+    "Odebrání slova",
+    "Úprava názorů"
+  ],
+  "explanations": [
+    "Text mluví o procedurách ve sboru, nikoliv obecně o parlamentu.",
+    "Text uvádí konkrétní pravidlo, neobecná pravidla jednání.",
+    "Text popisuje možný postup, nikoliv skutečné porušení.",
+    "Odebrání slova je zmíněno, ale ne v každé sekci.",
+    "Řeč o opravě názorů je pouze ve specifickém kontextu."
+  ]
+}
+,
+"977cea80-026c-4464-85fd-f8109b234067": {
+  "topics": [
+    "Historické dokumenty",
+    "Rodinné dědictví",
+    "Vydání knihy",
+    "Genealogický výzkum",
+    "Středověká Evropa"
+  ],
+  "explanations": [
+    "Popisuje obsah svazku, neplatí pro jiné díly.",
+    "Souvisí s potomky, nevztahuje se na nezmiňované předky.",
+    "Vztahuje se k uveřejnění, nek popisu obsahu dokumentů.",
+    "Vhodné pro potomky, nesedí na první část životopisu.",
+    "Nevhodné pro nové díly, vhodné pro historický kontext."
+  ]
+}
+,
+"9a6c8cf6-7a89-40e6-a77a-f8a73538e657": {
+  "topics": [
+    "Maďarské školství",
+    "Mladí Rumuni",
+    "Osobní zkušenost",
+    "Trvalé následky",
+    "Nacionalistické napětí"
+  ],
+  "explanations": [
+    "Popisuje školy, ale ne celou maďarskou školní soustavu.",
+    "Popisuje účastníky, ale ne všechny mladé Rumuny.",
+    "Odkazuje na vypravěčovy zkušenosti, ale ne vše je osobní.",
+    "Hovoří o nezapomenutí, ne vše má trvalé následky.",
+    "Napětí je implikované, ne všechny části mají tento charakter."
+  ]
+}
+,
+"423319dc-f46d-4a78-ad49-e9a03a2b4651": {
+  "topics": [
+    "Šlechtické dědictví",
+    "Právní nároky",
+    "Historická událost",
+    "Osobní identita",
+    "Vzdělání ve šlechtě"
+  ],
+  "explanations": [
+    "Odmítá jiné části textu o osobní cti.",
+    "Nic o konkrétních právech není zmíněno.",
+    "Žádná specifická událost, jen trvání rodiny.",
+    "Nehovoří o dalších aspektech identity postav.",
+    "Žádné zmínky o školním vzdělání v textu."
+  ]
+}
+,
+"5e9d4894-2b98-4f46-a0f7-d2e09d3539f8": {
+  "topics": [
+    "lesní hospodářství",
+    "osobní rozvoj",
+    "infekční nemoci",
+    "dřevozpracující průmysl",
+    "etická výchova"
+  ],
+  "explanations": [
+    "Popisuje dřevo, nevztahuje se k člověku.",
+    "Obrací se ke změně člověka, ne k dřevu.",
+    "Spomíná 'nákazu', nevztahuje se k lesnictví ani výchově.",
+    "Týká se zpracování dřeva, nikoli infekčních nemocí.",
+    "O změně člověka, nevztahuje se k dřevu ani nemocem."
+  ]
+}
+,
+"7ae71932-b9f6-44ad-a4d3-2b213e18cbfa": {
+  "topics": [
+    "Záchrana tonoucího",
+    "Neúspěšná snaha",
+    "Kritická situace",
+    "Boj o přežití",
+    "Voda mělká"
+  ],
+  "explanations": [
+    "Popisuje záchranu, ale neúspěch nutností tonutí jiných.",
+    "Popisuje snahu, ale neúspěch pomocí při tonutí.",
+    "Popisuje část textu, ale neodpovídá jiným situacím.",
+    "Popisuje boj o život, neodpovídá scéně rychlého tonutí.",
+    "Správně mělkou vodu, ale ne platí pro hlubokou část."
+  ]
+}
+,
+"e258ac0c-b955-4788-8c32-fab806b7431a": {
+  "topics": [
+    "šumavské lesy",
+    "starožitný úbor",
+    "blouznění",
+    "kostýmní zábava",
+    "záhadné spojení"
+  ],
+  "explanations": [
+    "Popisuje děvče, ne šlechtičnu.",
+    "Odkazuje na šlechtičnu, ne na děvče.",
+    "Vztahuje se k vidinám, ne reálné události.",
+    "Týká se šlechtičny, ne děvče z lesa.",
+    "Naráží na souvislost postav, ale ne na kliku."
+  ]
+}
+,
+"4343fb94-fe66-4a09-aa8e-bf80eb5d3e1c": {
+  "topics": [
+    "Rozbití pokladničky",
+    "Příprava na cestu",
+    "Péče o osobní finance",
+    "Domácí pohodlí",
+    "Pěší turistika"
+  ],
+  "explanations": [
+    "Popisuje scénu s pokladničkou, ale ne vztahy postav.",
+    "Popisuje balení věcí, ale ne hudbu.",
+    "Nespadá do scény s pokladničkou, pás.",
+    "Neodpovídá scéně se sbalováním, hůl.",
+    "Vztahuje se k chůzi horami, ale ne k rozbíjení."
+  ]
+}
+}

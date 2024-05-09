@@ -1,0 +1,596 @@
+{
+"51fa695f-2cba-4d40-b3d0-2ffc4ac3fcbb": {
+  "descriptions": [
+    "Kniha vzdělávací",
+    "Sportovní průvodce",
+    "Výživový manuál",
+    "Psychologická studie",
+    "Duchovní příručka"
+  ],
+  "explanations": [
+    "Text není kniha.",
+    "Text není o sportu.",
+    "Text nezmiňuje výživu.",
+    "Text není naučný o psychologii.",
+    "Text není o duchovním vedení."
+  ]
+}
+,
+"5445da40-ce98-4f4c-b1a8-e46115ef4166": {
+  "descriptions": [
+    "Lingvistická analýza",
+    "Průvodce učením",
+    "Technologický návod",
+    "Historický dokument",
+    "Teologické bádání"
+  ],
+  "explanations": [
+    "Text se nezabývá analýzou jazyka.",
+    "Není průvodcem, jen osobní zkušenost.",
+    "Text nesouvisející s technologií.",
+    "Není o historických událostech.",
+    "Text nezkoumá teologické otázky."
+  ]
+}
+,
+"4a80bf7d-9e2f-4d60-8751-0c02e643cf61": {
+  "descriptions": [
+    "Statická teorie",
+    "Vnitřní reflexe",
+    "Externí koordinace",
+    "Isolovaná introspekce",
+    "Pasivní observace"
+  ],
+  "explanations": [
+    "Text pojednává o pohybu, ne statickosti.",
+    "Text se zabývá vnějším pohybem, nikoliv vnitřním.",
+    "Zaměřuje se na individuální pohyb, ne koordinaci.",
+    "Text nezmiňuje introspekci, ale vnější pohyb.",
+    "Popisuje aktivní pohybování, ne pasivní pozorování."
+  ]
+}
+,
+"718431bf-885e-439a-bada-3d231c872f78": {
+  "descriptions": [
+    "Francouzský filosof",
+    "Renesanční malíř",
+    "Středověký básník",
+    "Americký historik",
+    "Řecký sochař"
+  ],
+  "explanations": [
+    "Winckelmann byl německý archeolog.",
+    "Winckelmann nebyl malíř, ale archeolog.",
+    "Žil ve 18. století, ne ve středověku.",
+    "Byl německý, ne americký.",
+    "Byl archeolog, ne sochař."
+  ]
+}
+,
+"6a766e56-e3c5-469c-b231-c288de83f73f": {
+  "descriptions": [
+    "Moderní psychologie",
+    "Ekonomická teorie",
+    "Sociální antropologie",
+    "Politická strategie",
+    "Organizační chování"
+  ],
+  "explanations": [
+    "Text se nezabývá psychologií",
+    "Text nepojednává o ekonomii",
+    "Text nezkoumá antropologii",
+    "Text není o politických strategiích",
+    "Text nesouvisejí s organizacním chováním"
+  ]
+}
+,
+"330ea01f-e6a6-4842-a065-3ff10f9a5cc3": {
+  "descriptions": [
+    "Dopis ze zahraničí",
+    "Občanské povinnosti",
+    "Mezinárodní diplomacie",
+    "Podnikatelské právo",
+    "Osobní identifikace"
+  ],
+  "explanations": [
+    "Text je o rakouském občanství, ne o dopisech.",
+    "Text se týká zákonů, ne obecných povinností.",
+    "Zákon, nikoli diplomatické procesy.",
+    "Nehovoří o podnikání ani jeho právech.",
+    "Nehovoří o procesu identifikace osoby."
+  ]
+}
+,
+"f4f69bca-c2ac-4c48-98ce-c390a87fb687": {
+  "descriptions": [
+    "Deník starého muže",
+    "Všeobecná encyklopedie",
+    "Umělecká galerie",
+    "Církevní dokument",
+    "Historický román"
+  ],
+  "explanations": [
+    "Text není deníkem.",
+    "Text není encyklopedie.",
+    "Text není galerie.",
+    "Text není církevní dokument.",
+    "Text není román."
+  ]
+}
+,
+"405d4e1a-0107-412f-ada6-d1121790b349": {
+  "descriptions": [
+    "Četné kosterní abnormality",
+    "Extrémní muskulatura",
+    "Přísně geometrický tvar",
+    "Vertikální tělesné rysy",
+    "Minimalistický výraz"
+  ],
+  "explanations": [
+    "Text popisuje normální ženskou postavu, ne abnormality.",
+    "Žádná zmínka o extrémní muskulatuře.",
+    "Text nezmiňuje přísně geometrické tvary.",
+    "Text popisuje plné prsy, ne svislé.",
+    "Text hovoří o bohatém vlasu a živém oku."
+  ]
+}
+,
+"2266eb09-6905-40e7-a8bf-aa2dd6d44b95": {
+  "descriptions": [
+    "Popularita turismu",
+    "Bojové strategie",
+    "Slavné umělecké dílo",
+    "Historická bitva",
+    "Poutnická tradice"
+  ],
+  "explanations": [
+    "Text se netýká turismu, ale historické památnosti.",
+    "Nezmiňuje strategie, ale místo události.",
+    "Nehovoří o umění, ale o historické lokalitě.",
+    "Křesťané zde nevybojovali bitvu, ale místo je spojeno s vírou.",
+    "Není uvedeno jako tradice, ale jako opakovaná událost."
+  ]
+}
+,
+"f87e1a6f-5194-44ad-9130-51e69ced1128": {
+  "descriptions": [
+    "Běžná cestovní zkušenost",
+    "Pohádkový muž",
+    "Diskuse o literaturu",
+    "Návštěva mořské oblasti",
+    "Diplomatické jednání"
+  ],
+  "explanations": [
+    "Nebyla to běžná cesta, ale zvláštní situace.",
+    "Muž nebyl typickou pohádkovou postavou.",
+    "Text není diskusí o literaturu.",
+    "Hlavně o zemi za horami, ne u moře.",
+    "Nejedná se o diplomatické jednání."
+  ]
+}
+,
+"6bc9f176-bf3d-4f63-9665-ac43c058d892": {
+  "descriptions": [
+    "Moderní pedagogické metody",
+    "Informativní vzdělávací přehled",
+    "Analýza dětské psychologie",
+    "Příručka obecného rozvoje",
+    "Studie o inteligenci"
+  ],
+  "explanations": [
+    "Text kritizuje, nechválí moderní metody.",
+    "Text není obecný přehled, je kritický.",
+    "Neanalyzuje psychologii, kritizuje vzdělávací metody.",
+    "Není příručkou, je kritickým postřehem.",
+    "Text není studií o inteligenci, kritizuje vzdělávání."
+  ]
+}
+,
+"95d72b68-214a-4075-8259-93634a9167af": {
+  "descriptions": [
+    "Cestovní průvodce",
+    "Historický román",
+    "Městská transformace",
+    "Antická architektura",
+    "Magický realismus"
+  ],
+  "explanations": [
+    "Text není průvodce cestováním.",
+    "Text není román, ale popis.",
+    "Není zaměřen jen na městskou transformaci.",
+    "Nezabývá se výhradně antickou architekturou.",
+    "Není to příběh o magii nebo realismu."
+  ]
+}
+,
+"e7f147ad-4a5b-4df8-a32c-7f008e2a0674": {
+  "descriptions": [
+    "Politické dějiny",
+    "Religiózní obřad",
+    "Hospodářská krize",
+    "Vědecký experiment",
+    "Technologický pokrok"
+  ],
+  "explanations": [
+    "Text mluví o pohádkovém příběhu, ne politice",
+    "Není zmínka o náboženských rituálech",
+    "Nebaví se o ekonomii",
+    "Nejedná se o vědecké zkoumání",
+    "Text neobsahuje technologii"
+  ]
+}
+,
+"69b66d80-b591-4205-8269-94296737a622": {
+  "descriptions": [
+    "Ekologická potravina",
+    "Posilující jídlo",
+    "Historická událost",
+    "Vědecký experiment",
+    "Filozofická teorie"
+  ],
+  "explanations": [
+    "Knedlíky nejsou ekologické produkty",
+    "Knedlíky obvykle nejsou posilující",
+    "Není zmínka o historii",
+    "Žádný experiment nedochází",
+    "Není to filozofická teorie"
+  ]
+}
+,
+"8a861c49-1f94-46e7-b92c-8bb10d06dd90": {
+  "descriptions": [
+    "Velká oslava",
+    "Příběh úspěchu",
+    "Hudební festival",
+    "Rodinná smlouva",
+    "Jarní výlet"
+  ],
+  "explanations": [
+    "Pohřeb není oslava",
+    "Text pojednává o smrti, ne úspěchu",
+    "Zmínka o hudbě, ale není festival",
+    "Nejedná se o rodinnou smlouvu",
+    "Text se netýká výletu"
+  ]
+}
+,
+"c9eb6eec-64c9-4029-807f-0cdc190c5165": {
+  "descriptions": [
+    "Japonská literární studie",
+    "Metody francouzské kuchyně",
+    "Techniky amerického fotbalu",
+    "Vplyvy ruského expresionismu",
+    "Podnikání v Jižní Americe"
+  ],
+  "explanations": [
+    "Nemá vztah k Japonsku ani literatuře",
+    "Nevztahuje se na francouzskou kuchyni",
+    "Neobsahuje informace o americkém fotbalu",
+    "Nediskutuje o ruském expresionismu",
+    "Nesouvisející s podnikáním ani Jižní Amerikou"
+  ]
+}
+,
+"71014c61-dddb-4476-88bf-dfbfbbf16131": {
+  "descriptions": [
+    "Recept na pečení",
+    "Darované zvíře",
+    "Ukázka uzení",
+    "Návod k grilování",
+    "Zahraniční kuchyně"
+  ],
+  "explanations": [
+    "Text mluví o rozkrájení, ne pečení.",
+    "Text mluví o rybě, ne zvířeti obecně.",
+    "Nemluví o procesu uzení.",
+    "Nemluví o grilování, ale vaření.",
+    "Nezmiňuje cizí kulturální vlivy."
+  ]
+}
+,
+"2c39f356-cfc6-4806-bff7-d8cb278e315a": {
+  "descriptions": [
+    "Historie psychologie",
+    "Filozofické implikace",
+    "Vědecká metodologie",
+    "Teorie behaviorismu",
+    "Kvantitativní analýza"
+  ],
+  "explanations": [
+    "Text se týká konkrétního oboru psychologie.",
+    "Text se zaměřuje na nejistotu pozorování.",
+    "Nezabývá se metodologiemi vědy obecně.",
+    "Behaviorismus není přímo zmíněn.",
+    "Nezmiňuje číselné vyhodnocení výsledků."
+  ]
+}
+,
+"0d0deeed-9064-44f3-b011-7ba092238afe": {
+  "descriptions": [
+    "Svalová relaxace",
+    "Flexibilní kosti",
+    "Trupová stabilita",
+    "Generování energie",
+    "Anatomická symetrie"
+  ],
+  "explanations": [
+    "Text nezmíní relaxaci svalů.",
+    "Text nezmiňuje flexibilitu kostí.",
+    "V textu není zmíněna stabilita trupu.",
+    "Energie nesouvisí s uvedeným textem.",
+    "Text nezmiňuje symetrii anatomie."
+  ]
+}
+,
+"91dd5970-19d4-4b33-ba55-47192373516b": {
+  "descriptions": [
+    "Matematická teorie",
+    "Pravidla hry",
+    "Ekonomické strategie",
+    "Chemické rovnice",
+    "Literární analýza"
+  ],
+  "explanations": [
+    "Text pojednává o matematice, ne teorii.",
+    "Text se nezabývá hrami.",
+    "Není o ekonomických strategiích.",
+    "Nezmiňuje chemii ani rovnice.",
+    "Nejedná se o analýzu literatury."
+  ]
+}
+,
+"3e732ca4-261d-43e3-b2fb-2c8a1a10e7c4": {
+  "descriptions": [
+    "Postupná migrace",
+    "Samotářské chování",
+    "Nezávislý vývoj",
+    "Nekontrolované rojení",
+    "Společenská dynamika"
+  ],
+  "explanations": [
+    "Není postupná, ale sezónní.",
+    "Skupiny, ne jednotlivci.",
+    "Nejde o vývoj, ale migraci.",
+    "Nejsou nekontrolovaná, ale přirozená.",
+    "Je zmíněna pouze ve vztahu k hejnům."
+  ]
+}
+,
+"9e041014-a35f-4926-9c37-04f0dce78a87": {
+  "descriptions": [
+    "Herzenstube opatření",
+    "Neobyčejný rozum",
+    "Dlouhodobá nemoc",
+    "Porušení určitost",
+    "Životní nebezpečí"
+  ],
+  "explanations": [
+    "Herzenstube je osoba, ne opatření.",
+    "Rozum nebyl neobyčejný, ale možně porušen.",
+    "Nemoc nemusí být dlouhodobá.",
+    "Porušení a určitost nejsou spojené.",
+    "Život nebyl v nebezpečí, ale povážlivém nebezpečí."
+  ]
+}
+,
+"8f6b51a9-4a67-419f-9f6f-2cfbbebbe8ee": {
+  "descriptions": [
+    "Historický román",
+    "Náboženská kontroverze",
+    "Moderní technologie",
+    "Ekonomická krize",
+    "Politická aliance"
+  ],
+  "explanations": [
+    "Text je historické vyprávění, ne román.",
+    "Text nepopisuje žádnou kontroverzi.",
+    "Text se netýká moderních technologií.",
+    "Text nesouvisejí s ekonomickou krizí.",
+    "Text nezahrnuje politickou alianci."
+  ]
+}
+,
+"4770c943-ac58-46f1-ac43-eb0a1706c1c4": {
+  "descriptions": [
+    "Moderní vzdělávací metody",
+    "Lekce o technologii",
+    "Seminář podnikání",
+    "Diskuze o zdravotnictví",
+    "Konference pro profesory"
+  ],
+  "explanations": [
+    "Text se týká paedagogiky, ne moderních metod.",
+    "Jedná se o paedagogiku, ne technologii.",
+    "Text se zaměřuje na paedagogiku, ne podnikání.",
+    "Jedná se o vzdělávání, ne zdravotnictví.",
+    "Text je o žačkách, ne profesorech."
+  ]
+}
+,
+"80ac1784-33dc-4100-af53-e802eb080ee9": {
+  "descriptions": [
+    "Tajemná válka",
+    "Smrtelná epidemie",
+    "Historická bitva",
+    "Krize následnictví",
+    "Politický převrat"
+  ],
+  "explanations": [
+    "Text nezmiňuje žádnou válku.",
+    "Text neobsahuje zmínku o epidemii.",
+    "Nebyla zmiňována žádná bitva.",
+    "Text neurčuje následnickou krizi.",
+    "Žádný převrat není v textu zmíněn."
+  ]
+}
+,
+"f13f8666-760f-4434-8311-b9f8b5e227ba": {
+  "descriptions": [
+    "Kulturní dědictví",
+    "Finanční analýza",
+    "Politický manifest",
+    "Astronomické pozorování",
+    "Literární kritika"
+  ],
+  "explanations": [
+    "Text pojednává o chemii, nikoliv kultuře",
+    "Text se nezabývá finančními tématy",
+    "Text není o politice",
+    "Text nesouvisí s astronomií",
+    "Text není literární dílo"
+  ]
+}
+,
+"7d5b22b7-4b11-464e-942f-0c5087652adc": {
+  "descriptions": [
+    "Opera v hrobce",
+    "Milánské muzeum",
+    "Scaly nádraží",
+    "Papežův rozhlas",
+    "Pomníkové skvosty"
+  ],
+  "explanations": [
+    "Text nezmiňuje operu v hrobce.",
+    "Text nenaznačuje muzeum v Miláně.",
+    "Scala není nádraží.",
+    "Papež nemá vlastní rozhlas.",
+    "Text neobsahuje žádné rozsáhlé popisy pomníků."
+  ]
+}
+,
+"83560180-60d7-4f54-9985-10dadbccf796": {
+  "descriptions": [
+    "Cestovní průvodce",
+    "Kulinářský recept",
+    "Zahradnické techniky",
+    "Romantický román",
+    "Vědecká studie"
+  ],
+  "explanations": [
+    "Text je o parlamentní debatě.",
+    "Text je o parlamentní debatě.",
+    "Text je o parlamentní debatě.",
+    "Text je o parlamentní debatě.",
+    "Text je o parlamentní debatě."
+  ]
+}
+,
+"977cea80-026c-4464-85fd-f8109b234067": {
+  "descriptions": [
+    "Románová trilogie",
+    "Biblická genealogie",
+    "Vědecká studie",
+    "Kulturní antologie",
+    "Filozofický manifest"
+  ],
+  "explanations": [
+    "Text je o uveřejnění dokumentů.",
+    "Text není o náboženském obsahu.",
+    "Text není akademický výzkum.",
+    "Text není o kultuře obecně.",
+    "Text není o filozofii."
+  ]
+}
+,
+"9a6c8cf6-7a89-40e6-a77a-f8a73538e657": {
+  "descriptions": [
+    "Maďarské vítězství",
+    "Rumunská škola",
+    "Osobní úspěch",
+    "Vzdělávací reforma",
+    "Životní radost"
+  ],
+  "explanations": [
+    "Text hovoří o utrpení, ne vítězství.",
+    "Mluví o maďarských školách, nikoli rumunských.",
+    "Popisuje zážitky, ne úspěchy.",
+    "Text nepopisuje žádnou reformu.",
+    "Text pojednává o nezapomenutelném utrpení."
+  ]
+}
+,
+"423319dc-f46d-4a78-ad49-e9a03a2b4651": {
+  "descriptions": [
+    "Moderní výchova",
+    "Právní konference",
+    "Kulinářská prezentace",
+    "Technologický postup",
+    "Ekonomická analýza"
+  ],
+  "explanations": [
+    "Žádný název neodpovídá historickému kontextu textu.",
+    "Text se nezabývá právními otázkami.",
+    "Není žádná zmínka o vaření nebo jídle.",
+    "Neobsahuje informace o technologii.",
+    "Text nesouvisející s ekonomií."
+  ]
+}
+,
+"5e9d4894-2b98-4f46-a0f7-d2e09d3539f8": {
+  "descriptions": [
+    "Dřevěná etymologie",
+    "Lidská flóra",
+    "Nákazlivý optimismus",
+    "Lingvistická transformace",
+    "Morální dřevo"
+  ],
+  "explanations": [
+    "Text nezmiňuje etymologii",
+    "Text nezmiňuje flóru, ani v přeneseném významu",
+    "Optimismus není diskutován",
+    "Žádná zmínka o jazykových změnách",
+    "Text nesouvisející s morálkou dřeva"
+  ]
+}
+,
+"7ae71932-b9f6-44ad-a4d3-2b213e18cbfa": {
+  "descriptions": [
+    "Boží zjevení",
+    "Mystická událost",
+    "Duchovní probuzení",
+    "Pohádkový příběh",
+    "Poltergeist fenomén"
+  ],
+  "explanations": [
+    "Text je o tonutí, ne o zjevení.",
+    "Není zde žádný mystický prvek.",
+    "Nejedná se o duchovní zážitek.",
+    "Skutečný incident, ne pohádka.",
+    "Neobsahuje nadpřirozené jevy."
+  ]
+}
+,
+"e258ac0c-b955-4788-8c32-fab806b7431a": {
+  "descriptions": [
+    "Historický výklad",
+    "Vědecká analýza",
+    "Religiózní dokument",
+    "Hudba národností",
+    "Právní interpretace"
+  ],
+  "explanations": [
+    "Text je beletristický, nikoli historický.",
+    "Text je literární, nikoli vědecký dokument.",
+    "Text nerozebírá náboženské téma.",
+    "Text není o hudbě, jen zmiňuje zpěv.",
+    "Text neobsahuje právní otázky."
+  ]
+}
+,
+"4343fb94-fe66-4a09-aa8e-bf80eb5d3e1c": {
+  "descriptions": [
+    "Finanční krize",
+    "Moderní technologie",
+    "Právní dilema",
+    "Vědecký experiment",
+    "Teologická studie"
+  ],
+  "explanations": [
+    "Žádné finanční témata explicitně zmíněna",
+    "Text se nezabývá moderní technologií",
+    "Neobsahuje právní problémy ani dilemata",
+    "Není zmíněn žádný vědecký experiment",
+    "Nevztahuje se k teologie ani studiím náboženství"
+  ]
+}
+}

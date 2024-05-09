@@ -1,15 +1,47 @@
 from openai import OpenAI
 import json, re, argparse
 from pathlib import Path
+import sys
 
 R_EXTRACT = re.compile(r"```json\n(.*)\n```", re.DOTALL)
 
 model = "gpt-4-turbo"
 
-system = "Jsi expert na lingvistiku, historii, kulturu, právo, technologii a teologii."
+system = "You are an expert on history, culture, law and Czech linguistics."
 
-# v češtině dělá méně gramatických chyb
-prompt_A = """Zde je vstupní text. Vytvoř 5 MÍRNĚ chybných popisů textu.
+
+prompts = {
+"alternative": """You are given an input text. Create 5 Czech descriptions of the text as a whole, each at most 4 words long.
+Each description has to be a common phrase, concrete concept or professional terminology.
+Don't make up new word combinations. Match the context and historical period of the text.
+
+For each description, create two alternatives, which have the following criteria:
+- They are a common phrase or concept.
+- They describe concepts similar to the original description.
+- They DON'T describe the input text as a whole.
+- They DON'T describe any specific section of the input text.
+- They belong in the same context and historical period as the original text.
+- They CAN'T be nonsensical, too broad, or irrelevant to the background of the original text.
+
+Output them as a JSON dictionary of arrays, where the keys are the original descriptions and the values are your alternatives.
+Output raw data without formatting.""",
+# ----------------------------------------
+"two_sec": """You are given an input text.
+Create 5 topics in Czech that satisfy these criteria:
+1. Each correctly describes some section of the input text
+2. Each INCORRECTLY describes some OTHER section of the input text
+3. Each is at most 5 words long
+4. Each is a common phrase, concept or professional terminology
+5. Each isn't an abstract concepts
+6. They are not new or unusual word combinations
+
+Only focus on the written text, ignore it's context, implications, or background.
+Output a correctly formatted JSON object with two keys: 'topics' and 'explanations'.
+'topics' is a list of topics.
+'explanations' is a list describing why they satisfy these criteria in Czech in at most 10 words.
+Output raw data without formatting.""",
+# ----------------------------------------
+"slightly_wrong_desc_cze": """Zde je vstupní text. Vytvoř 5 MÍRNĚ chybných popisů textu.
 Každý popis bude mít nejvýše 3 slova. Nevytvářej zjevně chybné popisy.
 Všechny popisy musí být gramaticky správné a musí být známými frázemi, koncepty nebo odbornými termíny. Nevymýšlej nová slovní spojení.
 Zobecnění správného popisu nebo nepřímý popis obsahu se nepočítají jako chybný popis - nevypisuj je.
@@ -18,12 +50,15 @@ Výstupem bude správně formátovaný JSON objekt se dvěma klíči: 'descripti
 'descriptions' je seznam popisů.
 'explanations' je seznam vysvětlení proč každý popis splňuje tato kritéria v maximálně 8 slovech.
 Nevypisuj formátování Prism."""
+}
+
+prompt_A = prompts["alternative"]
 
 def spam_api(texts:list[tuple[str, str]], take:int=10):
     try:
         client = OpenAI()
     except:
-        print("OpenAI API key not found. Please set it as an environment variable.")
+        print("OpenAI API key not found. Please set it as an environment variable.", file=sys.stderr)
         exit(-1)
 
     print("{")
@@ -33,7 +68,7 @@ def spam_api(texts:list[tuple[str, str]], take:int=10):
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": f"""{prompt_A}
-                Input text: {text}"""}
+                Vstupní text: {text}"""}
             ]
         )
 
@@ -41,7 +76,6 @@ def spam_api(texts:list[tuple[str, str]], take:int=10):
             print(",")
         print(f"\"{id}\": {completion.choices[0].message.content}")
 
-        i += 1
         if i == take:
             break
     print("}")
