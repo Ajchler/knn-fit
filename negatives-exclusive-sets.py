@@ -76,7 +76,7 @@ def flatten(xss):
 
 
 if __name__ == "__main__":
-    df_texts = pd.read_json("out-clean.json")
+    df_texts = pd.read_json("data/out-clean.json")
     model_name = 'sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2'
     model_name_file = model_name.replace("/", "_")
 
@@ -89,7 +89,7 @@ if __name__ == "__main__":
     text_embeddings = text_embeddings / text_embeddings.norm(dim=1)[:, None]
     similarity = text_embeddings @ text_embeddings.transpose(0, 1)
     similarity = similarity.cpu().numpy()
-    k = 20
+    k = 10
 
     similar_texts = []
     for i in range(len(similarity)):
@@ -110,7 +110,7 @@ if __name__ == "__main__":
 
         this_topics_set = set(df_texts.iloc[i]["user_topics"])
         best_text_topics_set = set(most_similar[0]["user_topics"])
-        best_text_topics_set_all = set(flatten(list(map(lambda x: x["user_topics"], most_similar)))[:10])
+        best_text_topics_set_all = set(flatten(list(map(lambda x: x["user_topics"], most_similar))))
         similar_texts.append(
             {
                 "text_id": df_texts.iloc[i]["text_id"],
