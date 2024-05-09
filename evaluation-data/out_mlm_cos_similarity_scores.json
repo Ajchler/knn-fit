@@ -388,5 +388,85 @@
                 "label": 0
             }
         ]
+    },
+    "423319dc-f46d-4a78-ad49-e9a03a2b4651": {
+        "text": " <b>U dvora,“ pokračoval pan d'Artagnan otec, „budete-li kdy míti čest tam přijíti, čest, k níž ostatně vaše staré šlechtictví právo vám dává, neste důstojně své jméno šlechtické, které bylo důstojně noseno vašimi předky déle než od pěti set let, pro sebe i pro lidi vaše.</b> ",
+        "scores": [
+            {
+                "topic": "tři mušketýři",
+                "similarity": 0.09099084138870239,
+                "label": 1
+            }
+        ]
+    },
+    "5e9d4894-2b98-4f46-a0f7-d2e09d3539f8": {
+        "text": " <b>Avšak říkají, ne z každého dřeva může býti fládr. Odpovídám: ale z každého člověka stává se člověk, vzdálí-li se nákaza./</b> ",
+        "scores": [
+            {
+                "topic": "metafora",
+                "similarity": 0.30796486139297485,
+                "label": 1
+            },
+            {
+                "topic": "motivační citát",
+                "similarity": 0.28169405460357666,
+                "label": 1
+            }
+        ]
+    },
+    "7ae71932-b9f6-44ad-a4d3-2b213e18cbfa": {
+        "text": "Pojednou vzkřikl jeden, jehož oči snad mimoděk zabloudily k vodě: „Ježíši! Maria! <b>Wolf se topí! ...“ Bylo tomu skutečně tak. Asi v polovici řeky objevily se ruce a hlava tonoucího nad rozčeřenou hladinou, ale hned zase zmizely pod vodou.</b> Nerozpakuje se ani vteřinu skočil jsem do vody a byl jsem dvěma rozmachy u tonoucího, jehož jsem chopil za ruku, snaže se jej vytáhnouti z hlubiny směrem k prvému břehu, kde, jak jsem věděl, voda byla mělká; než tento, rychleji nežli stačím vše vypravovati, zaťal mi prsty obou svých rukou do ramena a do plece, potopil mě a, snaže se dostat hlavu nad vodní hladinu, podepřel se při tom o mne, takže jsem ucítil dno řeky pod nohama... Byla to kritická chvíle — ani pomyšlení vyrvati se z jeho křečovitého objetí, bylť mnohem silnější mne a zápase o svůj život, zapomněl úplně, že, nepustí-li mne, i sobě jistou záhubu připraví...",
+        "scores": [
+            {
+                "topic": "havárie",
+                "similarity": 0.29909247159957886,
+                "label": 1
+            },
+            {
+                "topic": "nebezpečí",
+                "similarity": 0.16114546358585358,
+                "label": 0
+            },
+            {
+                "topic": "smrt",
+                "similarity": 0.20894265174865723,
+                "label": 0
+            },
+            {
+                "topic": "život",
+                "similarity": 0.1458202600479126,
+                "label": 1
+            },
+            {
+                "topic": "voda",
+                "similarity": 0.4389849603176117,
+                "label": 0
+            }
+        ]
+    },
+    "e258ac0c-b955-4788-8c32-fab806b7431a": {
+        "text": "Tehdáž byl jsem opravdovému šílenství snad nejblíže. Dosud jsem pokládal své vidiny za pouhý výplod blouznění, odtud počínal jsem v jejich skutečnou, reálnou bytnost věřiti. <b>Je-li možno, aby nejprostší děvče uprostřed hlubokého šumavského lesa, vnučka železničního hlídače, kteráž sotva dvakráte do roka přicházela na kraj hvozdu, zpívala francouzsky (ještě se nesměj!), jest mnohem spíše pravděpodobno, že člověk potká na Malé Straně starobylý povoz, ve kterém sedí šlechtična ve starožitném úboru některé své prabáby, dáma vracející se z nějaké kostymní zábavy šlechtické.</b> Tak jsem rozumoval. Vemlouval jsem se stále více do přesvědčení, nejen že ona dáma, již jsem o dostizích spatřil, jest totožna s dámou z oné noci, kteráž skončila ulomením kliky na vratech povědomého portálu, nýbrž že i mezi ní a Madlou, Mazancovou vnučkou, jest jakási tajemná souvislost.",
+        "scores": [
+            {
+                "topic": "Vzdělání prostého obyvatelstva",
+                "similarity": 0.19347578287124634,
+                "label": 1
+            }
+        ]
+    },
+    "4343fb94-fe66-4a09-aa8e-bf80eb5d3e1c": {
+        "text": "Teď však nic více jej nezdržuje. K čemu otálet? — Rozhodnutí a provedení bylo u pana Aloisa Petříka jedno. <b>Sáhl po hliněné pokladničce a rozbiv ji, obsah její zastrčil za pás; sundal s postele plášť, který zastával službu přikrývky, a svinuv jej dovedně otočil se jím; zavěsil kožený vak pocestný na bedra; do ruky vzal hůl.</b> A vesele, krokem svižným a lehkým, hvízdaje si bezstarostný popěvek, bral se přes hory a doly",
+        "scores": [
+            {
+                "topic": "skrývání cenností",
+                "similarity": 0.38712942600250244,
+                "label": 1
+            },
+            {
+                "topic": "Příprava na cestu",
+                "similarity": 0.2291536033153534,
+                "label": 0
+            }
+        ]
     }
 }

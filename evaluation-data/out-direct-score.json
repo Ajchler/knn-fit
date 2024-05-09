@@ -4,17 +4,17 @@
         "scores": [
             {
                 "topic": "fyzické cvičení těla",
-                "similarity": 1.0,
+                "similarity": 0.4949556589126587,
                 "label": 0
             },
             {
                 "topic": "cvičení duch",
-                "similarity": 0.0,
+                "similarity": 0.5373564958572388,
                 "label": 0
             },
             {
                 "topic": "výchova mládeže",
-                "similarity": 0.8,
+                "similarity": 0.5176729559898376,
                 "label": 0
             }
         ]
@@ -24,12 +24,12 @@
         "scores": [
             {
                 "topic": "Radost z učení se jazyka",
-                "similarity": 0.8,
+                "similarity": 0.4995577335357666,
                 "label": 0
             },
             {
                 "topic": "Radost z porozumění anglickému jazyku",
-                "similarity": 0.9,
+                "similarity": 0.5941405296325684,
                 "label": 0
             }
         ]
@@ -39,12 +39,12 @@
         "scores": [
             {
                 "topic": "filozofie",
-                "similarity": 0.1,
+                "similarity": 0.2735053598880768,
                 "label": 1
             },
             {
                 "topic": "metafora",
-                "similarity": 0.8,
+                "similarity": 0.36720356345176697,
                 "label": 1
             }
         ]
@@ -54,7 +54,7 @@
         "scores": [
             {
                 "topic": "život v 18. století",
-                "similarity": 0.1,
+                "similarity": 0.3197833299636841,
                 "label": 1
             }
         ]
@@ -64,7 +64,7 @@
         "scores": [
             {
                 "topic": "příprava bolševických filosofů",
-                "similarity": 0.9,
+                "similarity": 0.662322998046875,
                 "label": 0
             }
         ]
@@ -74,7 +74,7 @@
         "scores": [
             {
                 "topic": "platnost rakouského zákona",
-                "similarity": 1.0,
+                "similarity": 0.716266393661499,
                 "label": 0
             }
         ]
@@ -84,7 +84,7 @@
         "scores": [
             {
                 "topic": "popis drobné osoby",
-                "similarity": 1.0,
+                "similarity": 0.40501195192337036,
                 "label": 0
             }
         ]
@@ -94,7 +94,7 @@
         "scores": [
             {
                 "topic": "popis normální ženské postavy",
-                "similarity": 1.0,
+                "similarity": 0.7280744910240173,
                 "label": 0
             }
         ]
@@ -104,12 +104,12 @@
         "scores": [
             {
                 "topic": "výklad o památné hoře",
-                "similarity": 0.8,
+                "similarity": 0.24677535891532898,
                 "label": 0
             },
             {
                 "topic": "bitva křesťanů s Tatary",
-                "similarity": 0.6,
+                "similarity": 0.6670792698860168,
                 "label": 0
             }
         ]
@@ -119,12 +119,12 @@
         "scores": [
             {
                 "topic": "cestování",
-                "similarity": 0.8,
+                "similarity": 0.35471686720848083,
                 "label": 1
             },
             {
                 "topic": "vypráveč",
-                "similarity": 0.6,
+                "similarity": 0.39101356267929077,
                 "label": 1
             }
         ]
@@ -134,12 +134,12 @@
         "scores": [
             {
                 "topic": "Význam vzdělání",
-                "similarity": 0.8,
+                "similarity": 0.6268528699874878,
                 "label": 1
             },
             {
                 "topic": "Význam školství",
-                "similarity": 0.8,
+                "similarity": 0.6290678381919861,
                 "label": 1
             }
         ]
@@ -149,12 +149,12 @@
         "scores": [
             {
                 "topic": "záník říše římské",
-                "similarity": 0.8,
+                "similarity": 0.692995548248291,
                 "label": 1
             },
             {
                 "topic": "Proud času",
-                "similarity": 0.6,
+                "similarity": 0.3060830533504486,
                 "label": 1
             }
         ]
@@ -164,7 +164,7 @@
         "scores": [
             {
                 "topic": "pohádka",
-                "similarity": 1.0,
+                "similarity": 0.39459899067878723,
                 "label": 1
             }
         ]
@@ -174,12 +174,12 @@
         "scores": [
             {
                 "topic": "Rody podstatných jmen",
-                "similarity": 0.9,
+                "similarity": 0.23032233119010925,
                 "label": 1
             },
             {
                 "topic": "Vliv jazyka na vnímání světa",
-                "similarity": 0.1,
+                "similarity": 0.1524014174938202,
                 "label": 1
             }
         ]
@@ -189,17 +189,17 @@
         "scores": [
             {
                 "topic": "Smrt otce",
-                "similarity": 0.8,
+                "similarity": 0.5860862731933594,
                 "label": 0
             },
             {
                 "topic": "Pohřeb otce",
-                "similarity": 0.9,
+                "similarity": 0.4192017614841461,
                 "label": 0
             },
             {
                 "topic": "Mramorový pomník na pohřeb",
-                "similarity": 0.7,
+                "similarity": 0.6901407837867737,
                 "label": 0
             }
         ]
@@ -209,7 +209,7 @@
         "scores": [
             {
                 "topic": "Uznání československým legionářům",
-                "similarity": 1.0,
+                "similarity": 0.5741914510726929,
                 "label": 0
             }
         ]
@@ -219,7 +219,7 @@
         "scores": [
             {
                 "topic": "způsoby přípravy ryby",
-                "similarity": 0.8,
+                "similarity": 0.3336445093154907,
                 "label": 0
             }
         ]
@@ -229,17 +229,17 @@
         "scores": [
             {
                 "topic": "zvířecí psychologie",
-                "similarity": 0.8,
+                "similarity": 0.7895020842552185,
                 "label": 0
             },
             {
                 "topic": "skoumaní zvířat",
-                "similarity": 0.6,
+                "similarity": 0.5593141913414001,
                 "label": 0
             },
             {
                 "topic": "pozorování zvířat",
-                "similarity": 0.9,
+                "similarity": 0.6784868836402893,
                 "label": 0
             }
         ]
@@ -249,12 +249,12 @@
         "scores": [
             {
                 "topic": "anatomie lidského těla",
-                "similarity": 0.9,
+                "similarity": 0.5065434575080872,
                 "label": 0
             },
             {
                 "topic": "svaly na lidském těle",
-                "similarity": 0.95,
+                "similarity": 0.7948406338691711,
                 "label": 0
             }
         ]
@@ -264,7 +264,7 @@
         "scores": [
             {
                 "topic": "počitání sumy",
-                "similarity": 1.0,
+                "similarity": 0.22070130705833435,
                 "label": 0
             }
         ]
@@ -274,22 +274,22 @@
         "scores": [
             {
                 "topic": "Hejna ptáků",
-                "similarity": 0.8,
+                "similarity": 0.36894291639328003,
                 "label": 0
             },
             {
                 "topic": "Migrace ptáků",
-                "similarity": 0.9,
+                "similarity": 0.4322468042373657,
                 "label": 0
             },
             {
                 "topic": "Stěhování ptáků",
-                "similarity": 0.9,
+                "similarity": 0.4666992127895355,
                 "label": 0
             },
             {
                 "topic": "Odlet do teplých krajin",
-                "similarity": 0.6,
+                "similarity": 0.2295755296945572,
                 "label": 1
             }
         ]
@@ -299,12 +299,12 @@
         "scores": [
             {
                 "topic": "Opakované záchvaty",
-                "similarity": 0.8,
+                "similarity": 0.4487234652042389,
                 "label": 0
             },
             {
                 "topic": "Zachránění života pacienta",
-                "similarity": 0.9,
+                "similarity": 0.5607436895370483,
                 "label": 0
             }
         ]
@@ -314,7 +314,7 @@
         "scores": [
             {
                 "topic": "přichod biskupa Jindřicha Zdíka do Jeníkova",
-                "similarity": 1.0,
+                "similarity": 0.6823199987411499,
                 "label": 0
             }
         ]
@@ -324,7 +324,7 @@
         "scores": [
             {
                 "topic": "přednáška o pedagogice",
-                "similarity": 1.0,
+                "similarity": 0.7254348993301392,
                 "label": 0
             }
         ]
@@ -334,7 +334,7 @@
         "scores": [
             {
                 "topic": "zmizení panovníka Moravy",
-                "similarity": 1.0,
+                "similarity": 0.4952385127544403,
                 "label": 0
             }
         ]
@@ -344,7 +344,7 @@
         "scores": [
             {
                 "topic": "použití roztoků organických koloidů",
-                "similarity": 0.95,
+                "similarity": 0.7191442251205444,
                 "label": 0
             }
         ]
@@ -354,7 +354,7 @@
         "scores": [
             {
                 "topic": "cesra po Itálii",
-                "similarity": 0.1,
+                "similarity": 0.533561110496521,
                 "label": 1
             }
         ]
@@ -364,7 +364,7 @@
         "scores": [
             {
                 "topic": "pravidla debaty",
-                "similarity": 0.95,
+                "similarity": 0.5440373420715332,
                 "label": 0
             }
         ]
@@ -374,7 +374,7 @@
         "scores": [
             {
                 "topic": "uveřejnení dokladů k životopisu Jiříka VII",
-                "similarity": 1.0,
+                "similarity": 0.815517783164978,
                 "label": 0
             }
         ]
@@ -384,7 +384,7 @@
         "scores": [
             {
                 "topic": "šikana Rumunů na maďarských školách",
-                "similarity": 0.9,
+                "similarity": 0.7647638320922852,
                 "label": 0
             }
         ]
@@ -394,7 +394,7 @@
         "scores": [
             {
                 "topic": "tři mušketýři",
-                "similarity": 0.0,
+                "similarity": 0.09099084138870239,
                 "label": 1
             }
         ]
@@ -404,12 +404,12 @@
         "scores": [
             {
                 "topic": "metafora",
-                "similarity": 0.8,
+                "similarity": 0.30796486139297485,
                 "label": 1
             },
             {
                 "topic": "motivační citát",
-                "similarity": 0.4,
+                "similarity": 0.28169405460357666,
                 "label": 1
             }
         ]
@@ -419,27 +419,27 @@
         "scores": [
             {
                 "topic": "havárie",
-                "similarity": 0.1,
+                "similarity": 0.29909247159957886,
                 "label": 1
             },
             {
                 "topic": "nebezpečí",
-                "similarity": 0.8,
+                "similarity": 0.16114546358585358,
                 "label": 0
             },
             {
                 "topic": "smrt",
-                "similarity": 0.7,
+                "similarity": 0.20894265174865723,
                 "label": 0
             },
             {
                 "topic": "život",
-                "similarity": 0.9,
+                "similarity": 0.1458202600479126,
                 "label": 1
             },
             {
                 "topic": "voda",
-                "similarity": 0.9,
+                "similarity": 0.4389849603176117,
                 "label": 0
             }
         ]
@@ -449,7 +449,7 @@
         "scores": [
             {
                 "topic": "Vzdělání prostého obyvatelstva",
-                "similarity": 0.1,
+                "similarity": 0.19347578287124634,
                 "label": 1
             }
         ]
@@ -459,12 +459,12 @@
         "scores": [
             {
                 "topic": "skrývání cenností",
-                "similarity": 0.3,
+                "similarity": 0.38712942600250244,
                 "label": 1
             },
             {
                 "topic": "Příprava na cestu",
-                "similarity": 0.8,
+                "similarity": 0.2291536033153534,
                 "label": 0
             }
         ]
