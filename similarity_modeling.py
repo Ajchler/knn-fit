@@ -8,7 +8,7 @@ from openai import OpenAI
 
 class MLMTopicEvaluator:
     def __init__(self, *args):
-        self.model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
+        self.model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-mpnet-base-v2')
         self.cos_sim = nn.CosineSimilarity(dim=1)
 
     def get_embedding(self, text):
@@ -25,7 +25,7 @@ class MLMTopicEvaluator:
         return similarities
 
 
-class BenesEvaluator:
+class DirectScoreEvaluator:
     def __init__(self):
         self.client = OpenAI()
         self.temperature = 0.2
@@ -91,7 +91,7 @@ class BenesEvaluator:
 
 
 if __name__ == "__main__":
-    evaluator = BenesEvaluator()
+    evaluator = MLMTopicEvaluator()
     data = json.load(open('data/gold_annotated_dataset.json', 'r'))
     scores_dict = {}
     i = 0
