@@ -1,0 +1,472 @@
+{
+    "51fa695f-2cba-4d40-b3d0-2ffc4ac3fcbb": {
+        "text": " <b>Při vychovávání mládeže a ve školách je cvičení těla tak podstatné a potřebné, jako cvičení ducha. U dítěte jest vyvinutí těla přednější, nežli vyvinutí ducha.</b> ",
+        "scores": [
+            {
+                "topic": "fyzické cvičení těla",
+                "similarity": 0.5596350431442261,
+                "label": 0
+            },
+            {
+                "topic": "cvičení duch",
+                "similarity": 0.5561858415603638,
+                "label": 0
+            },
+            {
+                "topic": "výchova mládeže",
+                "similarity": 0.5945364236831665,
+                "label": 0
+            }
+        ]
+    },
+    "5445da40-ce98-4f4c-b1a8-e46115ef4166": {
+        "text": " <b>Radoval jsem se z toho, že jsem tento druhý anglický list již téměř bez pomoci slovníka dobře mohl pochopiti, pročež tím více byl jsem povzbuzen, abych jak skladbu tak i různé obraty této zvláštní mluvy sobě osvojil.</b> ",
+        "scores": [
+            {
+                "topic": "Radost z učení se jazyka",
+                "similarity": 0.5272248387336731,
+                "label": 0
+            },
+            {
+                "topic": "Radost z porozumění anglickému jazyku",
+                "similarity": 0.6307907104492188,
+                "label": 0
+            }
+        ]
+    },
+    "4a80bf7d-9e2f-4d60-8751-0c02e643cf61": {
+        "text": " <b>Ale to je pouze pohyb zdánlivý; právě naopak: jste to vy, kteří se pohybujete a opisujete kruh kol něho.</b> ",
+        "scores": [
+            {
+                "topic": "filozofie",
+                "similarity": 0.3562740087509155,
+                "label": 1
+            },
+            {
+                "topic": "metafora",
+                "similarity": 0.4726746678352356,
+                "label": 1
+            }
+        ]
+    },
+    "718431bf-885e-439a-bada-3d231c872f78": {
+        "text": " <b>Jan Jáchym Winckelmann, narozený 1717 v Stendalu v Branibořích, přišel roku 1755 do Říma a žil pak trvale v Italii do roku 1768, kdy byl v Terstu zavražděn.</b> ",
+        "scores": [
+            {
+                "topic": "život v 18. století",
+                "similarity": 0.24130183458328247,
+                "label": 1
+            }
+        ]
+    },
+    "6a766e56-e3c5-469c-b231-c288de83f73f": {
+        "text": " <b>Mimo to byla široce rozvětvena práce směřující ke přípravě bolševicky školených a vědecky kvalifikovaných filosofických kádrů, stojících na výši »současné vědy« a »stranou formulovaných úloh«, o čemž svědčí především dnešní stav aktivních spolupracovníků hlavního filosofického orgánu strany, který čítá 85 zcela zapracovaných chovanců zmíněného Institutu.</b> ",
+        "scores": [
+            {
+                "topic": "příprava bolševických filosofů",
+                "similarity": 0.7079031467437744,
+                "label": 0
+            }
+        ]
+    },
+    "330ea01f-e6a6-4842-a065-3ff10f9a5cc3": {
+        "text": " <b>To znamená, že i když jest rakouský občan v cizině, pokud rakouským příslušníkem jest, musí se podle tohoto zákona říditi.</b> ",
+        "scores": [
+            {
+                "topic": "platnost rakouského zákona",
+                "similarity": 0.8334392309188843,
+                "label": 0
+            }
+        ]
+    },
+    "f4f69bca-c2ac-4c48-98ce-c390a87fb687": {
+        "text": " <b>Vše na něm bylo drobounké, filigránové: útlounké kosti, oholené vráskovité tváře, ba i bílé zuby, které byly</b> ",
+        "scores": [
+            {
+                "topic": "popis drobné osoby",
+                "similarity": 0.3823358714580536,
+                "label": 0
+            }
+        ]
+    },
+    "405d4e1a-0107-412f-ada6-d1121790b349": {
+        "text": " <b>Normální ženská postava vyznačuje se útlejšími kostmi, okrouhlými formami, plnými, ale ne svislými prsy, širokou kyčlí, bohatým, dlouhým vlasem, živým okem; k tomu patří zdravá, růžová barva kůže, červená</b> ",
+        "scores": [
+            {
+                "topic": "popis normální ženské postavy",
+                "similarity": 0.7882015705108643,
+                "label": 0
+            }
+        ]
+    },
+    "2266eb09-6905-40e7-a8bf-aa2dd6d44b95": {
+        "text": " <b>Myslím, že také mnohého sem láká touha spatřiti místo slavného boje proti Tatarům, projevil své mínění Sladomel. — Ovšem, ale nikdo nesmí zapomenouti, že toho vítězství křesťané dobyli na přímluvu Marie Panny, pokračoval Soukal. — O tato hora je velepamátná a není se čemu diviti, že viděla už několikráte pospolu poutníky ze všech zemí slovanských.</b> ",
+        "scores": [
+            {
+                "topic": "výklad o památné hoře",
+                "similarity": 0.5245077013969421,
+                "label": 0
+            },
+            {
+                "topic": "bitva křesťanů s Tatary",
+                "similarity": 0.6647477746009827,
+                "label": 0
+            }
+        ]
+    },
+    "f87e1a6f-5194-44ad-9130-51e69ced1128": {
+        "text": " <b>Tu jednou stalo se, že cizí muž do hradu zavítal a pravil tak: „Jdu z daleka. Mám mnohou zkušenosť, za mořem nabytou, za horami.</b> ",
+        "scores": [
+            {
+                "topic": "cestování",
+                "similarity": 0.4879852533340454,
+                "label": 1
+            },
+            {
+                "topic": "vypráveč",
+                "similarity": 0.34945613145828247,
+                "label": 1
+            }
+        ]
+    },
+    "6bc9f176-bf3d-4f63-9665-ac43c058d892": {
+        "text": " <b>První podmínka, abychom měli užitek z intelligence, jest jednota. V mnohonásobnosti „obecného vzdělávání“ našlo se poslední umění, jak zpitoměti a zhovaditi děti.</b> ",
+        "scores": [
+            {
+                "topic": "Význam vzdělání",
+                "similarity": 0.5308343172073364,
+                "label": 1
+            },
+            {
+                "topic": "Význam školství",
+                "similarity": 0.5326766967773438,
+                "label": 1
+            }
+        ]
+    },
+    "95d72b68-214a-4075-8259-93634a9167af": {
+        "text": "vždy činí pověrčiví cizinci, a doufají tedy, že kouzelná moc je přivede zase do Říma zpět. <b>Ze staroslavného „forum romanum“ stalo se během věků — „campo vaccino“, pastvina pro skot, z nynějších náměstí římských stane se během času také něco.</b> ",
+        "scores": [
+            {
+                "topic": "záník říše římské",
+                "similarity": 0.6114633679389954,
+                "label": 1
+            },
+            {
+                "topic": "Proud času",
+                "similarity": 0.4274410903453827,
+                "label": 1
+            }
+        ]
+    },
+    "e7f147ad-4a5b-4df8-a32c-7f008e2a0674": {
+        "text": " <b>I umyla si čistě ruce a obličej, přišla, skromně před princem se uklonila, a když podaný jí střevíček zkusila, hodil se na nožku její jako ulitý- Princ podíval se teprve nyní Popelce do očí a hned poznal krásnou dívku, s níž tančil, a radostí zvolal: »To je pravá moje nevěsta!« Macecha i obě sestry velice se ulekly a zbledly zlostí a závistí; ale princ posadil Popelku před sebe na koně a vesele odjížděl.</b> ",
+        "scores": [
+            {
+                "topic": "pohádka",
+                "similarity": 0.3844473659992218,
+                "label": 1
+            }
+        ]
+    },
+    "69b66d80-b591-4205-8269-94296737a622": {
+        "text": " <b>Vskutku myslím, že švestkový knedlík je co do rodu svého ženská. Že náleží k slabému, ale krásnému pohlaví.</b> ",
+        "scores": [
+            {
+                "topic": "Rody podstatných jmen",
+                "similarity": 0.35140714049339294,
+                "label": 1
+            },
+            {
+                "topic": "Vliv jazyka na vnímání světa",
+                "similarity": 0.21569545567035675,
+                "label": 1
+            }
+        ]
+    },
+    "8a861c49-1f94-46e7-b92c-8bb10d06dd90": {
+        "text": " <b>Před rokem mu zemřel otec. Dal jej pohřbít s pompou skvělou (kněží pět a velká hudba, všecky spolky) — objednal hned na hrob mramorový pomník s vyzlacenou chvalořečí, pak vsed rychle do kočáru</b> ",
+        "scores": [
+            {
+                "topic": "Smrt otce",
+                "similarity": 0.6401523947715759,
+                "label": 0
+            },
+            {
+                "topic": "Pohřeb otce",
+                "similarity": 0.5390217304229736,
+                "label": 0
+            },
+            {
+                "topic": "Mramorový pomník na pohřeb",
+                "similarity": 0.6255722641944885,
+                "label": 0
+            }
+        ]
+    },
+    "c9eb6eec-64c9-4029-807f-0cdc190c5165": {
+        "text": " <b>Uznání, kterého se našim legionářům dostalo za jejich sibiřský výkon krásnými slovy osvíceného náčelníka britské vlády — opakovali jsme si je často před svým vy-</b> ",
+        "scores": [
+            {
+                "topic": "Uznání československým legionářům",
+                "similarity": 0.6301149129867554,
+                "label": 0
+            }
+        ]
+    },
+    "71014c61-dddb-4476-88bf-dfbfbbf16131": {
+        "text": " <b>Ryba pro hostinu se musí na přiměřené díly rozkrájeti, je-li však určena darem, vyjímá se lépe, je-li uvařena v celku.</b> ",
+        "scores": [
+            {
+                "topic": "způsoby přípravy ryby",
+                "similarity": 0.5112950205802917,
+                "label": 0
+            }
+        ]
+    },
+    "2c39f356-cfc6-4806-bff7-d8cb278e315a": {
+        "text": " <b>Ač se vykazuje v nové době tento druh psychologie — zvaný psychologie zvířecí — četnými úspěchy, jsou přece výsledky pozorování zvířat nejisté, neboť jich nelze potvrditi vlastním pozorováním zvířete samého.</b> ",
+        "scores": [
+            {
+                "topic": "zvířecí psychologie",
+                "similarity": 0.7405591607093811,
+                "label": 0
+            },
+            {
+                "topic": "skoumaní zvířat",
+                "similarity": 0.44915568828582764,
+                "label": 0
+            },
+            {
+                "topic": "pozorování zvířat",
+                "similarity": 0.5797113180160522,
+                "label": 0
+            }
+        ]
+    },
+    "0d0deeed-9064-44f3-b011-7ba092238afe": {
+        "text": " <b>Jest to nejsilnější sval na těle; pohybuje kostí stehenní, a i sehnutý trup zvedá. Pod ním leží střední a pod tímto malý sval hýžďový, kteréž mají stejný účel. 37.</b> ",
+        "scores": [
+            {
+                "topic": "anatomie lidského těla",
+                "similarity": 0.6206315159797668,
+                "label": 0
+            },
+            {
+                "topic": "svaly na lidském těle",
+                "similarity": 0.7894707918167114,
+                "label": 0
+            }
+        ]
+    },
+    "91dd5970-19d4-4b33-ba55-47192373516b": {
+        "text": " <b>Mají-li se z jisté sumy kolikeré setiny za sebou počítati, a k hlavní sumě přičítati nebo od ní odčítati, uvážiti při tom sluší, zdaliž se počítají z jednoho a toho samého čísla, nebo z čísel postupně za sebou jdoucích.</b> ",
+        "scores": [
+            {
+                "topic": "počitání sumy",
+                "similarity": 0.49941518902778625,
+                "label": 0
+            }
+        ]
+    },
+    "3e732ca4-261d-43e3-b2fb-2c8a1a10e7c4": {
+        "text": " <b>Někteří stěhují se, zvlášť na podzim v houfech, jež často v obrovská hejna vzrůstají (špačci, kavky), jiní zmizí po jednom a teprv na pozdější dráze shlukují se v menší společnosti.</b> ",
+        "scores": [
+            {
+                "topic": "Hejna ptáků",
+                "similarity": 0.6094238758087158,
+                "label": 0
+            },
+            {
+                "topic": "Migrace ptáků",
+                "similarity": 0.6021544933319092,
+                "label": 0
+            },
+            {
+                "topic": "Stěhování ptáků",
+                "similarity": 0.6427001357078552,
+                "label": 0
+            },
+            {
+                "topic": "Odlet do teplých krajin",
+                "similarity": 0.4327922761440277,
+                "label": 1
+            }
+        ]
+    },
+    "9e041014-a35f-4926-9c37-04f0dce78a87": {
+        "text": " <b>Dali mu na srozuměnou, že záchvat onen byl dokonce až neobyčejný, trval a opakoval se několik dní, takže život pacientův byl v povážlivém nebezpečí, a že teprv nyní po všemožných opatřeních možno už říci s určitostí, že nemocný zůstane na živu, ačkoliv jest dosti možno (dodal doktor Herzenstube), že rozum jeho zůstane z části porušen, ne-li na celý život, tedy na dosti dlouhou dobu.</b> ",
+        "scores": [
+            {
+                "topic": "Opakované záchvaty",
+                "similarity": 0.45900866389274597,
+                "label": 0
+            },
+            {
+                "topic": "Zachránění života pacienta",
+                "similarity": 0.5874031782150269,
+                "label": 0
+            }
+        ]
+    },
+    "8f6b51a9-4a67-419f-9f6f-2cfbbebbe8ee": {
+        "text": " <b>Když nouze byla největší, přišla z nenadání žádoucí pomoc. Biskup Jindřich Zdik objevil se v nedalekém Jeníkově, kde hodlal slaviti narození Páně.</b> ",
+        "scores": [
+            {
+                "topic": "přichod biskupa Jindřicha Zdíka do Jeníkova",
+                "similarity": 0.6507066488265991,
+                "label": 0
+            }
+        ]
+    },
+    "4770c943-ac58-46f1-ac43-eb0a1706c1c4": {
+        "text": " <b>Zvláštní přednášky o paedagogice budou se konati pro žačky, jež k učitelství se připravují (élèves maîtresses). 15.</b> ",
+        "scores": [
+            {
+                "topic": "přednáška o pedagogice",
+                "similarity": 0.7474682331085205,
+                "label": 0
+            }
+        ]
+    },
+    "80ac1784-33dc-4100-af53-e802eb080ee9": {
+        "text": " <b>Morava byla bez panovníka. A nezemřel jí, v boji nepadl aniž jinak zahynul. Ale zmizel beze stopy, že nebylo po něm ani slechu ani dechu.</b> ",
+        "scores": [
+            {
+                "topic": "zmizení panovníka Moravy",
+                "similarity": 0.42680227756500244,
+                "label": 0
+            }
+        ]
+    },
+    "f13f8666-760f-4434-8311-b9f8b5e227ba": {
+        "text": " <b>Roztoky některých, hlavně organických koloidů, jež nazýváme »ochranné koloidy« (Zsigmondy 1902), jako jsou klih, gelatina, gummi, vodní sklo, dextrin, škrob, albumin, kasein a jejich rozkladné produkty, zadržují, přidáme-li je k anorganickým hydrosólům kovů, hydroxydů, sulfidů, halogenidů stříbra a pod., vylučování těchto anorganických koloidů z roztoků a činí jejich roztoky stálejšími.</b> ",
+        "scores": [
+            {
+                "topic": "použití roztoků organických koloidů",
+                "similarity": 0.8442112803459167,
+                "label": 0
+            }
+        ]
+    },
+    "7d5b22b7-4b11-464e-942f-0c5087652adc": {
+        "text": "Pomník stál půldruhého milionu, místo u vchodu dalších 200.000 Kč. Hrobka rodičů nynějšího papeže je pozlacena a svítí mezi ostatními hroby. <b>Ctižádost Italů dosáhla na milánském hřbitově nejbizarnějších tvarů. Loučení s Milánem je těžké, ještě bychom rádi do Scaly, známého stánku operního umění, jehož arie a balety jsou svátkem pro miliony lidí, mohou-li je alespoň zachytit u rozhlasového přístroje, ale vždyť i nádraží</b> ",
+        "scores": [
+            {
+                "topic": "cesra po Itálii",
+                "similarity": 0.6495217680931091,
+                "label": 1
+            }
+        ]
+    },
+    "83560180-60d7-4f54-9985-10dadbccf796": {
+        "text": " <b>Byl-li řečník třikrát ku věci volán, může mu předseda odníti slovo. Udělí-li se řečníku po ukončené debatě slovo k stručné opravě okolností v debatě tvrzených (§ 45.), a řečník ve své řeči meze věcné opravy překročí, aneb do obšírných výkladů se pustí, může jemu předseda, aniž ho předem volá k věci, ihned odníti slovo.</b> ",
+        "scores": [
+            {
+                "topic": "pravidla debaty",
+                "similarity": 0.6232309341430664,
+                "label": 0
+            }
+        ]
+    },
+    "977cea80-026c-4464-85fd-f8109b234067": {
+        "text": " <b>Doklady k životopisu Jiříka VII. a jeho potomků budou uveřejněny ve svazku následujícím (Díl II. sv. 2.)</b> ",
+        "scores": [
+            {
+                "topic": "uveřejnení dokladů k životopisu Jiříka VII",
+                "similarity": 0.7713665962219238,
+                "label": 0
+            }
+        ]
+    },
+    "9a6c8cf6-7a89-40e6-a77a-f8a73538e657": {
+        "text": " <b>„Ano“ pravil dále, „já sám jsem byl v maďarských školách, a co jsme my mladí Rumuni tam vytrpěli, to se za všecek život zapomenouti nemůže.</b> ",
+        "scores": [
+            {
+                "topic": "šikana Rumunů na maďarských školách",
+                "similarity": 0.6453323364257812,
+                "label": 0
+            }
+        ]
+    },
+    "423319dc-f46d-4a78-ad49-e9a03a2b4651": {
+        "text": " <b>U dvora,“ pokračoval pan d'Artagnan otec, „budete-li kdy míti čest tam přijíti, čest, k níž ostatně vaše staré šlechtictví právo vám dává, neste důstojně své jméno šlechtické, které bylo důstojně noseno vašimi předky déle než od pěti set let, pro sebe i pro lidi vaše.</b> ",
+        "scores": [
+            {
+                "topic": "tři mušketýři",
+                "similarity": 0.19495834410190582,
+                "label": 1
+            }
+        ]
+    },
+    "5e9d4894-2b98-4f46-a0f7-d2e09d3539f8": {
+        "text": " <b>Avšak říkají, ne z každého dřeva může býti fládr. Odpovídám: ale z každého člověka stává se člověk, vzdálí-li se nákaza./</b> ",
+        "scores": [
+            {
+                "topic": "metafora",
+                "similarity": 0.3450115919113159,
+                "label": 1
+            },
+            {
+                "topic": "motivační citát",
+                "similarity": 0.3879813849925995,
+                "label": 1
+            }
+        ]
+    },
+    "7ae71932-b9f6-44ad-a4d3-2b213e18cbfa": {
+        "text": "Pojednou vzkřikl jeden, jehož oči snad mimoděk zabloudily k vodě: „Ježíši! Maria! <b>Wolf se topí! ...“ Bylo tomu skutečně tak. Asi v polovici řeky objevily se ruce a hlava tonoucího nad rozčeřenou hladinou, ale hned zase zmizely pod vodou.</b> Nerozpakuje se ani vteřinu skočil jsem do vody a byl jsem dvěma rozmachy u tonoucího, jehož jsem chopil za ruku, snaže se jej vytáhnouti z hlubiny směrem k prvému břehu, kde, jak jsem věděl, voda byla mělká; než tento, rychleji nežli stačím vše vypravovati, zaťal mi prsty obou svých rukou do ramena a do plece, potopil mě a, snaže se dostat hlavu nad vodní hladinu, podepřel se při tom o mne, takže jsem ucítil dno řeky pod nohama... Byla to kritická chvíle — ani pomyšlení vyrvati se z jeho křečovitého objetí, bylť mnohem silnější mne a zápase o svůj život, zapomněl úplně, že, nepustí-li mne, i sobě jistou záhubu připraví...",
+        "scores": [
+            {
+                "topic": "havárie",
+                "similarity": 0.4256971478462219,
+                "label": 1
+            },
+            {
+                "topic": "nebezpečí",
+                "similarity": 0.3068199157714844,
+                "label": 0
+            },
+            {
+                "topic": "smrt",
+                "similarity": 0.2798449397087097,
+                "label": 0
+            },
+            {
+                "topic": "život",
+                "similarity": 0.2217775285243988,
+                "label": 1
+            },
+            {
+                "topic": "voda",
+                "similarity": 0.4071865677833557,
+                "label": 0
+            }
+        ]
+    },
+    "e258ac0c-b955-4788-8c32-fab806b7431a": {
+        "text": "Tehdáž byl jsem opravdovému šílenství snad nejblíže. Dosud jsem pokládal své vidiny za pouhý výplod blouznění, odtud počínal jsem v jejich skutečnou, reálnou bytnost věřiti. <b>Je-li možno, aby nejprostší děvče uprostřed hlubokého šumavského lesa, vnučka železničního hlídače, kteráž sotva dvakráte do roka přicházela na kraj hvozdu, zpívala francouzsky (ještě se nesměj!), jest mnohem spíše pravděpodobno, že člověk potká na Malé Straně starobylý povoz, ve kterém sedí šlechtična ve starožitném úboru některé své prabáby, dáma vracející se z nějaké kostymní zábavy šlechtické.</b> Tak jsem rozumoval. Vemlouval jsem se stále více do přesvědčení, nejen že ona dáma, již jsem o dostizích spatřil, jest totožna s dámou z oné noci, kteráž skončila ulomením kliky na vratech povědomého portálu, nýbrž že i mezi ní a Madlou, Mazancovou vnučkou, jest jakási tajemná souvislost.",
+        "scores": [
+            {
+                "topic": "Vzdělání prostého obyvatelstva",
+                "similarity": 0.10040809959173203,
+                "label": 1
+            }
+        ]
+    },
+    "4343fb94-fe66-4a09-aa8e-bf80eb5d3e1c": {
+        "text": "Teď však nic více jej nezdržuje. K čemu otálet? — Rozhodnutí a provedení bylo u pana Aloisa Petříka jedno. <b>Sáhl po hliněné pokladničce a rozbiv ji, obsah její zastrčil za pás; sundal s postele plášť, který zastával službu přikrývky, a svinuv jej dovedně otočil se jím; zavěsil kožený vak pocestný na bedra; do ruky vzal hůl.</b> A vesele, krokem svižným a lehkým, hvízdaje si bezstarostný popěvek, bral se přes hory a doly",
+        "scores": [
+            {
+                "topic": "skrývání cenností",
+                "similarity": 0.4143647849559784,
+                "label": 1
+            },
+            {
+                "topic": "Příprava na cestu",
+                "similarity": 0.3059927821159363,
+                "label": 0
+            }
+        ]
+    }
+}

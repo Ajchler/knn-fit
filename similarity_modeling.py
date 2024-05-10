@@ -115,6 +115,6 @@ if __name__ == "__main__":
             scores.append(topic_dict)
         scores_dict[d]['scores'] = scores
 
-    json.dump(scores_dict, open('evaluation-data/out-direct-score.json', 'w'),
+    json.dump(scores_dict, open('evaluation-data/out-mlm-mpnet-base-v2.json', 'w'),
               indent=4, ensure_ascii=False)
 
