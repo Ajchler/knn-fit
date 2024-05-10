@@ -154,6 +154,9 @@ def create_hard_negatives_scores():
         potential_negatives_one = get_similarities('potential_negatives_one')
         potential_negatives_all = get_similarities('potential_negatives_all')
 
+        if len(potential_negatives_one) == 0:
+            empty_exclusive_set_counter += 1
+
         scores_dict[text_data['text_id']] = {
             'user_topics': text_data['user_topics'],
             'text': text,
