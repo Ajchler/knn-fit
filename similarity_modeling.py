@@ -127,12 +127,17 @@ def create_hard_negatives_scores():
     data = json.load(
         open('evaluation-data/neg_exSets_sentence-transformers_paraphrase-multilingual-MiniLM-L12-v2.json', 'r'))
 
+    empty_exclusive_set_counter = 0
+
     def get_similarities(negatives_list_name):
         topics = []
         for t in text_data[negatives_list_name]:
             topics.append(t)
 
-        similarities = evaluator.get_similarity(text, topics)
+        if len(topics) > 0:
+            similarities = evaluator.get_similarity(text, topics)
+        else:
+            return []
 
         scores = []
         for t, s in zip(topics, similarities):
@@ -156,6 +161,7 @@ def create_hard_negatives_scores():
             'potential_negatives_one': potential_negatives_one
         }
 
+    print(f"Empty exclusive set in {empty_exclusive_set_counter}/{len(data)}")
 
 if __name__ == "__main__":
     create_hard_negatives_scores()
