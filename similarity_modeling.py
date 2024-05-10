@@ -117,7 +117,7 @@ def create_text_topics_scores():
             scores.append(topic_dict)
         scores_dict[d]['scores'] = scores
 
-    json.dump(scores_dict, open(f"evaluation-data/neg_exSets-scores.json", 'w'),
+    json.dump(scores_dict, open(f"evaluation-data/none.json", 'w'),
               indent=4, ensure_ascii=False)
 
 
@@ -148,7 +148,7 @@ def create_hard_negatives_scores():
         return scores
 
     scores_dict = {}
-    for text_data in data:
+    for i, text_data in enumerate(data):
         text = text_data['text']
 
         potential_negatives_one = get_similarities('potential_negatives_one')
@@ -160,8 +160,14 @@ def create_hard_negatives_scores():
             'potential_negatives_all': potential_negatives_all,
             'potential_negatives_one': potential_negatives_one
         }
+        if i % 100:
+            print(f"Sim scores for {i}/{len(data)}")
 
     print(f"Empty exclusive set in {empty_exclusive_set_counter}/{len(data)}")
+
+    json.dump(scores_dict, open(f"evaluation-data/neg_exSets-scores.json", 'w'),
+              indent=4, ensure_ascii=False)
+
 
 if __name__ == "__main__":
     create_hard_negatives_scores()
