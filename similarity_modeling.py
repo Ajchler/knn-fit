@@ -90,15 +90,15 @@ class DirectScoreEvaluator:
         return map(lambda x: float(x.split(': ')[1]), generated_answer)
 
 
-if __name__ == "__main__":
-    model_name = 'setu4993/LaBSE'
+def create_text_topics_scores():
+    # model_name = 'setu4993/LaBSE'
+    # model_name = 'sentence-transformers/paraphrase-multilingual-mpnet-base-v2'
+    model_name = 'sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2'
 
-    evaluator = MLMTopicEvaluator(model_name)
-    data = json.load(open('data/gold_annotated_dataset.json', 'r'))
+    evaluator = None #  MLMTopicEvaluator(model_name)
+    data = json.load(open('evaluation-data/neg_exSets_sentence-transformers_paraphrase-multilingual-MiniLM-L12-v2.json', 'r'))
     scores_dict = {}
-    i = 0
     for d in data:
-        i += 1
         text = data[d]['text']
         topics = []
         labels = []
@@ -117,6 +117,46 @@ if __name__ == "__main__":
             scores.append(topic_dict)
         scores_dict[d]['scores'] = scores
 
-    json.dump(scores_dict, open(f"evaluation-data/out-mlm-{model_name.replace('/', '')}.json", 'w'),
+    json.dump(scores_dict, open(f"evaluation-data/neg_exSets-scores.json", 'w'),
               indent=4, ensure_ascii=False)
+
+
+def create_hard_negatives_scores():
+    model_name = 'sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2'
+    evaluator = MLMTopicEvaluator(model_name)
+    data = json.load(
+        open('evaluation-data/neg_exSets_sentence-transformers_paraphrase-multilingual-MiniLM-L12-v2.json', 'r'))
+
+    def get_similarities(negatives_list_name):
+        topics = []
+        for t in text_data[negatives_list_name]:
+            topics.append(t)
+
+        similarities = evaluator.get_similarity(text, topics)
+
+        scores = []
+        for t, s in zip(topics, similarities):
+            scores.append({
+                'topic': t,
+                'similarity': s
+            })
+        return scores
+
+    scores_dict = {}
+    for text_data in data:
+        text = text_data['text']
+
+        potential_negatives_one = get_similarities('potential_negatives_one')
+        potential_negatives_all = get_similarities('potential_negatives_all')
+
+        scores_dict[text_data['text_id']] = {
+            'user_topics': text_data['user_topics'],
+            'text': text,
+            'potential_negatives_all': potential_negatives_all,
+            'potential_negatives_one': potential_negatives_one
+        }
+
+
+if __name__ == "__main__":
+    create_hard_negatives_scores()
 
