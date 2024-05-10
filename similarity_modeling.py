@@ -7,8 +7,8 @@ from openai import OpenAI
 
 
 class MLMTopicEvaluator:
-    def __init__(self, *args):
-        self.model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-mpnet-base-v2')
+    def __init__(self, mlm_model_name):
+        self.model = SentenceTransformer(mlm_model_name)
         self.cos_sim = nn.CosineSimilarity(dim=1)
 
     def get_embedding(self, text):
@@ -91,7 +91,9 @@ class DirectScoreEvaluator:
 
 
 if __name__ == "__main__":
-    evaluator = MLMTopicEvaluator()
+    model_name = 'setu4993/LaBSE'
+
+    evaluator = MLMTopicEvaluator(model_name)
     data = json.load(open('data/gold_annotated_dataset.json', 'r'))
     scores_dict = {}
     i = 0
@@ -115,6 +117,6 @@ if __name__ == "__main__":
             scores.append(topic_dict)
         scores_dict[d]['scores'] = scores
 
-    json.dump(scores_dict, open('evaluation-data/out-mlm-mpnet-base-v2.json', 'w'),
+    json.dump(scores_dict, open(f'evaluation-data/out-mlm-{model_name}.json', 'w'),
               indent=4, ensure_ascii=False)
 
