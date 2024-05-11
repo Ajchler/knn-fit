@@ -16,6 +16,18 @@ You should first scrape data from API by running:
 python parse_annotations.py
 ```
 
+In order to experiment with generated topics, run:
+```shell
+python topic_modelling.py
+```
+You might need to change the path to the scraped json, since by default it runs with gold dataset, which you can use to check what the script does.
+
+
+To score the generated topics, run:
+```shell
+python evaluate_topic_modelling.py
+```
+
 Then, you can generate topics for text by running:
 ```shell
 python generate_hard_negatives.py
