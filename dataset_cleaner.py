@@ -11,7 +11,11 @@ if os.path.exists("data/clean_dataset.json"):
 else:
     clean_data = {}
 
-crs = curses.initscr()
+try:
+    crs = curses.initscr()
+except:
+    print("Error initializing curses, try increasing the terminal size.")
+    exit(1)
 
 crs.addstr("***********************************\n")
 crs.addstr("* Welcome to the dataset cleaner! *\n")
@@ -25,12 +29,14 @@ crs.addstr(
 crs.addstr("For each topic you will be prompted to mark it as relevant or not.\n")
 crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n")
 crs.addstr(
-    "Once you mark a topic relevant, the rest of the topics will be marked as relevant as well.\n\n\n"
+    "Once you mark a topic relevant, the rest of the topics will be marked as relevant as well.\n"
 )
-crs.addstr("If you want to start cleaning, press 'n' or 'q' to quit.\n\n")
+crs.addstr("After every cleaned text, your progress will be saved.\n\n\n")
+crs.addstr("If you want to start cleaning, press 'c' or 'q' to quit.\n\n")
 key = crs.getch()
 
-if key == ord("n"):
+if key == ord("c"):
+    end = False
     crs.clear()
     crs.refresh()
 
@@ -43,6 +49,9 @@ if key == ord("n"):
         if text_id in clean_data.keys():
             continue
 
+        crs.addstr("Controls:\n", curses.A_BOLD)
+        crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n\n")
+
         crs.addstr("\nText:\n\n", curses.A_BOLD)
         text = data[text_id]["text"]
         scores = data[text_id]["scores"]
@@ -53,7 +62,7 @@ if key == ord("n"):
         for score in sorted_scores:
             if accepted_topic:
                 correct_topics.append(score["topic"])
-                crs.addstr(f"Accepted topic: {score['topic']}\n")
+                crs.addstr(f"\nAccepted topic: {score['topic']}")
                 continue
             crs.addstr("\n\n")
             crs.addstr("Topic: ", curses.A_BOLD)
@@ -70,11 +79,28 @@ if key == ord("n"):
         clean_data[text_id]["text"] = text
         clean_data[text_id]["topics"] = correct_topics
 
+        json.dump(
+            clean_data,
+            open("data/clean_dataset.json", "w"),
+            indent=4,
+            ensure_ascii=False,
+        )
+
         while True:
-            crs.addstr("If you want to continue, press 'c', to quit press 'q'.\n")
+            crs.addstr("\n\nIf you want to continue, press 'c', to quit press 'q'. ")
             key = crs.getch()
             if key == ord("q") or key == ord("Q") or key == ord("c") or key == ord("C"):
-                break
+                if key == ord("q") or key == ord("Q"):
+                    crs.addstr("\nAre you sure you want to quit? [Y/n] ")
+                    key = crs.getch()
+                    if key == ord("y") or key == ord("Y"):
+                        end = True
+                        break
+                else:
+                    break
+
+        if end:
+            break
 
         crs.clear()
         crs.refresh()
