@@ -2,7 +2,7 @@ import curses
 import json
 import os
 
-with open("evaluation-data/out-mlm-mpnet-base-v2.json", "r") as f:
+with open("evaluation-data/out-mlm-mpnet-base-v2-all-texts.json", "r") as f:
     data = json.load(f)
 
 if os.path.exists("data/clean_dataset.json"):
@@ -17,14 +17,22 @@ except:
     print("Error initializing curses, try increasing the terminal size.")
     exit(1)
 
+number_of_texts = len(data)
+number_of_cleaned_texts = len(clean_data)
+
 crs.addstr("***********************************\n")
 crs.addstr("* Welcome to the dataset cleaner! *\n")
 crs.addstr("***********************************\n\n\n")
 
+crs.addstr("Statistics:\n", curses.A_BOLD)
+crs.addstr(f"Number of texts: {number_of_texts}\n")
+crs.addstr(f"Number of cleaned texts: {number_of_cleaned_texts}\n")
+crs.addstr(f"Number of texts left: {number_of_texts - number_of_cleaned_texts}\n\n\n")
+
 crs.addstr("Instructions:\n\n", curses.A_BOLD)
 crs.addstr("You will be presented with texts and potential topics for each text.\n")
 crs.addstr(
-    "The topics are sorted by similarity to the text with the least similar topic first.\n"
+    "The topics are sorted by similarity to the text, with the least similar topic first.\n"
 )
 crs.addstr("For each topic you will be prompted to mark it as relevant or not.\n")
 crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n")
@@ -34,6 +42,8 @@ crs.addstr(
 crs.addstr("After every cleaned text, your progress will be saved.\n\n\n")
 crs.addstr("If you want to start cleaning, press 'c' or 'q' to quit.\n\n")
 key = crs.getch()
+
+cleaned_texts_this_session = 0
 
 if key == ord("c"):
     end = False
@@ -49,13 +59,19 @@ if key == ord("c"):
         if text_id in clean_data.keys():
             continue
 
+        crs.addstr("Statistics:\n", curses.A_BOLD)
+        crs.addstr(
+            f"You have cleaned {cleaned_texts_this_session} texts this session.\n"
+        )
+        crs.addstr(f"There are {number_of_texts - (len(clean_data))} texts left.\n\n")
+
         crs.addstr("Controls:\n", curses.A_BOLD)
         crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n\n")
 
         crs.addstr("\nText:\n\n", curses.A_BOLD)
         text = data[text_id]["text"]
         scores = data[text_id]["scores"]
-        sorted_scores = sorted(scores, key=lambda x: x["similarity"], reverse=True)
+        sorted_scores = sorted(scores, key=lambda x: x["similarity"], reverse=False)
 
         crs.addstr(text + "\n")
 
@@ -78,6 +94,8 @@ if key == ord("c"):
         clean_data[text_id] = {}
         clean_data[text_id]["text"] = text
         clean_data[text_id]["topics"] = correct_topics
+
+        cleaned_texts_this_session += 1
 
         json.dump(
             clean_data,

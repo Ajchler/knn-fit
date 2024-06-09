@@ -104,9 +104,9 @@ class DirectScoreEvaluator:
 
 def create_text_topics_scores():
     # model_name = 'setu4993/LaBSE'
-    # model_name = 'sentence-transformers/paraphrase-multilingual-mpnet-base-v2'
+    model_name = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
     # model_name = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-    model_name = "googlebert-cased"
+    # model_name = "googlebert-cased"
 
     evaluator = None  #  MLMTopicEvaluator(model_name)
     evaluator = MLMTopicEvaluator(model_name)
@@ -144,6 +144,47 @@ def create_text_topics_scores():
     )
 
 
+def create_text_topics_scores_no_labels():
+    # model_name = 'setu4993/LaBSE'
+    model_name = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+    # model_name = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    # model_name = "googlebert-cased"
+
+    evaluator = None  #  MLMTopicEvaluator(model_name)
+    evaluator = MLMTopicEvaluator(model_name)
+    data = json.load(
+        open(
+            "data/out-clean.json",
+            "r",
+        )
+    )
+    scores_dict = {}
+    for d in data:
+        text = d["text"]
+        text_id = d["text_id"]
+        topics = []
+        for t in d["user_topics"]:
+            topics.append(t)
+
+        scores_dict[text_id] = {}
+        scores_dict[text_id]["text"] = text
+        scores = []
+        similarities = evaluator.get_similarity(text, topics)
+        for t, s in zip(topics, similarities):
+            topic_dict = {}
+            topic_dict["topic"] = t
+            topic_dict["similarity"] = s
+            scores.append(topic_dict)
+        scores_dict[text_id]["scores"] = scores
+
+    json.dump(
+        scores_dict,
+        open(f"evaluation-data/out-mlm-mpnet-base-v2-all-texts.json", "w"),
+        indent=4,
+        ensure_ascii=False,
+    )
+
+
 def create_hard_negatives_scores():
     model_name = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     evaluator = MLMTopicEvaluator(model_name)
@@ -173,7 +214,7 @@ def create_hard_negatives_scores():
 
     scores_dict = {}
     for i, text_data in enumerate(data):
-        text = text_data['text']
+        text = text_data["text"]
 
         potential_negatives_one = get_similarities("potential_negatives_one")
         potential_negatives_all = get_similarities("potential_negatives_all")
@@ -181,20 +222,25 @@ def create_hard_negatives_scores():
         if len(potential_negatives_one) == 0:
             empty_exclusive_set_counter += 1
 
-        scores_dict[text_data['text_id']] = {
-            'user_topics': text_data['user_topics'],
-            'text': text,
-            'potential_negatives_all': potential_negatives_all,
-            'potential_negatives_one': potential_negatives_one
+        scores_dict[text_data["text_id"]] = {
+            "user_topics": text_data["user_topics"],
+            "text": text,
+            "potential_negatives_all": potential_negatives_all,
+            "potential_negatives_one": potential_negatives_one,
         }
         if i % 100:
             print(f"Sim scores for {i}/{len(data)}")
 
     print(f"Empty exclusive set in {empty_exclusive_set_counter}/{len(data)}")
 
-    json.dump(scores_dict, open(f"evaluation-data/neg_exSets-scores.json", 'w'),
-              indent=4, ensure_ascii=False)
+    json.dump(
+        scores_dict,
+        open(f"evaluation-data/neg_exSets-scores.json", "w"),
+        indent=4,
+        ensure_ascii=False,
+    )
 
 
 if __name__ == "__main__":
-    create_hard_negatives_scores()
+    # create_hard_negatives_scores()
+    create_text_topics_scores_no_labels()
