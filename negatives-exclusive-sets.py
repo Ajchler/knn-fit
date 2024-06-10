@@ -7,33 +7,6 @@ import json
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-def clean_dataset():
-    f = open('data/out.json')
-
-    data = json.load(f)
-    data_list = []
-    for text_id, annotated_text in data.items():
-        annotation_ids = [k for k in annotated_text.keys() if k not in ["text", "text_id"]]
-        annotations = []
-        for an_id in annotation_ids:
-            annotations.append(annotated_text[an_id])
-        for annotation in annotations:
-            new_text = {
-                'text_id': text_id,
-                'text': annotated_text['text'],
-                'user_id': annotation["user_id"],
-                'user_topics': [t for t in annotation["topics"] if t != ""],
-            }
-            if len(new_text['user_topics']) != 0:
-                data_list.append(new_text)
-
-    with open("data/out-clean.json", "w") as f:
-        json.dump(data_list, f, ensure_ascii=False, indent=4)
-
-    # Create DataFrame
-    df = pd.DataFrame(data_list)
-    df
-
 
 def create_text_embeddings(model_name):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
