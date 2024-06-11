@@ -17,9 +17,9 @@ You should first scrape data from API by running:
 python parse_annotations.py
 ```
 
-Raw scraped API data are in `data/out.json` file. Records containing zero annotator topics were removed in `data/out-clean.json`. 
+Raw scraped API data are in `data/out.json` file. Records containing zero annotator topics were removed in `data/out-clean.json`.
 
-## Finding bad annotations 
+## Finding bad annotations
 ### Compute similarity scores for text-topic pairs
 
 Script `similarity_modeling.py` contains function `create_text_topics_scores()` which computes cosine similarities for text and topics pairs. We tried multiple models, therefore there are multiple outputs files: `evaluation-data/out-mlm*.json`.
@@ -30,7 +30,7 @@ In order to experiment with generated topics, run:
 ```shell
 python topic_modelling.py
 ```
-You might need to change the path to the scraped json, since by default it runs with gold dataset, which you can use to check what the script does. 
+You might need to change the path to the scraped json, since by default it runs with gold dataset, which you can use to check what the script does.
 
 Then, to score the generated topics, run:
 ```shell
@@ -55,10 +55,23 @@ python negatives-exclusive-sets.py
 ```
 
 Then, to compute similarity scores between found potential hard negatives and texts, please refer to the
-script `similarity_modeling.py` and function `create_hard_negatives_scores()`. 
-Python notebook `analyze_hard_negatives.ipynb` is then used to sort this topics by A) the highest value B) value closest to threshold (0.4). 
+script `similarity_modeling.py` and function `create_hard_negatives_scores()`.
+Python notebook `analyze_hard_negatives.ipynb` is then used to sort this topics by A) the highest value B) value closest to threshold (0.4).
 
 Resulting json files are `evaluation-data/neg_exSets-scores-sorted.json` and  `evaluation-data/neg_exSets-scores-sorted04.json`.
 
 ### Merged hard negatives
-**Finally**, to see hard negative sets from multiple sources at a single place, you can refer to `evaluation-data/merged_hard_negatives.json` 
+**Finally**, to see hard negative sets from multiple sources at a single place, you can refer to `evaluation-data/merged_hard_negatives.json`
+
+# Dataset cleaning
+
+Dataset cleaner is a TUI which makes identifying bad annotations easier, to run it make sure dependencies are installed correctly and then run:
+
+```shell
+python dataset_cleaner.py
+```
+
+Carefully read and follow instructions on the screen.
+
+If the program crashes on launch and ends with exception from the curses library then try increasing the height of your terminal window so that the TUI can be displayed properly.
+
