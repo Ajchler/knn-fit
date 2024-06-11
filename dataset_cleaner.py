@@ -45,83 +45,104 @@ key = crs.getch()
 
 cleaned_texts_this_session = 0
 
+redo = True
+
 if key == ord("c"):
     end = False
     crs.clear()
     crs.refresh()
 
     for text_id in data:
-        accepted_topic = False
+        redo = True
+        while redo:
+            accepted_topic = False
 
-        correct_topics = []
+            correct_topics = []
 
-        # Check if text_id is already in clean_data
-        if text_id in clean_data.keys():
-            continue
-
-        crs.addstr("Statistics:\n", curses.A_BOLD)
-        crs.addstr(
-            f"You have cleaned {cleaned_texts_this_session} texts this session.\n"
-        )
-        crs.addstr(f"There are {number_of_texts - (len(clean_data))} texts left.\n\n")
-
-        crs.addstr("Controls:\n", curses.A_BOLD)
-        crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n\n")
-
-        crs.addstr("\nText:\n\n", curses.A_BOLD)
-        text = data[text_id]["text"]
-        scores = data[text_id]["scores"]
-        sorted_scores = sorted(scores, key=lambda x: x["similarity"], reverse=False)
-
-        crs.addstr(text + "\n")
-
-        for score in sorted_scores:
-            if accepted_topic:
-                correct_topics.append(score["topic"])
-                crs.addstr(f"\nAccepted topic: {score['topic']}")
+            # Check if text_id is already in clean_data
+            if text_id in clean_data.keys():
+                redo = False
                 continue
-            crs.addstr("\n\n")
-            crs.addstr("Topic: ", curses.A_BOLD)
-            crs.addstr(f"{score['topic']}\n")
-            crs.addstr("Relevant? [Y/n] ")
-            key = crs.getch()
-            if key == ord("n") or key == ord("N"):
-                continue
-            else:
-                correct_topics.append(score["topic"])
-                accepted_topic = True
 
-        clean_data[text_id] = {}
-        clean_data[text_id]["text"] = text
-        clean_data[text_id]["topics"] = correct_topics
+            crs.addstr("Statistics:\n", curses.A_BOLD)
+            crs.addstr(
+                f"You have cleaned {cleaned_texts_this_session} texts this session.\n"
+            )
+            crs.addstr(
+                f"There are {number_of_texts - (len(clean_data))} texts left.\n\n"
+            )
 
-        cleaned_texts_this_session += 1
+            crs.addstr("Controls:\n", curses.A_BOLD)
+            crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n\n")
 
-        json.dump(
-            clean_data,
-            open("data/clean_dataset.json", "w"),
-            indent=4,
-            ensure_ascii=False,
-        )
+            crs.addstr("\nText:\n\n", curses.A_BOLD)
+            text = data[text_id]["text"]
+            scores = data[text_id]["scores"]
+            sorted_scores = sorted(scores, key=lambda x: x["similarity"], reverse=False)
 
-        while True:
-            crs.addstr("\n\nIf you want to continue, press 'c', to quit press 'q'. ")
-            key = crs.getch()
-            if key == ord("q") or key == ord("Q") or key == ord("c") or key == ord("C"):
-                if key == ord("q") or key == ord("Q"):
-                    crs.addstr("\nAre you sure you want to quit? [Y/n] ")
-                    key = crs.getch()
-                    if key == ord("y") or key == ord("Y"):
-                        end = True
-                        break
+            crs.addstr(text + "\n")
+
+            for score in sorted_scores:
+                if accepted_topic:
+                    correct_topics.append(score["topic"])
+                    crs.addstr(f"\nAccepted topic: {score['topic']}")
+                    continue
+                crs.addstr("\n\n")
+                crs.addstr("Topic: ", curses.A_BOLD)
+                crs.addstr(f"{score['topic']}\n")
+                crs.addstr("Relevant? [Y/n] ")
+                key = crs.getch()
+                if key == ord("n") or key == ord("N"):
+                    continue
                 else:
-                    break
+                    correct_topics.append(score["topic"])
+                    accepted_topic = True
+
+            current_text = {}
+            current_text["text"] = text
+            current_text["topics"] = correct_topics
+
+            json.dump(
+                clean_data,
+                open("data/clean_dataset.json", "w"),
+                indent=4,
+                ensure_ascii=False,
+            )
+
+            while True:
+                crs.addstr(
+                    "\n\nIf you want to continue, press 'c', to redo this text if you made a mistake press 'r', to quit press 'q'. "
+                )
+                key = crs.getch()
+                if (
+                    key == ord("q")
+                    or key == ord("Q")
+                    or key == ord("c")
+                    or key == ord("C")
+                    or key == ord("r")
+                    or key == ord("R")
+                ):
+                    if key == ord("q") or key == ord("Q"):
+                        crs.addstr("\nAre you sure you want to quit? [Y/n] ")
+                        key = crs.getch()
+                        if key == ord("y") or key == ord("Y"):
+                            end = True
+                            redo = False
+                            break
+                    elif key == ord("r") or key == ord("R"):
+                        redo = True
+                        break
+                    elif key == ord("c") or key == ord("C"):
+                        clean_data[text_id] = current_text
+                        cleaned_texts_this_session += 1
+                        redo = False
+                        break
+
+            crs.clear()
+            crs.refresh()
 
         if end:
             break
-
-        crs.clear()
-        crs.refresh()
 
 
 crs.clear()
