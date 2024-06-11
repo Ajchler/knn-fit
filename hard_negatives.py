@@ -53,7 +53,7 @@ class OpenAIGeneration:
     Výstupem bude správně formátovaný JSON objekt se dvěma klíči: 'descriptions' a 'explanations'.
     'descriptions' je seznam popisů.
     'explanations' je seznam vysvětlení proč každý popis splňuje tato kritéria v maximálně 8 slovech.
-    Nevypisuj formátování Prism."""
+    Nevypisuj formátování Prism.""",
     }
 
     current_prompt = prompts["alternative"]
@@ -66,8 +66,10 @@ class OpenAIGeneration:
             if "llm_generated_hn" in text:
                 already_generated += 1
 
-        print(f"There are {already_generated} already generated hard negatives"
-              f" and {len(self.data) - already_generated} to generate.")
+        print(
+            f"There are {already_generated} already generated hard negatives"
+            f" and {len(self.data) - already_generated} to generate."
+        )
 
         self.client = OpenAI()
 
@@ -85,33 +87,34 @@ class OpenAIGeneration:
             completion = self.client.chat.completions.create(
                 model=OpenAIGeneration.model,
                 messages=[
-                    {
-                        "role": "system",
-                        "content": OpenAIGeneration.system
-                    },
-                    {
-                        "role": "user",
-                        "content": prompt
-                    }
-                ]
+                    {"role": "system", "content": OpenAIGeneration.system},
+                    {"role": "user", "content": prompt},
+                ],
             )
             response = completion.choices[0].message.content
             try:
                 result = json.loads(response)
             except json.JSONDecodeError:
-                print(f"Error: Couldn't decode JSON response for text {id}."
-                      f"Raw response: '{response}'")
+                print(
+                    f"Error: Couldn't decode JSON response for text {id}."
+                    f"Raw response: '{response}'"
+                )
                 continue
-            if OpenAIGeneration.current_prompt == OpenAIGeneration.prompts["alternative"]:
+            if (
+                OpenAIGeneration.current_prompt
+                == OpenAIGeneration.prompts["alternative"]
+            ):
                 result = [item for sublist in result.values() for item in sublist]
-            self.data[id]['llm_generated_hn'] = result
+            self.data[id]["llm_generated_hn"] = result
             print(f"Generated hard negatives for text {id}.")
             generated += 1
 
         if generated < take:
             print(f"Hard negatives for only {generated}/{take} texts generated.")
 
-        json.dump(self.data, open(self.data_path, mode="w"), indent=4, ensure_ascii=False)
+        json.dump(
+            self.data, open(self.data_path, mode="w"), indent=4, ensure_ascii=False
+        )
 
 
 class MergeHN:
@@ -128,11 +131,15 @@ class MergeHN:
         for id, text in self.data_to.items():
             if "potential_hard_negatives" in text:
                 hns_total += 1
-        print(f"There are {len(self.data_to) - hns_total} texts in dataset which already have hard negatives."
-              f"Merging hard negatives for {hns_total} texts.")
+        print(
+            f"There are {len(self.data_to) - hns_total} texts in dataset which already have hard negatives."
+            f"Merging hard negatives for {hns_total} texts."
+        )
         if hns_total == len(self.data_to):
-            print("All texts have hard negatives."
-                  "You can specify --force to remerge not-annotated hard negatives.")
+            print(
+                "All texts have hard negatives."
+                "You can specify --force to remerge not-annotated hard negatives."
+            )
 
     def merge(self, hn_sort_threshold, force):
         for id, text in self.data_to.items():
@@ -140,34 +147,50 @@ class MergeHN:
                 continue
 
             if "potential_hard_negatives" in text:
-                is_annotated = any('annotation' in hn for hn in text['potential_hard_negatives'])
+                is_annotated = any(
+                    "annotation" in hn for hn in text["potential_hard_negatives"]
+                )
                 if is_annotated:
-                    print(f"Refused to regenerate hard negatives for text {id} "
-                          f"because they are already annotated.")
+                    print(
+                        f"Refused to regenerate hard negatives for text {id} "
+                        f"because they are already annotated."
+                    )
                     continue
 
-            hn_from_dataset = self.data_from[id]['potential_negatives_all']
+            hn_from_dataset = self.data_from[id]["potential_negatives_all"]
 
             # sort hard negatives by similarity or threshold
             if hn_sort_threshold is None:
-                hn_from_dataset = sorted(hn_from_dataset, key=lambda x: x['similarity'])
+                hn_from_dataset = sorted(hn_from_dataset, key=lambda x: x["similarity"])
             else:
-                hn_from_dataset = sorted(hn_from_dataset, key=lambda x: abs(x['similarity'] - hn_sort_threshold))
-            hn_from_dataset = hn_from_dataset[:self.take_from_dataset]
-            hn_from_dataset = [{'topic': hn['topic'], 'type': 'from_dataset'} for hn in hn_from_dataset]
+                hn_from_dataset = sorted(
+                    hn_from_dataset,
+                    key=lambda x: abs(x["similarity"] - hn_sort_threshold),
+                )
+            hn_from_dataset = hn_from_dataset[: self.take_from_dataset]
+            hn_from_dataset = [
+                {"topic": hn["topic"], "type": "from_dataset"} for hn in hn_from_dataset
+            ]
 
             # take hard negatives from API
             try:
-                hn_from_api = text['llm_generated_hn'][:self.take_api]
+                hn_from_api = text["llm_generated_hn"][: self.take_api]
             except KeyError:
-                print(f"Warning: There are no generated hard negatives to merge for text {id}.")
+                print(
+                    f"Warning: There are no generated hard negatives to merge for text {id}."
+                )
                 hn_from_api = []
-            hn_from_api = [{'topic': hn, 'type': 'generated'} for hn in hn_from_api]
+            hn_from_api = [{"topic": hn, "type": "generated"} for hn in hn_from_api]
 
-            text['potential_hard_negatives'] = hn_from_dataset + hn_from_api
+            text["potential_hard_negatives"] = hn_from_dataset + hn_from_api
             print(f"Merged hard negatives for text {id}.")
 
-        json.dump(self.data_to, open(self.merge_to_path, mode="w"), indent=4, ensure_ascii=False)
+        json.dump(
+            self.data_to,
+            open(self.merge_to_path, mode="w"),
+            indent=4,
+            ensure_ascii=False,
+        )
 
 
 class HNAnnotator:
@@ -180,7 +203,6 @@ class HNAnnotator:
             print("Error initializing curses, try increasing the terminal size.")
             exit(1)
 
-
     def refresh_annotation(self, annotation_true):
         char_to_print = "✓" if annotation_true else "✗"
         y, x = self.crs.getyx()
@@ -189,15 +211,19 @@ class HNAnnotator:
         # Delete the last line
         self.crs.deleteln()
         # Add char at the end of last line
-        self.crs.insstr(y-1, 0, char_to_print + " ")
+        self.crs.insstr(y - 1, 0, char_to_print + " ")
         self.crs.move(y, 0)
         self.crs.refresh()
 
     def annotate(self):
         number_of_texts = len(self.data)
         # annotated texts are texts with at least one annotated hard negative
-        number_of_annotated_texts = sum([any('annotation' in hn for hn in text['potential_hard_negatives'])
-                                         for text in self.data.values()])
+        number_of_annotated_texts = sum(
+            [
+                any("annotation" in hn for hn in text["potential_hard_negatives"])
+                for text in self.data.values()
+            ]
+        )
         crs = self.crs
         crs.addstr("*******************************************\n")
         crs.addstr("* Welcome to the hard negative annotator! *\n")
@@ -206,12 +232,18 @@ class HNAnnotator:
         crs.addstr("Statistics:\n", curses.A_BOLD)
         crs.addstr(f"Number of texts: {number_of_texts}\n")
         crs.addstr(f"Number of annotated texts: {number_of_annotated_texts}\n")
-        crs.addstr(f"Number of texts left: {number_of_texts - number_of_annotated_texts}\n\n\n")
+        crs.addstr(
+            f"Number of texts left: {number_of_texts - number_of_annotated_texts}\n\n\n"
+        )
 
         crs.addstr("Instructions:\n\n", curses.A_BOLD)
-        crs.addstr("You will be presented with texts and potential hard negatives for each text.\n"
-                   "Hard negatives from dataset are marked with 'D', generated hard negatives with 'G'.\n")
-        crs.addstr("For each potential hard negative, you will be prompted to mark it as relevant or not.\n")
+        crs.addstr(
+            "You will be presented with texts and potential hard negatives for each text.\n"
+            "Hard negatives from dataset are marked with 'D', generated hard negatives with 'G'.\n"
+        )
+        crs.addstr(
+            "For each potential hard negative, you will be prompted to mark it as relevant or not.\n"
+        )
         crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n")
         crs.addstr("Your annotations will be saved after each text.\n\n\n")
         crs.addstr("If you want to start annotating, press 'c' or 'q' to quit.\n\n")
@@ -224,70 +256,99 @@ class HNAnnotator:
             crs.refresh()
 
             for text_id in self.data:
-                if any('annotation' in hn for hn in self.data[text_id]['potential_hard_negatives']):
-                    continue
+                redo = True
+                while redo:
+                    if any(
+                        "annotation" in hn
+                        for hn in self.data[text_id]["potential_hard_negatives"]
+                    ):
+                        redo = False
+                        continue
 
-                crs.addstr("Statistics:\n", curses.A_BOLD)
-                crs.addstr(f"You have annotated {is_good_hn} texts this session.\n")
-                crs.addstr(f"There are {number_of_texts - number_of_annotated_texts - is_good_hn} texts left.\n\n")
+                    crs.addstr("Statistics:\n", curses.A_BOLD)
+                    crs.addstr(f"You have annotated {is_good_hn} texts this session.\n")
+                    crs.addstr(
+                        f"There are {number_of_texts - number_of_annotated_texts - is_good_hn} texts left.\n\n"
+                    )
 
-                crs.addstr("Controls:\n", curses.A_BOLD)
-                crs.addstr("Press y/Y if the topic is good hard-negative, n/N if it is not.\n\n")
-                text = self.data[text_id]["text"]
-                potential_hard_negatives = self.data[text_id]["potential_hard_negatives"]
+                    crs.addstr("Controls:\n", curses.A_BOLD)
+                    crs.addstr(
+                        "Press y/Y if the topic is good hard-negative, n/N if it is not.\n\n"
+                    )
+                    text = self.data[text_id]["text"]
+                    potential_hard_negatives = self.data[text_id][
+                        "potential_hard_negatives"
+                    ]
 
-                crs.addstr("\nText:\n", curses.A_BOLD)
-                crs.addstr(text + "\n")
+                    crs.addstr("\nText:\n", curses.A_BOLD)
+                    crs.addstr(text + "\n")
 
-                crs.addstr("\nCorrect topics: \n", curses.A_BOLD)
-                for good_topic in self.data[text_id]['topics']:
-                    crs.addstr(f"{good_topic}\n")
+                    crs.addstr("\nCorrect topics: \n", curses.A_BOLD)
+                    for good_topic in self.data[text_id]["topics"]:
+                        crs.addstr(f"{good_topic}\n")
 
-                crs.addstr("\nPotential hard negatives:\n", curses.A_BOLD)
-                annotated_hard_negatives = []
-                for hard_negative in potential_hard_negatives:
-                    hn_type = "D" if hard_negative['type'] == 'from_dataset' else 'G'
-                    crs.addstr(f"{hn_type}: {hard_negative['topic']} \n")
-                    crs.addstr("Good hard negative? [Y/n] ")
-                    key = crs.getch()
-                    is_good_hn = key == ord("y") or key == ord("Y")
-                    annotated_hn = {
-                        "topic": hard_negative["topic"],
-                        "type": hard_negative["type"],
-                        "annotation": is_good_hn
-                    }
-                    annotated_hard_negatives.append(annotated_hn)
-                    self.refresh_annotation(is_good_hn)
+                    crs.addstr("\nPotential hard negatives:\n", curses.A_BOLD)
+                    annotated_hard_negatives = []
+                    for hard_negative in potential_hard_negatives:
+                        hn_type = (
+                            "D" if hard_negative["type"] == "from_dataset" else "G"
+                        )
+                        crs.addstr(f"{hn_type}: {hard_negative['topic']} \n")
+                        crs.addstr("Good hard negative? [Y/n] ")
+                        key = crs.getch()
+                        is_good_hn = key == ord("y") or key == ord("Y")
+                        annotated_hn = {
+                            "topic": hard_negative["topic"],
+                            "type": hard_negative["type"],
+                            "annotation": is_good_hn,
+                        }
+                        annotated_hard_negatives.append(annotated_hn)
+                        self.refresh_annotation(is_good_hn)
 
-                self.data[text_id]['potential_hard_negatives'] = annotated_hard_negatives
+                    json.dump(
+                        self.data,
+                        open(self.source_path, "w"),
+                        indent=4,
+                        ensure_ascii=False,
+                    )
 
-                json.dump(
-                    self.data,
-                    open(self.source_path, "w"),
-                    indent=4,
-                    ensure_ascii=False,
-                )
+                    is_good_hn += 1
 
-                is_good_hn += 1
-
-                while True:
-                    crs.addstr("\n\nIf you want to continue, press 'c', to quit press 'q'. ")
-                    key = crs.getch()
-                    if key == ord("q") or key == ord("Q") or key == ord("c") or key == ord("C"):
-                        if key == ord("q") or key == ord("Q"):
-                            crs.addstr("\nAre you sure you want to quit? [Y/n] ")
-                            key = crs.getch()
-                            if key == ord("y") or key == ord("Y"):
-                                end = True
+                    while True:
+                        crs.addstr(
+                            "\n\nIf you want to continue, press 'c', to redo this text if you made a mistake press 'r', to quit press 'q'. "
+                        )
+                        key = crs.getch()
+                        if (
+                            key == ord("q")
+                            or key == ord("Q")
+                            or key == ord("c")
+                            or key == ord("C")
+                            or key == ord("r")
+                            or key == ord("R")
+                        ):
+                            if key == ord("q") or key == ord("Q"):
+                                crs.addstr("\nAre you sure you want to quit? [Y/n] ")
+                                key = crs.getch()
+                                if key == ord("y") or key == ord("Y"):
+                                    end = True
+                                    redo = False
+                                    break
+                            elif key == ord("r") or key == ord("R"):
+                                redo = True
                                 break
-                        else:
-                            break
+                            elif key == ord("c") or key == ord("C"):
+                                self.data[text_id][
+                                    "potential_hard_negatives"
+                                ] = annotated_hard_negatives
+                                redo = False
+                                break
+
+                    crs.clear()
+                    crs.refresh()
 
                 if end:
                     break
-
-                crs.clear()
-                crs.refresh()
 
         crs.clear()
         curses.endwin()
@@ -297,41 +358,75 @@ if "__main__" == __name__:
     # argparse to merge two json files
     # argparse option to specify how many hard negatives to take in sum
     # argparse to start annotating hard negatives
-    parser = argparse.ArgumentParser(description="Tool for texts hard negatives generation, "
-                                                 "finding in dataset and annotating.")
+    parser = argparse.ArgumentParser(
+        description="Tool for texts hard negatives generation, "
+        "finding in dataset and annotating."
+    )
     # argparse to create hard negatives - options [generate, find, both]
-    parser.add_argument("action", type=str, choices=["generate", "merge", "annotate"],
-                        help="Generate hard negatives for texts"
-                             "'generate' generates HN using OpenAI API."
-                             "'merge' merges hard negatives in dataset (requires --json "
-                             "and --merge-max argument).")
+    parser.add_argument(
+        "action",
+        type=str,
+        choices=["generate", "merge", "annotate"],
+        help="Generate hard negatives for texts"
+        "'generate' generates HN using OpenAI API."
+        "'merge' merges hard negatives in dataset (requires --json "
+        "and --merge-max argument).",
+    )
 
-    parser.add_argument("--source", type=Path,
-                        help="Source file to clean dataset. "
-                             "Default is data/clean_dataset.json."
-                             "Has to be dictionary with keys as text ids and values as text "
-                             "dictionaries.",
-                        default="data/clean_dataset.json")
-    parser.add_argument("--take", dest="take", type=int, default=10,
-                        help="Number of texts to generate hard negatives for."
-                             "Use with 'generate' action to limit number of API calls.")
+    parser.add_argument(
+        "--source",
+        type=Path,
+        help="Source file to clean dataset. "
+        "Default is data/clean_dataset.json."
+        "Has to be dictionary with keys as text ids and values as text "
+        "dictionaries.",
+        default="data/clean_dataset.json",
+    )
+    parser.add_argument(
+        "--take",
+        dest="take",
+        type=int,
+        default=10,
+        help="Number of texts to generate hard negatives for."
+        "Use with 'generate' action to limit number of API calls.",
+    )
 
-    parser.add_argument("--merge-json", type=Path, default=None,
-                        help="Path to json file with hard negatives to merge with clean dataset."
-                             "Should be json generated with `negative-exclusive-sets.py` with "
-                             "added similarity scores using similarity modeling.")
-    parser.add_argument("--hn-from-api", type=int, default=3,
-                        help="Number of hard negatives to take from API.")
-    parser.add_argument("--hn-from-dataset", type=int, default=2,
-                        help="Number of hard negatives to take from dataset specified by --merge-json."
-                             "Takes hard negatives closest to threshold --hn-from-dataset-threshold is specified."
-                             "Otherwise takes hard negatives with highest similarity score.")
-    parser.add_argument("--hn-from-dataset-threshold", type=float, default=None,
-                        help="Threshold for taking hard negatives from dataset.")
+    parser.add_argument(
+        "--merge-json",
+        type=Path,
+        default=None,
+        help="Path to json file with hard negatives to merge with clean dataset."
+        "Should be json generated with `negative-exclusive-sets.py` with "
+        "added similarity scores using similarity modeling.",
+    )
+    parser.add_argument(
+        "--hn-from-api",
+        type=int,
+        default=3,
+        help="Number of hard negatives to take from API.",
+    )
+    parser.add_argument(
+        "--hn-from-dataset",
+        type=int,
+        default=2,
+        help="Number of hard negatives to take from dataset specified by --merge-json."
+        "Takes hard negatives closest to threshold --hn-from-dataset-threshold is specified."
+        "Otherwise takes hard negatives with highest similarity score.",
+    )
+    parser.add_argument(
+        "--hn-from-dataset-threshold",
+        type=float,
+        default=None,
+        help="Threshold for taking hard negatives from dataset.",
+    )
 
-    parser.add_argument("--force", action="store_true", default=False,
-                        help="'generate': Turn off skipping texts with already generated hard negatives."
-                             "'merge': Turn off skipping texts with already merged hard negatives.")
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        default=False,
+        help="'generate': Turn off skipping texts with already generated hard negatives."
+        "'merge': Turn off skipping texts with already merged hard negatives.",
+    )
 
     args = parser.parse_args()
 
@@ -354,7 +449,9 @@ if "__main__" == __name__:
             print(f"File {args.json} not found.")
             exit(-1)
 
-        merger = MergeHN(args.merge_json, args.source, args.hn_from_api, args.hn_from_dataset)
+        merger = MergeHN(
+            args.merge_json, args.source, args.hn_from_api, args.hn_from_dataset
+        )
         merger.merge(args.hn_from_dataset_threshold, args.force)
 
     if args.action == "annotate":

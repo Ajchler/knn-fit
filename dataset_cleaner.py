@@ -73,8 +73,10 @@ if key == ord("c"):
             )
 
             crs.addstr("Controls:\n", curses.A_BOLD)
-            crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n\n")
-
+            crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n")
+            crs.addstr(
+                "You will also be able to redo the current text after last topic if you make a mistake during cleaning.\n\n"
+            )
             crs.addstr("\nText:\n\n", curses.A_BOLD)
             text = data[text_id]["text"]
             scores = data[text_id]["scores"]
