@@ -1,0 +1,1708 @@
+{
+    "51fa695f-2cba-4d40-b3d0-2ffc4ac3fcbb": {
+        "text": " <b>Při vychovávání mládeže a ve školách je cvičení těla tak podstatné a potřebné, jako cvičení ducha. U dítěte jest vyvinutí těla přednější, nežli vyvinutí ducha.</b> ",
+        "topics": [
+            "výchova mládeže",
+            "fyzické cvičení těla",
+            "cvičení duch"
+        ],
+        "llm_generated_hn": [
+            "duševní vývoj",
+            "akademické studium",
+            "vědecký pokrok",
+            "kulturní obohacení",
+            "politické změny",
+            "ekonomický růst",
+            "náboženské obřady",
+            "společenské normy",
+            "duchovní osvícení",
+            "intelektuální debaty"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "motlidba",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "církev",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "dichotomie církevní",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "duševní vývoj",
+                "type": "generated",
+                "annotation": true
+            },
+            {
+                "topic": "akademické studium",
+                "type": "generated",
+                "annotation": true
+            },
+            {
+                "topic": "vědecký pokrok",
+                "type": "generated",
+                "annotation": true
+            }
+        ]
+    },
+    "5445da40-ce98-4f4c-b1a8-e46115ef4166": {
+        "text": " <b>Radoval jsem se z toho, že jsem tento druhý anglický list již téměř bez pomoci slovníka dobře mohl pochopiti, pročež tím více byl jsem povzbuzen, abych jak skladbu tak i různé obraty této zvláštní mluvy sobě osvojil.</b> ",
+        "topics": [
+            "Radost z učení se jazyka"
+        ],
+        "llm_generated_hn": [
+            "studium lingvistiky",
+            "výuka angličtiny",
+            "překladatelské dovednosti",
+            "literární analyza",
+            "využití encyklopedie",
+            "práce s lexikonem",
+            "osvěžení znalostí",
+            "jazykový kurz",
+            "lingvistický výzkum",
+            "gramatická studia"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "chudoba",
+                "type": "from_dataset",
+                "annotation": true
+            },
+            {
+                "topic": "cestování",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "Lidskost",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "studium lingvistiky",
+                "type": "generated",
+                "annotation": true
+            },
+            {
+                "topic": "výuka angličtiny",
+                "type": "generated",
+                "annotation": false
+            },
+            {
+                "topic": "překladatelské dovednosti",
+                "type": "generated",
+                "annotation": true
+            }
+        ]
+    },
+    "4a80bf7d-9e2f-4d60-8751-0c02e643cf61": {
+        "text": " <b>Ale to je pouze pohyb zdánlivý; právě naopak: jste to vy, kteří se pohybujete a opisujete kruh kol něho.</b> ",
+        "topics": [
+            "metafora",
+            "filozofie"
+        ],
+        "llm_generated_hn": [
+            "optický klam",
+            "iluze vidění",
+            "nekonečný cyklus",
+            "věčný rituál",
+            "subjektivní vnímání",
+            "teorie relativity",
+            "psychologická persekuce",
+            "subjektivní zkušenost",
+            "kvantová teorie",
+            "teoretická fyzika"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "Naléhání o pomoc",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "prosba o odpuštění",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "návod na šití",
+                "type": "from_dataset",
+                "annotation": true
+            },
+            {
+                "topic": "optický klam",
+                "type": "generated",
+                "annotation": false
+            },
+            {
+                "topic": "iluze vidění",
+                "type": "generated",
+                "annotation": false
+            },
+            {
+                "topic": "nekonečný cyklus",
+                "type": "generated",
+                "annotation": false
+            }
+        ]
+    },
+    "718431bf-885e-439a-bada-3d231c872f78": {
+        "text": " <b>Jan Jáchym Winckelmann, narozený 1717 v Stendalu v Branibořích, přišel roku 1755 do Říma a žil pak trvale v Italii do roku 1768, kdy byl v Terstu zavražděn.</b> ",
+        "topics": [
+            "život v 18. století"
+        ],
+        "llm_generated_hn": [
+            "kulturní dědictví",
+            "umělecká práce",
+            "barokní doba",
+            "renesanční umění",
+            "technologický pokrok",
+            "politické změny",
+            "vědecké objevy",
+            "filozofické myšlenky",
+            "francouzská revoluce",
+            "britská kolonizace"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "jednota",
+                "type": "from_dataset",
+                "annotation": true
+            },
+            {
+                "topic": "Umělecké prvky v místním hostinci",
+                "type": "from_dataset",
+                "annotation": true
+            },
+            {
+                "topic": "přirovnání",
+                "type": "from_dataset",
+                "annotation": true
+            },
+            {
+                "topic": "kulturní dědictví",
+                "type": "generated",
+                "annotation": true
+            },
+            {
+                "topic": "umělecká práce",
+                "type": "generated",
+                "annotation": true
+            },
+            {
+                "topic": "barokní doba",
+                "type": "generated",
+                "annotation": true
+            }
+        ]
+    },
+    "6a766e56-e3c5-469c-b231-c288de83f73f": {
+        "text": " <b>Mimo to byla široce rozvětvena práce směřující ke přípravě bolševicky školených a vědecky kvalifikovaných filosofických kádrů, stojících na výši »současné vědy« a »stranou formulovaných úloh«, o čemž svědčí především dnešní stav aktivních spolupracovníků hlavního filosofického orgánu strany, který čítá 85 zcela zapracovaných chovanců zmíněného Institutu.</b> ",
+        "topics": [
+            "příprava bolševických filosofů"
+        ],
+        "llm_generated_hn": [
+            "dialektický materialismus",
+            "historický materialismus",
+            "politická indoktrinace",
+            "ideologická příprava",
+            "akademická disciplína",
+            "vysokoškolské studium",
+            "vědecká elita",
+            "intelektuální špička",
+            "stranická propaganda",
+            "politická agitace"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "Statistické údaje o populaci",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "gramatika",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "služby Nového Města nad Metují",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "dialektický materialismus",
+                "type": "generated",
+                "annotation": true
+            },
+            {
+                "topic": "historický materialismus",
+                "type": "generated",
+                "annotation": false
+            },
+            {
+                "topic": "politická indoktrinace",
+                "type": "generated",
+                "annotation": true
+            }
+        ]
+    },
+    "330ea01f-e6a6-4842-a065-3ff10f9a5cc3": {
+        "text": " <b>To znamená, že i když jest rakouský občan v cizině, pokud rakouským příslušníkem jest, musí se podle tohoto zákona říditi.</b> ",
+        "topics": [],
+        "llm_generated_hn": [
+            "cizinec v Rakousku",
+            "vízová povinnost",
+            "domácí legislativa",
+            "mezinárodní dohody",
+            "státní suverenita",
+            "diplomatická ochrana",
+            "právní řád",
+            "legislativní proces",
+            "občanské právo",
+            "právní normy"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "revoluce",
+                "type": "from_dataset",
+                "annotation": true
+            },
+            {
+                "topic": "archivace",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "politika",
+                "type": "from_dataset",
+                "annotation": true
+            },
+            {
+                "topic": "cizinec v Rakousku",
+                "type": "generated",
+                "annotation": false
+            },
+            {
+                "topic": "vízová povinnost",
+                "type": "generated",
+                "annotation": false
+            },
+            {
+                "topic": "domácí legislativa",
+                "type": "generated",
+                "annotation": false
+            }
+        ]
+    },
+    "f4f69bca-c2ac-4c48-98ce-c390a87fb687": {
+        "text": " <b>Vše na něm bylo drobounké, filigránové: útlounké kosti, oholené vráskovité tváře, ba i bílé zuby, které byly</b> ",
+        "topics": [
+            "popis drobné osoby"
+        ],
+        "llm_generated_hn": [
+            "miniaturní artefakt",
+            "jemná struktura",
+            "lehká konstrukce",
+            "subtilní architektura",
+            "precizní opracování",
+            "dokonalé provedení",
+            "ornamentální dekorace",
+            "komplikované vyřezávání",
+            "historický nález",
+            "starožitný předmět"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "útěk do bezpečí",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "uvolňování stresu",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "přesunutí se do příjemnějších podmínek",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "miniaturní artefakt",
+                "type": "generated",
+                "annotation": false
+            },
+            {
+                "topic": "jemná struktura",
+                "type": "generated",
+                "annotation": false
+            },
+            {
+                "topic": "lehká konstrukce",
+                "type": "generated",
+                "annotation": false
+            }
+        ]
+    },
+    "405d4e1a-0107-412f-ada6-d1121790b349": {
+        "text": " <b>Normální ženská postava vyznačuje se útlejšími kostmi, okrouhlými formami, plnými, ale ne svislými prsy, širokou kyčlí, bohatým, dlouhým vlasem, živým okem; k tomu patří zdravá, růžová barva kůže, červená</b> ",
+        "topics": [
+            "popis normální ženské postavy"
+        ],
+        "llm_generated_hn": [
+            "doba kamenná",
+            "victoriánské období",
+            "feudální společnost",
+            "renesanční umění",
+            "gotická architektura",
+            "antické sochařství",
+            "barokní hudba",
+            "klasická literatura",
+            "středověká filozofie",
+            "osvícenské myšlení"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "Muž držící ženu",
+                "type": "from_dataset",
+                "annotation": true
+            },
+            {
+                "topic": "brzká touha po lásce",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "móda",
+                "type": "from_dataset",
+                "annotation": true
+            },
+            {
+                "topic": "doba kamenná",
+                "type": "generated",
+                "annotation": false
+            },
+            {
+                "topic": "victoriánské období",
+                "type": "generated",
+                "annotation": true
+            },
+            {
+                "topic": "feudální společnost",
+                "type": "generated",
+                "annotation": true
+            }
+        ]
+    },
+    "2266eb09-6905-40e7-a8bf-aa2dd6d44b95": {
+        "text": " <b>Myslím, že také mnohého sem láká touha spatřiti místo slavného boje proti Tatarům, projevil své mínění Sladomel. — Ovšem, ale nikdo nesmí zapomenouti, že toho vítězství křesťané dobyli na přímluvu Marie Panny, pokračoval Soukal. — O tato hora je velepamátná a není se čemu diviti, že viděla už několikráte pospolu poutníky ze všech zemí slovanských.</b> ",
+        "topics": [],
+        "potential_hard_negatives": [
+            {
+                "topic": "pohřeb těla",
+                "type": "from_dataset",
+                "annotation": true
+            },
+            {
+                "topic": "vyslání poslů",
+                "type": "from_dataset",
+                "annotation": false
+            },
+            {
+                "topic": "jednota",
+                "type": "from_dataset",
+                "annotation": true
+            },
+            {
+                "topic": "poutní místo",
+                "type": "generated",
+                "annotation": true
+            },
+            {
+                "topic": "kulturní dědictví",
+                "type": "generated",
+                "annotation": false
+            },
+            {
+                "topic": "náboženský zázrak",
+                "type": "generated",
+                "annotation": false
+            }
+        ],
+        "llm_generated_hn": [
+            "poutní místo",
+            "kulturní dědictví",
+            "náboženský zázrak",
+            "duchovní odkaz",
+            "středověké bitvy",
+            "vojenské střety",
+            "historická tradice",
+            "vojenské dědictví",
+            "duchovní místo",
+            "náboženská tradice"
+        ]
+    },
+    "f87e1a6f-5194-44ad-9130-51e69ced1128": {
+        "text": " <b>Tu jednou stalo se, že cizí muž do hradu zavítal a pravil tak: „Jdu z daleka. Mám mnohou zkušenosť, za mořem nabytou, za horami.</b> ",
+        "topics": [
+            "cestování",
+            "vypráveč"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "bezpečí",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "opravy nedostatků hradeb",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "peklo",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "zahraniční obchodník",
+                "type": "generated"
+            },
+            {
+                "topic": "poutník z dálky",
+                "type": "generated"
+            },
+            {
+                "topic": "raráškovo vyprávění",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "zahraniční obchodník",
+            "poutník z dálky",
+            "raráškovo vyprávění",
+            "rytířská báseň",
+            "cestovatelský deník",
+            "objevitelská výprava",
+            "obchodní cesty",
+            "vojenské tažení",
+            "nečekaný dědic",
+            "zapomenutý vladař"
+        ]
+    },
+    "6bc9f176-bf3d-4f63-9665-ac43c058d892": {
+        "text": " <b>První podmínka, abychom měli užitek z intelligence, jest jednota. V mnohonásobnosti „obecného vzdělávání“ našlo se poslední umění, jak zpitoměti a zhovaditi děti.</b> ",
+        "topics": [
+            "Význam školství",
+            "Význam vzdělání"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "vnímání subtilních vécí",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "náboženství",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "kostel",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "společný cíl",
+                "type": "generated"
+            },
+            {
+                "topic": "kulturní harmonie",
+                "type": "generated"
+            },
+            {
+                "topic": "standardizovaná osvěta",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "společný cíl",
+            "kulturní harmonie",
+            "standardizovaná osvěta",
+            "univerzální znalosti",
+            "moderní techniky",
+            "nové metody",
+            "degenerace mládeže",
+            "morální úpadek",
+            "veřejná polemika",
+            "kritický diskurz"
+        ]
+    },
+    "95d72b68-214a-4075-8259-93634a9167af": {
+        "text": "vždy činí pověrčiví cizinci, a doufají tedy, že kouzelná moc je přivede zase do Říma zpět. <b>Ze staroslavného „forum romanum“ stalo se během věků — „campo vaccino“, pastvina pro skot, z nynějších náměstí římských stane se během času také něco.</b> ",
+        "topics": [
+            "záník říše římské",
+            "Proud času"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "finance",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "nejistota",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "volení",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "architektonický vývoj",
+                "type": "generated"
+            },
+            {
+                "topic": "kulturní evoluce",
+                "type": "generated"
+            },
+            {
+                "topic": "doznívající antika",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "architektonický vývoj",
+            "kulturní evoluce",
+            "doznívající antika",
+            "gotická éra",
+            "veřejný prostor",
+            "kulturní dědictví",
+            "městská expanze",
+            "demografické změny",
+            "historické artefakty",
+            "archeologické naleziště"
+        ]
+    },
+    "e7f147ad-4a5b-4df8-a32c-7f008e2a0674": {
+        "text": " <b>I umyla si čistě ruce a obličej, přišla, skromně před princem se uklonila, a když podaný jí střevíček zkusila, hodil se na nožku její jako ulitý- Princ podíval se teprve nyní Popelce do očí a hned poznal krásnou dívku, s níž tančil, a radostí zvolal: »To je pravá moje nevěsta!« Macecha i obě sestry velice se ulekly a zbledly zlostí a závistí; ale princ posadil Popelku před sebe na koně a vesele odjížděl.</b> ",
+        "topics": [],
+        "potential_hard_negatives": [
+            {
+                "topic": "sesazení lidí z nejvyšších pozic",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "pohádkové motivy",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "historie",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "soudobá historka",
+                "type": "generated"
+            },
+            {
+                "topic": "královské intriky",
+                "type": "generated"
+            },
+            {
+                "topic": "krvavá bitva",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "soudobá historka",
+            "královské intriky",
+            "krvavá bitva",
+            "politický převrat",
+            "válka a mír",
+            "obchodní jednání",
+            "technologický pokrok",
+            "filozofické hledání",
+            "náboženský konflikt",
+            "umělecké dílo"
+        ]
+    },
+    "69b66d80-b591-4205-8269-94296737a622": {
+        "text": " <b>Vskutku myslím, že švestkový knedlík je co do rodu svého ženská. Že náleží k slabému, ale krásnému pohlaví.</b> ",
+        "topics": [
+            "Rody podstatných jmen",
+            "Vliv jazyka na vnímání světa"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "informace",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Zvědavost",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Pindulinka",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "mužná síla",
+                "type": "generated"
+            },
+            {
+                "topic": "dětská nevinnost",
+                "type": "generated"
+            },
+            {
+                "topic": "politická debata",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "mužná síla",
+            "dětská nevinnost",
+            "politická debata",
+            "ekonomická teorie",
+            "válečná strategie",
+            "umělecký směr",
+            "technologický pokrok",
+            "legislativní opatření",
+            "historické události",
+            "vědecké objevy"
+        ]
+    },
+    "8a861c49-1f94-46e7-b92c-8bb10d06dd90": {
+        "text": " <b>Před rokem mu zemřel otec. Dal jej pohřbít s pompou skvělou (kněží pět a velká hudba, všecky spolky) — objednal hned na hrob mramorový pomník s vyzlacenou chvalořečí, pak vsed rychle do kočáru</b> ",
+        "topics": [
+            "Mramorový pomník na pohřeb",
+            "Pohřeb otce"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "fyzických vlastností",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Pohřeb a bankrot",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "rodina",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "společenská událost",
+                "type": "generated"
+            },
+            {
+                "topic": "veřejná slavnost",
+                "type": "generated"
+            },
+            {
+                "topic": "kulturní festival",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "společenská událost",
+            "veřejná slavnost",
+            "kulturní festival",
+            "národní oslava",
+            "rodinné setkání",
+            "přátelské shromáždění",
+            "výstavní galerie",
+            "historická stavba",
+            "umělecký koncert",
+            "kulturní přehlídka"
+        ]
+    },
+    "d2e4422a-d1c0-4a88-a9cf-bbc186894371": {
+        "text": " <b>Italie, jmenovitě severní, má od dob Karla IV. s Čechami styky a v době, kdy archa chuděnická vznikla, působil v Praze a v bratrstvu malířském Vlach Romanus z Florencie.</b> ",
+        "topics": [
+            "malířske bratstvo",
+            "mezistátní vztahy"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "vojenství",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "nejvyšší soudní dvůr ",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Studium",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "evropská diplomacie",
+                "type": "generated"
+            },
+            {
+                "topic": "kulturní výměna",
+                "type": "generated"
+            },
+            {
+                "topic": "literární inspirace",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "evropská diplomacie",
+            "kulturní výměna",
+            "literární inspirace",
+            "filozofické diskuse",
+            "náboženské reformy",
+            "obchodní cesty",
+            "akademické debaty",
+            "vědecké kruhy",
+            "technologický pokrok",
+            "politické aliance"
+        ]
+    },
+    "96e2e09d-af79-4fd5-bf04-235f61440ca5": {
+        "text": " <b>Chce-li poznačiti nástroj, ukazuje na domnělý předmět jak se v ruce drží. Tak na př. ukazuje spůsob, jak se drží nůžky, nůž, lžíce, péro, píla, sekera, nebozez a t. d. a jaké pohyby s těmito nástroji se provádějí.</b> ",
+        "topics": [
+            "nakládání s nástroji",
+            "pohyby s nástroji"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "Překlad z češtiny do francouzštiny ",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "vmáčknutí zlata",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "starostlivost o koně",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "obchod s nářadím",
+                "type": "generated"
+            },
+            {
+                "topic": "oprava nářadí",
+                "type": "generated"
+            },
+            {
+                "topic": "ergonomie práce",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "obchod s nářadím",
+            "oprava nářadí",
+            "ergonomie práce",
+            "průmyslový design",
+            "instruktážní video",
+            "uživatelská příručka",
+            "manuální práce",
+            "řemeslná výroba",
+            "výkladový slovník",
+            "vizuální prezentace"
+        ]
+    },
+    "151f5545-b49d-4a30-a755-7726732da4e9": {
+        "text": " <b>Při sázení některých složitějších prací je nezbytno, aby si sazeč ujasnil celkový dojem hotového tiskopisu a vzájemnou působivost jednotlivých ploch a dekorativních podrobností, čehož nejlépe lze dosíci zběžným náčrtkem, jakýmsi plánem, podporujícím sazečovu představivost, a mnozí akcidenčníci si i provedení obyčejného insertu zběžně načrtnou před započetím sazby nebo po obsazení hlavních řádek.</b> ",
+        "topics": [
+            "sazba textu",
+            "grafický design",
+            "příprava textu"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "mlhavé počasí",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "angličtina",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "bariéra v lidské komunikaci",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "grafické umění",
+                "type": "generated"
+            },
+            {
+                "topic": "vizuální stylizace",
+                "type": "generated"
+            },
+            {
+                "topic": "umělecká kompozice",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "grafické umění",
+            "vizuální stylizace",
+            "umělecká kompozice",
+            "harmonická rovnováha",
+            "tiskařské technologie",
+            "grafická produkce",
+            "designerské řešení",
+            "kompoziční návrh",
+            "estetická kvalita",
+            "umělecký dojem"
+        ]
+    },
+    "41d19573-2e5f-4bb6-b13b-8868227d4567": {
+        "text": " <b>Začali večeřeti, ale nedali tomu mnoho. Mísy byly odnášeny skoro netknuty. Paní Jadwiga pobízela k jídlu — leč každý se vymlouval.</b> ",
+        "topics": [
+            "jedení",
+            "večeření"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "politikaření ",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "čas",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "rozdíl mezi očekáváním a realitou",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "lehká večeře",
+                "type": "generated"
+            },
+            {
+                "topic": "nedokončený pokrm",
+                "type": "generated"
+            },
+            {
+                "topic": "neochucená strava",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "lehká večeře",
+            "nedokončený pokrm",
+            "neochucená strava",
+            "chladné předkrmy",
+            "absence chuti",
+            "stravovací nezájem",
+            "přátelské setkání",
+            "obchodní jednání",
+            "nevydařený večírek",
+            "zrušená slavnost"
+        ]
+    },
+    "662cdb90-66fd-44ab-837a-ed6d824bb42f": {
+        "text": " <b>Letha od narození Syna božího tisíczeho pětistého dvadczateho šestého tu neděli po S. Ondřeji stala se jest smluva mezi Váczlawem Hasíkem strany jedné a mezi Jakubem, synem Ondřejovým vinařem strany druhé taková, že Jakub již psaný má slúžiti z řemesla mistru Váczlavovi Hasíkovi z řemesla v leth pořád zběhlých a kdy by ta letha dobyl] tehdy mistr Váczlav má jemu sukni kupiti, košili a kabát nohavicze.</b> ",
+        "topics": [
+            "uzavírání smlouv"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "finance",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "očekávání konce",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "dobytek",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "feudální závislost",
+                "type": "generated"
+            },
+            {
+                "topic": "cechovní řády",
+                "type": "generated"
+            },
+            {
+                "topic": "lenní systém",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "feudální závislost",
+            "cechovní řády",
+            "lenní systém",
+            "královská moc",
+            "královské privilegium",
+            "šlechtické výsady",
+            "gildovní uspořádání",
+            "cechovní právo",
+            "tržní právo",
+            "městské právo"
+        ]
+    },
+    "99aea6bd-781c-4314-8fbe-bc76558c8eb9": {
+        "text": " <b>Zovou se též raci, jsou pokryty štítem na hrudihlavě a mají oči na pohyblivých násadcích. Dělí se na 3 čeledě: 1.</b> ",
+        "topics": [
+            "biologie",
+            "anatomie raků"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "stavebnictví",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "učebnice matematiky",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Mechanismus a funkce jazykových hrotů",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "lední živočichové",
+                "type": "generated"
+            },
+            {
+                "topic": "mořská fauna",
+                "type": "generated"
+            },
+            {
+                "topic": "ekosystémová diverzita",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "lední živočichové",
+            "mořská fauna",
+            "ekosystémová diverzita",
+            "biologické druhy",
+            "organická struktura",
+            "fyziologické procesy",
+            "taxonomické rozdělení",
+            "genetická variabilita",
+            "senzorický orgán",
+            "nervová soustava"
+        ]
+    },
+    "ad71d117-1674-48f2-b726-9d389c0b9f02": {
+        "text": " <b>V záchvatu vděčnosti Eduard Poppe ho objal a políbil. Laube ho doprovodil ke dveřím, potom v kanceláři sám, nepřipustiv k tomu vrátného, pomohl mu obléci kožich a potom, když Eduard Poppe odešel a zmizel na ulici, rychle přistoupil ke Krüdlichovi. — Zítra ráno, pošle-li sem Eduard Poppe někoho, nebudu doma, slyšíte? — A přijde-li sám? — To je lhostejné.</b> ",
+        "topics": [],
+        "potential_hard_negatives": [
+            {
+                "topic": "rodina ",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "podnikání",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "vojenská strategie",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "doby předbělohorské",
+                "type": "generated"
+            },
+            {
+                "topic": "renesanční období",
+                "type": "generated"
+            },
+            {
+                "topic": "barokní éra",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "doby předbělohorské",
+            "renesanční období",
+            "barokní éra",
+            "společenské konvence",
+            "rodinné pouto",
+            "občanské soudní řízení",
+            "veřejné vystoupení",
+            "diplomatické jednání",
+            "politická debata",
+            "umělecké ztvárnění",
+            "náboženský rituál",
+            "osobní meditace",
+            "venkovské hospodaření",
+            "průmyslová revoluce",
+            "námořní obchod"
+        ]
+    },
+    "4756949e-2973-4f62-8c19-a94cb26a99aa": {
+        "text": " <b>Kdy, nelze zjistiti, snad v bouřích husitských; aspoň v r. 1452. připomíná se jako zřícenina. Držitely panství byli později páni z Pernštýna — kteří asi přenesli sídlo s nepřístupného temene skalního do útulného údolí v Jimramově, vystavivše tam pěkný zámek, — později páni z Náchoda a konečně od 18. století hrabata z Belcredi.</b> ",
+        "topics": [
+            "vývoj panství",
+            "historická událost",
+            "šlechtické rody"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "rodinný erby",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "snění",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "rody",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "války růží",
+                "type": "generated"
+            },
+            {
+                "topic": "stoletá válka",
+                "type": "generated"
+            },
+            {
+                "topic": "královský palác",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "války růží",
+            "stoletá válka",
+            "královský palác",
+            "císařská rezidence",
+            "gotický styl",
+            "renesanční umění",
+            "hrabata z Harrachu",
+            "vévodové z Alby",
+            "markýzi z Caravaggio",
+            "knížata z Lichtensteinu"
+        ]
+    },
+    "ab59f13b-fc74-46e5-ad5d-71573d9a57ae": {
+        "text": " <b>Ale až poslední nádeník, kterýkoli člověk bez zaměstnání, každá kuchařka, zničený sedlák uvidí — nikoli z novin, ale na vlastní oči — že se proletářská vláda nekoří před bohatstvím, ale pomáhá chudině, že se tato vláda nezastavuje před revolučními kroky, že odbírá nadbytečné plodiny u darmojedů a dává je hladovým, že usídluje mocí nebydlící do bytů boháčů, že nutí platit bohaté za mléko, ale nedává jim ni jediné kapky mléka, pokud jím nejsou zásobeny v dostatečné míře děti všech chu-</b> ",
+        "topics": [
+            "komunizmus",
+            "marxizmus",
+            "revoluce",
+            "proletářska revoluce",
+            "vykořisťování"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": " techniky vaření",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Kulinářské postupy",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Reciprocita",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "buržoazní společnost",
+                "type": "generated"
+            },
+            {
+                "topic": "feudální pořádek",
+                "type": "generated"
+            },
+            {
+                "topic": "ekonomický růst",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "buržoazní společnost",
+            "feudální pořádek",
+            "ekonomický růst",
+            "technologický pokrok",
+            "koloniální expanze",
+            "industriální revoluce",
+            "kulturní renesance",
+            "vědecké objevy",
+            "umělecké směry",
+            "filozofické hnutí"
+        ]
+    },
+    "fe100f6e-b502-4d9d-9074-9ab2f7957a77": {
+        "text": " <b>K tomu konci, aby se odklizovaly výkaly, užíti lze také soustavy odvážení jich.1) V městech, městečkách a uzavřených osadách budiž způsob, jakýmž se žumpy mají vyprazdňovati, upraven předpisy v oboru policie místní vydanými.</b> ",
+        "topics": [
+            "odklizovaní výkalů",
+            "vyprazdňování žump",
+            "předpisy o vyprazdňování žump"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "loupež",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "smrt",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Vlastnictví ",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "městské vyhlášky",
+                "type": "generated"
+            },
+            {
+                "topic": "komunální záležitosti",
+                "type": "generated"
+            },
+            {
+                "topic": "městské plánování",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "městské vyhlášky",
+            "komunální záležitosti",
+            "městské plánování",
+            "infrastrukturní řešení",
+            "samosprávní pravomoci",
+            "obecní vyhlášky",
+            "veřejné zdravotnictví",
+            "hygienické standardy",
+            "stavební regulace",
+            "architektonické normy"
+        ]
+    },
+    "2b83cefd-0277-44d9-b30d-48d8ffab3c56": {
+        "text": " <b>Neleželi tam ovšem všichni předkové. Byl to někdy četný rod vladycký. V době vojen svolávali se heslem „Grady“ a v erbu, pokládajíce se za lepší jiných vladyků, kteří ne vždy měli právo k erbu, měli „tupou podkovu.“ V roku 1331 pod Plovci postříleli němečtí lučištníci čtyřiasedmdesát bojovníků z Bohdance na blatech, a zachránil se toliko jediný Vojtěch, příjmím Tur, kterému král Vladislav Lokietek po porážce Němců zvláštním privilejem potvrdil erb a zboží Bohdanecké.</b> ",
+        "topics": [
+            "vraždení pod Plovci",
+            "rody",
+            "rodinný erby"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "sociální postavení",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "jednota",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "církev",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "šlechtická etiketa",
+                "type": "generated"
+            },
+            {
+                "topic": "feudální struktury",
+                "type": "generated"
+            },
+            {
+                "topic": "feudální boje",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "šlechtická etiketa",
+            "feudální struktury",
+            "feudální boje",
+            "rytířské klání",
+            "šlechtické povinnosti",
+            "feudální dědictví",
+            "významné bitvy",
+            "historické události",
+            "středověké obrany",
+            "feudální spory"
+        ]
+    },
+    "915d9adf-a0dc-4c2c-862d-7c0d812ac045": {
+        "text": " <b>A tak gíme ċaſto zhreſſili proti Bohu, neměwſſe prawé wjry, prawé nadege a prawé láſky k Bohu; proti 3*</b> ",
+        "topics": [
+            "boží přikázání"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "motlidba",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "poslání",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "rouhání",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "rane křesťanské umění",
+                "type": "generated"
+            },
+            {
+                "topic": "počátky církve",
+                "type": "generated"
+            },
+            {
+                "topic": "teologické kontroverze",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "rane křesťanské umění",
+            "počátky církve",
+            "teologické kontroverze",
+            "církevní schizma",
+            "apoštolská tradice",
+            "biskupská hierarchie",
+            "dogmatické spory",
+            "koncilní rozhodnutí",
+            "svatí otcové",
+            "asketický život"
+        ]
+    },
+    "a83e06ce-cb32-44ad-a484-8cfe6d598e2c": {
+        "text": " <b>Koprník dosáhl dvacátého prvního roku a konal svá pozorování v Krakově s hvězdářem Vojtěchem Brudzewskim, když Krištof Kolumbus objevil Ameriku.</b> ",
+        "topics": [
+            "Život Mikuláše Koperníka"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "přesunutí se do příjemnějších podmínek",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Nešťastný prodej losu",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "strach z chování",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "hvězdářské studie",
+                "type": "generated"
+            },
+            {
+                "topic": "kosmický výzkum",
+                "type": "generated"
+            },
+            {
+                "topic": "euroasijské expedice",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "hvězdářské studie",
+            "kosmický výzkum",
+            "euroasijské expedice",
+            "koloniální expanze",
+            "teoretická studia",
+            "experimentální metody",
+            "epochální událost",
+            "civilizační pokrok",
+            "středověké umění",
+            "osvícenské myšlení"
+        ]
+    },
+    "da2aeaa8-0a4d-4ea3-920e-9f3f75911ad9": {
+        "text": " <b>Vzděl. hospodářské kursy Hospodyňský třínedělní kurs Použití elektř. v prům. a dom. 6 odborných kursů!) 10 přednáškových kursů3) 11 odborných kursů4)</b> ",
+        "topics": [
+            "hospodářstsví",
+            "kurs"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "Anglie nakupuje ječmen od spojených států.",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Spojené státy vyváží velké množství ječmene.",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Spojené státy pěstují velké množství ječmene pro evropské státy.",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Technické školení",
+                "type": "generated"
+            },
+            {
+                "topic": "Akademické studium",
+                "type": "generated"
+            },
+            {
+                "topic": "Rozvoj profesních schopností",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "Technické školení",
+            "Akademické studium",
+            "Rozvoj profesních schopností",
+            "Osobní rozvoj",
+            "Průmyslové inovační procesy",
+            "Technologické pokroky",
+            "Management domácnosti",
+            "Údržba domácnosti",
+            "Akademické diskurzy",
+            "Vědecké konference"
+        ]
+    },
+    "b2fc10cf-5eaf-4917-9b19-4665dedffe92": {
+        "text": " <b>Německá věda nepomohla Lvu Nikolajeviči, protože požadavky, jež on na tuto vědu kladl, byly příliš vysoké.</b> ",
+        "topics": [
+            "Výzkum Lva Nikolajeviče Tolstého",
+            "Vědecké bádání Tolstého"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "v hospodě",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "satira ",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "pohádka",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "neúměrné nároky",
+                "type": "generated"
+            },
+            {
+                "topic": "nesplnitelné požadavky",
+                "type": "generated"
+            },
+            {
+                "topic": "pomalý technologický vývoj",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "neúměrné nároky",
+            "nesplnitelné požadavky",
+            "pomalý technologický vývoj",
+            "omezovaný vědecký rozvoj",
+            "neuspokojené ambice",
+            "nevyřešené požadavky",
+            "omezená technologická pomoc",
+            "nedostatečná akademická asistence",
+            "technologické překážky",
+            "akademické obtíže"
+        ]
+    },
+    "752ec558-81bc-45a0-9906-b256859d5ef5": {
+        "text": "Počet stran napíšeme podle posledního čísla v knize vytištěného. Při dílech vícesvazkových počet stranse neuvádí. <b>V místě, kde mají býti na hlavním lístku zapsány přílohy, napíšeme souhrnný počet všech příloh, tabulek, map, nákresů a podobizen, a to jenom tehdy, když nejsou započteny ve stránkách knihy samé.</b> ",
+        "topics": [],
+        "potential_hard_negatives": [
+            {
+                "topic": "školství za císařství",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "angličtina",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "cizí jazyk",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "vědecká publikace",
+                "type": "generated"
+            },
+            {
+                "topic": "univerzitetní studie",
+                "type": "generated"
+            },
+            {
+                "topic": "redakční úprava",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "vědecká publikace",
+            "univerzitetní studie",
+            "redakční úprava",
+            "tisková korektura",
+            "archivační systém",
+            "katalogizace materiálů",
+            "historické dokumenty",
+            "registrace dat",
+            "referenční seznam",
+            "citace zdrojů"
+        ]
+    },
+    "b9cdb436-c081-4055-beca-937dd16344ab": {
+        "text": " <b>Tato modlitba koná se při následujících zastaveních s upomínkou na duše v očistci, a modli se Otče náš a Zdrávas Maria.</b> ",
+        "topics": [
+            "výzva k modlitbě za duše v očistci"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "domácnost",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "prodloužení života",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Literatura",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "církevní obřad",
+                "type": "generated"
+            },
+            {
+                "topic": "duchovní služba",
+                "type": "generated"
+            },
+            {
+                "topic": "poutní místo",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "církevní obřad",
+            "duchovní služba",
+            "poutní místo",
+            "sváteční shromáždění",
+            "vzpomínka na předky",
+            "pocta památky",
+            "prosba za pokoj",
+            "přání pomocí modlitby",
+            "náboženská praxe",
+            "duchovní odkaz"
+        ]
+    },
+    "e9def577-7ddc-4298-96b8-f671ed34f6c7": {
+        "text": " <b>Byl u nás učedník, hlupák, že mu nebylo rovno. K ničemu dobrej, leda k házení betonu, nosení vody nebo točení klikou.</b> ",
+        "topics": [
+            "Pracovní neschopnost učedníka"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "spoločenský život nemanželských dětí",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Překročení řeky",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "snaha získat bydlení",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "mistr a učeň",
+                "type": "generated"
+            },
+            {
+                "topic": "učení řemesla",
+                "type": "generated"
+            },
+            {
+                "topic": "marná snaha",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "mistr a učeň",
+            "učení řemesla",
+            "marná snaha",
+            "zbytečná námaha",
+            "nevhodný spolupracovník",
+            "neefektivní pracovník",
+            "nedokonalé umění",
+            "nevyužité schopnosti",
+            "fyzická práce",
+            "ruční práce"
+        ]
+    },
+    "746ac4d2-6707-48d9-8a70-f5b45980597c": {
+        "text": " <b>Zároveň hlásí se tu však i jiné, spíše domorodé složky cítění romantického. Především vřelé hodnocení rozmanitých společenských a stavovských řádů, které vyrůstaly z dějinné tradice místní a byly vážně ohroženy nivellisující vlnou osvícenského absolutismu a jeho suše ustrojeným duchem.</b> ",
+        "topics": [
+            "sociální cítění",
+            "tradice"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "Problémy způsobené podmínkami bytu",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Povznášení nad podmínkami svého bytu",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "touha",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "historické hodnoty",
+                "type": "generated"
+            },
+            {
+                "topic": "kulturní dedičství",
+                "type": "generated"
+            },
+            {
+                "topic": "feudální zřízení",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "historické hodnoty",
+            "kulturní dedičství",
+            "feudální zřízení",
+            "středověká věrnost",
+            "šlechtická hierarchie",
+            "královský titul",
+            "starodávné obyčeje",
+            "národní zvyky",
+            "archeologické nálezy",
+            "vědecké objevy"
+        ]
+    },
+    "998ae34f-8996-4604-a4f0-8af8744d5772": {
+        "text": " <b>Giovanni Pierluigi Sante, zván dle svého rodiště da Palestrina (* r. 1514), byl kapelníkem v různých chrámech římských (St. Giovanni v Lateraně, St. Maria Maggiore a zemř. jako kapelník chrámu sv. Petra r. 1594.</b> ",
+        "topics": [
+            "kapelník v 16. století",
+            "italský kapelník"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "Popis atmosféry ve městě",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "životopis",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "sociální život",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "italská renesanční literatura",
+                "type": "generated"
+            },
+            {
+                "topic": "renesanční umělecké dílo",
+                "type": "generated"
+            },
+            {
+                "topic": "chrámové varhany v Římě",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "italská renesanční literatura",
+            "renesanční umělecké dílo",
+            "chrámové varhany v Římě",
+            "renesanční stavby v Římě",
+            "literatura 16. století",
+            "umění 16. století",
+            "gotické katedrály",
+            "barokní sochařství",
+            "Florencie v Toskánsku",
+            "Benátky a umění"
+        ]
+    },
+    "90971cd1-2d30-41eb-8ce7-8342165725f6": {
+        "text": " <b>Oddělení V/7: Přednosta: Alfons Nováček, MVDr, odb. rada. Zástupce: Jindřich Hyhlík, MVDr, min. rada.</b> ",
+        "topics": [
+            "ministerská rada"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "oděvnictví",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "geografie",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Královská zpráva z 15. století",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "zemědělské ředitelství",
+                "type": "generated"
+            },
+            {
+                "topic": "lesnická správa",
+                "type": "generated"
+            },
+            {
+                "topic": "městská rada",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "zemědělské ředitelství",
+            "lesnická správa",
+            "městská rada",
+            "královský úřad",
+            "královská kancelář",
+            "ministerstvo financí",
+            "univerzitní senát",
+            "fakultní rada",
+            "akademické tituly",
+            "vojenské hodnosti"
+        ]
+    },
+    "111cfec4-0539-47d3-a46b-d4d6d67ad7ba": {
+        "text": " <b>Prodaná nevěsta. 285.80. Princezna Pampeliška. 296.10. Láska a smrt. Odp. 556.20. Psohlavci. 1619.16. Bajaja.</b> ",
+        "topics": [
+            "Divadelní hry",
+            "Literární díla"
+        ],
+        "potential_hard_negatives": [
+            {
+                "topic": "legislativa",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Inzerát na vychování syna",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "kursy na pěněžní burze",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Dobročinný bazar",
+                "type": "generated"
+            },
+            {
+                "topic": "Staré pověsti",
+                "type": "generated"
+            },
+            {
+                "topic": "Královské sňatky",
+                "type": "generated"
+            }
+        ],
+        "llm_generated_hn": [
+            "Dobročinný bazar",
+            "Staré pověsti",
+            "Královské sňatky",
+            "Korunovační ceremonie",
+            "Hrdinské činy",
+            "Večerní příběhy",
+            "Národní obrození",
+            "Slavné bitvy",
+            "Lidové pohádky",
+            "Starožitné legendy"
+        ]
+    }
+}
