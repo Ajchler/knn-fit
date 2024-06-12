@@ -75,3 +75,30 @@ Carefully read and follow instructions on the screen.
 
 If the program crashes on launch and ends with exception from the curses library then try increasing the height of your terminal window so that the TUI can be displayed properly.
 
+# Hard Negatives selection
+First of all it's necessary to generate potential hard negatives for each text, the expected json for this has the same format as the output of dataset cleaner (see `clean_dataset_example.json`). To familirize yourself with the CLI arguments run:
+
+```shell
+python hard_negatives.py --help
+```
+
+If you want to generate hard negatives using OpenAI API (this step is not necessary for demonstration on the example json), run:
+
+```shell
+python hard_negatives.py generate --take $NUM_OF_HARD_NEGATIVES
+```
+
+If you would like to not only generate hard negatives from API, but also gather some potential hard negatives from the dataset itself, run:
+
+```shell
+python hard_negatives.py merge --merge-json $EXCLUSIVE_SET_HNS_WITH_SCORES --hn-from-api $NUM_HN_FROM_API --hn-from-dataset $NUM_HN_FROM_DATA
+```
+
+where `$EXCLUSIVE_SET_HNS_WITH_SCORES` could be `evaluation-data/neg_exSets-scores.json` for example.
+
+In order to start the hard negatives selection process you can run:
+```shell
+python3 hard_negatives.py annotate
+```
+
+As of now this is a demonstration which by default starts the selection for an example file called `clean_dataset_example.json`.

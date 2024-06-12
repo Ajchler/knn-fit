@@ -380,7 +380,7 @@ if "__main__" == __name__:
         "Default is data/clean_dataset.json."
         "Has to be dictionary with keys as text ids and values as text "
         "dictionaries.",
-        default="data/clean_dataset.json",
+        default="data/clean_dataset_example.json",
     )
     parser.add_argument(
         "--take",
