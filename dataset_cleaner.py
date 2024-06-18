@@ -142,9 +142,7 @@ if key == ord("c"):
                         continue
                     else:
                         score = sorted_scores[key - 1]
-                        crs.addstr(f"\nTopic #{key}: ", curses.A_BOLD)
-                        crs.addstr(f"{score['topic']}\n")
-                        crs.addstr("Relevant? [Y/n] ")
+                        crs.addstr("\nRelevant? [Y/n] ")
                         key = crs.getch()
                         if key == ord("n") or key == ord("N"):
                             # Remove topic from correct_topics
