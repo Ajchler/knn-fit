@@ -197,6 +197,7 @@ class HNAnnotator:
     def __init__(self, source_path):
         self.source_path = source_path
         self.data = json.load(open(source_path, mode="r"))
+        self.curses_err_count = 0
         try:
             self.crs = curses.initscr()
         except:
@@ -226,6 +227,21 @@ class HNAnnotator:
         self.crs.move(y_old, x_old)
 
     def annotate(self):
+        try:
+            if self.curses_err_count < 100:
+                self.annotate_loop()
+            else:
+                print(
+                    "Curses error, exiting to prevent terminal corruption."
+                    "Try increasing the terminal size."
+                )
+        except curses.error:
+            self.crs.clear()
+            self.crs.refresh()
+            self.curses_err_count += 1
+            self.annotate()
+
+    def annotate_loop(self):
         number_of_texts = len(self.data)
         # annotated texts are texts with at least one annotated hard negative
         number_of_annotated_texts = sum(
