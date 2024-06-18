@@ -10,22 +10,22 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-# Data pipeline
-## Scraping data
+# Scraping pipeline
 You should first scrape data from API by running:
 ```shell
 python parse_annotations.py
 ```
 
 Raw scraped API data are in `data/out.json` file. Records containing zero annotator topics were removed in `data/out-clean.json`.
-
+# Bad annotations
 ## Finding bad annotations
-### Compute similarity scores for text-topic pairs
+There are two methods to score (text-annotation) pairs. The first method relies entirely on comparing the similarity score (cosine similarity) between the text and the annotation. The second method involves generating relevant topics using a language model (LM) and comparing them with annotator-provided topics. In the next step, these scores are used to optimize the annotation workflow.
+### By computing similarity scores for text-topic pairs
 
 Script `similarity_modeling.py` contains function `create_text_topics_scores()` which computes cosine similarities for text and topics pairs. We tried multiple models, therefore there are multiple outputs files: `evaluation-data/out-mlm*.json`.
 
 
-### Generate relevant topics
+### By generating relevant topics
 In order to experiment with generated topics, run:
 ```shell
 python topic_modelling.py
@@ -38,32 +38,7 @@ python evaluate_topic_modelling.py
 ```
 The resulting json file can be found in `evaluation-data/out-eval-golden.json` for the golden dataset. Note that there are multiple metrics for each generated topic in this file.
 
-## Hard negatives
-### Generating hard negatives
-
-You can generate hard negatives for text by running:
-```shell
-python generate_hard_negatives.py
-```
-
-The experiments were extensive resulting in multiple hard negative files `evalutaion-data/hard-negatives*.json`.
-
-### Finding hard negatives in the dataset
-Scripts which computes similarity scores between all texts and founds exclusive sets of topics can be run by:
-```shell
-python negatives-exclusive-sets.py
-```
-
-Then, to compute similarity scores between found potential hard negatives and texts, please refer to the
-script `similarity_modeling.py` and function `create_hard_negatives_scores()`.
-Python notebook `analyze_hard_negatives.ipynb` is then used to sort this topics by A) the highest value B) value closest to threshold (0.4).
-
-Resulting json files are `evaluation-data/neg_exSets-scores-sorted.json` and  `evaluation-data/neg_exSets-scores-sorted04.json`.
-
-### Merged hard negatives
-**Finally**, to see hard negative sets from multiple sources at a single place, you can refer to `evaluation-data/merged_hard_negatives.json`
-
-# Dataset cleaning
+## Dataset cleaning
 
 Dataset cleaner is a TUI which makes identifying bad annotations easier, to run it make sure dependencies are installed correctly and then run:
 
@@ -75,26 +50,50 @@ Carefully read and follow instructions on the screen.
 
 If the program crashes on launch and ends with exception from the curses library then try increasing the height of your terminal window so that the TUI can be displayed properly.
 
-# Hard Negatives selection
-First of all it's necessary to generate potential hard negatives for each text, the expected json for this has the same format as the output of dataset cleaner (see `clean_dataset_example.json`). To familirize yourself with the CLI arguments run:
+# Hard negatives
+Another objective is to add set of hard-negatives to each text. There are two methods to create potential hard negatives. First uses LM to generate HN to each text and the second one takes topics from most similar texts in the dataset.
+
+To familiarize yourself with the CLI arguments run:
 
 ```shell
 python hard_negatives.py --help
 ```
 
-If you want to generate hard negatives using OpenAI API (this step is not necessary for demonstration on the example json), run:
+
+
+## Finding hard negatives in the dataset
+Scripts which computes similarity scores between all texts and founds exclusive sets of topics can be run by:
+```shell
+python negatives-exclusive-sets.py
+```
+
+Then, to compute similarity scores between found potential hard negatives and texts, please refer to the
+script `similarity_modeling.py` and function `create_hard_negatives_scores()`.
+
+Resulting json files are `evaluation-data/neg_exSets-scores-sorted.json` and  `evaluation-data/neg_exSets-scores-sorted04.json`.
+
+## Generating hard negatives
+To generate potential hard negatives for each text, the expected json for this has the same format as the output of dataset cleaner (see `clean_dataset_example.json`). 
+
+
+To add generated hard negatives to json file specified by `--source` (defaults to `data/clean_dataset_example.json`) using OpenAI API (this step is not necessary for demonstration on the example json), run:
 
 ```shell
 python hard_negatives.py generate --take $NUM_OF_HARD_NEGATIVES
 ```
 
-If you would like to not only generate hard negatives from API, but also gather some potential hard negatives from the dataset itself, run:
+This adds `llm_generated_hn` set to each text.
+
+## Merging hard negatives sets
+To create final `potential_hard_negatives` set for each text, run:
 
 ```shell
 python hard_negatives.py merge --merge-json $EXCLUSIVE_SET_HNS_WITH_SCORES --hn-from-api $NUM_HN_FROM_API --hn-from-dataset $NUM_HN_FROM_DATA
 ```
 
-where `$EXCLUSIVE_SET_HNS_WITH_SCORES` could be `evaluation-data/neg_exSets-scores.json` for example.
+where `$EXCLUSIVE_SET_HNS_WITH_SCORES` could be for example `evaluation-data/neg_exSets-scores.json`. It takes `$NUM_HN_FROM_API` from `llm_generated_hn` set and `$NUM_HN_FROM_DATA` from json specified by `--merge-json` argument.
+
+## Hard negatives selection
 
 In order to start the hard negatives selection process you can run:
 ```shell
