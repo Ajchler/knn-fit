@@ -6,6 +6,8 @@ from pathlib import Path
 import curses
 from openai import OpenAI
 
+from utils import addstr_wordwrap
+
 
 class OpenAIGeneration:
     R_EXTRACT = re.compile(r"```json\n(.*)\n```", re.DOTALL)
@@ -304,7 +306,8 @@ class HNAnnotator:
                 ]
 
                 crs.addstr("\nText:\n", curses.A_BOLD)
-                crs.addstr(text + "\n")
+                addstr_wordwrap(crs, text, 0)
+                crs.addstr("\n")
 
                 crs.addstr("\nCorrect topics: \n", curses.A_BOLD)
                 for good_topic in self.data[text_id]["topics"]:
@@ -329,7 +332,7 @@ class HNAnnotator:
                 ins_lines_count = 1
                 while True:
                     crs.addstr(
-                        "\n\nIf you want to continue, press 'c', to redo this text if you made a mistake press 'r', to quit press 'q'. "
+                        "\n\nPress 'c' to continue, 'r' to redo if you made a mistake, 'q' to quit. "
                     )
                     ins_lines_count += 2
                     key = crs.getch()

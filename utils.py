@@ -1,3 +1,4 @@
+import itertools
 import logging
 from contextlib import contextmanager
 from itertools import islice
@@ -232,6 +233,41 @@ def clean_dataset():
 
     with open("data/out-clean.json", "w") as f:
         json.dump(data_list, f, ensure_ascii=False, indent=4)
+
+
+def addstr_wordwrap(window, s, mode=0):
+    """ (cursesWindow, str, int, int) -> None
+
+    Add a string to a curses window with given dimensions. If mode is given
+    (e.g. curses.A_BOLD), then format text accordingly. We do very
+    rudimentary wrapping on word boundaries.
+
+    Raise WindowFullException if we run out of room.
+    """
+    height, width = window.getmaxyx()
+    (y, x) = window.getyx() # Coords of cursor
+    # If the whole string fits on the current line, just add it all at once
+    if len(s) + x <= width:
+        window.addstr(s, mode)
+    # Otherwise, split on word boundaries and write each token individually
+    else:
+        for word in words_and_spaces(s):
+            if len(word) + x <= width:
+                window.addstr(word, mode)
+            else:
+                if y == height-1:
+                    # Can't go down another line
+                    raise curses.error("Window full")
+                window.addstr(y+1, 0, word, mode)
+            (y, x) = window.getyx()
+
+def words_and_spaces(s):
+    """
+    ['spam', ' ', 'eggs', ' ', 'ham']
+    """
+    # Inspired by http://stackoverflow.com/a/8769863/262271
+    # Drop the last space
+    return list(itertools.chain.from_iterable(zip(s.split(), itertools.repeat(' '))))[:-1]
 
 
 if __name__ == '__main__':
