@@ -2,6 +2,8 @@ import curses
 import json
 import os
 
+from utils import addstr_wordwrap
+
 with open("evaluation-data/out-mlm-mpnet-base-v2-all-texts.json", "r") as f:
     data = json.load(f)
 
@@ -69,16 +71,13 @@ if key == ord("c"):
         crs.addstr(f"There are {number_of_texts - (len(clean_data))} texts left.\n\n")
 
         crs.addstr("Controls:\n", curses.A_BOLD)
-        crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n")
-        crs.addstr(
-            "You will also be able to redo the current text after last topic if you make a mistake during cleaning.\n\n"
-        )
+        controls_string = "Press y/Y if the topic is relevant, n/N if it is not.\nYou will also be able to redo the current text after last topic if you make a mistake during cleaning.\n\n"
+        addstr_wordwrap(crs, controls_string, 0)
         crs.addstr("\nText:\n\n", curses.A_BOLD)
         text = data[text_id]["text"]
+        addstr_wordwrap(crs, text + "\n", 0)
         scores = data[text_id]["scores"]
         sorted_scores = sorted(scores, key=lambda x: x["similarity"], reverse=False)
-
-        crs.addstr(text + "\n")
 
         count = 0
 
@@ -103,13 +102,6 @@ if key == ord("c"):
         current_text = {}
         current_text["text"] = text
         current_text["topics"] = correct_topics
-
-        json.dump(
-            clean_data,
-            open("data/clean_dataset.json", "w"),
-            indent=4,
-            ensure_ascii=False,
-        )
 
         while True:
             crs.addstr(
@@ -156,6 +148,13 @@ if key == ord("c"):
                     cleaned_texts_this_session += 1
                     redo = False
                     break
+
+        json.dump(
+            clean_data,
+            open("data/clean_dataset.json", "w"),
+            indent=4,
+            ensure_ascii=False,
+        )
 
         if end:
             break
