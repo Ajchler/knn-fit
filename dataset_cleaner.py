@@ -172,15 +172,38 @@ if key == ord("c"):
                         state = "not relevant\n"
                         key = int(key)
                         score = sorted_scores[key - 1]
-                        if score["topic"] in current_text["topics"]:
-                            current_text["topics"].remove(score["topic"])
+                        score["state"] = CHECKED
+
+                        crs.addstr("\nRelevant? [Y/n/s] ")
+                        choice = crs.getch()
+                        while choice not in [
+                            ord("y"),
+                            ord("Y"),
+                            ord("n"),
+                            ord("N"),
+                            ord("s"),
+                            ord("S"),
+                        ]:
+                            choice = crs.getch()
+
+                        if choice == ord("n") or choice == ord("N"):
+                            if score["topic"] in current_text["topics"]:
+                                current_text["topics"].remove(score["topic"])
+                            state = "not relevant"
+                        elif choice == ord("y") or choice == ord("Y"):
+                            if score["topic"] not in current_text["topics"]:
+                                current_text["topics"].append(score["topic"])
+                            state = "relevant"
                         else:
-                            current_text["topics"].append(score["topic"])
-                            state = "relevant\n"
+                            if score["topic"] in current_text["topics"]:
+                                current_text["topics"].remove(score["topic"])
+                            score["state"] = SKIPPED
+                            state = "skipped"
                         state_str = (
                             f"\nAnnotation {key} changed and is now marked as " + state
                         )
                         addstr_wordwrap(crs, state_str, 0)
+                        flagged_scores[key - 1] = score
 
                 elif key == ord("c") or key == ord("C"):
 
