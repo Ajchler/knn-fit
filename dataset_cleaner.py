@@ -135,12 +135,12 @@ if key == ord("c"):
                     crs.addstr(
                         "\nChoose which annotation to redo by pressing the number of the annotation: "
                     )
-                    key = crs.getch()
-                    key = int(chr(key))
-                    if key not in range(1, count + 1):
+                    key = chr(crs.getch())
+                    if not key.isnumeric() or int(key) not in range(1, count + 1):
                         crs.addstr("\nInvalid annotation number.")
                         continue
                     else:
+                        key = int(key)
                         score = sorted_scores[key - 1]
                         crs.addstr("\nRelevant? [Y/n] ")
                         key = crs.getch()
