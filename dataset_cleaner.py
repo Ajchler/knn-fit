@@ -150,7 +150,8 @@ if key == ord("c"):
                             # Remove topic from correct_topics
                             current_text["topics"].remove(score["topic"])
                         else:
-                            current_text["topics"].append(score["topic"])
+                            if score["topic"] not in current_text["topics"]:
+                                current_text["topics"].append(score["topic"])
 
                 elif key == ord("c") or key == ord("C"):
                     clean_data[text_id] = current_text
