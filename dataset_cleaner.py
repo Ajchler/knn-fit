@@ -10,6 +10,36 @@ CHECKED = 2
 
 INPUT_FILE = "evaluation-data/out-mlm-mpnet-base-v2-all-texts.json"
 
+controls_string = "Press y/Y if the topic is relevant, n/N if it is not. You can also skip this text anytime by pressing 's'.\nYou will also be able to redo the current text after last topic if you make a mistake during cleaning.\n\n"
+
+
+def display_text(
+    text, clean_data, topics, number_of_texts, cleaned_texts_this_session, crs
+):
+    crs.addstr("Statistics:\n", curses.A_BOLD)
+    crs.addstr(f"You have cleaned {cleaned_texts_this_session} texts this session.\n")
+    crs.addstr(f"There are {number_of_texts - (len(clean_data))} texts left.\n\n")
+    crs.addstr("Controls:\n", curses.A_BOLD)
+    addstr_wordwrap(crs, controls_string, 0)
+    crs.addstr("\nText:\n\n", curses.A_BOLD)
+    text = data[text_id]["text"]
+    addstr_wordwrap(crs, text + "\n", 0)
+    crs.addstr("\n\n")
+
+
+def display_topics(flagged_scores, current_text, crs):
+    count = 0
+    for score in flagged_scores:
+        count += 1
+        crs.addstr(f"Topic #{count}: ", curses.A_BOLD)
+        crs.addstr(f"{score['topic']}\n")
+        crs.addstr("Relevant? ")
+        if score["topic"] in current_text["topics"]:
+            crs.addstr("✓\n\n")
+        else:
+            crs.addstr("✗\n\n")
+
+
 with open(INPUT_FILE, "r") as f:
     data = json.load(f)
 
@@ -59,6 +89,7 @@ if key == ord("c"):
     crs.refresh()
 
     for text_id in data:
+        skip = False
         accepted_topic = False
 
         correct_topics = []
@@ -78,27 +109,24 @@ if key == ord("c"):
         if not annotate:
             continue
 
-        crs.addstr("Statistics:\n", curses.A_BOLD)
-        crs.addstr(
-            f"You have cleaned {cleaned_texts_this_session} texts this session.\n"
-        )
-        crs.addstr(f"There are {number_of_texts - (len(clean_data))} texts left.\n\n")
-
-        crs.addstr("Controls:\n", curses.A_BOLD)
-        controls_string = "Press y/Y if the topic is relevant, n/N if it is not. You can also skip any topic by pressing 's' if you are unable to make a decision.\nYou will also be able to redo the current text after last topic if you make a mistake during cleaning.\n\n"
-        addstr_wordwrap(crs, controls_string, 0)
-        crs.addstr("\nText:\n\n", curses.A_BOLD)
-        text = data[text_id]["text"]
-        addstr_wordwrap(crs, text + "\n", 0)
-        crs.addstr("\n")
         scores = scores_to_check
         sorted_scores = sorted(scores, key=lambda x: x["similarity"], reverse=False)
 
         count = 0
         flagged_scores = []
 
+        display_text(
+            data[text_id]["text"],
+            clean_data,
+            data[text_id]["scores"],
+            number_of_texts,
+            cleaned_texts_this_session,
+            crs,
+        )
+
         # Annotate topics
         for score in sorted_scores:
+            done = False
             count += 1
             if accepted_topic:
                 correct_topics.append(score["topic"])
@@ -110,30 +138,65 @@ if key == ord("c"):
             crs.addstr("\n")
             crs.addstr(f"Topic #{count}: ", curses.A_BOLD)
             crs.addstr(f"{score['topic']}\n")
-            crs.addstr("Relevant? [Y/n/s] ")
-            key = crs.getch()
-            while key not in [
-                ord("y"),
-                ord("Y"),
-                ord("n"),
-                ord("N"),
-                ord("s"),
-                ord("S"),
-            ]:
+            crs.addstr("Relevant? [Y/n] ")
+
+            while (not skip) and (not done):
                 key = crs.getch()
-            if key == ord("n") or key == ord("N"):
-                score["state"] = CHECKED
-            elif key == ord("y") or key == ord("Y"):
-                correct_topics.append(score["topic"])
-                accepted_topic = True
-                score["state"] = CHECKED
-            elif key == ord("s") or key == ord("S"):
-                score["state"] = SKIPPED
+                while key not in [
+                    ord("y"),
+                    ord("Y"),
+                    ord("n"),
+                    ord("N"),
+                    ord("s"),
+                    ord("S"),
+                ]:
+                    key = crs.getch()
+
+                if key == ord("n") or key == ord("N"):
+                    score["state"] = CHECKED
+                    done = True
+                elif key == ord("y") or key == ord("Y"):
+                    correct_topics.append(score["topic"])
+                    accepted_topic = True
+                    score["state"] = CHECKED
+                    done = True
+                else:
+                    crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
+                    key = crs.getch()
+                    while key not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
+                        key = crs.getch()
+
+                    crs.addstr("\n")
+                    if key == ord("y") or key == ord("Y"):
+                        skip = True
+
+            if skip:
+                break
+
             flagged_scores.append(score)
-            crs.addstr("\n")
+            crs.clear()
+            crs.refresh()
+            display_text(
+                data[text_id]["text"],
+                clean_data,
+                data[text_id]["scores"],
+                number_of_texts,
+                cleaned_texts_this_session,
+                crs,
+            )
+            display_topics(
+                flagged_scores,
+                {"text": data[text_id]["text"], "topics": correct_topics},
+                crs,
+            )
+
+        if skip:
+            crs.clear()
+            crs.refresh()
+            continue
 
         current_text = {}
-        current_text["text"] = text
+        current_text["text"] = data[text_id]["text"]
         current_text["topics"] = correct_topics
 
         # Redo annotations if needed, quit or continue
@@ -151,14 +214,16 @@ if key == ord("c"):
                 or key == ord("C")
                 or key == ord("r")
                 or key == ord("R")
+                or key == ord("s")
+                or key == ord("S")
             ):
-                if key == ord("q") or key == ord("Q"):
+                if key == ord("q") or key == ord("Q"):  # Quit
                     crs.addstr("\nAre you sure you want to quit? [Y/n] ")
                     key = crs.getch()
                     if key == ord("y") or key == ord("Y"):
                         end = True
                         break
-                elif key == ord("r") or key == ord("R"):
+                elif key == ord("r") or key == ord("R"):  # Redo
                     addstr_wordwrap(
                         crs,
                         "\nChoose which annotation to redo by pressing the number of the annotation: ",
@@ -174,40 +239,48 @@ if key == ord("c"):
                         score = sorted_scores[key - 1]
                         score["state"] = CHECKED
 
-                        crs.addstr("\nRelevant? [Y/n/s] ")
+                        crs.addstr("\nRelevant? [Y/n] ")
                         choice = crs.getch()
-                        while choice not in [
-                            ord("y"),
-                            ord("Y"),
-                            ord("n"),
-                            ord("N"),
-                            ord("s"),
-                            ord("S"),
-                        ]:
+                        while choice not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
                             choice = crs.getch()
 
                         if choice == ord("n") or choice == ord("N"):
                             if score["topic"] in current_text["topics"]:
                                 current_text["topics"].remove(score["topic"])
-                            state = "not relevant"
                         elif choice == ord("y") or choice == ord("Y"):
                             if score["topic"] not in current_text["topics"]:
                                 current_text["topics"].append(score["topic"])
-                            state = "relevant"
-                        else:
-                            if score["topic"] in current_text["topics"]:
-                                current_text["topics"].remove(score["topic"])
-                            score["state"] = SKIPPED
-                            state = "skipped"
-                        state_str = (
-                            f"\nAnnotation {key} changed and is now marked as " + state
-                        )
-                        addstr_wordwrap(crs, state_str, 0)
                         flagged_scores[key - 1] = score
+                        crs.clear()
+                        crs.refresh()
+                        display_text(
+                            data[text_id]["text"],
+                            clean_data,
+                            data[text_id]["scores"],
+                            number_of_texts,
+                            cleaned_texts_this_session,
+                            crs,
+                        )
+                        display_topics(flagged_scores, current_text, crs)
 
                 elif key == ord("c") or key == ord("C"):
-
                     break
+                elif key == ord("s") or key == ord("S"):
+
+                    crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
+                    key = crs.getch()
+                    while key not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
+                        key = crs.getch()
+
+                    crs.addstr("\n")
+                    if key == ord("y") or key == ord("Y"):
+                        skip = True
+                        break
+
+        if skip:
+            crs.clear()
+            crs.refresh()
+            continue
 
         # Update cleaned data
         clean_data[text_id] = current_text
