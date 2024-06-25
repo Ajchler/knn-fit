@@ -291,12 +291,6 @@ if key == ord("c"):
         with open(INPUT_FILE, "w") as f:
             for l in lines:
                 f.write(l)
-        # json.dump(
-        #    data,
-        #    open(INPUT_FILE, "w"),
-        #    indent=4,
-        #    ensure_ascii=False,
-        # )
 
         if end:
             break
