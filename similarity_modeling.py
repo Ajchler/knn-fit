@@ -177,12 +177,18 @@ def create_text_topics_scores_no_labels():
             scores.append(topic_dict)
         scores_dict[text_id]["scores"] = scores
 
-    json.dump(
-        scores_dict,
-        open(f"evaluation-data/out-mlm-mpnet-base-v2-all-texts.json", "w"),
-        indent=4,
-        ensure_ascii=False,
-    )
+    with open(f"evaluation-data/out-mlm-mpnet-base-v2-all-texts.jsonl", "w") as f:
+        for text_id, text_data in scores_dict.items():
+            f.write(
+                json.dumps(
+                    {
+                        "text_id": text_id,
+                        "text": text_data["text"],
+                        "scores": text_data["scores"],
+                    }
+                )
+                + "\n"
+            )
 
 
 def create_hard_negatives_scores():

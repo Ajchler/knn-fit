@@ -1,5 +1,6 @@
 import curses
 import json
+import jsonlines
 import os
 
 from utils import addstr_wordwrap
@@ -8,7 +9,7 @@ NOT_VISITED = 0
 SKIPPED = 1
 CHECKED = 2
 
-INPUT_FILE = "evaluation-data/out-mlm-mpnet-base-v2-all-texts.json"
+INPUT_FILE = "evaluation-data/out-mlm-mpnet-base-v2-all-texts.jsonl"
 
 controls_string = "Press y/Y if the topic is relevant, n/N if it is not. You can also skip this text anytime by pressing 's'.\nYou will also be able to redo the current text after last topic if you make a mistake during cleaning.\n\n"
 
@@ -22,7 +23,6 @@ def display_text(
     crs.addstr("Controls:\n", curses.A_BOLD)
     addstr_wordwrap(crs, controls_string, 0)
     crs.addstr("\nText:\n\n", curses.A_BOLD)
-    text = data[text_id]["text"]
     addstr_wordwrap(crs, text + "\n", 0)
     crs.addstr("\n\n")
 
@@ -41,7 +41,7 @@ def display_topics(flagged_scores, current_text, crs):
 
 
 with open(INPUT_FILE, "r") as f:
-    data = json.load(f)
+    lines = f.readlines()
 
 if os.path.exists("data/clean_dataset.json"):
     with open("data/clean_dataset.json", "r") as f:
@@ -55,7 +55,7 @@ except:
     print("Error initializing curses, try increasing the terminal size.")
     exit(1)
 
-number_of_texts = len(data)
+number_of_texts = len(lines)
 number_of_cleaned_texts = len(clean_data)
 
 crs.addstr("***********************************\n")
@@ -88,7 +88,9 @@ if key == ord("c"):
     crs.clear()
     crs.refresh()
 
-    for text_id in data:
+    for i, line in enumerate(lines):
+        line = json.loads(line)
+        text_id = line["text_id"]
         skip = False
         accepted_topic = False
 
@@ -97,14 +99,14 @@ if key == ord("c"):
         # Check whether there are topics to be annotated
         annotate = False
         scores_to_check = []
-        for score in data[text_id]["scores"]:
-            try:
-                state = score["state"]
-            except KeyError:
-                state = NOT_VISITED
-            if state == NOT_VISITED or state == SKIPPED:
-                annotate = True
-                scores_to_check.append(score)
+        try:
+            state = line["state"]
+        except KeyError:
+            state = NOT_VISITED
+
+        if state == NOT_VISITED:
+            annotate = True
+            scores_to_check = line["scores"]
 
         if not annotate:
             continue
@@ -116,9 +118,9 @@ if key == ord("c"):
         flagged_scores = []
 
         display_text(
-            data[text_id]["text"],
+            line["text"],
             clean_data,
-            data[text_id]["scores"],
+            line["scores"],
             number_of_texts,
             cleaned_texts_this_session,
             crs,
@@ -132,7 +134,6 @@ if key == ord("c"):
                 correct_topics.append(score["topic"])
                 crs.addstr(f"Accepted topic #{count}: ", curses.A_BOLD)
                 crs.addstr(f"{score['topic']}\n")
-                score["state"] = CHECKED
                 flagged_scores.append(score)
                 continue
             crs.addstr("\n")
@@ -153,12 +154,10 @@ if key == ord("c"):
                     key = crs.getch()
 
                 if key == ord("n") or key == ord("N"):
-                    score["state"] = CHECKED
                     done = True
                 elif key == ord("y") or key == ord("Y"):
                     correct_topics.append(score["topic"])
                     accepted_topic = True
-                    score["state"] = CHECKED
                     done = True
                 else:
                     crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
@@ -169,6 +168,7 @@ if key == ord("c"):
                     crs.addstr("\n")
                     if key == ord("y") or key == ord("Y"):
                         skip = True
+                        line["state"] = SKIPPED
 
             if skip:
                 break
@@ -177,30 +177,27 @@ if key == ord("c"):
             crs.clear()
             crs.refresh()
             display_text(
-                data[text_id]["text"],
+                line["text"],
                 clean_data,
-                data[text_id]["scores"],
+                line["scores"],
                 number_of_texts,
                 cleaned_texts_this_session,
                 crs,
             )
             display_topics(
                 flagged_scores,
-                {"text": data[text_id]["text"], "topics": correct_topics},
+                {"text": line["text"], "topics": correct_topics},
                 crs,
             )
 
-        if skip:
-            crs.clear()
-            crs.refresh()
-            continue
-
         current_text = {}
-        current_text["text"] = data[text_id]["text"]
+        current_text["text"] = line["text"]
         current_text["topics"] = correct_topics
 
         # Redo annotations if needed, quit or continue
         while True:
+            if skip:
+                break
             addstr_wordwrap(
                 crs,
                 "\n\nIf you want to continue, press 'c', to redo an annotation press 'r', to quit press 'q'. ",
@@ -234,10 +231,8 @@ if key == ord("c"):
                         crs.addstr("\nInvalid annotation number.")
                         continue
                     else:
-                        state = "not relevant\n"
                         key = int(key)
                         score = sorted_scores[key - 1]
-                        score["state"] = CHECKED
 
                         crs.addstr("\nRelevant? [Y/n] ")
                         choice = crs.getch()
@@ -254,9 +249,9 @@ if key == ord("c"):
                         crs.clear()
                         crs.refresh()
                         display_text(
-                            data[text_id]["text"],
+                            line["text"],
                             clean_data,
-                            data[text_id]["scores"],
+                            line["scores"],
                             number_of_texts,
                             cleaned_texts_this_session,
                             crs,
@@ -264,6 +259,7 @@ if key == ord("c"):
                         display_topics(flagged_scores, current_text, crs)
 
                 elif key == ord("c") or key == ord("C"):
+                    line["state"] = CHECKED
                     break
                 elif key == ord("s") or key == ord("S"):
 
@@ -275,19 +271,12 @@ if key == ord("c"):
                     crs.addstr("\n")
                     if key == ord("y") or key == ord("Y"):
                         skip = True
+                        line["state"] = SKIPPED
                         break
-
-        if skip:
-            crs.clear()
-            crs.refresh()
-            continue
 
         # Update cleaned data
         clean_data[text_id] = current_text
         cleaned_texts_this_session += 1
-
-        # Update original data with flags
-        data[text_id]["scores"] = flagged_scores
 
         # Clean data
         json.dump(
@@ -297,13 +286,17 @@ if key == ord("c"):
             ensure_ascii=False,
         )
 
-        # Original data
-        json.dump(
-            data,
-            open(INPUT_FILE, "w"),
-            indent=4,
-            ensure_ascii=False,
-        )
+        # Original data, write back to file
+        lines[i] = json.dumps(line) + "\n"
+        with open(INPUT_FILE, "w") as f:
+            for l in lines:
+                f.write(l)
+        # json.dump(
+        #    data,
+        #    open(INPUT_FILE, "w"),
+        #    indent=4,
+        #    ensure_ascii=False,
+        # )
 
         if end:
             break
