@@ -126,16 +126,19 @@ class MergeHN:
     def __init__(self, merge_from_path, merge_to_path, take_api, take_from_dataset):
         print(f"Merging hard negatives from {merge_from_path}.")
         self.data_from = json.load(open(merge_from_path, mode="r"))
-        self.data_to = json.load(open(merge_to_path, mode="r"))
+        self.data_to = []
         self.merge_to_path = merge_to_path
 
         self.take_api = take_api
         self.take_from_dataset = take_from_dataset
 
         hns_total = 0
-        for id, text in self.data_to.items():
-            if "potential_hard_negatives" in text:
-                hns_total += 1
+        with jsonlines.open(merge_to_path, mode='r') as reader:
+            for text in reader:
+                self.data_to.append(text)
+                if "potential_hard_negatives" in text:
+                    hns_total += 1
+
         print(
             f"There are {len(self.data_to) - hns_total} texts in dataset which already have hard negatives."
             f"Merging hard negatives for {hns_total} texts."
@@ -147,20 +150,10 @@ class MergeHN:
             )
 
     def merge(self, hn_sort_threshold, force):
-        for id, text in self.data_to.items():
+        for i, text in enumerate(self.data_to):
+            id = text["text_id"]
             if not force and "potential_hard_negatives" in text:
                 continue
-
-            if "potential_hard_negatives" in text:
-                is_annotated = any(
-                    "annotation" in hn for hn in text["potential_hard_negatives"]
-                )
-                if is_annotated:
-                    print(
-                        f"Refused to regenerate hard negatives for text {id} "
-                        f"because they are already annotated."
-                    )
-                    continue
 
             hn_from_dataset = self.data_from[id]["potential_negatives_all"]
 
@@ -190,12 +183,8 @@ class MergeHN:
             text["potential_hard_negatives"] = hn_from_dataset + hn_from_api
             print(f"Merged hard negatives for text {id}.")
 
-        json.dump(
-            self.data_to,
-            open(self.merge_to_path, mode="w"),
-            indent=4,
-            ensure_ascii=False,
-        )
+        with jsonlines.open(self.merge_to_path, mode='w') as writer:
+            writer.write_all(self.data_to)
 
 
 class HNAnnotator:
