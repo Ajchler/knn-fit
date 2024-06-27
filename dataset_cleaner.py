@@ -214,8 +214,9 @@ if key == ord("c"):
                 or key == ord("s")
                 or key == ord("S")
             ):
+                crs.addstr("\n")
                 if key == ord("q") or key == ord("Q"):  # Quit
-                    crs.addstr("\nAre you sure you want to quit? [Y/n] ")
+                    crs.addstr("Are you sure you want to quit? [Y/n] ")
                     key = crs.getch()
                     if key == ord("y") or key == ord("Y"):
                         end = True
@@ -223,18 +224,19 @@ if key == ord("c"):
                 elif key == ord("r") or key == ord("R"):  # Redo
                     addstr_wordwrap(
                         crs,
-                        "\nChoose which annotation to redo by pressing the number of the annotation: ",
+                        "Choose which annotation to redo by pressing the number of the annotation: ",
                         0,
                     )
                     key = chr(crs.getch())
+                    crs.addstr("\n")
                     if not key.isnumeric() or int(key) not in range(1, count + 1):
-                        crs.addstr("\nInvalid annotation number.")
+                        crs.addstr("Invalid annotation number.\n")
                         continue
                     else:
                         key = int(key)
                         score = sorted_scores[key - 1]
 
-                        crs.addstr("\nRelevant? [Y/n] ")
+                        crs.addstr("Relevant? [Y/n] ")
                         choice = crs.getch()
                         while choice not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
                             choice = crs.getch()
