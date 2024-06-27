@@ -4,6 +4,8 @@ import os
 import re
 from pathlib import Path
 import curses
+
+import jsonlines
 from openai import OpenAI
 
 from utils import addstr_wordwrap
@@ -62,15 +64,19 @@ class OpenAIGeneration:
 
     def __init__(self, path):
         self.data_path = path
-        self.data = json.load(open(path, mode="r"))
+        self.data = []
+
         already_generated = 0
-        for i, (id, text) in enumerate(self.data.items()):
-            if "llm_generated_hn" in text:
-                already_generated += 1
+        i = 0
+        with jsonlines.open(self.data_path, mode='r') as reader:
+            for i, text_obj in enumerate(reader):
+                self.data.append(text_obj)
+                if "llm_generated_hn" in text_obj:
+                    already_generated += 1
 
         print(
             f"There are {already_generated} already generated hard negatives"
-            f" and {len(self.data) - already_generated} to generate."
+            f" and {i - already_generated} to generate."
         )
 
         self.client = OpenAI()
@@ -78,7 +84,8 @@ class OpenAIGeneration:
     def spam_api(self, take, force_regenerate):
         print(f"Generating hard negatives for {take} texts.")
         generated = 0
-        for id, text in self.data.items():
+        for text_index, text in enumerate(self.data):
+            id = text["text_id"]
             if not force_regenerate and "llm_generated_hn" in text:
                 continue
 
@@ -102,21 +109,17 @@ class OpenAIGeneration:
                     f"Raw response: '{response}'"
                 )
                 continue
-            if (
-                OpenAIGeneration.current_prompt
-                == OpenAIGeneration.prompts["alternative"]
-            ):
+            if OpenAIGeneration.current_prompt == OpenAIGeneration.prompts["alternative"]:
                 result = [item for sublist in result.values() for item in sublist]
-            self.data[id]["llm_generated_hn"] = result
+            self.data[text_index]["llm_generated_hn"] = result
             print(f"Generated hard negatives for text {id}.")
             generated += 1
 
         if generated < take:
             print(f"Hard negatives for only {generated}/{take} texts generated.")
 
-        json.dump(
-            self.data, open(self.data_path, mode="w"), indent=4, ensure_ascii=False
-        )
+        with jsonlines.open(self.data_path, mode='w') as writer:
+            writer.write_all(self.data)
 
 
 class MergeHN:
@@ -416,10 +419,9 @@ if "__main__" == __name__:
         "--source",
         type=Path,
         help="Source file to clean dataset. "
-        "Default is data/clean_dataset.json."
-        "Has to be dictionary with keys as text ids and values as text "
-        "dictionaries.",
-        default="data/clean_dataset_example.json",
+        "Default is evaluation-data/out-mlm-mpnet-base-v2-all-texts_example.jsonl."
+        "Has to be jsonlines file with texts to generate hard negatives for.",
+        default="evaluation-data/out-mlm-mpnet-base-v2-all-texts_example.jsonl",
     )
     parser.add_argument(
         "--take",
