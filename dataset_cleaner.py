@@ -9,9 +9,11 @@ NOT_VISITED = 0
 SKIPPED = 1
 CHECKED = 2
 
-INPUT_FILE = "evaluation-data/out-mlm-mpnet-base-v2-all-texts.jsonl"
+INPUT_FILE = "evaluation-data/out-mlm-mpnet-base-v2-all-texts_example.jsonl"
 
-controls_string = "Press y/Y if the topic is relevant, n/N if it is not. You can also skip this text anytime by pressing 's'.\nYou will also be able to redo the current text after last topic if you make a mistake during cleaning.\n\n"
+controls_string = ("Press y/Y if the topic is relevant, n/N if it is not. You can also skip this text anytime by "
+                   "pressing 's'.\nYou will also be able to redo the current text after last topic if you make a "
+                   "mistake during cleaning.\n\n")
 
 
 def display_text(
@@ -190,9 +192,11 @@ if key == ord("c"):
                 crs,
             )
 
-        current_text = {}
-        current_text["text"] = line["text"]
-        current_text["topics"] = correct_topics
+        current_text = {
+            "text": line["text"],
+            "topics": correct_topics,
+            "potential_hard_negatives": line["potential_hard_negatives"],
+        }
 
         # Redo annotations if needed, quit or continue
         while True:

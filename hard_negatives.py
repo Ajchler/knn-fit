@@ -211,6 +211,13 @@ class HNAnnotator:
         self.crs.move(y, 0)
         self.crs.refresh()
 
+    def confirm_skip(self):
+        self.crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
+        key = self.crs.getch()
+        if key == ord("y") or key == ord("Y"):
+            return True
+        return False
+
     def switch_annotation(self, hn_offset, toggle_to, ins_lines_count):
         annotation = "✓" if toggle_to else "✗"
         y_old, x_old = self.crs.getyx()
@@ -264,7 +271,9 @@ class HNAnnotator:
         crs.addstr(
             "For each potential hard negative, you will be prompted to mark it as relevant or not.\n"
         )
-        crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n")
+        crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n"
+                   "You can also skip text anytime by pressing 's'.\n")
+
         crs.addstr("Your annotations will be saved after each text.\n\n\n")
         crs.addstr("If you want to start annotating, press 'c' or 'q' to quit.\n\n")
         key = crs.getch()
@@ -276,6 +285,7 @@ class HNAnnotator:
             crs.refresh()
 
             for text_id in self.data:
+                skipped = False
                 if any(
                         "annotation" in hn
                         for hn in self.data[text_id]["potential_hard_negatives"]
@@ -290,7 +300,8 @@ class HNAnnotator:
 
                 crs.addstr("Controls:\n", curses.A_BOLD)
                 crs.addstr(
-                    "Press y/Y if the topic is good hard-negative, n/N if it is not.\n\n"
+                    "Press y/Y if the topic is good hard-negative, n/N if it is not.\n"
+                    "You can also skip this text anytime by pressing 's'.\n"
                 )
                 text = self.data[text_id]["text"]
                 potential_hard_negatives = self.data[text_id][
@@ -309,20 +320,36 @@ class HNAnnotator:
                 annotated_hard_negatives = []
                 count = 0
                 for count, hard_negative in enumerate(potential_hard_negatives):
-                    crs.addstr(f"{hard_negative['topic']} \n")
-                    crs.addstr("Good hard negative? [Y/n] ")
-                    key = crs.getch()
-                    is_good_hn = key == ord("y") or key == ord("Y")
-                    annotated_hn = {
-                        "topic": hard_negative["topic"],
-                        "type": hard_negative["type"],
-                        "annotation": is_good_hn,
-                    }
-                    annotated_hard_negatives.append(annotated_hn)
-                    self.annotation_done(is_good_hn, hard_negative["type"], count)
+                    while True:
+                        crs.addstr(f"{hard_negative['topic']} \n")
+                        crs.addstr("Good hard negative? [Y/n] ")
+                        key = crs.getch()
+                        if key == ord("s") or key == ord("S"):
+                            skipped = self.confirm_skip()
+                            if skipped:
+                                break
+                            else:
+                                # remove last 3 lines (1 for prompt, 1 for topic, 1 for skip prompt)
+                                y_old, x_old = self.crs.getyx()
+                                crs.deleteln()
+                                self.crs.move(y_old - 1, 0)
+                                crs.deleteln()
+                                self.crs.move(y_old - 2, 0)
+                                crs.deleteln()
+                                continue
+
+                        is_good_hn = key == ord("y") or key == ord("Y")
+                        annotated_hn = {
+                            "topic": hard_negative["topic"],
+                            "type": hard_negative["type"],
+                            "annotation": is_good_hn,
+                        }
+                        annotated_hard_negatives.append(annotated_hn)
+                        self.annotation_done(is_good_hn, hard_negative["type"], count)
+                        break
 
                 ins_lines_count = 1
-                while True:
+                while True and not skipped:
                     crs.addstr(
                         "\n\nPress 'c' to continue, 'r' to redo if you made a mistake, 'q' to quit. "
                     )
@@ -335,6 +362,8 @@ class HNAnnotator:
                             or key == ord("C")
                             or key == ord("r")
                             or key == ord("R")
+                            or key == ord("S")
+                            or key == ord("s")
                     ):
                         if key == ord("q") or key == ord("Q"):
                             ins_lines_count += 1
@@ -361,10 +390,15 @@ class HNAnnotator:
                                 crs.addstr(f"\nAnnotation #{key} toggled.")
                                 ins_lines_count += 1
                         elif key == ord("c") or key == ord("C"):
-                            self.data[text_id][
-                                "potential_hard_negatives"
-                            ] = annotated_hard_negatives
+                            self.data[text_id]["potential_hard_negatives"] = annotated_hard_negatives
                             break
+                        elif key == ord("s") or key == ord("S"):
+                            ins_lines_count += 1
+                            if self.confirm_skip():
+                                break
+
+                if skipped:
+                    self.data[text_id]["skipped"] = True
 
                 json.dump(
                     self.data,
@@ -391,7 +425,7 @@ if "__main__" == __name__:
     # argparse to start annotating hard negatives
     parser = argparse.ArgumentParser(
         description="Tool for texts hard negatives generation, "
-        "finding in dataset and annotating."
+                    "finding in dataset and annotating."
     )
     # argparse to create hard negatives - options [generate, find, both]
     parser.add_argument(
@@ -399,17 +433,17 @@ if "__main__" == __name__:
         type=str,
         choices=["generate", "merge", "annotate"],
         help="Generate hard negatives for texts"
-        "'generate' generates HN using OpenAI API."
-        "'merge' merges hard negatives in dataset (requires --json "
-        "and --merge-max argument).",
+             "'generate' generates HN using OpenAI API."
+             "'merge' merges hard negatives in dataset (requires --json "
+             "and --merge-max argument).",
     )
 
     parser.add_argument(
         "--source",
         type=Path,
         help="Source file to clean dataset. "
-        "Default is evaluation-data/out-mlm-mpnet-base-v2-all-texts_example.jsonl."
-        "Has to be jsonlines file with texts to generate hard negatives for.",
+             "Default is evaluation-data/out-mlm-mpnet-base-v2-all-texts_example.jsonl."
+             "Has to be jsonlines file with texts to generate hard negatives for.",
         default="evaluation-data/out-mlm-mpnet-base-v2-all-texts_example.jsonl",
     )
     parser.add_argument(
@@ -418,7 +452,7 @@ if "__main__" == __name__:
         type=int,
         default=10,
         help="Number of texts to generate hard negatives for."
-        "Use with 'generate' action to limit number of API calls.",
+             "Use with 'generate' action to limit number of API calls.",
     )
 
     parser.add_argument(
@@ -426,8 +460,8 @@ if "__main__" == __name__:
         type=Path,
         default=None,
         help="Path to json file with hard negatives to merge with clean dataset."
-        "Should be json generated with `negative-exclusive-sets.py` with "
-        "added similarity scores using similarity modeling.",
+             "Should be json generated with `negative-exclusive-sets.py` with "
+             "added similarity scores using similarity modeling.",
     )
     parser.add_argument(
         "--hn-from-api",
@@ -440,8 +474,8 @@ if "__main__" == __name__:
         type=int,
         default=2,
         help="Number of hard negatives to take from dataset specified by --merge-json."
-        "Takes hard negatives closest to threshold --hn-from-dataset-threshold is specified."
-        "Otherwise takes hard negatives with highest similarity score.",
+             "Takes hard negatives closest to threshold --hn-from-dataset-threshold is specified."
+             "Otherwise takes hard negatives with highest similarity score.",
     )
     parser.add_argument(
         "--hn-from-dataset-threshold",
@@ -455,7 +489,7 @@ if "__main__" == __name__:
         action="store_true",
         default=False,
         help="'generate': Turn off skipping texts with already generated hard negatives."
-        "'merge': Turn off skipping texts with already merged hard negatives.",
+             "'merge': Turn off skipping texts with already merged hard negatives.",
     )
 
     args = parser.parse_args()
