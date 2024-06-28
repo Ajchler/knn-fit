@@ -320,7 +320,7 @@ class HNAnnotator:
                 annotated_hard_negatives = []
                 count = 0
                 for count, hard_negative in enumerate(potential_hard_negatives):
-                    while True:
+                    while True and not skipped:
                         crs.addstr(f"{hard_negative['topic']} \n")
                         crs.addstr("Good hard negative? [Y/n] ")
                         key = crs.getch()
@@ -395,6 +395,7 @@ class HNAnnotator:
                         elif key == ord("s") or key == ord("S"):
                             ins_lines_count += 1
                             if self.confirm_skip():
+                                skipped = True
                                 break
 
                 if skipped:
