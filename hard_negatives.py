@@ -440,9 +440,19 @@ if "__main__" == __name__:
     )
 
     parser.add_argument(
-        "--source",
+        "--annotate-source",
         type=Path,
         help="Source file to clean dataset. "
+             "Default is data/clean_dataset.json."
+             "Has to be json file with texts and potential hard negatives "
+             "to select good hard negatives from.",
+        default="data/clean_dataset.json",
+    )
+
+    parser.add_argument(
+        "--source",
+        type=Path,
+        help="Source file to jsonlines with already scored topics. "
              "Default is evaluation-data/out-mlm-mpnet-base-v2-all-texts_example.jsonl."
              "Has to be jsonlines file with texts to generate hard negatives for.",
         default="evaluation-data/out-mlm-mpnet-base-v2-all-texts_example.jsonl",
@@ -520,4 +530,4 @@ if "__main__" == __name__:
         merger.merge(args.hn_from_dataset_threshold, args.force)
 
     if args.action == "annotate":
-        HNAnnotator(args.source).annotate()
+        HNAnnotator(args.annotate_source).annotate()
