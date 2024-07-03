@@ -14,7 +14,7 @@
             {
                 "topic": "nejvyšší soudní dvůr ",
                 "type": "from_dataset",
-                "annotation": false
+                "annotation": true
             },
             {
                 "topic": "Studium",
@@ -34,10 +34,9 @@
             {
                 "topic": "literární inspirace",
                 "type": "generated",
-                "annotation": true
+                "annotation": false
             }
-        ],
-        "skipped": true
+        ]
     },
     "96e2e09d-af79-4fd5-bf04-235f61440ca5": {
         "text": " <b>Chce-li poznačiti nástroj, ukazuje na domnělý předmět jak se v ruce drží. Tak na př. ukazuje spůsob, jak se drží nůžky, nůž, lžíce, péro, píla, sekera, nebozez a t. d. a jaké pohyby s těmito nástroji se provádějí.</b> ",
@@ -49,7 +48,7 @@
             {
                 "topic": "Překlad z češtiny do francouzštiny ",
                 "type": "from_dataset",
-                "annotation": false
+                "annotation": true
             },
             {
                 "topic": "vmáčknutí zlata",
@@ -59,7 +58,7 @@
             {
                 "topic": "starostlivost o koně",
                 "type": "from_dataset",
-                "annotation": true
+                "annotation": false
             },
             {
                 "topic": "uživatelská příručka",
@@ -74,7 +73,7 @@
             {
                 "topic": "řemeslné umění",
                 "type": "generated",
-                "annotation": true
+                "annotation": false
             }
         ]
     },
@@ -111,8 +110,7 @@
                 "topic": "umělecká koncepce",
                 "type": "generated"
             }
-        ],
-        "skipped": true
+        ]
     },
     "41d19573-2e5f-4bb6-b13b-8868227d4567": {
         "text": " <b>Začali večeřeti, ale nedali tomu mnoho. Mísy byly odnášeny skoro netknuty. Paní Jadwiga pobízela k jídlu — leč každý se vymlouval.</b> ",
@@ -123,33 +121,27 @@
         "potential_hard_negatives": [
             {
                 "topic": "politikaření ",
-                "type": "from_dataset",
-                "annotation": true
+                "type": "from_dataset"
             },
             {
                 "topic": "čas",
-                "type": "from_dataset",
-                "annotation": false
+                "type": "from_dataset"
             },
             {
                 "topic": "rozdíl mezi očekáváním a realitou",
-                "type": "from_dataset",
-                "annotation": true
+                "type": "from_dataset"
             },
             {
                 "topic": "Nedostatečná hostina",
-                "type": "generated",
-                "annotation": false
+                "type": "generated"
             },
             {
                 "topic": "Skromné pohoštění",
-                "type": "generated",
-                "annotation": false
+                "type": "generated"
             },
             {
                 "topic": "Stravovací zvyky",
-                "type": "generated",
-                "annotation": false
+                "type": "generated"
             }
         ]
     },
@@ -184,6 +176,32 @@
                 "topic": "Šlechtický titul",
                 "type": "generated"
             }
+        ],
+        "hard_negatives": [
+            {
+                "topic": "finance",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "očekávání konce",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "dobytek",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Feudální závislost",
+                "type": "generated"
+            },
+            {
+                "topic": "Cechovní řády",
+                "type": "generated"
+            },
+            {
+                "topic": "Šlechtický titul",
+                "type": "generated"
+            }
         ]
     },
     "99aea6bd-781c-4314-8fbe-bc76558c8eb9": {
@@ -193,6 +211,20 @@
             "anatomie raků"
         ],
         "potential_hard_negatives": [
+            {
+                "topic": "stavebnictví",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "učebnice matematiky",
+                "type": "from_dataset"
+            },
+            {
+                "topic": "Mechanismus a funkce jazykových hrotů",
+                "type": "from_dataset"
+            }
+        ],
+        "hard_negatives": [
             {
                 "topic": "stavebnictví",
                 "type": "from_dataset"

@@ -191,6 +191,13 @@ class HNAnnotator:
     def __init__(self, source_path):
         self.source_path = source_path
         self.data = json.load(open(source_path, mode="r"))
+
+        self.out_json_path = str(source_path).strip(".json") + "_annotated.jsonl"
+        if os.path.exists(self.out_json_path):
+            with jsonlines.open(self.out_json_path, mode='r') as reader:
+                self.out_data = list(reader)
+        else:
+            self.out_data = []
         self.curses_err_count = 0
         try:
             self.crs = curses.initscr()
@@ -390,7 +397,6 @@ class HNAnnotator:
                                 crs.addstr(f"\nAnnotation #{key} toggled.")
                                 ins_lines_count += 1
                         elif key == ord("c") or key == ord("C"):
-                            self.data[text_id]["potential_hard_negatives"] = annotated_hard_negatives
                             break
                         elif key == ord("s") or key == ord("S"):
                             ins_lines_count += 1
@@ -400,13 +406,32 @@ class HNAnnotator:
 
                 if skipped:
                     self.data[text_id]["skipped"] = True
+                else:
+                    selected_hns = []
+                    for hn in annotated_hard_negatives:
+                        if hn["annotation"]:
+                            selected_hns.append(hn["topic"])
+                    self.data[text_id]["potential_hard_negatives"] = annotated_hard_negatives
+                    self.out_data.append(
+                        {
+                            "text_id": text_id,
+                            "text": text,
+                            "topics": self.data[text_id]["topics"],
+                            "hard_negatives": selected_hns,
+                        }
+                    )
 
+                # save data to input file for annotation control
                 json.dump(
                     self.data,
                     open(self.source_path, "w"),
                     indent=4,
                     ensure_ascii=False,
                 )
+
+                # save data to output file for final merging
+                with jsonlines.open(self.out_json_path, mode='w') as writer:
+                    writer.write_all(self.out_data)
 
                 annotated_texts_session += 1
 
