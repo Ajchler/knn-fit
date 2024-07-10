@@ -7,6 +7,7 @@ import logging
 import os
 
 from utils import addstr_wordwrap
+import getting_user_input
 
 NOT_VISITED = 0
 SKIPPED = 1
@@ -110,38 +111,6 @@ def put_introduction(nb_texts, nb_texts_cleaned, crs):
     crs.addstr("If you want to start cleaning press 'c', to quit press 'q'.\n\n")
 
 
-class SkipError(Exception):
-    pass
-
-
-class QuitError(Exception):
-    pass
-
-
-def user_says_accept(crs):
-    crs.addstr("Relevant? [Y/n] ")
-
-    done = False
-    while not done:
-        key = crs.getch()
-        while key not in (ord(c) for c in "yYnNsS"):
-            key = crs.getch()
-
-        if key == ord("n") or key == ord("N"):
-            return False
-        elif key == ord("y") or key == ord("Y"):
-            return True
-        else:
-            crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
-            key = crs.getch()
-            while key not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
-                key = crs.getch()
-
-            crs.addstr("\n")
-            if key == ord("y") or key == ord("Y"):
-                raise SkipError
-
-
 def annotate_topics(sorted_topics, crs):
     accepted_topic = False
     correct_topics = []
@@ -158,7 +127,7 @@ def annotate_topics(sorted_topics, crs):
         crs.addstr(f"Topic #{i}: ", curses.A_BOLD)
         crs.addstr(f"{score['topic']}\n")
 
-        if user_says_accept(crs):
+        if getting_user_input.accept_topic(crs):
             correct_topics.append(score["topic"])
             accepted_topic = True
         else:
@@ -184,32 +153,6 @@ def get_topics_to_check(data_sample, clean_data):
     return topics_to_check, warning
 
 
-def get_redo_or_move_on_action(crs):
-    key = crs.getch()
-    if key in (ord(c) for c in "qQcCrRsS"):
-        crs.addstr("\n")
-        if key == ord("q") or key == ord("Q"):  # Quit
-            crs.addstr("Are you sure you want to quit? [Y/n] ")
-            key = crs.getch()
-            if key == ord("y") or key == ord("Y"):
-                raise QuitError()
-        elif key == ord("r") or key == ord("R"):  # Redo
-            return "redo"
-
-        elif key == ord("c") or key == ord("C"):
-            return "continue"
-
-        elif key == ord("s") or key == ord("S"):
-            crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
-            key = crs.getch()
-            while key not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
-                key = crs.getch()
-
-            crs.addstr("\n")
-            if key == ord("y") or key == ord("Y"):
-                raise SkipError
-
-
 def annotation_to_redo(nb_topics, crs):
     addstr_wordwrap(
         crs,
@@ -224,18 +167,6 @@ def annotation_to_redo(nb_topics, crs):
     return int(annot_id_str) - 1
 
 
-def user_redoes_to_accept(crs):
-    crs.addstr("Relevant? [Y/n] ")
-    choice = crs.getch()
-    while choice not in (ord(c) for c in "yYnN"):
-        choice = crs.getch()
-
-    if choice == ord("n") or choice == ord("N"):
-        return False
-    elif choice == ord("y") or choice == ord("Y"):
-        return True
-
-
 def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
     while True:
         addstr_wordwrap(
@@ -243,7 +174,7 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
             "\n\nIf you want to continue, press 'c', to redo an annotation press 'r', to quit press 'q'. ",
             0,
         )
-        action = get_redo_or_move_on_action(crs)
+        action = getting_user_input.redo_or_proceed(crs)
         if action == "redo":  # Redo
             annot_id = annotation_to_redo(len(sorted_topics), crs)
             if annot_id is None:
@@ -252,7 +183,7 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
 
             topic = sorted_topics[annot_id]
 
-            relevant = user_redoes_to_accept(crs)
+            relevant = getting_user_input.redo_accept(crs)
 
             if relevant and topic["topic"] not in correct_topics:
                 correct_topics.append(topic["topic"])
@@ -266,19 +197,6 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
             break
 
     return correct_topics
-
-
-def user_quit_or_proceed(crs):
-    key = crs.getch()
-
-    while key not in (ord(c) for c in "cCqQ"):
-        key = crs.getch()
-
-    if key == ord("c") or key == ord("C"):
-        return "proceed"
-
-    elif key == ord("q") or key == ord("Q"):
-        return "quit"
 
 
 def main():
@@ -300,7 +218,7 @@ def main():
     with CursesWindow() as crs:
         put_introduction(nb_texts, nb_texts_cleaned, crs)
 
-        quit_or_proceed = user_quit_or_proceed(crs)
+        quit_or_proceed = getting_user_input.quit_or_proceed(crs)
         if quit_or_proceed == "quit":
             return 0
 
@@ -318,20 +236,20 @@ def main():
 
             try:
                 correct_topics = annotate_topics(sorted_topics, crs)
-            except SkipError:
+                screen_owner.update_correct_topics(correct_topics)
+            except getting_user_input.SkipError:
                 data_sample["state"] = SKIPPED
                 continue
             finally:
-                screen_owner.update_correct_topics(correct_topics)
 
             # Redo annotations if needed, quit or continue
             end = False
             try:
                 correct_topics = redo_if_needed(sorted_topics, correct_topics, screen_owner, crs)
                 data_sample["state"] = CHECKED
-            except QuitError:
+            except getting_user_input.QuitError:
                 end = True
-            except SkipError:
+            except getting_user_input.SkipError:
                 data_sample["state"] = SKIPPED
 
             current_text = {
