@@ -126,7 +126,6 @@ def user_says_accept(crs):
 def annotate_topics(sorted_scores, crs):
     accepted_topic = False
     correct_topics = []
-    flagged_scores = []
 
     for i, score in enumerate(sorted_scores, start=1):
         #  Once a topic is accepted, we accept all the following ones (based on sorted similarity)
@@ -134,7 +133,6 @@ def annotate_topics(sorted_scores, crs):
             correct_topics.append(score["topic"])
             crs.addstr(f"Accepted topic #{i}: ", curses.A_BOLD)
             crs.addstr(f"{score['topic']}\n")
-            flagged_scores.append(score)
             continue
 
         crs.addstr("\n")
@@ -147,9 +145,7 @@ def annotate_topics(sorted_scores, crs):
         else:
             pass  # rejection is implicit
 
-        flagged_scores.append(score)
-
-    return correct_topics, flagged_scores
+    return correct_topics
 
 
 def main():
@@ -215,7 +211,7 @@ def main():
 
             # Annotate topics  TODO
             try:
-                correct_topics, flagged_scores = annotate_topics(sorted_scores, crs)
+                correct_topics = annotate_topics(sorted_scores, crs)
             except SkipError:
                 data_sample["state"] = SKIPPED
                 continue
@@ -232,7 +228,7 @@ def main():
                 crs,
             )
             display_topics(
-                flagged_scores,
+                sorted_scores,
                 {"text": data_sample["text"], "topics": correct_topics},
                 crs,
             )
@@ -287,7 +283,7 @@ def main():
                             elif choice == ord("y") or choice == ord("Y"):
                                 if score["topic"] not in current_text["topics"]:
                                     current_text["topics"].append(score["topic"])
-                            flagged_scores[annot_id - 1] = score
+                            sorted_scores[annot_id - 1] = score
                             crs.clear()
                             crs.refresh()
                             display_text(
@@ -298,7 +294,7 @@ def main():
                                 cleaned_texts_this_session,
                                 crs,
                             )
-                            display_topics(flagged_scores, current_text, crs)
+                            display_topics(sorted_scores, current_text, crs)
 
                     elif key == ord("c") or key == ord("C"):
                         data_sample["state"] = CHECKED
