@@ -95,6 +95,56 @@ def put_introduction(nb_texts, nb_texts_cleaned, crs):
     crs.addstr("If you want to start cleaning press 'c', to quit press 'q'.\n\n")
 
 
+class SkipError(Exception):
+    pass
+
+
+def annotate_topics(sorted_scores, crs):
+    accepted_topic = False
+    correct_topics = []
+    flagged_scores = []
+    count = 0
+
+    for score in sorted_scores:
+        done = False
+        count += 1
+        if accepted_topic:
+            correct_topics.append(score["topic"])
+            crs.addstr(f"Accepted topic #{count}: ", curses.A_BOLD)
+            crs.addstr(f"{score['topic']}\n")
+            flagged_scores.append(score)
+            continue
+        crs.addstr("\n")
+        crs.addstr(f"Topic #{count}: ", curses.A_BOLD)
+        crs.addstr(f"{score['topic']}\n")
+        crs.addstr("Relevant? [Y/n] ")
+
+        while not done:
+            key = crs.getch()
+            while key not in (ord(c) for c in "yYnNsS"):
+                key = crs.getch()
+
+            if key == ord("n") or key == ord("N"):
+                done = True
+            elif key == ord("y") or key == ord("Y"):
+                correct_topics.append(score["topic"])
+                accepted_topic = True
+                done = True
+            else:
+                crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
+                key = crs.getch()
+                while key not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
+                    key = crs.getch()
+
+                crs.addstr("\n")
+                if key == ord("y") or key == ord("Y"):
+                    raise SkipError
+
+        flagged_scores.append(score)
+
+    return correct_topics, flagged_scores
+
+
 def main():
     args = get_args()
 
@@ -127,32 +177,25 @@ def main():
             data_sample = json.loads(line)
             text_id = data_sample["text_id"]
             skip = False
-            accepted_topic = False
-
-            correct_topics = []
 
             # Check whether there are topics to be annotated
             annotate = False
-            scores_to_check = []
+            topics_to_check = []
             state = data_sample.get("state", NOT_VISITED)
 
             if state == NOT_VISITED:
                 annotate = True
-                scores_to_check = data_sample["scores"]
+                topics_to_check = data_sample["scores"]
 
             if state == CHECKED and text_id not in clean_data:
                 annotate = True
-                scores_to_check = data_sample["scores"]
+                topics_to_check = data_sample["scores"]
                 crs.addstr(f'WARNING: Sample {text_id} marked as CHECKED (2), but not present in CLEAN_DATA. Someone tampered with CLEAN_DATA?\n\n')
 
             if not annotate:
                 continue
 
-            scores = scores_to_check
-            sorted_scores = sorted(scores, key=lambda x: x["similarity"], reverse=False)
-
-            count = 0
-            flagged_scores = []
+            sorted_scores = sorted(topics_to_check, key=lambda x: x["similarity"], reverse=False)
 
             display_text(
                 data_sample["text"],
@@ -163,62 +206,29 @@ def main():
                 crs,
             )
 
-            # Annotate topics
-            for score in sorted_scores:
-                done = False
-                count += 1
-                if accepted_topic:
-                    correct_topics.append(score["topic"])
-                    crs.addstr(f"Accepted topic #{count}: ", curses.A_BOLD)
-                    crs.addstr(f"{score['topic']}\n")
-                    flagged_scores.append(score)
-                    continue
-                crs.addstr("\n")
-                crs.addstr(f"Topic #{count}: ", curses.A_BOLD)
-                crs.addstr(f"{score['topic']}\n")
-                crs.addstr("Relevant? [Y/n] ")
-
-                while (not skip) and (not done):
-                    key = crs.getch()
-                    while key not in (ord(c) for c in "yYnNsS"):
-                        key = crs.getch()
-
-                    if key == ord("n") or key == ord("N"):
-                        done = True
-                    elif key == ord("y") or key == ord("Y"):
-                        correct_topics.append(score["topic"])
-                        accepted_topic = True
-                        done = True
-                    else:
-                        crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
-                        key = crs.getch()
-                        while key not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
-                            key = crs.getch()
-
-                        crs.addstr("\n")
-                        if key == ord("y") or key == ord("Y"):
-                            skip = True
-                            data_sample["state"] = SKIPPED
-
-                if skip:
-                    break
-
-                flagged_scores.append(score)
+            # Annotate topics  TODO
+            try:
+                correct_topics, flagged_scores = annotate_topics(sorted_scores, crs)
+            except SkipError:
+                data_sample["state"] = SKIPPED
+                continue
+            finally:
                 crs.clear()
                 crs.refresh()
-                display_text(
-                    data_sample["text"],
-                    clean_data,
-                    data_sample["scores"],
-                    nb_texts,
-                    cleaned_texts_this_session,
-                    crs,
-                )
-                display_topics(
-                    flagged_scores,
-                    {"text": data_sample["text"], "topics": correct_topics},
-                    crs,
-                )
+
+            display_text(
+                data_sample["text"],
+                clean_data,
+                data_sample["scores"],
+                nb_texts,
+                cleaned_texts_this_session,
+                crs,
+            )
+            display_topics(
+                flagged_scores,
+                {"text": data_sample["text"], "topics": correct_topics},
+                crs,
+            )
 
             current_text = {
                 "text": data_sample["text"],
@@ -252,7 +262,7 @@ def main():
                         )
                         annot_id_str = chr(crs.getch())
                         crs.addstr("\n")
-                        if not annot_id_str.isnumeric() or int(annot_id_str) not in range(1, count + 1):
+                        if not annot_id_str.isnumeric() or int(annot_id_str) not in range(1, len(sorted_scores) + 1):
                             crs.addstr("Invalid annotation number.\n")
                             continue
                         else:
