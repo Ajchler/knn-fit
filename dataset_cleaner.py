@@ -175,6 +175,32 @@ def get_topics_to_check(data_sample, clean_data):
     return topics_to_check, warning
 
 
+def get_redo_or_move_on_action(crs):
+    key = crs.getch()
+    if key in (ord(c) for c in "qQcCrRsS"):
+        crs.addstr("\n")
+        if key == ord("q") or key == ord("Q"):  # Quit
+            crs.addstr("Are you sure you want to quit? [Y/n] ")
+            key = crs.getch()
+            if key == ord("y") or key == ord("Y"):
+                raise QuitError()
+        elif key == ord("r") or key == ord("R"):  # Redo
+            return "redo"
+
+        elif key == ord("c") or key == ord("C"):
+            return "continue"
+
+        elif key == ord("s") or key == ord("S"):
+            crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
+            key = crs.getch()
+            while key not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
+                key = crs.getch()
+
+            crs.addstr("\n")
+            if key == ord("y") or key == ord("Y"):
+                raise SkipError
+
+
 def redo_if_needed(sorted_topics, correct_topics, data_sample, text_displayer, crs):
     current_text = {
         "text": data_sample["text"],
@@ -188,60 +214,42 @@ def redo_if_needed(sorted_topics, correct_topics, data_sample, text_displayer, c
             "\n\nIf you want to continue, press 'c', to redo an annotation press 'r', to quit press 'q'. ",
             0,
         )
-        key = crs.getch()
-        if key in (ord(c) for c in "qQcCrRsS"):
+        action = get_redo_or_move_on_action(crs)
+        if action == "redo":  # Redo
+            addstr_wordwrap(
+                crs,
+                "Choose which annotation to redo by pressing the number of the annotation: ",
+                0,
+            )
+            annot_id_str = chr(crs.getch())
             crs.addstr("\n")
-            if key == ord("q") or key == ord("Q"):  # Quit
-                crs.addstr("Are you sure you want to quit? [Y/n] ")
-                key = crs.getch()
-                if key == ord("y") or key == ord("Y"):
-                    raise QuitError()
-            elif key == ord("r") or key == ord("R"):  # Redo
-                addstr_wordwrap(
-                    crs,
-                    "Choose which annotation to redo by pressing the number of the annotation: ",
-                    0,
-                )
-                annot_id_str = chr(crs.getch())
-                crs.addstr("\n")
-                if not annot_id_str.isnumeric() or int(annot_id_str) not in range(1, len(sorted_topics) + 1):
-                    crs.addstr("Invalid annotation number.\n")
-                    continue
-                else:
-                    annot_id = int(annot_id_str)
-                    score = sorted_topics[annot_id - 1]
+            if not annot_id_str.isnumeric() or int(annot_id_str) not in range(1, len(sorted_topics) + 1):
+                crs.addstr("Invalid annotation number.\n")
+                continue
+            else:
+                annot_id = int(annot_id_str)
+                score = sorted_topics[annot_id - 1]
 
-                    crs.addstr("Relevant? [Y/n] ")
+                crs.addstr("Relevant? [Y/n] ")
+                choice = crs.getch()
+                while choice not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
                     choice = crs.getch()
-                    while choice not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
-                        choice = crs.getch()
 
-                    if choice == ord("n") or choice == ord("N"):
-                        if score["topic"] in current_text["topics"]:
-                            current_text["topics"].remove(score["topic"])
-                    elif choice == ord("y") or choice == ord("Y"):
-                        if score["topic"] not in current_text["topics"]:
-                            current_text["topics"].append(score["topic"])
-                    sorted_topics[annot_id - 1] = score
-                    crs.clear()
-                    crs.refresh()
-                    text_displayer.display()
-                    display_topics(sorted_topics, current_text, crs)
+                if choice == ord("n") or choice == ord("N"):
+                    if score["topic"] in current_text["topics"]:
+                        current_text["topics"].remove(score["topic"])
+                elif choice == ord("y") or choice == ord("Y"):
+                    if score["topic"] not in current_text["topics"]:
+                        current_text["topics"].append(score["topic"])
+                sorted_topics[annot_id - 1] = score
+                crs.clear()
+                crs.refresh()
+                text_displayer.display()
+                display_topics(sorted_topics, current_text, crs)
 
-            elif key == ord("c") or key == ord("C"):
-                data_sample["state"] = CHECKED
-                break
-            elif key == ord("s") or key == ord("S"):
-
-                crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
-                key = crs.getch()
-                while key not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
-                    key = crs.getch()
-
-                crs.addstr("\n")
-                if key == ord("y") or key == ord("Y"):
-                    data_sample["state"] = SKIPPED
-                    raise SkipError
+        elif action == 'continue':
+            data_sample["state"] = CHECKED
+            break
 
     return current_text
 
@@ -310,7 +318,7 @@ def main():
             except QuitError:
                 end = True
             except SkipError:
-                pass  # already handled inside of redo_if_needed, to be improved
+                data_sample["state"] = SKIPPED
 
             # Update cleaned data
             clean_data[data_sample["text_id"]] = current_text
