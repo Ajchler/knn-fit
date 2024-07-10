@@ -26,17 +26,23 @@ def get_args():
     return parser.parse_args()
 
 
-def display_text(
-    text, clean_data, topics, nb_texts, cleaned_texts_this_session, crs
-):
-    crs.addstr("Statistics:\n", curses.A_BOLD)
-    crs.addstr(f"You have cleaned {cleaned_texts_this_session} texts this session.\n")
-    crs.addstr(f"There are {nb_texts - (len(clean_data))} texts left.\n\n")
-    crs.addstr("Controls:\n", curses.A_BOLD)
-    addstr_wordwrap(crs, controls_string, 0)
-    crs.addstr("\nText:\n\n", curses.A_BOLD)
-    addstr_wordwrap(crs, text + "\n", 0)
-    crs.addstr("\n\n")
+class TextDisplayer:
+    def __init__(self, text, nb_left, nb_cleaned_this_session, crs):
+        self.text = text
+        self.nb_left = nb_left
+        self.nb_cleaned_this_session = nb_cleaned_this_session
+
+        self.crs = crs
+
+    def display(self):
+        self.crs.addstr("Statistics:\n", curses.A_BOLD)
+        self.crs.addstr(f"You have cleaned {self.nb_cleaned_this_session} texts this session.\n")
+        self.crs.addstr(f"There are {self.nb_left} texts left.\n\n")
+        self.crs.addstr("Controls:\n", curses.A_BOLD)
+        addstr_wordwrap(self.crs, controls_string, 0)
+        self.crs.addstr("\nText:\n\n", curses.A_BOLD)
+        addstr_wordwrap(self.crs, self.text + "\n", 0)
+        self.crs.addstr("\n\n")
 
 
 def display_topics(flagged_scores, current_text, crs):
@@ -202,16 +208,10 @@ def main():
             if warning:
                 crs.addstr(warning)
 
-            sorted_topics = sorted(topics_to_check, key=lambda x: x["similarity"], reverse=False)
+            text_displayer = TextDisplayer(data_sample["text"], nb_texts - (len(clean_data)), cleaned_texts_this_session, crs)
+            text_displayer.display()
 
-            display_text(
-                data_sample["text"],
-                clean_data,
-                data_sample["scores"],
-                nb_texts,
-                cleaned_texts_this_session,
-                crs,
-            )
+            sorted_topics = sorted(topics_to_check, key=lambda x: x["similarity"], reverse=False)
 
             try:
                 correct_topics = annotate_topics(sorted_topics, crs)
@@ -222,14 +222,7 @@ def main():
                 crs.clear()
                 crs.refresh()
 
-            display_text(
-                data_sample["text"],
-                clean_data,
-                data_sample["scores"],
-                nb_texts,
-                cleaned_texts_this_session,
-                crs,
-            )
+            text_displayer.display()
             display_topics(
                 sorted_topics,
                 {"text": data_sample["text"], "topics": correct_topics},
@@ -290,14 +283,7 @@ def main():
                             sorted_topics[annot_id - 1] = score
                             crs.clear()
                             crs.refresh()
-                            display_text(
-                                data_sample["text"],
-                                clean_data,
-                                data_sample["scores"],
-                                nb_texts,
-                                cleaned_texts_this_session,
-                                crs,
-                            )
+                            text_displayer.display()
                             display_topics(sorted_topics, current_text, crs)
 
                     elif key == ord("c") or key == ord("C"):
