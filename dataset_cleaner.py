@@ -201,6 +201,32 @@ def get_redo_or_move_on_action(crs):
                 raise SkipError
 
 
+def annotation_to_redo(nb_topics, crs):
+    addstr_wordwrap(
+        crs,
+        "Choose which annotation to redo by pressing the number of the annotation: ",
+        0,
+    )
+    annot_id_str = chr(crs.getch())
+    crs.addstr("\n")
+    if not annot_id_str.isnumeric() or int(annot_id_str) not in range(1, nb_topics + 1):
+        return None
+
+    return int(annot_id_str) - 1
+
+
+def user_redoes_to_accept(crs):
+    crs.addstr("Relevant? [Y/n] ")
+    choice = crs.getch()
+    while choice not in (ord(c) for c in "yYnN"):
+        choice = crs.getch()
+
+    if choice == ord("n") or choice == ord("N"):
+        return False
+    elif choice == ord("y") or choice == ord("Y"):
+        return True
+
+
 def redo_if_needed(sorted_topics, correct_topics, data_sample, text_displayer, crs):
     current_text = {
         "text": data_sample["text"],
@@ -216,36 +242,25 @@ def redo_if_needed(sorted_topics, correct_topics, data_sample, text_displayer, c
         )
         action = get_redo_or_move_on_action(crs)
         if action == "redo":  # Redo
-            addstr_wordwrap(
-                crs,
-                "Choose which annotation to redo by pressing the number of the annotation: ",
-                0,
-            )
-            annot_id_str = chr(crs.getch())
-            crs.addstr("\n")
-            if not annot_id_str.isnumeric() or int(annot_id_str) not in range(1, len(sorted_topics) + 1):
+            annot_id = annotation_to_redo(len(sorted_topics), crs)
+            if annot_id is None:
                 crs.addstr("Invalid annotation number.\n")
                 continue
-            else:
-                annot_id = int(annot_id_str)
-                score = sorted_topics[annot_id - 1]
 
-                crs.addstr("Relevant? [Y/n] ")
-                choice = crs.getch()
-                while choice not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
-                    choice = crs.getch()
+            topic = sorted_topics[annot_id]
 
-                if choice == ord("n") or choice == ord("N"):
-                    if score["topic"] in current_text["topics"]:
-                        current_text["topics"].remove(score["topic"])
-                elif choice == ord("y") or choice == ord("Y"):
-                    if score["topic"] not in current_text["topics"]:
-                        current_text["topics"].append(score["topic"])
-                sorted_topics[annot_id - 1] = score
-                crs.clear()
-                crs.refresh()
-                text_displayer.display()
-                display_topics(sorted_topics, current_text, crs)
+            relevant = user_redoes_to_accept(crs)
+
+            if relevant and topic["topic"] not in current_text["topics"]:
+                current_text["topics"].append(topic["topic"])
+            elif topic["topic"] in current_text["topics"]:
+                current_text["topics"].remove(topic["topic"])
+
+            sorted_topics[annot_id] = topic
+            crs.clear()
+            crs.refresh()
+            text_displayer.display()
+            display_topics(sorted_topics, current_text, crs)
 
         elif action == 'continue':
             data_sample["state"] = CHECKED
