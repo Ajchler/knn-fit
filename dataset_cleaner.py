@@ -123,11 +123,11 @@ def user_says_accept(crs):
                 raise SkipError
 
 
-def annotate_topics(sorted_scores, crs):
+def annotate_topics(sorted_topics, crs):
     accepted_topic = False
     correct_topics = []
 
-    for i, score in enumerate(sorted_scores, start=1):
+    for i, score in enumerate(sorted_topics, start=1):
         #  Once a topic is accepted, we accept all the following ones (based on sorted similarity)
         if accepted_topic:
             correct_topics.append(score["topic"])
@@ -179,7 +179,6 @@ def main():
         for i, line in enumerate(lines):
             data_sample = json.loads(line)
             text_id = data_sample["text_id"]
-            skip = False
 
             # Check whether there are topics to be annotated
             annotate = False
@@ -198,7 +197,7 @@ def main():
             if not annotate:
                 continue
 
-            sorted_scores = sorted(topics_to_check, key=lambda x: x["similarity"], reverse=False)
+            sorted_topics = sorted(topics_to_check, key=lambda x: x["similarity"], reverse=False)
 
             display_text(
                 data_sample["text"],
@@ -209,9 +208,8 @@ def main():
                 crs,
             )
 
-            # Annotate topics  TODO
             try:
-                correct_topics = annotate_topics(sorted_scores, crs)
+                correct_topics = annotate_topics(sorted_topics, crs)
             except SkipError:
                 data_sample["state"] = SKIPPED
                 continue
@@ -228,7 +226,7 @@ def main():
                 crs,
             )
             display_topics(
-                sorted_scores,
+                sorted_topics,
                 {"text": data_sample["text"], "topics": correct_topics},
                 crs,
             )
@@ -240,6 +238,7 @@ def main():
             }
 
             # Redo annotations if needed, quit or continue
+            skip = False
             while True:
                 if skip:
                     break
@@ -265,12 +264,12 @@ def main():
                         )
                         annot_id_str = chr(crs.getch())
                         crs.addstr("\n")
-                        if not annot_id_str.isnumeric() or int(annot_id_str) not in range(1, len(sorted_scores) + 1):
+                        if not annot_id_str.isnumeric() or int(annot_id_str) not in range(1, len(sorted_topics) + 1):
                             crs.addstr("Invalid annotation number.\n")
                             continue
                         else:
                             annot_id = int(annot_id_str)
-                            score = sorted_scores[annot_id - 1]
+                            score = sorted_topics[annot_id - 1]
 
                             crs.addstr("Relevant? [Y/n] ")
                             choice = crs.getch()
@@ -283,7 +282,7 @@ def main():
                             elif choice == ord("y") or choice == ord("Y"):
                                 if score["topic"] not in current_text["topics"]:
                                     current_text["topics"].append(score["topic"])
-                            sorted_scores[annot_id - 1] = score
+                            sorted_topics[annot_id - 1] = score
                             crs.clear()
                             crs.refresh()
                             display_text(
@@ -294,7 +293,7 @@ def main():
                                 cleaned_texts_this_session,
                                 crs,
                             )
-                            display_topics(sorted_scores, current_text, crs)
+                            display_topics(sorted_topics, current_text, crs)
 
                     elif key == ord("c") or key == ord("C"):
                         data_sample["state"] = CHECKED
