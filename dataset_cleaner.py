@@ -99,46 +99,53 @@ class SkipError(Exception):
     pass
 
 
+def user_says_accept(crs):
+    crs.addstr("Relevant? [Y/n] ")
+
+    done = False
+    while not done:
+        key = crs.getch()
+        while key not in (ord(c) for c in "yYnNsS"):
+            key = crs.getch()
+
+        if key == ord("n") or key == ord("N"):
+            return False
+        elif key == ord("y") or key == ord("Y"):
+            return True
+        else:
+            crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
+            key = crs.getch()
+            while key not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
+                key = crs.getch()
+
+            crs.addstr("\n")
+            if key == ord("y") or key == ord("Y"):
+                raise SkipError
+
+
 def annotate_topics(sorted_scores, crs):
     accepted_topic = False
     correct_topics = []
     flagged_scores = []
-    count = 0
 
-    for score in sorted_scores:
-        done = False
-        count += 1
+    for i, score in enumerate(sorted_scores, start=1):
+        #  Once a topic is accepted, we accept all the following ones (based on sorted similarity)
         if accepted_topic:
             correct_topics.append(score["topic"])
-            crs.addstr(f"Accepted topic #{count}: ", curses.A_BOLD)
+            crs.addstr(f"Accepted topic #{i}: ", curses.A_BOLD)
             crs.addstr(f"{score['topic']}\n")
             flagged_scores.append(score)
             continue
+
         crs.addstr("\n")
-        crs.addstr(f"Topic #{count}: ", curses.A_BOLD)
+        crs.addstr(f"Topic #{i}: ", curses.A_BOLD)
         crs.addstr(f"{score['topic']}\n")
-        crs.addstr("Relevant? [Y/n] ")
 
-        while not done:
-            key = crs.getch()
-            while key not in (ord(c) for c in "yYnNsS"):
-                key = crs.getch()
-
-            if key == ord("n") or key == ord("N"):
-                done = True
-            elif key == ord("y") or key == ord("Y"):
-                correct_topics.append(score["topic"])
-                accepted_topic = True
-                done = True
-            else:
-                crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
-                key = crs.getch()
-                while key not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
-                    key = crs.getch()
-
-                crs.addstr("\n")
-                if key == ord("y") or key == ord("Y"):
-                    raise SkipError
+        if user_says_accept(crs):
+            correct_topics.append(score["topic"])
+            accepted_topic = True
+        else:
+            pass  # rejection is implicit
 
         flagged_scores.append(score)
 
