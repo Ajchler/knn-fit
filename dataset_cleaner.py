@@ -148,6 +148,23 @@ def annotate_topics(sorted_topics, crs):
     return correct_topics
 
 
+def get_topics_to_check(data_sample, clean_data):
+    topics_to_check = []
+    warning = ''
+
+    state = data_sample.get("state", NOT_VISITED)
+
+    if state == NOT_VISITED:
+        topics_to_check = data_sample["scores"]
+
+    text_id = data_sample["text_id"]
+    if state == CHECKED and text_id not in clean_data:
+        topics_to_check = data_sample["scores"]
+        warning = (f'WARNING: Sample {text_id} marked as CHECKED (2), but not present in CLEAN_DATA. Someone tampered with CLEAN_DATA?\n\n')
+
+    return topics_to_check, warning
+
+
 def main():
     args = get_args()
 
@@ -178,24 +195,12 @@ def main():
 
         for i, line in enumerate(lines):
             data_sample = json.loads(line)
-            text_id = data_sample["text_id"]
 
-            # Check whether there are topics to be annotated
-            annotate = False
-            topics_to_check = []
-            state = data_sample.get("state", NOT_VISITED)
-
-            if state == NOT_VISITED:
-                annotate = True
-                topics_to_check = data_sample["scores"]
-
-            if state == CHECKED and text_id not in clean_data:
-                annotate = True
-                topics_to_check = data_sample["scores"]
-                crs.addstr(f'WARNING: Sample {text_id} marked as CHECKED (2), but not present in CLEAN_DATA. Someone tampered with CLEAN_DATA?\n\n')
-
-            if not annotate:
+            topics_to_check, warning = get_topics_to_check(data_sample, clean_data)
+            if not topics_to_check:
                 continue
+            if warning:
+                crs.addstr(warning)
 
             sorted_topics = sorted(topics_to_check, key=lambda x: x["similarity"], reverse=False)
 
@@ -312,7 +317,7 @@ def main():
                             break
 
             # Update cleaned data
-            clean_data[text_id] = current_text
+            clean_data[data_sample["text_id"]] = current_text
             cleaned_texts_this_session += 1
 
             # Clean data
