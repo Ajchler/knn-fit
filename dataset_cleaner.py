@@ -268,6 +268,19 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
     return correct_topics
 
 
+def user_quit_or_proceed(crs):
+    key = crs.getch()
+
+    while key not in (ord(c) for c in "cCqQ"):
+        key = crs.getch()
+
+    if key == ord("c") or key == ord("C"):
+        return "proceed"
+
+    elif key == ord("q") or key == ord("Q"):
+        return "quit"
+
+
 def main():
     args = get_args()
 
@@ -286,9 +299,9 @@ def main():
 
     with CursesWindow() as crs:
         put_introduction(nb_texts, nb_texts_cleaned, crs)
-        key = crs.getch()
 
-        if key != ord("c"):
+        quit_or_proceed = user_quit_or_proceed(crs)
+        if quit_or_proceed == "quit":
             return 0
 
         for i, line in enumerate(lines):
