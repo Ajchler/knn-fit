@@ -26,15 +26,23 @@ def get_args():
     return parser.parse_args()
 
 
-class TextDisplayer:
-    def __init__(self, text, nb_left, nb_cleaned_this_session, crs):
+class ScreenOwner:
+    def __init__(self, text, sorted_topics, nb_left, nb_cleaned_this_session, crs):
+        self.crs = crs
+
         self.text = text
         self.nb_left = nb_left
         self.nb_cleaned_this_session = nb_cleaned_this_session
+        self.sorted_topics = sorted_topics
 
-        self.crs = crs
+        self.correct_topics = None
 
-    def display(self):
+        self.redraw()
+
+    def redraw(self):
+        self.crs.clear()
+        self.crs.refresh()
+
         self.crs.addstr("Statistics:\n", curses.A_BOLD)
         self.crs.addstr(f"You have cleaned {self.nb_cleaned_this_session} texts this session.\n")
         self.crs.addstr(f"There are {self.nb_left} texts left.\n\n")
@@ -44,18 +52,19 @@ class TextDisplayer:
         addstr_wordwrap(self.crs, self.text + "\n", 0)
         self.crs.addstr("\n\n")
 
+        if self.correct_topics is not None:
+            for i, topic in enumerate(self.sorted_topics, start=1):
+                self.crs.addstr(f"Topic #{i}: ", curses.A_BOLD)
+                self.crs.addstr(f"{topic['topic']}\n")
+                self.crs.addstr("Relevant? ")
+                if topic["topic"] in self.correct_topics:
+                    self.crs.addstr("✓\n\n")
+                else:
+                    self.crs.addstr("✗\n\n")
 
-def display_topics(flagged_scores, correct_topics, crs):
-    count = 0
-    for score in flagged_scores:
-        count += 1
-        crs.addstr(f"Topic #{count}: ", curses.A_BOLD)
-        crs.addstr(f"{score['topic']}\n")
-        crs.addstr("Relevant? ")
-        if score["topic"] in correct_topics:
-            crs.addstr("✓\n\n")
-        else:
-            crs.addstr("✗\n\n")
+    def update_correct_topics(self, correct_topics):
+        self.correct_topics = correct_topics
+        self.redraw()
 
 
 class CursesWindow:
@@ -227,7 +236,7 @@ def user_redoes_to_accept(crs):
         return True
 
 
-def redo_if_needed(sorted_topics, correct_topics, text_displayer, crs):
+def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
     while True:
         addstr_wordwrap(
             crs,
@@ -251,10 +260,7 @@ def redo_if_needed(sorted_topics, correct_topics, text_displayer, crs):
                 correct_topics.remove(topic["topic"])
 
             sorted_topics[annot_id] = topic
-            crs.clear()
-            crs.refresh()
-            text_displayer.display()
-            display_topics(sorted_topics, correct_topics, crs)
+            screen_owner.update_correct_topics(correct_topics)
 
         elif action == 'continue':
             break
@@ -283,11 +289,7 @@ def main():
         key = crs.getch()
 
         if key != ord("c"):
-            print(f'DEBUG got {key}')
             return 0
-
-        crs.clear()
-        crs.refresh()
 
         for i, line in enumerate(lines):
             data_sample = json.loads(line)
@@ -298,10 +300,8 @@ def main():
             if warning:
                 crs.addstr(warning)
 
-            text_displayer = TextDisplayer(data_sample["text"], nb_texts - (len(clean_data)), cleaned_texts_this_session, crs)
-            text_displayer.display()
-
             sorted_topics = sorted(topics_to_check, key=lambda x: x["similarity"], reverse=False)
+            screen_owner = ScreenOwner(data_sample["text"], sorted_topics, nb_texts - (len(clean_data)), cleaned_texts_this_session, crs)
 
             try:
                 correct_topics = annotate_topics(sorted_topics, crs)
@@ -309,16 +309,12 @@ def main():
                 data_sample["state"] = SKIPPED
                 continue
             finally:
-                crs.clear()
-                crs.refresh()
-
-            text_displayer.display()
-            display_topics(sorted_topics, correct_topics, crs)
+                screen_owner.update_correct_topics(correct_topics)
 
             # Redo annotations if needed, quit or continue
             end = False
             try:
-                correct_topics = redo_if_needed(sorted_topics, correct_topics, text_displayer, crs)
+                correct_topics = redo_if_needed(sorted_topics, correct_topics, screen_owner, crs)
                 data_sample["state"] = CHECKED
             except QuitError:
                 end = True
@@ -351,11 +347,6 @@ def main():
 
             if end:
                 break
-
-            crs.clear()
-            crs.refresh()
-
-        crs.getch()  # TODO DEBUG
 
 
 if __name__ == '__main__':
