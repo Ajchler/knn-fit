@@ -119,8 +119,6 @@ def annotate_topics(sorted_topics, crs):
         #  Once a topic is accepted, we accept all the following ones (based on sorted similarity)
         if accepted_topic:
             correct_topics.append(score["topic"])
-            crs.addstr(f"Accepted topic #{i}: ", curses.A_BOLD)
-            crs.addstr(f"{score['topic']}\n")
             continue
 
         crs.addstr("\n")
@@ -240,7 +238,6 @@ def main():
             except getting_user_input.SkipError:
                 data_sample["state"] = SKIPPED
                 continue
-            finally:
 
             # Redo annotations if needed, quit or continue
             end = False
