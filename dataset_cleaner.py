@@ -45,14 +45,14 @@ class TextDisplayer:
         self.crs.addstr("\n\n")
 
 
-def display_topics(flagged_scores, current_text, crs):
+def display_topics(flagged_scores, correct_topics, crs):
     count = 0
     for score in flagged_scores:
         count += 1
         crs.addstr(f"Topic #{count}: ", curses.A_BOLD)
         crs.addstr(f"{score['topic']}\n")
         crs.addstr("Relevant? ")
-        if score["topic"] in current_text["topics"]:
+        if score["topic"] in correct_topics:
             crs.addstr("✓\n\n")
         else:
             crs.addstr("✗\n\n")
@@ -227,13 +227,7 @@ def user_redoes_to_accept(crs):
         return True
 
 
-def redo_if_needed(sorted_topics, correct_topics, data_sample, text_displayer, crs):
-    current_text = {
-        "text": data_sample["text"],
-        "topics": correct_topics,
-        "potential_hard_negatives": data_sample["potential_hard_negatives"],
-    }
-
+def redo_if_needed(sorted_topics, correct_topics, text_displayer, crs):
     while True:
         addstr_wordwrap(
             crs,
@@ -251,22 +245,21 @@ def redo_if_needed(sorted_topics, correct_topics, data_sample, text_displayer, c
 
             relevant = user_redoes_to_accept(crs)
 
-            if relevant and topic["topic"] not in current_text["topics"]:
-                current_text["topics"].append(topic["topic"])
-            elif topic["topic"] in current_text["topics"]:
-                current_text["topics"].remove(topic["topic"])
+            if relevant and topic["topic"] not in correct_topics:
+                correct_topics.append(topic["topic"])
+            elif topic["topic"] in correct_topics:
+                correct_topics.remove(topic["topic"])
 
             sorted_topics[annot_id] = topic
             crs.clear()
             crs.refresh()
             text_displayer.display()
-            display_topics(sorted_topics, current_text, crs)
+            display_topics(sorted_topics, correct_topics, crs)
 
         elif action == 'continue':
-            data_sample["state"] = CHECKED
             break
 
-    return current_text
+    return correct_topics
 
 
 def main():
@@ -320,20 +313,23 @@ def main():
                 crs.refresh()
 
             text_displayer.display()
-            display_topics(
-                sorted_topics,
-                {"text": data_sample["text"], "topics": correct_topics},
-                crs,
-            )
+            display_topics(sorted_topics, correct_topics, crs)
 
             # Redo annotations if needed, quit or continue
             end = False
             try:
-                current_text = redo_if_needed(sorted_topics, correct_topics, data_sample, text_displayer, crs)
+                correct_topics = redo_if_needed(sorted_topics, correct_topics, text_displayer, crs)
+                data_sample["state"] = CHECKED
             except QuitError:
                 end = True
             except SkipError:
                 data_sample["state"] = SKIPPED
+
+            current_text = {
+                "text": data_sample["text"],
+                "topics": correct_topics,
+                "potential_hard_negatives": data_sample["potential_hard_negatives"],
+            }
 
             # Update cleaned data
             clean_data[data_sample["text_id"]] = current_text
