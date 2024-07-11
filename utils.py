@@ -309,16 +309,20 @@ class CursesWindow:
 
 
 class ScreenOwner:
-    def __init__(self, crs, text, nb_left, nb_cleaned_this_session, controls_string):
+    controls_string = ""
+
+    def __init__(self, crs, text, nb_left, nb_cleaned_this_session):
         self.crs = crs
         self.text = text
         self.nb_left = nb_left
         self.nb_cleaned_this_session = nb_cleaned_this_session
-        self.controls_string = controls_string
 
         self.redraw()
 
     def redraw(self):
+        assert_message = "You must set the controls_string attribute in the subclass."
+        assert self.controls_string != "", assert_message
+
         self.crs.clear()
         self.crs.refresh()
 

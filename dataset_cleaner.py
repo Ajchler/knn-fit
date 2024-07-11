@@ -33,7 +33,7 @@ class ScreenOwnerCleaning(ScreenOwner):
         self.correct_topics = None
         self.sorted_topics = sorted_topics
 
-        super().__init__(crs, text, nb_left, nb_cleaned_this_session, ScreenOwnerCleaning.controls_string)
+        super().__init__(crs, text, nb_left, nb_cleaned_this_session)
 
     def redraw(self):
         super().redraw()

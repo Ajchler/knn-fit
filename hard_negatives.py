@@ -9,7 +9,7 @@ import jsonlines
 from openai import OpenAI
 
 import getting_user_input
-from utils import addstr_wordwrap, CursesWindow, curses_overflow_restarts
+from utils import addstr_wordwrap, CursesWindow, curses_overflow_restarts, ScreenOwner
 
 
 class OpenAIGeneration:
@@ -188,6 +188,24 @@ class MergeHN:
             writer.write_all(self.data_to)
 
 
+class ScreenOwnerHns(ScreenOwner):
+    controls_string = (
+        "Press y/Y if the topic is good hard-negative, n/N if it is not.\n"
+        "You can also skip this text anytime by pressing 's'.\n"
+    )
+
+    def __init__(self, crs, text, nb_left, nb_cleaned_this_session, good_topics):
+        self.good_topics = good_topics
+        super().__init__(crs, text, nb_left, nb_cleaned_this_session)
+
+    def redraw(self):
+        super().redraw()
+
+        self.crs.addstr("\nCorrect topics: \n", curses.A_BOLD)
+        for good_topic in self.good_topics:
+            self.crs.addstr(f"{good_topic}\n")
+
+
 class HNAnnotator:
     def __init__(self, source_path):
         self.source_path = source_path
@@ -260,8 +278,6 @@ class HNAnnotator:
         annotated_texts_session = 0
         if quit_or_proceed == "proceed":
             end = False
-            crs.clear()
-            crs.refresh()
 
             for text_id in self.data:
                 skipped = False
@@ -270,32 +286,17 @@ class HNAnnotator:
                         for hn in self.data[text_id]["potential_hard_negatives"]
                 ):
                     continue
-
-                crs.addstr("Statistics:\n", curses.A_BOLD)
-                crs.addstr(f"You have annotated {annotated_texts_session} texts this session.\n")
-                crs.addstr(
-                    f"There are {number_of_texts - number_of_annotated_texts - annotated_texts_session} texts left.\n\n"
-                )
-
-                crs.addstr("Controls:\n", curses.A_BOLD)
-                crs.addstr(
-                    "Press y/Y if the topic is good hard-negative, n/N if it is not.\n"
-                    "You can also skip this text anytime by pressing 's'.\n"
-                )
+                to_annotate = number_of_texts - number_of_annotated_texts - annotated_texts_session
                 text = self.data[text_id]["text"]
-                potential_hard_negatives = self.data[text_id][
-                    "potential_hard_negatives"
-                ]
 
-                crs.addstr("\nText:\n", curses.A_BOLD)
-                addstr_wordwrap(crs, text, 0)
-                crs.addstr("\n")
+                good_topics = self.data[text_id]["topics"]
+                owner = ScreenOwnerHns(crs, text, to_annotate, annotated_texts_session, good_topics)
 
-                crs.addstr("\nCorrect topics: \n", curses.A_BOLD)
-                for good_topic in self.data[text_id]["topics"]:
-                    crs.addstr(f"{good_topic}\n")
+
 
                 crs.addstr("\nPotential hard negatives:\n", curses.A_BOLD)
+
+                potential_hard_negatives = self.data[text_id]["potential_hard_negatives"]
                 annotated_hard_negatives = []
                 count = 0
                 for count, hard_negative in enumerate(potential_hard_negatives):
