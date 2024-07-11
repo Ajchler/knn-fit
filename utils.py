@@ -268,7 +268,7 @@ def words_and_spaces(s):
     """
     # Inspired by http://stackoverflow.com/a/8769863/262271
     # Drop the last space
-    return list(itertools.chain.from_iterable(zip(s.split(), itertools.repeat(' '))))[:-1]
+    return list(itertools.chain.from_iterable(zip(s.split(' '), itertools.repeat(' '))))[:-1]
 
 
 def curses_overflow_restarts(func, attempts=100):
