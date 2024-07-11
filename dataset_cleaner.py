@@ -5,7 +5,7 @@ import curses
 import json
 import os
 
-from utils import addstr_wordwrap, CursesWindow, curses_overflow_restarts
+from utils import addstr_wordwrap, CursesWindow, curses_overflow_restarts, ScreenOwner
 import getting_user_input
 
 NOT_VISITED = 0
@@ -13,44 +13,30 @@ SKIPPED = 1
 CHECKED = 2
 
 
-controls_string = ("Press y/Y if the topic is relevant, n/N if it is not. You can also skip this text anytime by "
-                   "pressing 's'.\nYou will also be able to redo the current text after last topic if you make a "
-                   "mistake during cleaning.\n\n")
-
-
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--INPUT_FILE', required=False, default="evaluation-data/out-mlm-mpnet-base-v2-all-texts_example.jsonl")
+    parser.add_argument('--INPUT_FILE', required=False,
+                        default="evaluation-data/out-mlm-mpnet-base-v2-all-texts_example.jsonl")
     parser.add_argument('--CLEAN_DATASET', default="data/clean_dataset.json")
 
     return parser.parse_args()
 
 
-class ScreenOwner:
-    def __init__(self, text, sorted_topics, nb_left, nb_cleaned_this_session, crs):
-        self.crs = crs
+class ScreenOwnerCleaning(ScreenOwner):
+    controls_string = (
+        "Press y/Y if the topic is relevant, n/N if it is not. You can also skip this text anytime by "
+        "pressing 's'.\nYou will also be able to redo the current text after last topic if you make a "
+        "mistake during cleaning.\n\n")
 
-        self.text = text
-        self.nb_left = nb_left
-        self.nb_cleaned_this_session = nb_cleaned_this_session
-        self.sorted_topics = sorted_topics
+    def __init__(self, crs, text, nb_left, nb_cleaned_this_session, sorted_topics):
 
         self.correct_topics = None
+        self.sorted_topics = sorted_topics
 
-        self.redraw()
+        super().__init__(crs, text, nb_left, nb_cleaned_this_session, ScreenOwnerCleaning.controls_string)
 
     def redraw(self):
-        self.crs.clear()
-        self.crs.refresh()
-
-        self.crs.addstr("Statistics:\n", curses.A_BOLD)
-        self.crs.addstr(f"You have cleaned {self.nb_cleaned_this_session} texts this session.\n")
-        self.crs.addstr(f"There are {self.nb_left} texts left.\n\n")
-        self.crs.addstr("Controls:\n", curses.A_BOLD)
-        addstr_wordwrap(self.crs, controls_string, 0)
-        self.crs.addstr("\nText:\n\n", curses.A_BOLD)
-        addstr_wordwrap(self.crs, self.text + "\n", 0)
-        self.crs.addstr("\n\n")
+        super().redraw()
 
         if self.correct_topics is not None:
             for i, topic in enumerate(self.sorted_topics, start=1):
@@ -126,7 +112,8 @@ def get_topics_to_check(data_sample, clean_data):
     text_id = data_sample["text_id"]
     if state == CHECKED and text_id not in clean_data:
         topics_to_check = data_sample["scores"]
-        warning = (f'WARNING: Sample {text_id} marked as CHECKED (2), but not present in CLEAN_DATA. Someone tampered with CLEAN_DATA?\n\n')
+        warning = (
+            f'WARNING: Sample {text_id} marked as CHECKED (2), but not present in CLEAN_DATA. Someone tampered with CLEAN_DATA?\n\n')
 
     return topics_to_check, warning
 
@@ -200,7 +187,11 @@ def start_data_cleaning(clean_data, lines, args):
                 crs.addstr(warning)
 
             sorted_topics = sorted(topics_to_check, key=lambda x: x["similarity"], reverse=False)
-            screen_owner = ScreenOwner(data_sample["text"], sorted_topics, nb_texts - (len(clean_data)), cleaned_texts_this_session, crs)
+            screen_owner = ScreenOwnerCleaning(crs,
+                                               data_sample["text"],
+                                               nb_texts - (len(clean_data)),
+                                               cleaned_texts_this_session,
+                                               sorted_topics)
 
             try:
                 correct_topics = annotate_topics(sorted_topics, crs)

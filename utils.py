@@ -288,6 +288,7 @@ def curses_overflow_restarts(func, attempts=100):
 
     return wrapper
 
+
 class CursesWindow:
     def __init__(self):
         self.crs = None
@@ -305,6 +306,31 @@ class CursesWindow:
         assert self.crs is not None
         self.crs.clear()
         curses.endwin()
+
+
+class ScreenOwner:
+    def __init__(self, crs, text, nb_left, nb_cleaned_this_session, controls_string):
+        self.crs = crs
+        self.text = text
+        self.nb_left = nb_left
+        self.nb_cleaned_this_session = nb_cleaned_this_session
+        self.controls_string = controls_string
+
+        self.redraw()
+
+    def redraw(self):
+        self.crs.clear()
+        self.crs.refresh()
+
+        self.crs.addstr("Statistics:\n", curses.A_BOLD)
+        self.crs.addstr(f"You have cleaned {self.nb_cleaned_this_session} texts this session.\n")
+        self.crs.addstr(f"There are {self.nb_left} texts left.\n\n")
+        self.crs.addstr("Controls:\n", curses.A_BOLD)
+        addstr_wordwrap(self.crs, self.controls_string, 0)
+
+        self.crs.addstr("\nText:\n\n", curses.A_BOLD)
+        addstr_wordwrap(self.crs, self.text + "\n", 0)
+        self.crs.addstr("\n\n")
 
 
 if __name__ == '__main__':
