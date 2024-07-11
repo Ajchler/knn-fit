@@ -8,6 +8,7 @@ import curses
 import jsonlines
 from openai import OpenAI
 
+import getting_user_input
 from utils import addstr_wordwrap
 
 
@@ -259,34 +260,14 @@ class HNAnnotator:
             ]
         )
         crs = self.crs
-        crs.addstr("*******************************************\n")
-        crs.addstr("* Welcome to the hard negative annotator! *\n")
-        crs.addstr("*******************************************\n\n\n")
 
-        crs.addstr("Statistics:\n", curses.A_BOLD)
-        crs.addstr(f"Number of texts: {number_of_texts}\n")
-        crs.addstr(f"Number of annotated texts: {number_of_annotated_texts}\n")
-        crs.addstr(
-            f"Number of texts left: {number_of_texts - number_of_annotated_texts}\n\n\n"
-        )
-
-        crs.addstr("Instructions:\n\n", curses.A_BOLD)
-        crs.addstr(
-            "You will be presented with texts and potential hard negatives for each text.\n"
-            "Hard negatives from dataset are marked with 'D', generated hard negatives with 'G'.\n"
-        )
-        crs.addstr(
-            "For each potential hard negative, you will be prompted to mark it as relevant or not.\n"
-        )
-        crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n"
-                   "You can also skip text anytime by pressing 's'.\n")
-
-        crs.addstr("Your annotations will be saved after each text.\n\n\n")
-        crs.addstr("If you want to start annotating, press 'c' or 'q' to quit.\n\n")
-        key = crs.getch()
+        self.put_introduction(number_of_texts, number_of_annotated_texts)
+        quit_or_proceed = getting_user_input.quit_or_proceed(crs)
+        if quit_or_proceed == "quit":
+            return 0
 
         annotated_texts_session = 0
-        if key == ord("c"):
+        if quit_or_proceed == "proceed":
             end = False
             crs.clear()
             crs.refresh()
@@ -443,6 +424,33 @@ class HNAnnotator:
 
         crs.clear()
         curses.endwin()
+
+    def put_introduction(self, number_of_texts, number_of_annotated_texts):
+        crs = self.crs
+        crs.addstr("*******************************************\n")
+        crs.addstr("* Welcome to the hard negative annotator! *\n")
+        crs.addstr("*******************************************\n\n\n")
+
+        crs.addstr("Statistics:\n", curses.A_BOLD)
+        crs.addstr(f"Number of texts: {number_of_texts}\n")
+        crs.addstr(f"Number of annotated texts: {number_of_annotated_texts}\n")
+        crs.addstr(
+            f"Number of texts left: {number_of_texts - number_of_annotated_texts}\n\n\n"
+        )
+
+        crs.addstr("Instructions:\n\n", curses.A_BOLD)
+        crs.addstr(
+            "You will be presented with texts and potential hard negatives for each text.\n"
+            "Hard negatives from dataset are marked with 'D', generated hard negatives with 'G'.\n"
+        )
+        crs.addstr(
+            "For each potential hard negative, you will be prompted to mark it as relevant or not.\n"
+        )
+        crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n"
+                   "You can also skip text anytime by pressing 's'.\n")
+
+        crs.addstr("Your annotations will be saved after each text.\n\n\n")
+        crs.addstr("If you want to start annotating, press 'c' or 'q' to quit.\n\n")
 
 
 if "__main__" == __name__:
