@@ -44,6 +44,13 @@ def accept_or_reject(crs, question_string):
 
 
 def redo_or_proceed(crs):
+    """
+    Asks the user if they want to redo the current text or proceed to the next one.
+    :param crs: Curses window
+    :return: String "redo" or "proceed"
+    :raises SkipError: If the user wants to skip the current text
+    :raises QuitError: If the user wants to quit the program
+    """
     key = crs.getch()
     if key in (ord(c) for c in "qQcCrRsS"):
         crs.addstr("\n")
@@ -51,7 +58,7 @@ def redo_or_proceed(crs):
             crs.addstr("Are you sure you want to quit? [Y/n] ")
             key = crs.getch()
             if key == ord("y") or key == ord("Y"):
-                raise QuitError()
+                raise QuitError
         elif key == ord("r") or key == ord("R"):  # Redo
             return "redo"
 

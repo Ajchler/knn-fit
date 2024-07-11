@@ -136,7 +136,7 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
     while True:
         addstr_wordwrap(
             crs,
-            "\n\nIf you want to continue, press 'c', to redo an annotation press 'r', to quit press 'q'. ",
+            "\n\nPress 'c' to continue, 'r' to redo if you made a mistake, 'q' to quit. ",
             0,
         )
         action = getting_user_input.redo_or_proceed(crs)
