@@ -249,10 +249,17 @@ def main():
             except getting_user_input.SkipError:
                 data_sample["state"] = SKIPPED
 
+            # Add user rejected topics to the set of potential hard negatives
+            rejected_topics = [
+                {"topic": topic["topic"], "type": "rejected"}
+                for topic in sorted_topics
+                if topic["topic"] not in correct_topics]
+            new_potential_hns = data_sample["potential_hard_negatives"] + rejected_topics
+
             current_text = {
                 "text": data_sample["text"],
                 "topics": correct_topics,
-                "potential_hard_negatives": data_sample["potential_hard_negatives"],
+                "potential_hard_negatives": new_potential_hns,
             }
 
             # Update cleaned data
