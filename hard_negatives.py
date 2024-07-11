@@ -9,7 +9,7 @@ import jsonlines
 from openai import OpenAI
 
 import getting_user_input
-from utils import addstr_wordwrap, CursesWindow
+from utils import addstr_wordwrap, CursesWindow, curses_overflow_restarts
 
 
 class OpenAIGeneration:
@@ -231,21 +231,10 @@ class HNAnnotator:
         self.crs.insstr(y_old - hn_offset - ins_lines_count, 0, annotation)
         self.crs.move(y_old, x_old)
 
+    @curses_overflow_restarts
     def annotate(self):
-        try:
-            if self.curses_err_count < 100:
-                with CursesWindow() as self.crs:
-                    self.annotate_loop()
-            else:
-                print(
-                    "Curses error, exiting to prevent terminal corruption."
-                    "Try increasing the terminal size."
-                )
-        except curses.error:
-            self.crs.clear()
-            self.crs.refresh()
-            self.curses_err_count += 1
-            self.annotate()
+        with CursesWindow() as self.crs:
+            self.annotate_loop()
 
     def annotate_loop(self):
         number_of_texts = len(self.data)

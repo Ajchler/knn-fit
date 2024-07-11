@@ -1,3 +1,4 @@
+import functools
 import itertools
 import logging
 from contextlib import contextmanager
@@ -269,6 +270,23 @@ def words_and_spaces(s):
     # Drop the last space
     return list(itertools.chain.from_iterable(zip(s.split(), itertools.repeat(' '))))[:-1]
 
+
+def curses_overflow_restarts(func, attempts=100):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        assert attempts > 0
+        for attempt in range(attempts):
+            try:
+                return func(*args, **kwargs)
+            except curses.error:
+                pass  # Try again in next loop
+        if attempt == attempts - 1:
+            print(
+                "Curses error, exiting to prevent terminal corruption."
+                "Try increasing the terminal size."
+            )
+
+    return wrapper
 
 class CursesWindow:
     def __init__(self):

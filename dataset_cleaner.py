@@ -3,10 +3,9 @@
 import argparse
 import curses
 import json
-import logging
 import os
 
-from utils import addstr_wordwrap, CursesWindow
+from utils import addstr_wordwrap, CursesWindow, curses_overflow_restarts
 import getting_user_input
 
 NOT_VISITED = 0
@@ -178,18 +177,8 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
     return correct_topics
 
 
-def main():
-    args = get_args()
-
-    with open(args.INPUT_FILE, "r") as f:
-        lines = f.readlines()
-
-    if os.path.exists(args.CLEAN_DATASET):
-        with open(args.CLEAN_DATASET, "r") as f:
-            clean_data = json.load(f)
-    else:
-        clean_data = {}
-
+@curses_overflow_restarts
+def start_data_cleaning(clean_data, lines, args):
     nb_texts = len(lines)
     nb_texts_cleaned = len(clean_data)
     cleaned_texts_this_session = 0
@@ -263,6 +252,21 @@ def main():
 
             if end:
                 break
+
+
+def main():
+    args = get_args()
+
+    with open(args.INPUT_FILE, "r") as f:
+        lines = f.readlines()
+
+    if os.path.exists(args.CLEAN_DATASET):
+        with open(args.CLEAN_DATASET, "r") as f:
+            clean_data = json.load(f)
+    else:
+        clean_data = {}
+
+    start_data_cleaning(clean_data, lines, args)
 
 
 if __name__ == '__main__':
