@@ -358,7 +358,8 @@ class HNAnnotator:
         crs.addstr("Instructions:\n\n", curses.A_BOLD)
         crs.addstr(
             "You will be presented with texts and potential hard negatives for each text.\n"
-            "Hard negatives from dataset are marked with 'D', generated hard negatives with 'G'.\n"
+            "Hard negatives from dataset are marked with 'D', generated hard negatives with 'G' and "
+            "rejected hard negatives with 'R'.\n"
         )
         crs.addstr(
             "For each potential hard negative, you will be prompted to mark it as relevant or not.\n"
