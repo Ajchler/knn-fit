@@ -237,6 +237,8 @@ class HNAnnotator:
 
     def annotate_text(self, screen_owner, potential_hard_negatives):
         annotated_hard_negatives = []
+        screen_owner.redraw_annotated(annotated_hard_negatives)
+
         crs = self.crs
         for count, hard_negative in enumerate(potential_hard_negatives, start=1):
             crs.addstr(f"{hard_negative['topic']} \n")
@@ -288,8 +290,6 @@ class HNAnnotator:
             good_topics = self.data[text_id]["topics"]
             screen_owner = ScreenOwnerHns(crs, text, to_annotate, annotated_texts_session, good_topics)
 
-            crs.addstr("\nPotential hard negatives:\n", curses.A_BOLD)
-
             potential_hard_negatives = self.data[text_id]["potential_hard_negatives"]
             try:
                 annotated_hard_negatives = self.annotate_text(screen_owner, potential_hard_negatives)
@@ -297,47 +297,13 @@ class HNAnnotator:
                 skipped = True
                 annotated_hard_negatives = []
 
-            count = len(annotated_hard_negatives)
-
-            ins_lines_count = 1
-            while True and not skipped:
-                crs.addstr(
-                    "\n\nPress 'c' to continue, 'r' to redo if you made a mistake, 'q' to quit. "
-                )
-                ins_lines_count += 2
-                key = crs.getch()
-                if key in (ord(c) for c in "qQcCrRsS"):
-                    if key == ord("q") or key == ord("Q"):
-                        ins_lines_count += 1
-                        crs.addstr("\nAre you sure you want to quit? [Y/n] ")
-                        key = crs.getch()
-                        if key == ord("y") or key == ord("Y"):
-                            end = True
-                            break
-                    elif key == ord("r") or key == ord("R"):
-                        ins_lines_count += 1
-                        crs.addstr(
-                            "\nToggle annotation result by pressing the number of the annotation: "
-                        )
-                        key = chr(crs.getch())
-                        if not key.isnumeric() or int(key) not in range(1, count + 2):
-                            crs.addstr("\nInvalid annotation number.")
-                            ins_lines_count += 1
-                            continue
-                        else:
-                            key = int(key)
-                            toggle_to = not annotated_hard_negatives[key - 1]['annotation']
-                            annotated_hard_negatives[key - 1]['annotation'] = toggle_to
-                            screen_owner.redraw_annotated(annotated_hard_negatives)
-                            crs.addstr(f"\nAnnotation #{key} toggled.")
-                            ins_lines_count += 1
-                    elif key == ord("c") or key == ord("C"):
-                        break
-                    elif key == ord("s") or key == ord("S"):
-                        ins_lines_count += 1
-                        if self.confirm_skip():
-                            skipped = True
-                            break
+            try:
+                if not skipped:
+                    annotated_hard_negatives = self.redo_if_needed(screen_owner, annotated_hard_negatives)
+            except getting_user_input.QuitError:
+                end = True
+            except getting_user_input.SkipError:
+                skipped = True
 
             if skipped:
                 self.data[text_id]["skipped"] = True
@@ -376,7 +342,6 @@ class HNAnnotator:
             if end:
                 break
 
-
     def put_introduction(self, number_of_texts, number_of_annotated_texts):
         crs = self.crs
         crs.addstr("*******************************************\n")
@@ -403,6 +368,33 @@ class HNAnnotator:
 
         crs.addstr("Your annotations will be saved after each text.\n\n\n")
         crs.addstr("If you want to start annotating, press 'c' or 'q' to quit.\n\n")
+
+    def redo_if_needed(self, screen_owner, annotated_hard_negatives):
+        crs = self.crs
+        while True:
+            addstr_wordwrap(
+                crs,
+                "\n\nPress 'c' to continue, 'r' to redo if you made a mistake, 'q' to quit. ",
+                0,
+            )
+            action = getting_user_input.redo_or_proceed(crs)
+            if action == "redo":
+                crs.addstr(
+                    "\nToggle annotation result by pressing the number of the annotation: "
+                )
+                key = chr(crs.getch())
+                if key.isnumeric() and 1 <= int(key) <= len(annotated_hard_negatives):
+                    hn_id = int(key) - 1
+                    toggle_to = not annotated_hard_negatives[hn_id]['annotation']
+                    annotated_hard_negatives[hn_id]['annotation'] = toggle_to
+                    screen_owner.redraw_annotated(annotated_hard_negatives)
+                    crs.addstr(f"\nAnnotation #{hn_id} toggled.")
+                else:
+                    crs.addstr("\nInvalid annotation number.")
+                    continue
+            elif action == 'continue':
+                break
+        return annotated_hard_negatives
 
 
 if "__main__" == __name__:
