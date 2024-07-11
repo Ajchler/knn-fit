@@ -204,7 +204,12 @@ class HNAnnotator:
 
     def annotation_done(self, annotation_true, hn_type, i):
         annotation = "✓" if annotation_true else "✗"
-        hn_type = "D" if hn_type == "from_dataset" else "G"
+        type_shortcuts = {
+            "from_dataset": "D",
+            "generated": "G",
+            "rejected": "R",
+        }
+        hn_type = type_shortcuts[hn_type]
         y, x = self.crs.getyx()
         self.crs.move(y, 0)
 
