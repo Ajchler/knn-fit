@@ -207,6 +207,7 @@ def start_data_cleaning(clean_data, lines, args):
                 data_sample["state"] = CHECKED
             except getting_user_input.QuitError:
                 end = True
+                data_sample["state"] = CHECKED
             except getting_user_input.SkipError:
                 data_sample["state"] = SKIPPED
 
