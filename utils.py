@@ -270,6 +270,25 @@ def words_and_spaces(s):
     return list(itertools.chain.from_iterable(zip(s.split(), itertools.repeat(' '))))[:-1]
 
 
+class CursesWindow:
+    def __init__(self):
+        self.crs = None
+
+    def __enter__(self):
+        try:
+            self.crs = curses.initscr()
+        except Exception:
+            logging.error("Error initializing curses, try increasing the terminal size.")
+            raise
+
+        return self.crs
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        assert self.crs is not None
+        self.crs.clear()
+        curses.endwin()
+
+
 if __name__ == '__main__':
     pass
     # GoldDatasetConvertor()()

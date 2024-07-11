@@ -6,7 +6,7 @@ import json
 import logging
 import os
 
-from utils import addstr_wordwrap
+from utils import addstr_wordwrap, CursesWindow
 import getting_user_input
 
 NOT_VISITED = 0
@@ -66,25 +66,6 @@ class ScreenOwner:
     def update_correct_topics(self, correct_topics):
         self.correct_topics = correct_topics
         self.redraw()
-
-
-class CursesWindow:
-    def __init__(self):
-        self.crs = None
-
-    def __enter__(self):
-        try:
-            self.crs = curses.initscr()
-        except Exception:
-            logging.error("Error initializing curses, try increasing the terminal size.")
-            raise
-
-        return self.crs
-
-    def __exit__(self, exc_type, exc_value, traceback):
-        assert self.crs is not None
-        self.crs.clear()
-        curses.endwin()
 
 
 def put_introduction(nb_texts, nb_texts_cleaned, crs):

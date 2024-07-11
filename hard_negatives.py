@@ -9,7 +9,7 @@ import jsonlines
 from openai import OpenAI
 
 import getting_user_input
-from utils import addstr_wordwrap
+from utils import addstr_wordwrap, CursesWindow
 
 
 class OpenAIGeneration:
@@ -200,11 +200,7 @@ class HNAnnotator:
         else:
             self.out_data = []
         self.curses_err_count = 0
-        try:
-            self.crs = curses.initscr()
-        except:
-            print("Error initializing curses, try increasing the terminal size.")
-            exit(1)
+        self.crs = None
 
     def annotation_done(self, annotation_true, hn_type, i):
         annotation = "✓" if annotation_true else "✗"
@@ -238,7 +234,8 @@ class HNAnnotator:
     def annotate(self):
         try:
             if self.curses_err_count < 100:
-                self.annotate_loop()
+                with CursesWindow() as self.crs:
+                    self.annotate_loop()
             else:
                 print(
                     "Curses error, exiting to prevent terminal corruption."
