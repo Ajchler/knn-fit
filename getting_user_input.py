@@ -19,8 +19,8 @@ def quit_or_proceed(crs):
         return "quit"
 
 
-def accept_topic(crs):
-    crs.addstr("Relevant? [Y/n] ")
+def accept_or_reject(crs, question_string):
+    crs.addstr(question_string)
 
     done = False
     while not done:

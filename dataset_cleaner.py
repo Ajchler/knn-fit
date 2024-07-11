@@ -91,7 +91,7 @@ def annotate_topics(sorted_topics, crs):
         crs.addstr(f"Topic #{i}: ", curses.A_BOLD)
         crs.addstr(f"{score['topic']}\n")
 
-        if getting_user_input.accept_topic(crs):
+        if getting_user_input.accept_or_reject(crs, "Relevant? [Y/n] "):
             correct_topics.append(score["topic"])
             accepted_topic = True
         else:

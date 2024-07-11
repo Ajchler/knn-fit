@@ -201,10 +201,25 @@ class ScreenOwnerHns(ScreenOwner):
     def redraw(self):
         super().redraw()
 
-        self.crs.addstr("\nCorrect topics: \n", curses.A_BOLD)
+        self.crs.addstr("Correct topics: \n", curses.A_BOLD)
         for good_topic in self.good_topics:
             self.crs.addstr(f"{good_topic}\n")
 
+    def annotation_done(self, annotated_topic, hn_count):
+        annotation = "✓" if annotated_topic['annotation'] else "✗"
+        type_shortcuts = {
+            "from_dataset": "D",
+            "generated": "G",
+            "rejected": "R",
+        }
+        hn_type = type_shortcuts[annotated_topic["type"]]
+        self.crs.addstr(f"{annotation} #{hn_count} {hn_type}: {annotated_topic['topic']}\n")
+
+    def redraw_annotated(self, annotated_topics):
+        self.redraw()
+
+        for count, annotated_topic in enumerate(annotated_topics, start=1):
+            self.annotation_done(annotated_topic, count)
 
 class HNAnnotator:
     def __init__(self, source_path):
@@ -220,39 +235,21 @@ class HNAnnotator:
         self.curses_err_count = 0
         self.crs = None
 
-    def annotation_done(self, annotation_true, hn_type, i):
-        annotation = "✓" if annotation_true else "✗"
-        type_shortcuts = {
-            "from_dataset": "D",
-            "generated": "G",
-            "rejected": "R",
-        }
-        hn_type = type_shortcuts[hn_type]
-        y, x = self.crs.getyx()
-        self.crs.move(y, 0)
+    def annotate_text(self, screen_owner, potential_hard_negatives):
+        annotated_hard_negatives = []
+        crs = self.crs
+        for count, hard_negative in enumerate(potential_hard_negatives, start=1):
+            crs.addstr(f"{hard_negative['topic']} \n")
+            is_good_hn = getting_user_input.accept_or_reject(crs, "Good hard negative? [Y/n]")
 
-        # Delete the last line
-        self.crs.deleteln()
-        # Add char at the end of last line
-        self.crs.insstr(y - 1, 0, f"{annotation} #{i + 1} {hn_type}: ")
-        self.crs.move(y, 0)
-        self.crs.refresh()
-
-    def confirm_skip(self):
-        self.crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
-        key = self.crs.getch()
-        if key == ord("y") or key == ord("Y"):
-            return True
-        return False
-
-    def switch_annotation(self, hn_offset, toggle_to, ins_lines_count):
-        annotation = "✓" if toggle_to else "✗"
-        y_old, x_old = self.crs.getyx()
-
-        # replace first char by annotation
-        self.crs.delch(y_old - hn_offset - ins_lines_count, 0)
-        self.crs.insstr(y_old - hn_offset - ins_lines_count, 0, annotation)
-        self.crs.move(y_old, x_old)
+            annotated_hn = {
+                "topic": hard_negative["topic"],
+                "type": hard_negative["type"],
+                "annotation": is_good_hn,
+            }
+            annotated_hard_negatives.append(annotated_hn)
+            screen_owner.redraw_annotated(annotated_hard_negatives)
+        return annotated_hard_negatives
 
     @curses_overflow_restarts
     def annotate(self):
@@ -276,146 +273,109 @@ class HNAnnotator:
             return 0
 
         annotated_texts_session = 0
-        if quit_or_proceed == "proceed":
-            end = False
+        end = False
 
-            for text_id in self.data:
-                skipped = False
-                if any(
-                        "annotation" in hn
-                        for hn in self.data[text_id]["potential_hard_negatives"]
-                ):
-                    continue
-                to_annotate = number_of_texts - number_of_annotated_texts - annotated_texts_session
-                text = self.data[text_id]["text"]
+        for text_id in self.data:
+            skipped = False
+            if any(
+                    "annotation" in hn
+                    for hn in self.data[text_id]["potential_hard_negatives"]
+            ):
+                continue
+            to_annotate = number_of_texts - number_of_annotated_texts - annotated_texts_session
+            text = self.data[text_id]["text"]
 
-                good_topics = self.data[text_id]["topics"]
-                owner = ScreenOwnerHns(crs, text, to_annotate, annotated_texts_session, good_topics)
+            good_topics = self.data[text_id]["topics"]
+            screen_owner = ScreenOwnerHns(crs, text, to_annotate, annotated_texts_session, good_topics)
 
+            crs.addstr("\nPotential hard negatives:\n", curses.A_BOLD)
 
-
-                crs.addstr("\nPotential hard negatives:\n", curses.A_BOLD)
-
-                potential_hard_negatives = self.data[text_id]["potential_hard_negatives"]
+            potential_hard_negatives = self.data[text_id]["potential_hard_negatives"]
+            try:
+                annotated_hard_negatives = self.annotate_text(screen_owner, potential_hard_negatives)
+            except getting_user_input.SkipError:
+                skipped = True
                 annotated_hard_negatives = []
-                count = 0
-                for count, hard_negative in enumerate(potential_hard_negatives):
-                    while True and not skipped:
-                        crs.addstr(f"{hard_negative['topic']} \n")
-                        crs.addstr("Good hard negative? [Y/n] ")
+
+            count = len(annotated_hard_negatives)
+
+            ins_lines_count = 1
+            while True and not skipped:
+                crs.addstr(
+                    "\n\nPress 'c' to continue, 'r' to redo if you made a mistake, 'q' to quit. "
+                )
+                ins_lines_count += 2
+                key = crs.getch()
+                if key in (ord(c) for c in "qQcCrRsS"):
+                    if key == ord("q") or key == ord("Q"):
+                        ins_lines_count += 1
+                        crs.addstr("\nAre you sure you want to quit? [Y/n] ")
                         key = crs.getch()
-                        if key == ord("s") or key == ord("S"):
-                            skipped = self.confirm_skip()
-                            if skipped:
-                                break
-                            else:
-                                # remove last 3 lines (1 for prompt, 1 for topic, 1 for skip prompt)
-                                y_old, x_old = self.crs.getyx()
-                                crs.deleteln()
-                                self.crs.move(y_old - 1, 0)
-                                crs.deleteln()
-                                self.crs.move(y_old - 2, 0)
-                                crs.deleteln()
-                                continue
-
-                        is_good_hn = key == ord("y") or key == ord("Y")
-                        annotated_hn = {
-                            "topic": hard_negative["topic"],
-                            "type": hard_negative["type"],
-                            "annotation": is_good_hn,
-                        }
-                        annotated_hard_negatives.append(annotated_hn)
-                        self.annotation_done(is_good_hn, hard_negative["type"], count)
-                        break
-
-                ins_lines_count = 1
-                while True and not skipped:
-                    crs.addstr(
-                        "\n\nPress 'c' to continue, 'r' to redo if you made a mistake, 'q' to quit. "
-                    )
-                    ins_lines_count += 2
-                    key = crs.getch()
-                    if (
-                            key == ord("q")
-                            or key == ord("Q")
-                            or key == ord("c")
-                            or key == ord("C")
-                            or key == ord("r")
-                            or key == ord("R")
-                            or key == ord("S")
-                            or key == ord("s")
-                    ):
-                        if key == ord("q") or key == ord("Q"):
-                            ins_lines_count += 1
-                            crs.addstr("\nAre you sure you want to quit? [Y/n] ")
-                            key = crs.getch()
-                            if key == ord("y") or key == ord("Y"):
-                                end = True
-                                break
-                        elif key == ord("r") or key == ord("R"):
-                            ins_lines_count += 1
-                            crs.addstr(
-                                "\nToggle annotation result by pressing the number of the annotation: "
-                            )
-                            key = chr(crs.getch())
-                            if not key.isnumeric() or int(key) not in range(1, count + 2):
-                                crs.addstr("\nInvalid annotation number.")
-                                ins_lines_count += 1
-                                continue
-                            else:
-                                key = int(key)
-                                toggle_to = not annotated_hard_negatives[key - 1]['annotation']
-                                annotated_hard_negatives[key - 1]['annotation'] = toggle_to
-                                self.switch_annotation(count - (key - 1), toggle_to, ins_lines_count)
-                                crs.addstr(f"\nAnnotation #{key} toggled.")
-                                ins_lines_count += 1
-                        elif key == ord("c") or key == ord("C"):
+                        if key == ord("y") or key == ord("Y"):
+                            end = True
                             break
-                        elif key == ord("s") or key == ord("S"):
+                    elif key == ord("r") or key == ord("R"):
+                        ins_lines_count += 1
+                        crs.addstr(
+                            "\nToggle annotation result by pressing the number of the annotation: "
+                        )
+                        key = chr(crs.getch())
+                        if not key.isnumeric() or int(key) not in range(1, count + 2):
+                            crs.addstr("\nInvalid annotation number.")
                             ins_lines_count += 1
-                            if self.confirm_skip():
-                                skipped = True
-                                break
+                            continue
+                        else:
+                            key = int(key)
+                            toggle_to = not annotated_hard_negatives[key - 1]['annotation']
+                            annotated_hard_negatives[key - 1]['annotation'] = toggle_to
+                            screen_owner.redraw_annotated(annotated_hard_negatives)
+                            crs.addstr(f"\nAnnotation #{key} toggled.")
+                            ins_lines_count += 1
+                    elif key == ord("c") or key == ord("C"):
+                        break
+                    elif key == ord("s") or key == ord("S"):
+                        ins_lines_count += 1
+                        if self.confirm_skip():
+                            skipped = True
+                            break
 
-                if skipped:
-                    self.data[text_id]["skipped"] = True
-                else:
-                    selected_hns = []
-                    for hn in annotated_hard_negatives:
-                        if hn["annotation"]:
-                            selected_hns.append(hn["topic"])
-                    self.data[text_id]["potential_hard_negatives"] = annotated_hard_negatives
-                    self.out_data.append(
-                        {
-                            "text_id": text_id,
-                            "text": text,
-                            "topics": self.data[text_id]["topics"],
-                            "hard_negatives": selected_hns,
-                        }
-                    )
-
-                # save data to input file for annotation control
-                json.dump(
-                    self.data,
-                    open(self.source_path, "w"),
-                    indent=4,
-                    ensure_ascii=False,
+            if skipped:
+                self.data[text_id]["skipped"] = True
+            else:
+                selected_hns = []
+                for hn in annotated_hard_negatives:
+                    if hn["annotation"]:
+                        selected_hns.append(hn["topic"])
+                self.data[text_id]["potential_hard_negatives"] = annotated_hard_negatives
+                self.out_data.append(
+                    {
+                        "text_id": text_id,
+                        "text": text,
+                        "topics": self.data[text_id]["topics"],
+                        "hard_negatives": selected_hns,
+                    }
                 )
 
-                # save data to output file for final merging
-                with jsonlines.open(self.out_json_path, mode='w') as writer:
-                    writer.write_all(self.out_data)
+            # save data to input file for annotation control
+            json.dump(
+                self.data,
+                open(self.source_path, "w"),
+                indent=4,
+                ensure_ascii=False,
+            )
 
-                annotated_texts_session += 1
+            # save data to output file for final merging
+            with jsonlines.open(self.out_json_path, mode='w') as writer:
+                writer.write_all(self.out_data)
 
-                crs.clear()
-                crs.refresh()
+            annotated_texts_session += 1
 
-                if end:
-                    break
+            crs.clear()
+            crs.refresh()
 
-        crs.clear()
-        curses.endwin()
+            if end:
+                break
+
 
     def put_introduction(self, number_of_texts, number_of_annotated_texts):
         crs = self.crs
