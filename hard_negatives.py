@@ -201,9 +201,13 @@ class ScreenOwnerHns(ScreenOwner):
     def redraw(self):
         super().redraw()
 
-        self.crs.addstr("Correct topics: \n", curses.A_BOLD)
+        if len(self.good_topics):
+            self.crs.addstr("Correct topics: \n", curses.A_BOLD)
+
         for good_topic in self.good_topics:
             self.crs.addstr(f"{good_topic}\n")
+
+        self.crs.addstr("\nHard negatives: \n", curses.A_BOLD)
 
     def annotation_done(self, annotated_topic, hn_count):
         annotation = "✓" if annotated_topic['annotation'] else "✗"
@@ -237,7 +241,6 @@ class HNAnnotator:
 
     def annotate_text(self, screen_owner, potential_hard_negatives):
         annotated_hard_negatives = []
-        screen_owner.redraw_annotated(annotated_hard_negatives)
 
         crs = self.crs
         for count, hard_negative in enumerate(potential_hard_negatives, start=1):
