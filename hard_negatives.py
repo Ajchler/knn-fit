@@ -392,7 +392,7 @@ class HNAnnotator:
                     toggle_to = not annotated_hard_negatives[hn_id]['annotation']
                     annotated_hard_negatives[hn_id]['annotation'] = toggle_to
                     screen_owner.redraw_annotated(annotated_hard_negatives)
-                    crs.addstr(f"\nAnnotation #{hn_id} toggled.")
+                    crs.addstr(f"\nAnnotation #{key} toggled.")
                 else:
                     crs.addstr("\nInvalid annotation number.")
                     continue
