@@ -267,6 +267,7 @@ class HNAnnotator:
         number_of_annotated_texts = sum(
             [
                 any("annotation" in hn for hn in text["potential_hard_negatives"])
+                or "skipped" in text
                 for text in self.data.values()
             ]
         )
@@ -281,6 +282,9 @@ class HNAnnotator:
         end = False
 
         for text_id in self.data:
+            if "skipped" in self.data[text_id]:
+                continue
+
             skipped = False
             if any(
                     "annotation" in hn
