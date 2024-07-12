@@ -15,9 +15,12 @@ CHECKED = 2
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--INPUT_FILE', required=False,
-                        default="evaluation-data/out-mlm-mpnet-base-v2-all-texts_example.jsonl")
-    parser.add_argument('--CLEAN_DATASET', default="data/clean_dataset.json")
+    parser.add_argument(
+        "--INPUT_FILE",
+        required=False,
+        default="evaluation-data/out-mlm-mpnet-base-v2-all-texts_example.jsonl",
+    )
+    parser.add_argument("--CLEAN_DATASET", default="data/clean_dataset.json")
 
     return parser.parse_args()
 
@@ -26,7 +29,8 @@ class ScreenOwnerCleaning(ScreenOwner):
     controls_string = (
         "Press y/Y if the topic is relevant, n/N if it is not. You can also skip this text anytime by "
         "pressing 's'.\nYou will also be able to redo the current text after last topic if you make a "
-        "mistake during cleaning.\n\n")
+        "mistake during cleaning.\n\n"
+    )
 
     def __init__(self, crs, text, nb_left, nb_cleaned_this_session, sorted_topics):
 
@@ -102,7 +106,7 @@ def annotate_topics(sorted_topics, crs):
 
 def get_topics_to_check(data_sample, clean_data):
     topics_to_check = []
-    warning = ''
+    warning = ""
 
     state = data_sample.get("state", NOT_VISITED)
 
@@ -112,8 +116,7 @@ def get_topics_to_check(data_sample, clean_data):
     text_id = data_sample["text_id"]
     if state == CHECKED and text_id not in clean_data:
         topics_to_check = data_sample["scores"]
-        warning = (
-            f'WARNING: Sample {text_id} marked as CHECKED (2), but not present in CLEAN_DATA. Someone tampered with CLEAN_DATA?\n\n')
+        warning = f"WARNING: Sample {text_id} marked as CHECKED (2), but not present in CLEAN_DATA. Someone tampered with CLEAN_DATA?\n\n"
 
     return topics_to_check, warning
 
@@ -158,7 +161,7 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
             sorted_topics[annot_id] = topic
             screen_owner.update_correct_topics(correct_topics)
 
-        elif action == 'continue':
+        elif action == "continue":
             break
 
     return correct_topics
@@ -186,24 +189,31 @@ def start_data_cleaning(clean_data, lines, args):
             if warning:
                 crs.addstr(warning)
 
-            sorted_topics = sorted(topics_to_check, key=lambda x: x["similarity"], reverse=False)
-            screen_owner = ScreenOwnerCleaning(crs,
-                                               data_sample["text"],
-                                               nb_texts - (len(clean_data)),
-                                               cleaned_texts_this_session,
-                                               sorted_topics)
+            sorted_topics = sorted(
+                topics_to_check, key=lambda x: x["similarity"], reverse=False
+            )
+            screen_owner = ScreenOwnerCleaning(
+                crs,
+                data_sample["text"],
+                nb_texts - (len(clean_data)),
+                cleaned_texts_this_session,
+                sorted_topics,
+            )
 
             try:
                 correct_topics = annotate_topics(sorted_topics, crs)
                 screen_owner.update_correct_topics(correct_topics)
             except getting_user_input.SkipError:
                 data_sample["state"] = SKIPPED
+                lines[i] = json.dumps(data_sample) + "\n"
                 continue
 
             # Redo annotations if needed, quit or continue
             end = False
             try:
-                correct_topics = redo_if_needed(sorted_topics, correct_topics, screen_owner, crs)
+                correct_topics = redo_if_needed(
+                    sorted_topics, correct_topics, screen_owner, crs
+                )
                 data_sample["state"] = CHECKED
             except getting_user_input.QuitError:
                 end = True
@@ -215,8 +225,11 @@ def start_data_cleaning(clean_data, lines, args):
             rejected_topics = [
                 {"topic": topic["topic"], "type": "rejected"}
                 for topic in sorted_topics
-                if topic["topic"] not in correct_topics]
-            new_potential_hns = data_sample["potential_hard_negatives"] + rejected_topics
+                if topic["topic"] not in correct_topics
+            ]
+            new_potential_hns = (
+                data_sample["potential_hard_negatives"] + rejected_topics
+            )
 
             current_text = {
                 "text": data_sample["text"],
@@ -261,5 +274,5 @@ def main():
     start_data_cleaning(clean_data, lines, args)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
