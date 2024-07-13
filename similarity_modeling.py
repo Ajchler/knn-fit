@@ -186,6 +186,7 @@ def create_text_topics_scores_no_labels():
                         "text": text_data["text"],
                         "scores": text_data["scores"],
                     }
+                    , ensure_ascii=False
                 )
                 + "\n"
             )
