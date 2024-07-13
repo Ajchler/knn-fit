@@ -159,8 +159,10 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
 
             relevant = getting_user_input.redo_accept(crs)
 
-            if relevant and topic["topic"] not in correct_topics:
-                correct_topics.append(topic["topic"])
+            if relevant:
+                # User marked as relevant topic which was already marked as relevant
+                if topic["topic"] not in correct_topics:
+                    correct_topics.append(topic["topic"])
             elif topic["topic"] in correct_topics:
                 correct_topics.remove(topic["topic"])
 
