@@ -242,7 +242,7 @@ def start_data_cleaning(clean_data, lines, args):
 
             # Original data, write back to file with updated state
             data_sample["state"] = CHECKED if not skipped else SKIPPED
-            lines[i] = json.dumps(data_sample) + "\n"
+            lines[i] = json.dumps(data_sample, ensure_ascii=False) + "\n"
             with open(args.INPUT_FILE, "w") as f:
                 for line in lines:
                     f.write(line)

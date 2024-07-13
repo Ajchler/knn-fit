@@ -2,6 +2,7 @@
     "d2e4422a-d1c0-4a88-a9cf-bbc186894371": {
         "text": " <b>Italie, jmenovitě severní, má od dob Karla IV. s Čechami styky a v době, kdy archa chuděnická vznikla, působil v Praze a v bratrstvu malířském Vlach Romanus z Florencie.</b> ",
         "topics": [
+            "malířske bratstvo",
             "mezistátní vztahy"
         ],
         "potential_hard_negatives": [
@@ -21,23 +22,13 @@
                 "annotation": false
             },
             {
-                "topic": "kulturní výměna",
-                "type": "generated",
+                "topic": "výhodná koupě",
+                "type": "from_dataset",
                 "annotation": true
             },
             {
-                "topic": "diplomatické styky",
-                "type": "generated",
-                "annotation": false
-            },
-            {
-                "topic": "literární inspirace",
-                "type": "generated",
-                "annotation": false
-            },
-            {
-                "topic": "malířske bratstvo",
-                "type": "rejected",
+                "topic": "Dluh a vinitelé",
+                "type": "from_dataset",
                 "annotation": false
             }
         ]
@@ -51,33 +42,23 @@
         "potential_hard_negatives": [
             {
                 "topic": "Překlad z češtiny do francouzštiny ",
-                "type": "from_dataset",
-                "annotation": true
+                "type": "from_dataset"
             },
             {
                 "topic": "vmáčknutí zlata",
-                "type": "from_dataset",
-                "annotation": false
+                "type": "from_dataset"
             },
             {
                 "topic": "starostlivost o koně",
-                "type": "from_dataset",
-                "annotation": true
+                "type": "from_dataset"
             },
             {
-                "topic": "uživatelská příručka",
-                "type": "generated",
-                "annotation": false
+                "topic": "cpátko a zlato",
+                "type": "from_dataset"
             },
             {
-                "topic": "příručka první pomoci",
-                "type": "generated",
-                "annotation": false
-            },
-            {
-                "topic": "řemeslné umění",
-                "type": "generated",
-                "annotation": false
+                "topic": "Česko-francouzský slovník ",
+                "type": "from_dataset"
             }
         ]
     },
@@ -103,22 +84,20 @@
                 "type": "from_dataset"
             },
             {
-                "topic": "vizuální umění",
-                "type": "generated"
+                "topic": "motorsport",
+                "type": "from_dataset"
             },
             {
-                "topic": "rukodělná výroba",
-                "type": "generated"
-            },
-            {
-                "topic": "umělecká koncepce",
-                "type": "generated"
+                "topic": "auta",
+                "type": "from_dataset"
             }
         ]
     },
     "41d19573-2e5f-4bb6-b13b-8868227d4567": {
         "text": " <b>Začali večeřeti, ale nedali tomu mnoho. Mísy byly odnášeny skoro netknuty. Paní Jadwiga pobízela k jídlu — leč každý se vymlouval.</b> ",
-        "topics": [],
+        "topics": [
+            "večeření"
+        ],
         "potential_hard_negatives": [
             {
                 "topic": "politikaření ",
@@ -133,238 +112,16 @@
                 "type": "from_dataset"
             },
             {
-                "topic": "Nedostatečná hostina",
-                "type": "generated"
+                "topic": "historka",
+                "type": "from_dataset"
             },
             {
-                "topic": "Skromné pohoštění",
-                "type": "generated"
-            },
-            {
-                "topic": "Stravovací zvyky",
-                "type": "generated"
+                "topic": "sociální akce",
+                "type": "from_dataset"
             },
             {
                 "topic": "jedení",
                 "type": "rejected"
-            },
-            {
-                "topic": "večeření",
-                "type": "rejected"
-            }
-        ]
-    },
-    "662cdb90-66fd-44ab-837a-ed6d824bb42f": {
-        "text": " <b>Letha od narození Syna božího tisíczeho pětistého dvadczateho šestého tu neděli po S. Ondřeji stala se jest smluva mezi Váczlawem Hasíkem strany jedné a mezi Jakubem, synem Ondřejovým vinařem strany druhé taková, že Jakub již psaný má slúžiti z řemesla mistru Váczlavovi Hasíkovi z řemesla v leth pořád zběhlých a kdy by ta letha dobyl] tehdy mistr Váczlav má jemu sukni kupiti, košili a kabát nohavicze.</b> ",
-        "topics": [
-            "pracovní smlouva",
-            "uzavírání smlouv"
-        ],
-        "potential_hard_negatives": [
-            {
-                "topic": "finance",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "očekávání konce",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "dobytek",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "Feudální závislost",
-                "type": "generated"
-            },
-            {
-                "topic": "Cechovní řády",
-                "type": "generated"
-            },
-            {
-                "topic": "Šlechtický titul",
-                "type": "generated"
-            }
-        ]
-    },
-    "99aea6bd-781c-4314-8fbe-bc76558c8eb9": {
-        "text": " <b>Zovou se též raci, jsou pokryty štítem na hrudihlavě a mají oči na pohyblivých násadcích. Dělí se na 3 čeledě: 1.</b> ",
-        "topics": [
-            "anatomie raků"
-        ],
-        "potential_hard_negatives": [
-            {
-                "topic": "stavebnictví",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "učebnice matematiky",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "Mechanismus a funkce jazykových hrotů",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "biologie",
-                "type": "rejected"
-            }
-        ]
-    },
-    "51fa695f-2cba-4d40-b3d0-2ffc4ac3fcbb": {
-        "text": " <b>Při vychovávání mládeže a ve školách je cvičení těla tak podstatné a potřebné, jako cvičení ducha. U dítěte jest vyvinutí těla přednější, nežli vyvinutí ducha.</b> ",
-        "topics": [
-            "fyzické cvičení těla",
-            "výchova mládeže"
-        ],
-        "potential_hard_negatives": [
-            {
-                "topic": "motlidba",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "církev",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "dichotomie církevní",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "cvičení duch",
-                "type": "rejected"
-            }
-        ]
-    },
-    "ad71d117-1674-48f2-b726-9d389c0b9f02": {
-        "text": " <b>V záchvatu vděčnosti Eduard Poppe ho objal a políbil. Laube ho doprovodil ke dveřím, potom v kanceláři sám, nepřipustiv k tomu vrátného, pomohl mu obléci kožich a potom, když Eduard Poppe odešel a zmizel na ulici, rychle přistoupil ke Krüdlichovi. — Zítra ráno, pošle-li sem Eduard Poppe někoho, nebudu doma, slyšíte? — A přijde-li sám? — To je lhostejné.</b> ",
-        "topics": [],
-        "potential_hard_negatives": [
-            {
-                "topic": "rodina ",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "podnikání",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "vojenská strategie",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "homoerotické vztahy",
-                "type": "rejected"
-            }
-        ]
-    },
-    "4756949e-2973-4f62-8c19-a94cb26a99aa": {
-        "text": " <b>Kdy, nelze zjistiti, snad v bouřích husitských; aspoň v r. 1452. připomíná se jako zřícenina. Držitely panství byli později páni z Pernštýna — kteří asi přenesli sídlo s nepřístupného temene skalního do útulného údolí v Jimramově, vystavivše tam pěkný zámek, — později páni z Náchoda a konečně od 18. století hrabata z Belcredi.</b> ",
-        "topics": [
-            "vývoj panství",
-            "historická událost",
-            "šlechtické rody"
-        ],
-        "potential_hard_negatives": [
-            {
-                "topic": "rodinný erby",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "snění",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "rody",
-                "type": "from_dataset"
-            }
-        ]
-    },
-    "ab59f13b-fc74-46e5-ad5d-71573d9a57ae": {
-        "text": " <b>Ale až poslední nádeník, kterýkoli člověk bez zaměstnání, každá kuchařka, zničený sedlák uvidí — nikoli z novin, ale na vlastní oči — že se proletářská vláda nekoří před bohatstvím, ale pomáhá chudině, že se tato vláda nezastavuje před revolučními kroky, že odbírá nadbytečné plodiny u darmojedů a dává je hladovým, že usídluje mocí nebydlící do bytů boháčů, že nutí platit bohaté za mléko, ale nedává jim ni jediné kapky mléka, pokud jím nejsou zásobeny v dostatečné míře děti všech chu-</b> ",
-        "topics": [
-            "komunizmus",
-            "marxizmus",
-            "revoluce",
-            "proletářska revoluce",
-            "vykořisťování"
-        ],
-        "potential_hard_negatives": [
-            {
-                "topic": " techniky vaření",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "Kulinářské postupy",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "Reciprocita",
-                "type": "from_dataset"
-            }
-        ]
-    },
-    "fe100f6e-b502-4d9d-9074-9ab2f7957a77": {
-        "text": " <b>K tomu konci, aby se odklizovaly výkaly, užíti lze také soustavy odvážení jich.1) V městech, městečkách a uzavřených osadách budiž způsob, jakýmž se žumpy mají vyprazdňovati, upraven předpisy v oboru policie místní vydanými.</b> ",
-        "topics": [
-            "odklizovaní výkalů",
-            "vyprazdňování žump",
-            "předpisy o vyprazdňování žump"
-        ],
-        "potential_hard_negatives": [
-            {
-                "topic": "loupež",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "smrt",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "Vlastnictví ",
-                "type": "from_dataset"
-            }
-        ]
-    },
-    "2b83cefd-0277-44d9-b30d-48d8ffab3c56": {
-        "text": " <b>Neleželi tam ovšem všichni předkové. Byl to někdy četný rod vladycký. V době vojen svolávali se heslem „Grady“ a v erbu, pokládajíce se za lepší jiných vladyků, kteří ne vždy měli právo k erbu, měli „tupou podkovu.“ V roku 1331 pod Plovci postříleli němečtí lučištníci čtyřiasedmdesát bojovníků z Bohdance na blatech, a zachránil se toliko jediný Vojtěch, příjmím Tur, kterému král Vladislav Lokietek po porážce Němců zvláštním privilejem potvrdil erb a zboží Bohdanecké.</b> ",
-        "topics": [
-            "vraždení pod Plovci",
-            "rody",
-            "rodinný erby"
-        ],
-        "potential_hard_negatives": [
-            {
-                "topic": "sociální postavení",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "jednota",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "církev",
-                "type": "from_dataset"
-            }
-        ]
-    },
-    "915d9adf-a0dc-4c2c-862d-7c0d812ac045": {
-        "text": " <b>A tak gíme ċaſto zhreſſili proti Bohu, neměwſſe prawé wjry, prawé nadege a prawé láſky k Bohu; proti 3*</b> ",
-        "topics": [
-            "boží přikázání"
-        ],
-        "potential_hard_negatives": [
-            {
-                "topic": "motlidba",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "poslání",
-                "type": "from_dataset"
-            },
-            {
-                "topic": "rouhání",
-                "type": "from_dataset"
             }
         ]
     }
