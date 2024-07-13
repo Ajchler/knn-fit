@@ -167,6 +167,14 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
     return correct_topics
 
 
+def create_rejected_topics(correct_topics, sorted_topics):
+    return [
+        {"topic": topic["topic"], "type": "rejected"}
+        for topic in sorted_topics
+        if topic["topic"] not in correct_topics
+    ]
+
+
 @curses_overflow_restarts
 def start_data_cleaning(clean_data, lines, args):
     nb_texts = len(lines)
@@ -221,23 +229,19 @@ def start_data_cleaning(clean_data, lines, args):
                 skipped = True
 
             # Add user rejected topics to the set of potential hard negatives
-            rejected_topics = [
-                {"topic": topic["topic"], "type": "rejected"}
-                for topic in sorted_topics
-                if topic["topic"] not in correct_topics
-            ]
+            rejected_topics = create_rejected_topics(correct_topics, sorted_topics)
             new_potential_hns = (
                 data_sample["potential_hard_negatives"] + rejected_topics
             )
 
-            current_text = {
+            new_annotated = {
                 "text": data_sample["text"],
                 "topics": correct_topics,
                 "potential_hard_negatives": new_potential_hns,
             }
 
             # Update cleaned data
-            clean_data[data_sample["text_id"]] = current_text
+            clean_data[data_sample["text_id"]] = new_annotated
             cleaned_texts_this_session += 1
 
             # Clean data
