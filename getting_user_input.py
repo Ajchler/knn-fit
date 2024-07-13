@@ -41,6 +41,8 @@ def accept_or_reject(crs, question_string):
             crs.addstr("\n")
             if key == ord("y") or key == ord("Y"):
                 raise SkipError
+            elif key == ord("n") or key == ord("N"):
+                crs.addstr(question_string)
 
 
 def redo_or_proceed(crs):
