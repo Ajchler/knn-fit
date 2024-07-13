@@ -281,7 +281,6 @@ def start_data_cleaning(clean_data, lines, args):
 
         if remaining == 0:
             print_job_done(crs)
-            return 0
 
 
 def main():
