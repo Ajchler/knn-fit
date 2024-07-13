@@ -9,7 +9,13 @@ import jsonlines
 from openai import OpenAI
 
 import getting_user_input
-from utils import addstr_wordwrap, CursesWindow, curses_overflow_restarts, ScreenOwner
+from utils import (
+    addstr_wordwrap,
+    CursesWindow,
+    curses_overflow_restarts,
+    ScreenOwner,
+    print_job_done,
+)
 
 
 class OpenAIGeneration:
@@ -348,6 +354,9 @@ class HNAnnotator:
 
             if end:
                 break
+
+        if number_of_texts - number_of_annotated_texts == 0:
+            print_job_done(crs)
 
     def put_introduction(self, number_of_texts, number_of_annotated_texts):
         crs = self.crs
