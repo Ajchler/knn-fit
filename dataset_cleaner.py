@@ -5,7 +5,13 @@ import curses
 import json
 import os
 
-from utils import addstr_wordwrap, CursesWindow, curses_overflow_restarts, ScreenOwner
+from utils import (
+    addstr_wordwrap,
+    CursesWindow,
+    curses_overflow_restarts,
+    ScreenOwner,
+    print_job_done,
+)
 import getting_user_input
 
 NOT_VISITED = 0
@@ -57,15 +63,15 @@ class ScreenOwnerCleaning(ScreenOwner):
         self.redraw()
 
 
-def put_introduction(nb_texts, nb_texts_cleaned, crs):
+def put_introduction(nb_texts, remaining, crs):
     crs.addstr("***********************************\n")
     crs.addstr("* Welcome to the dataset cleaner! *\n")
     crs.addstr("***********************************\n\n\n")
 
     crs.addstr("Statistics:\n", curses.A_BOLD)
     crs.addstr(f"Number of texts: {nb_texts}\n")
-    crs.addstr(f"Number of cleaned texts: {nb_texts_cleaned}\n")
-    crs.addstr(f"Number of texts left: {nb_texts - nb_texts_cleaned}\n\n\n")
+    crs.addstr(f"Number of cleaned texts: {nb_texts - remaining}\n")
+    crs.addstr(f"Number of texts left: {remaining}\n\n\n")
 
     crs.addstr("Instructions:\n\n", curses.A_BOLD)
     crs.addstr("You will be presented with texts and potential topics for each text.\n")
@@ -179,6 +185,12 @@ def create_rejected_topics(correct_topics, sorted_topics):
 def start_data_cleaning(clean_data, lines, args):
     nb_texts = len(lines)
     nb_texts_cleaned = len(clean_data)
+    remaining = 0
+    for line in lines:
+        data_sample = json.loads(line)
+        state = data_sample.get("state", NOT_VISITED)
+        if state == NOT_VISITED:
+            remaining += 1
     cleaned_texts_this_session = 0
 
     with CursesWindow() as crs:
@@ -203,7 +215,7 @@ def start_data_cleaning(clean_data, lines, args):
             screen_owner = ScreenOwnerCleaning(
                 crs,
                 data_sample["text"],
-                nb_texts - (len(clean_data)),
+                remaining,
                 cleaned_texts_this_session,
                 sorted_topics,
             )
@@ -254,6 +266,7 @@ def start_data_cleaning(clean_data, lines, args):
             # Update cleaned data
             clean_data[data_sample["text_id"]] = new_annotated
             cleaned_texts_this_session += 1
+            remaining -= 1
 
             # Clean data
             json.dump(
@@ -265,6 +278,10 @@ def start_data_cleaning(clean_data, lines, args):
 
             if end:
                 break
+
+        if remaining == 0:
+            print_job_done(crs)
+            return 0
 
 
 def main():

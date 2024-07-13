@@ -337,6 +337,14 @@ class ScreenOwner:
         self.crs.addstr("\n\n")
 
 
+def print_job_done(crs):
+    crs.clear()
+    crs.addstr("Job done!\n")
+    crs.addstr("Press any key to exit.\n")
+    crs.refresh()
+    crs.getch()
+
+
 if __name__ == '__main__':
     pass
     # GoldDatasetConvertor()()
