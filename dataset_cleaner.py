@@ -228,6 +228,17 @@ def start_data_cleaning(clean_data, lines, args):
             except getting_user_input.SkipError:
                 skipped = True
 
+            # Original data, write back to file with updated state
+            data_sample["state"] = CHECKED if not skipped else SKIPPED
+            lines[i] = json.dumps(data_sample) + "\n"
+            with open(args.INPUT_FILE, "w") as f:
+                for line in lines:
+                    f.write(line)
+
+            # Do not update cleaned data if the text was skipped
+            if skipped:
+                continue
+
             # Add user rejected topics to the set of potential hard negatives
             rejected_topics = create_rejected_topics(correct_topics, sorted_topics)
             new_potential_hns = (
@@ -251,15 +262,6 @@ def start_data_cleaning(clean_data, lines, args):
                 indent=4,
                 ensure_ascii=False,
             )
-
-            # Update state of the sample to input file
-            data_sample["state"] = CHECKED if not skipped else SKIPPED
-
-            # Original data, write back to file
-            lines[i] = json.dumps(data_sample) + "\n"
-            with open(args.INPUT_FILE, "w") as f:
-                for line in lines:
-                    f.write(line)
 
             if end:
                 break
