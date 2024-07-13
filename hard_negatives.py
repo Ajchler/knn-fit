@@ -355,7 +355,7 @@ class HNAnnotator:
             if end:
                 break
 
-        if number_of_texts - number_of_annotated_texts == 0:
+        if number_of_texts - number_of_annotated_texts - annotated_texts_session == 0:
             print_job_done(crs)
 
     def put_introduction(self, number_of_texts, number_of_annotated_texts):
