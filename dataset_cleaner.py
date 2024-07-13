@@ -200,26 +200,25 @@ def start_data_cleaning(clean_data, lines, args):
                 sorted_topics,
             )
 
+            skipped = False
+            correct_topics = []
             try:
                 correct_topics = annotate_topics(sorted_topics, crs)
                 screen_owner.update_correct_topics(correct_topics)
             except getting_user_input.SkipError:
-                data_sample["state"] = SKIPPED
-                lines[i] = json.dumps(data_sample) + "\n"
-                continue
+                skipped = True
 
             # Redo annotations if needed, quit or continue
             end = False
             try:
-                correct_topics = redo_if_needed(
-                    sorted_topics, correct_topics, screen_owner, crs
-                )
-                data_sample["state"] = CHECKED
+                if not skipped:
+                    correct_topics = redo_if_needed(
+                        sorted_topics, correct_topics, screen_owner, crs
+                    )
             except getting_user_input.QuitError:
                 end = True
-                data_sample["state"] = CHECKED
             except getting_user_input.SkipError:
-                data_sample["state"] = SKIPPED
+                skipped = True
 
             # Add user rejected topics to the set of potential hard negatives
             rejected_topics = [
@@ -248,6 +247,9 @@ def start_data_cleaning(clean_data, lines, args):
                 indent=4,
                 ensure_ascii=False,
             )
+
+            # Update state of the sample to input file
+            data_sample["state"] = CHECKED if not skipped else SKIPPED
 
             # Original data, write back to file
             lines[i] = json.dumps(data_sample) + "\n"
