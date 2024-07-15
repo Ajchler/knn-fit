@@ -63,15 +63,15 @@ class ScreenOwnerCleaning(ScreenOwner):
         self.redraw()
 
 
-def put_introduction(nb_texts, remaining, crs):
+def put_introduction(nb_texts, nb_cleaned, crs):
     crs.addstr("***********************************\n")
     crs.addstr("* Welcome to the dataset cleaner! *\n")
     crs.addstr("***********************************\n\n\n")
 
     crs.addstr("Statistics:\n", curses.A_BOLD)
     crs.addstr(f"Number of texts: {nb_texts}\n")
-    crs.addstr(f"Number of cleaned texts: {nb_texts - remaining}\n")
-    crs.addstr(f"Number of texts left: {remaining}\n\n\n")
+    crs.addstr(f"Number of cleaned texts: {nb_cleaned}\n")
+    crs.addstr(f"Number of texts left: {nb_texts - nb_cleaned}\n\n\n")
 
     crs.addstr("Instructions:\n\n", curses.A_BOLD)
     crs.addstr("You will be presented with texts and potential topics for each text.\n")
