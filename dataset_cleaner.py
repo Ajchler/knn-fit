@@ -134,9 +134,11 @@ def annotation_to_redo(nb_topics, crs):
         0,
     )
     annot_id_str = chr(crs.getch())
+    while True:
+        if annot_id_str.isnumeric() and int(annot_id_str) in range(1, nb_topics + 1):
+            break
+        annot_id_str = chr(crs.getch())
     crs.addstr("\n")
-    if not annot_id_str.isnumeric() or int(annot_id_str) not in range(1, nb_topics + 1):
-        return None
 
     return int(annot_id_str) - 1
 
@@ -151,9 +153,6 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
         action = getting_user_input.redo_or_proceed(crs)
         if action == "redo":  # Redo
             annot_id = annotation_to_redo(len(sorted_topics), crs)
-            if annot_id is None:
-                crs.addstr("Invalid annotation number.\n")
-                continue
 
             topic = sorted_topics[annot_id]
 

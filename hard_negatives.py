@@ -392,15 +392,19 @@ class HNAnnotator:
                     "\nToggle annotation result by pressing the number of the annotation: "
                 )
                 key = chr(self.crs.getch())
-                if key.isnumeric() and 1 <= int(key) <= len(annotated_hard_negatives):
-                    hn_id = int(key) - 1
-                    toggle_to = not annotated_hard_negatives[hn_id]['annotation']
-                    annotated_hard_negatives[hn_id]['annotation'] = toggle_to
-                    screen_owner.redraw_annotated(annotated_hard_negatives)
-                    self.crs.addstr(f"\nAnnotation #{key} toggled.")
-                else:
-                    self.crs.addstr("\nInvalid annotation number.")
-                    continue
+
+                while True:
+                    if key.isnumeric() and 1 <= int(key) <= len(
+                        annotated_hard_negatives
+                    ):
+                        hn_id = int(key) - 1
+                        toggle_to = not annotated_hard_negatives[hn_id]["annotation"]
+                        annotated_hard_negatives[hn_id]["annotation"] = toggle_to
+                        screen_owner.redraw_annotated(annotated_hard_negatives)
+                        self.crs.addstr(f"\nAnnotation #{key} toggled.")
+                        break
+                    key = chr(self.crs.getch())
+
             elif action == 'continue':
                 break
         return annotated_hard_negatives
