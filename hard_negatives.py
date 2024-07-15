@@ -387,35 +387,28 @@ class HNAnnotator:
                 0,
             )
             action = getting_user_input.redo_or_proceed(self.crs)
-            while True:
-                if action == "redo":
-                    self.crs.addstr(
-                        "\nToggle annotation result by pressing the number of the annotation: "
-                    )
+            if action == "redo":
+                self.crs.addstr(
+                    "\nToggle annotation result by pressing the number of the annotation: "
+                )
+                key = chr(self.crs.getch())
+
+                while True:
+                    if key.isnumeric() and 1 <= int(key) <= len(
+                        annotated_hard_negatives
+                    ):
+                        hn_id = int(key) - 1
+                        toggle_to = not annotated_hard_negatives[hn_id]["annotation"]
+                        annotated_hard_negatives[hn_id]["annotation"] = toggle_to
+                        screen_owner.redraw_annotated(annotated_hard_negatives)
+                        self.crs.addstr(f"\nAnnotation #{key} toggled.")
+                        break
                     key = chr(self.crs.getch())
 
-                    while True:
-                        if key.isnumeric() and 1 <= int(key) <= len(
-                            annotated_hard_negatives
-                        ):
-                            hn_id = int(key) - 1
-                            toggle_to = not annotated_hard_negatives[hn_id][
-                                "annotation"
-                            ]
-                            annotated_hard_negatives[hn_id]["annotation"] = toggle_to
-                            screen_owner.redraw_annotated(annotated_hard_negatives)
-                            self.crs.addstr(f"\nAnnotation #{key} toggled.")
-                            break
-                        key = chr(self.crs.getch())
-                    break
-
-                elif action == "continue":
-                    break
-                else:
-                    action = getting_user_input.redo_or_proceed(self.crs)
-
-            if action == "continue":
+            elif action == "continue":
                 break
+            else:
+                action = getting_user_input.redo_or_proceed(self.crs)
 
         return annotated_hard_negatives
 

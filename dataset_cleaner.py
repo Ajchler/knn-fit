@@ -151,30 +151,27 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
             0,
         )
         action = getting_user_input.redo_or_proceed(crs)
-        while True:  # Inner loop to handle waiting for user input when redoing
-            if action == "redo":  # Redo
-                annot_id = annotation_to_redo(len(sorted_topics), crs)
+        if action == "redo":  # Redo
+            annot_id = annotation_to_redo(len(sorted_topics), crs)
 
-                topic = sorted_topics[annot_id]
+            topic = sorted_topics[annot_id]
 
-                relevant = getting_user_input.redo_accept(crs)
+            relevant = getting_user_input.redo_accept(crs)
 
-                if relevant:
-                    # User marked as relevant topic which was already marked as relevant
-                    if topic["topic"] not in correct_topics:
-                        correct_topics.append(topic["topic"])
-                elif topic["topic"] in correct_topics:
-                    correct_topics.remove(topic["topic"])
+            if relevant:
+                # User marked as relevant topic which was already marked as relevant
+                if topic["topic"] not in correct_topics:
+                    correct_topics.append(topic["topic"])
+            elif topic["topic"] in correct_topics:
+                correct_topics.remove(topic["topic"])
 
-                sorted_topics[annot_id] = topic
-                screen_owner.update_correct_topics(correct_topics)
-                break
-            elif action == "continue":
-                break
-            else:
-                action = getting_user_input.redo_or_proceed(crs)
-        if action == "continue":
+            sorted_topics[annot_id] = topic
+            screen_owner.update_correct_topics(correct_topics)
             break
+        elif action == "continue":
+            break
+        else:
+            action = getting_user_input.redo_or_proceed(crs)
 
     return correct_topics
 
