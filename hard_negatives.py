@@ -231,8 +231,9 @@ class ScreenOwnerHns(ScreenOwner):
         for count, annotated_topic in enumerate(annotated_topics, start=1):
             self.annotation_done(annotated_topic, count)
 
+
 class HNAnnotator:
-    def __init__(self, source_path):
+    def __init__(self, source_path, crs):
         self.source_path = source_path
         self.data = json.load(open(source_path, mode="r"))
 
@@ -243,15 +244,14 @@ class HNAnnotator:
         else:
             self.out_data = []
         self.curses_err_count = 0
-        self.crs = None
+        self.crs = crs
 
     def annotate_text(self, screen_owner, potential_hard_negatives):
         annotated_hard_negatives = []
 
-        crs = self.crs
         for count, hard_negative in enumerate(potential_hard_negatives, start=1):
-            crs.addstr(f"{hard_negative['topic']} \n")
-            is_good_hn = getting_user_input.accept_or_reject(crs, "Good hard negative? [Y/n]")
+            self.crs.addstr(f"{hard_negative['topic']} \n")
+            is_good_hn = getting_user_input.accept_or_reject(self.crs, "Good hard negative? [Y/n]")
 
             annotated_hn = {
                 "topic": hard_negative["topic"],
@@ -261,11 +261,6 @@ class HNAnnotator:
             annotated_hard_negatives.append(annotated_hn)
             screen_owner.redraw_annotated(annotated_hard_negatives)
         return annotated_hard_negatives
-
-    @curses_overflow_restarts
-    def annotate(self):
-        with CursesWindow() as self.crs:
-            self.annotate_loop()
 
     def annotate_loop(self):
         number_of_texts = len(self.data)
@@ -277,10 +272,9 @@ class HNAnnotator:
                 for text in self.data.values()
             ]
         )
-        crs = self.crs
 
         self.put_introduction(number_of_texts, number_of_annotated_texts)
-        quit_or_proceed = getting_user_input.quit_or_proceed(crs)
+        quit_or_proceed = getting_user_input.quit_or_proceed(self.crs)
         if quit_or_proceed == "quit":
             return 0
 
@@ -301,7 +295,7 @@ class HNAnnotator:
             text = self.data[text_id]["text"]
 
             good_topics = self.data[text_id]["topics"]
-            screen_owner = ScreenOwnerHns(crs, text, to_annotate, annotated_texts_session, good_topics)
+            screen_owner = ScreenOwnerHns(self.crs, text, to_annotate, annotated_texts_session, good_topics)
 
             potential_hard_negatives = self.data[text_id]["potential_hard_negatives"]
             try:
@@ -349,69 +343,74 @@ class HNAnnotator:
 
             annotated_texts_session += 1
 
-            crs.clear()
-            crs.refresh()
+            self.crs.clear()
+            self.crs.refresh()
 
             if end:
                 break
 
         if number_of_texts - number_of_annotated_texts - annotated_texts_session == 0:
-            print_job_done(crs)
+            print_job_done(self.crs)
 
     def put_introduction(self, number_of_texts, number_of_annotated_texts):
-        crs = self.crs
-        crs.addstr("*******************************************\n")
-        crs.addstr("* Welcome to the hard negative annotator! *\n")
-        crs.addstr("*******************************************\n\n\n")
+        self.crs.addstr("*******************************************\n")
+        self.crs.addstr("* Welcome to the hard negative annotator! *\n")
+        self.crs.addstr("*******************************************\n\n\n")
 
-        crs.addstr("Statistics:\n", curses.A_BOLD)
-        crs.addstr(f"Number of texts: {number_of_texts}\n")
-        crs.addstr(f"Number of annotated texts: {number_of_annotated_texts}\n")
-        crs.addstr(
+        self.crs.addstr("Statistics:\n", curses.A_BOLD)
+        self.crs.addstr(f"Number of texts: {number_of_texts}\n")
+        self.crs.addstr(f"Number of annotated texts: {number_of_annotated_texts}\n")
+        self.crs.addstr(
             f"Number of texts left: {number_of_texts - number_of_annotated_texts}\n\n\n"
         )
 
-        crs.addstr("Instructions:\n\n", curses.A_BOLD)
-        crs.addstr(
+        self.crs.addstr("Instructions:\n\n", curses.A_BOLD)
+        self.crs.addstr(
             "You will be presented with texts and potential hard negatives for each text.\n"
             "Hard negatives from dataset are marked with 'D', generated hard negatives with 'G' and "
             "rejected hard negatives with 'R'.\n"
         )
-        crs.addstr(
+        self.crs.addstr(
             "For each potential hard negative, you will be prompted to mark it as relevant or not.\n"
         )
-        crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n"
-                   "You can also skip text anytime by pressing 's'.\n")
+        self.crs.addstr("Press y/Y if the topic is relevant, n/N if it is not.\n"
+                        "You can also skip text anytime by pressing 's'.\n")
 
-        crs.addstr("Your annotations will be saved after each text.\n\n\n")
-        crs.addstr("If you want to start annotating, press 'c' or 'q' to quit.\n\n")
+        self.crs.addstr("Your annotations will be saved after each text.\n\n\n")
+        self.crs.addstr("If you want to start annotating, press 'c' or 'q' to quit.\n\n")
 
     def redo_if_needed(self, screen_owner, annotated_hard_negatives):
-        crs = self.crs
         while True:
             addstr_wordwrap(
-                crs,
+                self.crs,
                 "\n\nPress 'c' to continue, 'r' to redo if you made a mistake, 'q' to quit. ",
                 0,
             )
-            action = getting_user_input.redo_or_proceed(crs)
+            action = getting_user_input.redo_or_proceed(self.crs)
             if action == "redo":
-                crs.addstr(
+                self.crs.addstr(
                     "\nToggle annotation result by pressing the number of the annotation: "
                 )
-                key = chr(crs.getch())
+                key = chr(self.crs.getch())
                 if key.isnumeric() and 1 <= int(key) <= len(annotated_hard_negatives):
                     hn_id = int(key) - 1
                     toggle_to = not annotated_hard_negatives[hn_id]['annotation']
                     annotated_hard_negatives[hn_id]['annotation'] = toggle_to
                     screen_owner.redraw_annotated(annotated_hard_negatives)
-                    crs.addstr(f"\nAnnotation #{key} toggled.")
+                    self.crs.addstr(f"\nAnnotation #{key} toggled.")
                 else:
-                    crs.addstr("\nInvalid annotation number.")
+                    self.crs.addstr("\nInvalid annotation number.")
                     continue
             elif action == 'continue':
                 break
         return annotated_hard_negatives
+
+
+@curses_overflow_restarts
+def run_annotation(annotation_source):
+    with CursesWindow() as crs:
+        annotator = HNAnnotator(annotation_source, crs)
+        annotator.annotate_loop()
 
 
 if "__main__" == __name__:
@@ -524,4 +523,4 @@ if "__main__" == __name__:
         merger.merge(args.hn_from_dataset_threshold, args.force)
 
     if args.action == "annotate":
-        HNAnnotator(args.annotate_source).annotate()
+        run_annotation(args.annotate_source)
