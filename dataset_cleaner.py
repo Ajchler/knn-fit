@@ -171,7 +171,7 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
         elif action == "continue":
             break
         else:
-            action = getting_user_input.redo_or_proceed(crs)
+            screen_owner.redraw()
 
     return correct_topics
 

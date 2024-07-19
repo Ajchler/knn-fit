@@ -408,7 +408,8 @@ class HNAnnotator:
             elif action == "continue":
                 break
             else:
-                action = getting_user_input.redo_or_proceed(self.crs)
+                screen_owner.redraw_annotated(annotated_hard_negatives)
+                # action = getting_user_input.redo_or_proceed(self.crs)
 
         return annotated_hard_negatives
 
