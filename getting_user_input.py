@@ -54,28 +54,30 @@ def redo_or_proceed(crs):
     :raises QuitError: If the user wants to quit the program
     """
     key = crs.getch()
-    if key in (ord(c) for c in "qQcCrRsS"):
+    while key not in (ord(c) for c in "qQcCrRsS"):
+        key = crs.getch()
+
+    crs.addstr("\n")
+    if key == ord("q") or key == ord("Q"):  # Quit
+        crs.addstr("Are you sure you want to quit? [Y/n] ")
+        key = crs.getch()
+        if key == ord("y") or key == ord("Y"):
+            raise QuitError
+    elif key == ord("r") or key == ord("R"):  # Redo
+        return "redo"
+
+    elif key == ord("c") or key == ord("C"):
+        return "continue"
+
+    elif key == ord("s") or key == ord("S"):
+        crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
+        key = crs.getch()
+        while key not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
+            key = crs.getch()
+
         crs.addstr("\n")
-        if key == ord("q") or key == ord("Q"):  # Quit
-            crs.addstr("Are you sure you want to quit? [Y/n] ")
-            key = crs.getch()
-            if key == ord("y") or key == ord("Y"):
-                raise QuitError
-        elif key == ord("r") or key == ord("R"):  # Redo
-            return "redo"
-
-        elif key == ord("c") or key == ord("C"):
-            return "continue"
-
-        elif key == ord("s") or key == ord("S"):
-            crs.addstr("\nAre you sure you want to skip this text? [Y/n] ")
-            key = crs.getch()
-            while key not in [ord("y"), ord("Y"), ord("n"), ord("N")]:
-                key = crs.getch()
-
-            crs.addstr("\n")
-            if key == ord("y") or key == ord("Y"):
-                raise SkipError
+        if key == ord("y") or key == ord("Y"):
+            raise SkipError
 
 
 def redo_accept(crs):
