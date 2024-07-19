@@ -167,7 +167,6 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
 
             sorted_topics[annot_id] = topic
             screen_owner.update_correct_topics(correct_topics)
-            break
         elif action == "continue":
             break
         else:
