@@ -34,8 +34,8 @@ def get_args():
 class ScreenOwnerCleaning(ScreenOwner):
     controls_string = (
         "Press y/Y if the topic is relevant, n/N if it is not. You can also skip this text anytime by "
-        "pressing 's'.\nYou will also be able to redo the current text after last topic if you make a "
-        "mistake during cleaning.\n\n"
+        "pressing 's'.\nYou will also be able to redo the current text after last topic if you wish to "
+        "reconsider an answer.\n\n"
     )
 
     def __init__(self, crs, text, nb_left, nb_cleaned_this_session, sorted_topics):
@@ -147,7 +147,7 @@ def redo_if_needed(sorted_topics, correct_topics, screen_owner, crs):
     while True:  # Outer loop to enable multiple redos or quitting after redo
         addstr_wordwrap(
             crs,
-            "\n\nPress 'c' to continue, 'r' to redo if you made a mistake, 'q' to quit. ",
+            "\n\nPress 'c' to continue, 'r' to redo an annotation, 'q' to quit. ",
             0,
         )
         action = getting_user_input.redo_or_proceed(crs)
